@@ -149,19 +149,19 @@
                                 <rect key="frame" x="137" y="642.33333333333337" width="156" height="145"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTi-h8-bac">
-                                <rect key="frame" x="65" y="787.33333333333337" width="300" height="60"/>
+                                <rect key="frame" x="65" y="787.33333333333337" width="300" height="54"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចូលលេង" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgD-JP-w3H">
-                                        <rect key="frame" x="101" y="13.333333333333258" width="98.333333333333314" height="33.666666666666664"/>
+                                        <rect key="frame" x="101" y="10.333333333333258" width="98.333333333333314" height="33.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playIcon" translatesAutoresizingMaskIntoConstraints="NO" id="eMH-7a-M2C">
-                                        <rect key="frame" x="249" y="4.6666666666666288" width="51" height="51"/>
+                                        <rect key="frame" x="240" y="-5.3333333333333712" width="65" height="65"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="51" id="2LI-z4-v1Q"/>
-                                            <constraint firstAttribute="width" constant="51" id="ciH-oG-8zU"/>
+                                            <constraint firstAttribute="height" constant="65" id="2LI-z4-v1Q"/>
+                                            <constraint firstAttribute="width" constant="65" id="ciH-oG-8zU"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -169,8 +169,8 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="300" id="BV9-o2-3De"/>
                                     <constraint firstItem="EgD-JP-w3H" firstAttribute="centerY" secondItem="nTi-h8-bac" secondAttribute="centerY" id="fP6-Xa-qXn"/>
-                                    <constraint firstAttribute="trailing" secondItem="eMH-7a-M2C" secondAttribute="trailing" id="hje-bz-4oW"/>
-                                    <constraint firstAttribute="height" constant="60" id="i8t-SR-l3h"/>
+                                    <constraint firstAttribute="trailing" secondItem="eMH-7a-M2C" secondAttribute="trailing" constant="-5" id="hje-bz-4oW"/>
+                                    <constraint firstAttribute="height" constant="54" id="i8t-SR-l3h"/>
                                     <constraint firstItem="EgD-JP-w3H" firstAttribute="centerX" secondItem="nTi-h8-bac" secondAttribute="centerX" id="mJn-Ie-Ogh"/>
                                     <constraint firstItem="eMH-7a-M2C" firstAttribute="centerY" secondItem="nTi-h8-bac" secondAttribute="centerY" id="o4M-fs-eEZ"/>
                                 </constraints>
@@ -205,6 +205,14 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HBs-ci-sA1" secondAttribute="trailing" id="zjQ-qA-RKb"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="playButton" destination="nTi-h8-bac" id="6fY-6k-5rL"/>
+                        <outletCollection property="scoreBackground" destination="bPH-Zz-OrZ" collectionClass="NSMutableArray" id="obR-Az-w6X"/>
+                        <outletCollection property="scoreBackground" destination="HBs-ci-sA1" collectionClass="NSMutableArray" id="XTU-E8-C9j"/>
+                        <outletCollection property="scoreBackground" destination="HBs-ci-sA1" collectionClass="NSMutableArray" id="y6e-93-dav"/>
+                        <outletCollection property="scoreBackground" destination="4BP-1i-WGL" collectionClass="NSMutableArray" id="hcx-g2-sCB"/>
+                        <outletCollection property="scoreBackground" destination="ohb-dC-7mn" collectionClass="NSMutableArray" id="upQ-bS-U1R"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -223,7 +231,7 @@
         <image name="score" width="32" height="33"/>
         <image name="stars" width="43" height="28"/>
         <namedColor name="scoreboard">
-            <color red="0.16470588235294117" green="0.2627450980392157" blue="0.039215686274509803" alpha="0.56999999999999995" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.16470588235294117" green="0.2627450980392157" blue="0.039215686274509803" alpha="0.56999999284744263" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="secondarySystemBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
