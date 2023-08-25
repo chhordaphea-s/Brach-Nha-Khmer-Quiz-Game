@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FC1933742A90CE30003DF965 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1933732A90CE30003DF965 /* UIColorExtension.swift */; };
 		FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */; };
 		FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */; };
 		FC3D98902A8E2A86001A05CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988F2A8E2A86001A05CE /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		FC1933732A90CE30003DF965 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		FC3D98882A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brach-Nha-Khmer-Quiz-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */,
 				FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */,
+				FC1933732A90CE30003DF965 /* UIColorExtension.swift */,
 				FC3D988F2A8E2A86001A05CE /* ViewController.swift */,
 				FC3D98912A8E2A86001A05CE /* Main.storyboard */,
 				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
@@ -141,6 +144,7 @@
 				FC3D98902A8E2A86001A05CE /* ViewController.swift in Sources */,
 				FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
+				FC1933742A90CE30003DF965 /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
