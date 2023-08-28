@@ -14,6 +14,12 @@
 		FC3D98932A8E2A86001A05CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98912A8E2A86001A05CE /* Main.storyboard */; };
 		FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98942A8E2A87001A05CE /* Assets.xcassets */; };
 		FC3D98982A8E2A87001A05CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98962A8E2A87001A05CE /* LaunchScreen.storyboard */; };
+		FCCDD2332A9CB6B100672A8C /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCDD2322A9CB6B100672A8C /* LevelViewModel.swift */; };
+		FCCDD2362A9CC02600672A8C /* ButtonEffectAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCDD2352A9CC02600672A8C /* ButtonEffectAnimation.swift */; };
+		FCE106002A97679900AAEDD0 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE105FF2A97679900AAEDD0 /* LevelViewController.swift */; };
+		FCE106042A99E5B300AAEDD0 /* LevelCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */; };
+		FCE106052A99E5B300AAEDD0 /* LevelCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */; };
+		FCE106072A99ECCB00AAEDD0 /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE106062A99ECCB00AAEDD0 /* UIViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +32,12 @@
 		FC3D98942A8E2A87001A05CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3D98972A8E2A87001A05CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC3D98992A8E2A87001A05CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCCDD2322A9CB6B100672A8C /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
+		FCCDD2352A9CC02600672A8C /* ButtonEffectAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonEffectAnimation.swift; sourceTree = "<group>"; };
+		FCE105FF2A97679900AAEDD0 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCustomCell.swift; sourceTree = "<group>"; };
+		FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCustomCell.xib; sourceTree = "<group>"; };
+		FCE106062A99ECCB00AAEDD0 /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +70,38 @@
 		FC3D988A2A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game */ = {
 			isa = PBXGroup;
 			children = (
+				FCCDD2312A9CB68200672A8C /* View Model */,
+				FCE106012A99E51000AAEDD0 /* Level Game Custom Cell */,
 				FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */,
 				FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */,
 				FC1933732A90CE30003DF965 /* UIColorExtension.swift */,
 				FC3D988F2A8E2A86001A05CE /* ViewController.swift */,
+				FCE105FF2A97679900AAEDD0 /* LevelViewController.swift */,
 				FC3D98912A8E2A86001A05CE /* Main.storyboard */,
 				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
 				FC3D98962A8E2A87001A05CE /* LaunchScreen.storyboard */,
 				FC3D98992A8E2A87001A05CE /* Info.plist */,
+				FCE106062A99ECCB00AAEDD0 /* UIViewExtension.swift */,
+				FCCDD2352A9CC02600672A8C /* ButtonEffectAnimation.swift */,
 			);
 			path = "Brach-Nha-Khmer-Quiz-Game";
+			sourceTree = "<group>";
+		};
+		FCCDD2312A9CB68200672A8C /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				FCCDD2322A9CB6B100672A8C /* LevelViewModel.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		FCE106012A99E51000AAEDD0 /* Level Game Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */,
+				FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */,
+			);
+			path = "Level Game Custom Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,6 +165,7 @@
 				FC3D98982A8E2A87001A05CE /* LaunchScreen.storyboard in Resources */,
 				FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */,
 				FC3D98932A8E2A86001A05CE /* Main.storyboard in Resources */,
+				FCE106052A99E5B300AAEDD0 /* LevelCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,7 +177,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3D98902A8E2A86001A05CE /* ViewController.swift in Sources */,
+				FCE106002A97679900AAEDD0 /* LevelViewController.swift in Sources */,
+				FCCDD2362A9CC02600672A8C /* ButtonEffectAnimation.swift in Sources */,
 				FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */,
+				FCCDD2332A9CB6B100672A8C /* LevelViewModel.swift in Sources */,
+				FCE106042A99E5B300AAEDD0 /* LevelCustomCell.swift in Sources */,
+				FCE106072A99ECCB00AAEDD0 /* UIViewExtension.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
 				FC1933742A90CE30003DF965 /* UIColorExtension.swift in Sources */,
 			);

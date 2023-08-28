@@ -6,6 +6,7 @@
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -218,18 +219,108 @@
             </objects>
             <point key="canvasLocation" x="129.76744186046511" y="-27.682403433476395"/>
         </scene>
+        <!--Level View Controller-->
+        <scene sceneID="FpE-RM-HKD">
+            <objects>
+                <viewController storyboardIdentifier="LevelViewController" id="bsQ-EY-7N7" customClass="LevelViewController" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EFN-Bq-3HV">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="countryside4 1" translatesAutoresizingMaskIntoConstraints="NO" id="cLm-98-6RS">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEf-qK-esX">
+                                <rect key="frame" x="16" y="75" width="42" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="3Br-zC-0x5"/>
+                                    <constraint firstAttribute="width" constant="42" id="Qh5-Dd-TQT"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Group 5"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="size" keyPath="shadowOffset">
+                                        <size key="value" width="0.0" height="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" name="StarColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="y0V-Td-XXY">
+                                <rect key="frame" x="30" y="167" width="370" height="473"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="473" id="0B9-Bb-rgn"/>
+                                    <constraint firstAttribute="width" constant="370" id="eCT-aT-R3Y"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="12" minimumInteritemSpacing="2" id="ogv-me-fhA">
+                                    <size key="itemSize" width="83" height="81"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="mCR-Oq-O0M">
+                                        <rect key="frame" x="0.0" y="0.0" width="95" height="87"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="mNt-K9-of7">
+                                            <rect key="frame" x="0.0" y="0.0" width="95" height="87"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="95" height="87"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ពាក្យបណ្ដៅ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DG4-bV-UGg">
+                                <rect key="frame" x="164" y="75" width="102" height="26.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="QrB-eU-WDN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="DG4-bV-UGg" firstAttribute="centerX" secondItem="EFN-Bq-3HV" secondAttribute="centerX" id="2Xu-Ce-58x"/>
+                            <constraint firstItem="cLm-98-6RS" firstAttribute="leading" secondItem="QrB-eU-WDN" secondAttribute="leading" id="Fgj-0N-Vnx"/>
+                            <constraint firstAttribute="trailing" secondItem="cLm-98-6RS" secondAttribute="trailing" id="InL-OQ-nPt"/>
+                            <constraint firstItem="DG4-bV-UGg" firstAttribute="top" secondItem="QrB-eU-WDN" secondAttribute="top" constant="16" id="Raw-LT-dhl"/>
+                            <constraint firstItem="fEf-qK-esX" firstAttribute="leading" secondItem="QrB-eU-WDN" secondAttribute="leading" constant="16" id="aUE-d9-mwZ"/>
+                            <constraint firstItem="y0V-Td-XXY" firstAttribute="top" secondItem="fEf-qK-esX" secondAttribute="bottom" constant="50" id="aWi-Gn-MYn"/>
+                            <constraint firstAttribute="bottom" secondItem="cLm-98-6RS" secondAttribute="bottom" id="hCV-YG-gWW"/>
+                            <constraint firstItem="y0V-Td-XXY" firstAttribute="centerX" secondItem="EFN-Bq-3HV" secondAttribute="centerX" id="kEy-1z-iwO"/>
+                            <constraint firstItem="fEf-qK-esX" firstAttribute="top" secondItem="QrB-eU-WDN" secondAttribute="top" constant="16" id="kS3-RK-eHg"/>
+                            <constraint firstItem="cLm-98-6RS" firstAttribute="top" secondItem="EFN-Bq-3HV" secondAttribute="top" id="y57-HI-wDY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="levelCollectionView" destination="y0V-Td-XXY" id="UgQ-t3-MGz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hpg-7R-dYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="962.79069767441854" y="-28.326180257510732"/>
+        </scene>
     </scenes>
     <resources>
         <image name="Bank" width="40" height="40"/>
         <image name="GearSix" width="37" height="37"/>
+        <image name="Group 5" width="76" height="76"/>
         <image name="Group 95" width="224" height="203"/>
         <image name="boygirl" width="156" height="145"/>
+        <image name="countryside4 1" width="430" height="932"/>
         <image name="hint" width="35" height="34"/>
         <image name="hint50" width="36" height="25"/>
         <image name="landscape1 1" width="430" height="932"/>
         <image name="playIcon" width="67.666664123535156" height="67.666664123535156"/>
         <image name="score" width="32" height="33"/>
         <image name="stars" width="43" height="28"/>
+        <namedColor name="StarColor">
+            <color red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="scoreboard">
             <color red="0.16470588235294117" green="0.2627450980392157" blue="0.039215686274509803" alpha="0.56999999284744263" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
