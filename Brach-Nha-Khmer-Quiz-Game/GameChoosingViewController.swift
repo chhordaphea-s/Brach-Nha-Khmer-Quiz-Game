@@ -1,5 +1,5 @@
 //
-//  GameChoosing.swift
+//  GameChoosingViewController.swift
 //  Brach-Nha-Khmer-Quiz-Game
 //
 //  Created by Aing Hongsin on 8/18/23.
@@ -10,60 +10,66 @@ import UIKit
 
 class GameChoosingViewController: UIViewController {
     
+    @IBOutlet var gameBackgroundView: [UIView]!
+    @IBOutlet weak var imageBackground: UIImageView!
+    @IBOutlet var gameButtonView: [UIView]!
 
-    @IBOutlet weak var GameBackground: UIView!
+    @IBOutlet weak var playerModeSagementControl: ChoosePlayerModeCustomSagement!
+    
+    
+    var active: PlayMode = .singlePlayerMode
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        customBackgroundView(parent: GameBackground)
+        customizeGameButton()
+
+        UIView.animate(withDuration: 30.0, delay: 0, options: [.repeat, .autoreverse], animations: { [self] in
+            imageBackground.transform = CGAffineTransform(translationX: -self.imageBackground.frame.width + self.view.bounds.width, y: 0)
+        }, completion: nil)
+        
+    }
+
+    
+    // MARK: - Function
+    private func customizeGameButton() {
+        let colors = [0xCBF5D6, 0xCBEDF5, 0xF5CAEF]
+        var index = 0
+        for b in gameBackgroundView {
+            
+            b.addBorder(to: .bottom, color: UIColor(rgb: colors[index]), thickness: 3.0)
+            index += 1
+        }
+    }
+
+    
+
+    
+    
+    @IBAction func riddleButtonPressed(_ sender: UITapGestureRecognizer) {
+        ButtonEffectAnimation.shared.popEffect(button: gameButtonView[0], sclaEffect: 0.9)
+        print("Khmer Riddle")
     }
     
-    private func customBackgroundView(parent: UIView) {
-        var view = UIView()
-        view.frame = CGRect(x: 0, y: 0, width: 360, height: 102.48)
-
-        var shadows = UIView()
-        shadows.frame = view.frame
-        shadows.clipsToBounds = false
-        view.addSubview(shadows)
-
-        let shadowPath0 = UIBezierPath(roundedRect: shadows.bounds, cornerRadius: 17.82)
-        let layer0 = CALayer()
-        layer0.shadowPath = shadowPath0.cgPath
-        layer0.shadowColor = UIColor(red: 0.184, green: 0.533, blue: 0.847, alpha: 0.25).cgColor
-        layer0.shadowOpacity = 1
-        layer0.shadowRadius = 13.27
-        layer0.shadowOffset = CGSize(width: 0, height: 4.42)
-        layer0.bounds = shadows.bounds
-        layer0.position = shadows.center
-        shadows.layer.addSublayer(layer0)
-
-        let shapes = UIView()
-        shapes.frame = view.frame
-        shapes.clipsToBounds = true
-        view.addSubview(shapes)
-
-        let layer1 = CAGradientLayer()
-        layer1.colors = [
-          UIColor(red: 0.184, green: 0.725, blue: 0.847, alpha: 1).cgColor,
-          UIColor(red: 0.184, green: 0.535, blue: 0.847, alpha: 1).cgColor
-        ]
-        layer1.locations = [0, 1]
-        layer1.startPoint = CGPoint(x: 0.25, y: 0.5)
-        layer1.endPoint = CGPoint(x: 0.75, y: 0.5)
-        layer1.transform = CATransform3DMakeAffineTransform(CGAffineTransform(a: 0, b: 1, c: -1, d: 0, tx: 1, ty: 0))
-        layer1.bounds = shapes.bounds.insetBy(dx: -0.5*shapes.bounds.size.width, dy: -0.5*shapes.bounds.size.height)
-        layer1.position = shapes.center
-        shapes.layer.addSublayer(layer1)
-
-        shapes.layer.cornerRadius = 17.82
-
-//        let parent = self.viewr!
-        parent.addSubview(view)
-        view.translatesAutoresizingMaskIntoConstraints = false
-        view.widthAnchor.constraint(equalToConstant: 360).isActive = true
-        view.heightAnchor.constraint(equalToConstant: 102.48).isActive = true
-        view.leadingAnchor.constraint(equalTo: parent.leadingAnchor, constant: 0).isActive = true
-        view.topAnchor.constraint(equalTo: parent.topAnchor, constant: 19.78).isActive = true
+    @IBAction func khmerProverButtonPressed(_ sender: UITapGestureRecognizer) {
+        ButtonEffectAnimation.shared.popEffect(button: gameButtonView[1], sclaEffect: 0.9)
+        print("Khmer Proverb")
+    }
+    @IBAction func generalKnowlage(_ sender: UITapGestureRecognizer) {
+        ButtonEffectAnimation.shared.popEffect(button: gameButtonView[2], sclaEffect: 0.9)
+        print("Khmer General Knowlate")
+    }
+    
+    
+    
+    func moveIt(_ imageView: UIImageView,_ speed:CGFloat) {
+        let speeds = speed
+        let imageSpeed = speeds / view.frame.size.width
+        let averageSpeed = (view.frame.size.width - imageView.frame.origin.x) * imageSpeed
+        UIView.animate(withDuration: TimeInterval(averageSpeed), delay: 0.0, options: .curveLinear, animations: {
+            imageView.frame.origin.x = self.view.frame.size.width
+        }, completion: { (_) in
+            imageView.frame.origin.x = -imageView.frame.size.width
+            self.moveIt(imageView,speeds)
+        })
     }
 }

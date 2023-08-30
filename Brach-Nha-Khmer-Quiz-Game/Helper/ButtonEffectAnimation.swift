@@ -8,13 +8,13 @@
 import Foundation
 import UIKit
 
-class buttonEffectAnimation {
-    static let shared = buttonEffectAnimation()
+class ButtonEffectAnimation {
+    static let shared = ButtonEffectAnimation()
     
-    func popEffect(button: UIView) {
+    func popEffect(button: UIView, sclaEffect: Float = 0.8) {
         UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseOut, animations: {
             button.alpha = 1
-            button.transform = CGAffineTransform(scaleX: 0.8, y: 0.8)
+            button.transform = CGAffineTransform(scaleX: CGFloat(sclaEffect), y: CGFloat(sclaEffect))
         }, completion: {_ in
             UIView.animate(withDuration: 0.2, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseOut, animations: {
                 button.alpha = 1
@@ -23,5 +23,6 @@ class buttonEffectAnimation {
             }, completion: nil)
         })
     }
+    
 
 }
