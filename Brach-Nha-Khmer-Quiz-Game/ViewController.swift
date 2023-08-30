@@ -68,7 +68,7 @@ class ViewController: UIViewController {
     }
     
     func switchToAnotherScreen(){
-        let controller = storyboard?.instantiateViewController(withIdentifier: "LevelViewController") as! LevelViewController
+        let controller = storyboard?.instantiateViewController(withIdentifier: "GameChoosingViewController") as! GameChoosingViewController
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .crossDissolve
         self.present(controller, animated: true, completion: nil)
