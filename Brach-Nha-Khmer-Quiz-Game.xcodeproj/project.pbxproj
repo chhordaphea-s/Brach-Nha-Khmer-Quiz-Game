@@ -8,6 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		FC1933742A90CE30003DF965 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC1933732A90CE30003DF965 /* UIColorExtension.swift */; };
+		0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */; };
+		0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */; };
+		0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C92A2A9B356F00ACF84D /* Constant.swift */; };
+		0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */; };
+		0E8B56E42A8F517800395E05 /* GameChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8B56E32A8F517800395E05 /* GameChoosingViewController.swift */; };
+		0EA44D372A97177600B5539A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D362A97177600B5539A /* UIViewExtension.swift */; };
+		0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */; };
+		0EA44D3B2A97293A00B5539A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */; };
+		0EA44D462A97353600B5539A /* PlayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D452A97353600B5539A /* PlayMode.swift */; };
+		9ACAE1A7220D8574C05B4853 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8625A7BDAF5BDB5E0016DF55 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */; };
 		FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */; };
 		FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */; };
 		FC3D98902A8E2A86001A05CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988F2A8E2A86001A05CE /* ViewController.swift */; };
@@ -24,6 +34,18 @@
 
 /* Begin PBXFileReference section */
 		FC1933732A90CE30003DF965 /* UIColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosePlayerModeCustomSagement.xib; sourceTree = "<group>"; };
+		0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerModeCustomSagement.swift; sourceTree = "<group>"; };
+		0E68C92A2A9B356F00ACF84D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEffectAnimation.swift; sourceTree = "<group>"; };
+		0E8B56E32A8F517800395E05 /* GameChoosingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameChoosingViewController.swift; sourceTree = "<group>"; };
+		0EA44D362A97177600B5539A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AKbalthom-KOUPREY-Jais.ttf"; sourceTree = "<group>"; };
+		0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		0EA44D452A97353600B5539A /* PlayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMode.swift; sourceTree = "<group>"; };
+		258D287A1FC2293C06EA96CE /* Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig"; path = "Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig"; sourceTree = "<group>"; };
+		2CA491813F3E4465F40705D2 /* Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig"; path = "Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig"; sourceTree = "<group>"; };
+		8625A7BDAF5BDB5E0016DF55 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brach_Nha_Khmer_Quiz_Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3D98882A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brach-Nha-Khmer-Quiz-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -45,17 +67,79 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ACAE1A7220D8574C05B4853 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E68C9222A9B307400ACF84D /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				0E68C9232A9B307F00ACF84D /* ChoosePlayerModeCustomSagement */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		0E68C9232A9B307F00ACF84D /* ChoosePlayerModeCustomSagement */ = {
+			isa = PBXGroup;
+			children = (
+				0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */,
+				0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */,
+			);
+			path = ChoosePlayerModeCustomSagement;
+			sourceTree = "<group>";
+		};
+		0E6F8A9D2A989E5E00B480F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EA44D452A97353600B5539A /* PlayMode.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E6F8A9E2A989E6700B480F5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		0EA44D352A9716FF00B5539A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0EA44D362A97177600B5539A /* UIViewExtension.swift */,
+				0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		44491726AFD7A6E36AFEE5DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				258D287A1FC2293C06EA96CE /* Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig */,
+				2CA491813F3E4465F40705D2 /* Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		73935C76798FF0C796361FB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8625A7BDAF5BDB5E0016DF55 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		FC3D987F2A8E2A86001A05CE = {
 			isa = PBXGroup;
 			children = (
 				FC3D988A2A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game */,
 				FC3D98892A8E2A86001A05CE /* Products */,
+				44491726AFD7A6E36AFEE5DF /* Pods */,
+				73935C76798FF0C796361FB4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -72,17 +156,24 @@
 			children = (
 				FCCDD2312A9CB68200672A8C /* View Model */,
 				FCE106012A99E51000AAEDD0 /* Level Game Custom Cell */,
+				0E68C9222A9B307400ACF84D /* Custom View */,
+				0E6F8A9E2A989E6700B480F5 /* Helper */,
+				0E6F8A9D2A989E5E00B480F5 /* Model */,
+				0EA44D352A9716FF00B5539A /* Extension */,
 				FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */,
 				FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */,
 				FC1933732A90CE30003DF965 /* UIColorExtension.swift */,
 				FC3D988F2A8E2A86001A05CE /* ViewController.swift */,
 				FCE105FF2A97679900AAEDD0 /* LevelViewController.swift */,
+				0E8B56E32A8F517800395E05 /* GameChoosingViewController.swift */,
 				FC3D98912A8E2A86001A05CE /* Main.storyboard */,
 				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
 				FC3D98962A8E2A87001A05CE /* LaunchScreen.storyboard */,
 				FC3D98992A8E2A87001A05CE /* Info.plist */,
 				FCE106062A99ECCB00AAEDD0 /* UIViewExtension.swift */,
 				FCCDD2352A9CC02600672A8C /* ButtonEffectAnimation.swift */,
+				0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */,
+				0E68C92A2A9B356F00ACF84D /* Constant.swift */,
 			);
 			path = "Brach-Nha-Khmer-Quiz-Game";
 			sourceTree = "<group>";
@@ -111,9 +202,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC3D989C2A8E2A87001A05CE /* Build configuration list for PBXNativeTarget "Brach-Nha-Khmer-Quiz-Game" */;
 			buildPhases = (
+				53EB88C28AD2C3D00CA237FA /* [CP] Check Pods Manifest.lock */,
 				FC3D98842A8E2A86001A05CE /* Sources */,
 				FC3D98852A8E2A86001A05CE /* Frameworks */,
 				FC3D98862A8E2A86001A05CE /* Resources */,
+				3FFF9AD48A676CEC04062DD3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,6 +256,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3D98982A8E2A87001A05CE /* LaunchScreen.storyboard in Resources */,
+				0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */,
+				0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */,
 				FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */,
 				FC3D98932A8E2A86001A05CE /* Main.storyboard in Resources */,
 				FCE106052A99E5B300AAEDD0 /* LevelCustomCell.xib in Resources */,
@@ -171,11 +266,55 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3FFF9AD48A676CEC04062DD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53EB88C28AD2C3D00CA237FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Brach-Nha-Khmer-Quiz-Game-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		FC3D98842A8E2A86001A05CE /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */,
+				0EA44D372A97177600B5539A /* UIViewExtension.swift in Sources */,
 				FC3D98902A8E2A86001A05CE /* ViewController.swift in Sources */,
 				FCE106002A97679900AAEDD0 /* LevelViewController.swift in Sources */,
 				FCCDD2362A9CC02600672A8C /* ButtonEffectAnimation.swift in Sources */,
@@ -185,6 +324,12 @@
 				FCE106072A99ECCB00AAEDD0 /* UIViewExtension.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
 				FC1933742A90CE30003DF965 /* UIColorExtension.swift in Sources */,
+				0E8B56E42A8F517800395E05 /* GameChoosingViewController.swift in Sources */,
+				0EA44D462A97353600B5539A /* PlayMode.swift in Sources */,
+				0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */,
+				0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */,
+				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
+				0EA44D3B2A97293A00B5539A /* UIColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,12 +471,13 @@
 		};
 		FC3D989D2A8E2A87001A05CE /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 258D287A1FC2293C06EA96CE /* Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 453LSDFZ53;
+				DEVELOPMENT_TEAM = S4SC57X43S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Brach-Nha-Khmer-Quiz-Game/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -354,12 +500,13 @@
 		};
 		FC3D989E2A8E2A87001A05CE /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CA491813F3E4465F40705D2 /* Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 453LSDFZ53;
+				DEVELOPMENT_TEAM = S4SC57X43S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Brach-Nha-Khmer-Quiz-Game/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;

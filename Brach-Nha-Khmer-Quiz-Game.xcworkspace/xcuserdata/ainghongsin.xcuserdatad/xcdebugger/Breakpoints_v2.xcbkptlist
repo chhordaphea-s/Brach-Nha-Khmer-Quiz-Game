@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   uuid = "B7695A3B-96A3-49DC-9A03-2E18EE8AD785"
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5FEF271-032F-4D89-BA10-369C83F2351F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Custom View/ChoosePlayerModeCustomSagement/ChoosePlayerModeCustomSagement.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "setupSagement()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F5FEF271-032F-4D89-BA10-369C83F2351F - d980995a737a3829"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.ChoosePlayerModeCustomSagement.setupSagement() -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Custom%20View/ChoosePlayerModeCustomSagement/ChoosePlayerModeCustomSagement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "322">
+               </Location>
+               <Location
+                  uuid = "F5FEF271-032F-4D89-BA10-369C83F2351F - d980995a737a3808"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.ChoosePlayerModeCustomSagement.setupSagement() -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Custom%20View/ChoosePlayerModeCustomSagement/ChoosePlayerModeCustomSagement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "55"
+                  endingLineNumber = "55"
+                  offsetFromSymbolStart = "33">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FA77A6A5-7540-4F0E-8883-F2D9DF9B7D2C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Custom View/ChoosePlayerModeCustomSagement/ChoosePlayerModeCustomSagement.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "init(frame:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "FA77A6A5-7540-4F0E-8883-F2D9DF9B7D2C - 397cf03a72b78458"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.ChoosePlayerModeCustomSagement.init(frame: __C.CGRect) -&gt; Brach_Nha_Khmer_Quiz_Game.ChoosePlayerModeCustomSagement"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Custom%20View/ChoosePlayerModeCustomSagement/ChoosePlayerModeCustomSagement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "FA77A6A5-7540-4F0E-8883-F2D9DF9B7D2C - 397cf03a72b78439"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.ChoosePlayerModeCustomSagement.init(frame: __C.CGRect) -&gt; Brach_Nha_Khmer_Quiz_Game.ChoosePlayerModeCustomSagement"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Custom%20View/ChoosePlayerModeCustomSagement/ChoosePlayerModeCustomSagement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "354">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "46191203-89F0-4293-B829-FA2F1068E8D6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Custom View/ChoosePlayerModeCustomSagement/ChoosePlayerModeCustomSagement.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "init?(coder:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F5E2558C-7647-468E-9BCD-5E244FCCCF37"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Custom View/ChoosePlayerModeCustomSagement/ChoosePlayerModeCustomSagement.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "30"
+            endingLineNumber = "30"
+            landmarkName = "commonInit()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F5E2558C-7647-468E-9BCD-5E244FCCCF37 - f523d64b7c5aa7a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.ChoosePlayerModeCustomSagement.commonInit() -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Custom%20View/ChoosePlayerModeCustomSagement/ChoosePlayerModeCustomSagement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "145">
+               </Location>
+               <Location
+                  uuid = "F5E2558C-7647-468E-9BCD-5E244FCCCF37 - f523d64b7c5aa7a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.ChoosePlayerModeCustomSagement.commonInit() -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Custom%20View/ChoosePlayerModeCustomSagement/ChoosePlayerModeCustomSagement.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "30"
+                  endingLineNumber = "30"
+                  offsetFromSymbolStart = "356">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
