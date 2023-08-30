@@ -20,6 +20,7 @@ class ViewController: UIViewController {
         customizePlayButton()
         customizeScoreBoard()
         
+        
         let tap = UITapGestureRecognizer(target: self, action: #selector(playButtonActive))
         playButton.addGestureRecognizer(tap)
     }
@@ -28,6 +29,7 @@ class ViewController: UIViewController {
         print("Play available!")
         
         playButtonEffect()
+        switchToAnotherScreen()
         
     }
     
@@ -65,6 +67,12 @@ class ViewController: UIViewController {
         
     }
     
+    func switchToAnotherScreen(){
+        let controller = storyboard?.instantiateViewController(withIdentifier: "LevelViewController") as! LevelViewController
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .crossDissolve
+        self.present(controller, animated: true, completion: nil)
+    }
 
     
     
