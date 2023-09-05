@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22138.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22113"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AKbalthom-KOUPREY-Jais.ttf">
+            <string>AKbalthomKOUPREYJais</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingView" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+            <connections>
+                <outletCollection property="onOffButtons" destination="Vef-tO-8bl" collectionClass="NSMutableArray" id="YzS-hz-7Pi"/>
+                <outletCollection property="onOffButtons" destination="B9S-vM-wcO" collectionClass="NSMutableArray" id="Xdw-kf-7ua"/>
+                <outletCollection property="onOffButtons" destination="x6K-Ge-yN0" collectionClass="NSMutableArray" id="UdG-4T-Jt4"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="260"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ការកំណត់" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MW4-fh-oKJ">
+                    <rect key="frame" x="110" y="15.999999999999996" width="100" height="43.666666666666657"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="100" id="eCu-Bg-qnJ"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="24"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="MhA-yj-3YL">
+                    <rect key="frame" x="0.0" y="75.666666666666686" width="320" height="156"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HbT-XW-Df9">
+                            <rect key="frame" x="0.0" y="0.0" width="320" height="32"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vef-tO-8bl" customClass="CustomOnOffButton" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+                                    <rect key="frame" x="272" y="0.0" width="32" height="32"/>
+                                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="32" id="KaD-ZR-Dxj"/>
+                                        <constraint firstAttribute="width" constant="32" id="V4m-wB-KFz"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="តន្ត្រី" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wly-aF-z3S">
+                                    <rect key="frame" x="21" y="-3" width="32" height="38"/>
+                                    <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="21"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Vef-tO-8bl" firstAttribute="centerY" secondItem="HbT-XW-Df9" secondAttribute="centerY" id="GHz-mk-xzF"/>
+                                <constraint firstItem="wly-aF-z3S" firstAttribute="leading" secondItem="HbT-XW-Df9" secondAttribute="leading" constant="21" id="HKQ-t4-lpK"/>
+                                <constraint firstItem="Vef-tO-8bl" firstAttribute="centerY" secondItem="wly-aF-z3S" secondAttribute="centerY" id="gSx-nJ-CJv"/>
+                                <constraint firstItem="wly-aF-z3S" firstAttribute="centerY" secondItem="HbT-XW-Df9" secondAttribute="centerY" id="qRr-HJ-tv5"/>
+                                <constraint firstAttribute="trailing" secondItem="Vef-tO-8bl" secondAttribute="trailing" constant="16" id="slN-a6-N3k"/>
+                                <constraint firstAttribute="height" constant="32" id="ydL-AZ-JFt"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xl5-sO-7GW">
+                            <rect key="frame" x="0.0" y="61.999999999999986" width="320" height="32"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B9S-vM-wcO" customClass="CustomOnOffButton" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+                                    <rect key="frame" x="272" y="0.0" width="32" height="32"/>
+                                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="32" id="7pe-LS-nlH"/>
+                                        <constraint firstAttribute="width" constant="32" id="Fk8-IN-hxh"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="សម្លេង" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3B-0U-EAw">
+                                    <rect key="frame" x="21.000000000000004" y="-3" width="52.333333333333343" height="38"/>
+                                    <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="21"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="a3B-0U-EAw" firstAttribute="centerY" secondItem="Xl5-sO-7GW" secondAttribute="centerY" id="0OS-mT-6Jd"/>
+                                <constraint firstItem="a3B-0U-EAw" firstAttribute="leading" secondItem="Xl5-sO-7GW" secondAttribute="leading" constant="21" id="2ic-1o-5Kj"/>
+                                <constraint firstItem="B9S-vM-wcO" firstAttribute="centerY" secondItem="a3B-0U-EAw" secondAttribute="centerY" id="Y15-IM-Df7"/>
+                                <constraint firstAttribute="height" constant="32" id="Yo6-yI-Pta"/>
+                                <constraint firstAttribute="trailing" secondItem="B9S-vM-wcO" secondAttribute="trailing" constant="16" id="clI-7I-DNe"/>
+                                <constraint firstItem="B9S-vM-wcO" firstAttribute="centerY" secondItem="Xl5-sO-7GW" secondAttribute="centerY" id="qLb-JN-Owx"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Sqb-Yx-sVg">
+                            <rect key="frame" x="0.0" y="124" width="320" height="32"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x6K-Ge-yN0" customClass="CustomOnOffButton" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+                                    <rect key="frame" x="272" y="0.0" width="32" height="32"/>
+                                    <color key="backgroundColor" systemColor="systemBrownColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="32" id="aXa-yZ-gHg"/>
+                                        <constraint firstAttribute="height" constant="32" id="mPl-kh-pkl"/>
+                                    </constraints>
+                                </view>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="រំញ័រ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR5-1U-vD5">
+                                    <rect key="frame" x="21" y="-3" width="33" height="38"/>
+                                    <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="21"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="x6K-Ge-yN0" secondAttribute="trailing" constant="16" id="4a6-ia-asy"/>
+                                <constraint firstAttribute="height" constant="32" id="BpI-Fp-XMx"/>
+                                <constraint firstItem="x6K-Ge-yN0" firstAttribute="centerY" secondItem="Sqb-Yx-sVg" secondAttribute="centerY" id="bM8-pD-NTZ"/>
+                                <constraint firstItem="x6K-Ge-yN0" firstAttribute="centerY" secondItem="gR5-1U-vD5" secondAttribute="centerY" id="d6k-eN-euE"/>
+                                <constraint firstItem="gR5-1U-vD5" firstAttribute="centerY" secondItem="Sqb-Yx-sVg" secondAttribute="centerY" id="e1a-9y-Zjs"/>
+                                <constraint firstItem="gR5-1U-vD5" firstAttribute="leading" secondItem="Sqb-Yx-sVg" secondAttribute="leading" constant="21" id="jPt-iU-Mls"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sKS-Gg-O3W">
+                    <rect key="frame" x="272" y="22" width="32" height="32"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="32" id="1hb-g3-zof"/>
+                        <constraint firstAttribute="width" constant="32" id="cHz-9j-Hee"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="labelColor"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain">
+                        <imageReference key="image" image="multiply" catalog="system" renderingMode="original"/>
+                    </buttonConfiguration>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="soundFileName" value="pressed"/>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="dismissButton:" destination="-1" eventType="touchUpInside" id="dJJ-gR-f59"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="MhA-yj-3YL" firstAttribute="top" secondItem="MW4-fh-oKJ" secondAttribute="bottom" constant="16" id="0Qc-t1-g6q"/>
+                <constraint firstAttribute="trailing" secondItem="sKS-Gg-O3W" secondAttribute="trailing" constant="16" id="1u5-tm-6VU"/>
+                <constraint firstItem="MhA-yj-3YL" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="5sX-tU-Y4c"/>
+                <constraint firstItem="MhA-yj-3YL" firstAttribute="centerX" secondItem="MW4-fh-oKJ" secondAttribute="centerX" id="Pyv-zP-WU5"/>
+                <constraint firstItem="MhA-yj-3YL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="Uxf-o9-JRl"/>
+                <constraint firstItem="MW4-fh-oKJ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="16" id="jew-Vq-sxM"/>
+                <constraint firstItem="MW4-fh-oKJ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="mhI-JM-k6l"/>
+                <constraint firstItem="sKS-Gg-O3W" firstAttribute="centerY" secondItem="MW4-fh-oKJ" secondAttribute="centerY" id="n0m-Yu-WtA"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <userDefinedRuntimeAttributes>
+                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                    <real key="value" value="21"/>
+                </userDefinedRuntimeAttribute>
+            </userDefinedRuntimeAttributes>
+            <point key="canvasLocation" x="83.969465648854964" y="-1.4084507042253522"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="multiply" catalog="system" width="128" height="111"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBrownColor">
+            <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
