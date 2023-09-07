@@ -9,31 +9,29 @@ import UIKit
 
 class MainViewController: UIViewController {
 
-    
     @IBOutlet weak var playButton: UIView!
     @IBOutlet var scoreBackground: [UIStackView]!
     
     let settingView = SettingView()
-    
+    let playButtonPressed = UITapGestureRecognizer()
+
     // MARK: - Body
     
     override func viewDidLoad() {
         super.viewDidLoad()
         customizePlayButton()
         customizeScoreBoard()
-        settingView.delegate = self
-        
-        self.navigationController?.isNavigationBarHidden = true
-        let tap = UITapGestureRecognizer(target: self, action: #selector(playButtonActive))
-        playButton.addGestureRecognizer(tap)
+        setupSettingView()
 
+        playButtonPressed.addTarget(self, action: #selector(playButtonActive))
+        playButton.addGestureRecognizer(playButtonPressed)
         
     }
     
     
     // MARK: BUTTON
     @IBAction func settingButtonPressed(_ sender: UIButton) {
-        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 260)
+        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 270)
     }
     
     @objc func playButtonActive() {
@@ -44,6 +42,11 @@ class MainViewController: UIViewController {
     }
     
     // MARK: FUNCTION
+    
+    func setupSettingView() {
+        settingView.delegate = self
+        settingView.setup(type: .normal)
+    }
     
     func playButtonEffect() {
         UIView.animate(withDuration: 0.1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: .curveEaseOut, animations: {
@@ -91,6 +94,8 @@ class MainViewController: UIViewController {
 }
 
 extension MainViewController: SettingViewDelegate {
+    func quitGame() {}
+    
     func dismissButton(_ view: UIView) {
         ViewAnimateHelper.shared.animateViewOut(self.view, popUpView: view)
     }

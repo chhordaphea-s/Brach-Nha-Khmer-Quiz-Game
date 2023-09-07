@@ -9,13 +9,22 @@ import UIKit
 
 protocol SettingViewDelegate: NSObjectProtocol {
     func dismissButton(_ view: UIView)
+    func quitGame()
+}
+
+enum SettingViewType {
+    case normal, playing
 }
 
 class SettingView: UIView {
 
     @IBOutlet var onOffButtons: [CustomOnOffButton]!
+    @IBOutlet weak var quitGameButton: UIView!
+    
     weak var delegate: SettingViewDelegate?
-        
+    
+    var settingButtonState: SettingViewType = .normal
+            
     // MARK: BODY
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,6 +40,12 @@ class SettingView: UIView {
         delegate?.dismissButton(self)
     }
     
+    @IBAction func quitGameButtonPressed(_ sender: UITapGestureRecognizer) {
+        ButtonEffectAnimation.shared.popEffect(button: quitGameButton)
+        print("Quit Game ")
+        delegate?.quitGame()
+    }
+    
     // MARK: FUNCTION
     
     private func commonInit() {
@@ -41,12 +56,18 @@ class SettingView: UIView {
             contentView.frame = self.bounds
             contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         }
-        setupButton()
     }
     
     
-    func setupButton() {
+    func setup(type: SettingViewType) {
+        self.settingButtonState = type
 
+        setupButton()
+        
+        quitGameButton.isHidden = settingButtonState == .normal ? true : false
+    }
+    
+    func setupButton() {
         let data = [
             OnOffButton(name: "Music", activeIcon: Constant.icon.music.getActive(), disActiveIcon: Constant.icon.music.getDisActive()),
             OnOffButton(name: "Sound", activeIcon: Constant.icon.sound.getActive(), disActiveIcon: Constant.icon.sound.getDisActive()),
@@ -65,8 +86,6 @@ class SettingView: UIView {
             index += 1
         }
     }
-    
-    
     
     
     func musicBackgroundHaneler(status: Bool) {
@@ -92,7 +111,6 @@ class SettingView: UIView {
 }
 
 extension SettingView: CustomOnOffButtonDelegate {
-
     
     func didSelected(_ button: UIView, status: Bool, index: Int) {
         switch index {

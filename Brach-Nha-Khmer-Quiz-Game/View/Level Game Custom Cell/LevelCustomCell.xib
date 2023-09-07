@@ -104,6 +104,7 @@
             <size key="customSize" width="119" height="100"/>
             <userDefinedRuntimeAttributes>
                 <userDefinedRuntimeAttribute type="string" keyPath="soundEffectName" value="Failed"/>
+                <userDefinedRuntimeAttribute type="string" keyPath="soundFileName" value="pressed"/>
             </userDefinedRuntimeAttributes>
             <connections>
                 <outlet property="levelBackgroundColor" destination="NbH-oV-Pez" id="GOQ-1c-jFF"/>

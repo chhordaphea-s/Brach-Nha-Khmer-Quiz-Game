@@ -17,6 +17,7 @@ class CustomOnOffButton: UIView {
     // MARK: PROPERTIES
     @IBOutlet weak var button: UIButton!
     
+    
     var isActive: Bool = true
     var buttonData: OnOffButton?
     var index: Int?

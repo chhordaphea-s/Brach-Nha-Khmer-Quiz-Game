@@ -269,6 +269,7 @@
                                     <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
                                         <color key="value" name="StarColor"/>
                                     </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="soundFileName" value="pressed"/>
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="backButtonPressed:" destination="bsQ-EY-7N7" eventType="touchUpInside" id="coM-Yv-cNE"/>
@@ -555,8 +556,8 @@
                                 </subviews>
                                 <gestureRecognizers/>
                             </stackView>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJ4-yf-qwq" customClass="ChoosePlayerModeCustomSagement" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
-                                <rect key="frame" x="30" y="445" width="370" height="42"/>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lJ4-yf-qwq" customClass="ChoosePlayerModeCustomSagement" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+                                <rect key="frame" x="30" y="474" width="370" height="42"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="370" id="OM8-WO-o3r"/>
@@ -574,11 +575,11 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="dV1-6t-Gnx" firstAttribute="centerX" secondItem="6eP-01-HdH" secondAttribute="centerX" id="267-8H-Ioo"/>
-                            <constraint firstItem="lJ4-yf-qwq" firstAttribute="centerY" secondItem="6eP-01-HdH" secondAttribute="centerY" id="Aby-pb-0r8"/>
                             <constraint firstItem="w6j-FM-Cbh" firstAttribute="trailing" secondItem="OMC-zF-kG7" secondAttribute="trailing" id="C9D-xa-RV0"/>
                             <constraint firstItem="eOl-ny-7iD" firstAttribute="leading" secondItem="w6j-FM-Cbh" secondAttribute="leading" constant="28" id="Jpn-Vk-xM4"/>
                             <constraint firstItem="lHB-Om-7iU" firstAttribute="top" secondItem="w6j-FM-Cbh" secondAttribute="top" id="NUS-Ll-ygD"/>
                             <constraint firstAttribute="bottom" secondItem="OMC-zF-kG7" secondAttribute="bottom" id="ZY6-a8-euA"/>
+                            <constraint firstItem="dV1-6t-Gnx" firstAttribute="top" secondItem="lJ4-yf-qwq" secondAttribute="bottom" constant="30" id="a8x-7s-0Hc"/>
                             <constraint firstItem="w6j-FM-Cbh" firstAttribute="bottom" secondItem="dV1-6t-Gnx" secondAttribute="bottom" constant="30" id="fF6-aE-PEY"/>
                             <constraint firstItem="eOl-ny-7iD" firstAttribute="top" secondItem="w6j-FM-Cbh" secondAttribute="top" id="oqJ-G2-uji"/>
                             <constraint firstItem="lJ4-yf-qwq" firstAttribute="centerX" secondItem="6eP-01-HdH" secondAttribute="centerX" id="qLG-aP-NJ5"/>

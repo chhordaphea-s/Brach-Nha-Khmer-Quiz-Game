@@ -21,26 +21,17 @@ class GameChoosingViewController: UIViewController {
     
     let settingView = SettingView()
     
+    // MARK: - BODY
+
     override func viewDidLoad() {
         super.viewDidLoad()
         customizeGameButton()
-        settingView.delegate = self
+        setupSettingView()
         
     }
-
     
-    // MARK: - Function
-    private func customizeGameButton() {
-        let colors = [0xCBF5D6, 0xCBEDF5, 0xF5CAEF]
-        var index = 0
-        for b in gameButtonView {
-            
-            b.addBorder(to: .bottom, color: UIColor(rgb: colors[index]), thickness: 3.0)
-            index += 1
-        }
-    }
+    // MARK: BUTTON
 
-    
     @IBAction func riddleButtonPressed(_ sender: UITapGestureRecognizer) {
         ButtonEffectAnimation.shared.popEffect(button: gameButtonView[0], sclaEffect: 0.9)
         print("Khmer Riddle")
@@ -60,8 +51,27 @@ class GameChoosingViewController: UIViewController {
     }
     
     @IBAction func settingButtonPressed(_ sender: UIButton) {
-        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 260)
+        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 326)
     }
+    
+    // MARK: - Function
+    private func customizeGameButton() {
+        let colors = [0xCBF5D6, 0xCBEDF5, 0xF5CAEF]
+        var index = 0
+        for b in gameButtonView {
+            
+            b.addBorder(to: .bottom, color: UIColor(rgb: colors[index]), thickness: 3.0)
+            index += 1
+        }
+    }
+
+    
+    func setupSettingView() {
+        settingView.delegate = self
+        settingView.setup(type: .playing)
+    }
+    
+
     
     func switchToAnotherScreen(){
         let controller = storyboard?.instantiateViewController(withIdentifier: "LevelViewController") as! LevelViewController
@@ -72,6 +82,8 @@ class GameChoosingViewController: UIViewController {
 }
 
 extension GameChoosingViewController: SettingViewDelegate {
+    func quitGame() {}
+    
     func dismissButton(_ view: UIView) {
         ViewAnimateHelper.shared.animateViewOut(self.view, popUpView: view)
     }
