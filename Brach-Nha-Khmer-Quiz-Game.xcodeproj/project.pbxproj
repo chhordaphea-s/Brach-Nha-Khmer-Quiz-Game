@@ -12,14 +12,30 @@
 		0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C92A2A9B356F00ACF84D /* Constant.swift */; };
 		0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */; };
 		0E8B56E42A8F517800395E05 /* GameChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8B56E32A8F517800395E05 /* GameChoosingViewController.swift */; };
+		0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */; };
+		0E8BFF732AA43584000E5AC7 /* AudioMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF722AA43584000E5AC7 /* AudioMode.swift */; };
+		0E98815B2AA46F2200D326CC /* playBackground.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E98815A2AA46F2200D326CC /* playBackground.mp3 */; };
+		0E98815D2AA46F8600D326CC /* GlobleVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98815C2AA46F8600D326CC /* GlobleVariable.swift */; };
+		0E9881612AA47A7D00D326CC /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9881602AA47A7D00D326CC /* SoundEffect.swift */; };
+		0E9881632AA5AA1100D326CC /* pressed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E9881622AA5AA1100D326CC /* pressed.mp3 */; };
+		0E9881672AA6E12C00D326CC /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E9881662AA6E12C00D326CC /* background.mp3 */; };
 		0EA44D372A97177600B5539A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D362A97177600B5539A /* UIViewExtension.swift */; };
 		0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */; };
 		0EA44D3B2A97293A00B5539A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */; };
 		0EA44D462A97353600B5539A /* PlayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D452A97353600B5539A /* PlayMode.swift */; };
+		0EDC0B2B2AA0A46A00B91B2C /* OnOffButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0B2A2AA0A46A00B91B2C /* OnOffButton.swift */; };
+		0EDC0B2D2AA0A49700B91B2C /* ViewAnimateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */; };
+		0EDC0B342AA0A5EB00B91B2C /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */; };
+		0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0B332AA0A5EB00B91B2C /* SettingView.swift */; };
+		0EDC0B3A2AA0A62300B91B2C /* CustomOnOffButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC0B382AA0A62300B91B2C /* CustomOnOffButton.xib */; };
+		0EDC0B3B2AA0A62300B91B2C /* CustomOnOffButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0B392AA0A62300B91B2C /* CustomOnOffButton.swift */; };
+		0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EDDEC242AA1BAEB00E32087 /* PlayingBackground1.mp3 */; };
+		0EDDEC2C2AA1C6F000E32087 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EDDEC292AA1C6F000E32087 /* correct.mp3 */; };
+		0EDDEC2D2AA1C6F000E32087 /* failed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EDDEC2A2AA1C6F000E32087 /* failed.mp3 */; };
 		9ACAE1A7220D8574C05B4853 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8625A7BDAF5BDB5E0016DF55 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */; };
 		FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */; };
 		FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */; };
-		FC3D98902A8E2A86001A05CE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988F2A8E2A86001A05CE /* ViewController.swift */; };
+		FC3D98902A8E2A86001A05CE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988F2A8E2A86001A05CE /* MainViewController.swift */; };
 		FC3D98932A8E2A86001A05CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98912A8E2A86001A05CE /* Main.storyboard */; };
 		FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98942A8E2A87001A05CE /* Assets.xcassets */; };
 		FC3D98982A8E2A87001A05CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98962A8E2A87001A05CE /* LaunchScreen.storyboard */; };
@@ -35,17 +51,33 @@
 		0E68C92A2A9B356F00ACF84D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEffectAnimation.swift; sourceTree = "<group>"; };
 		0E8B56E32A8F517800395E05 /* GameChoosingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameChoosingViewController.swift; sourceTree = "<group>"; };
+		0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
+		0E8BFF722AA43584000E5AC7 /* AudioMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMode.swift; sourceTree = "<group>"; };
+		0E98815A2AA46F2200D326CC /* playBackground.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBackground.mp3; sourceTree = "<group>"; };
+		0E98815C2AA46F8600D326CC /* GlobleVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobleVariable.swift; sourceTree = "<group>"; };
+		0E9881602AA47A7D00D326CC /* SoundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
+		0E9881622AA5AA1100D326CC /* pressed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pressed.mp3; sourceTree = "<group>"; };
+		0E9881662AA6E12C00D326CC /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		0EA44D362A97177600B5539A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AKbalthom-KOUPREY-Jais.ttf"; sourceTree = "<group>"; };
 		0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0EA44D452A97353600B5539A /* PlayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMode.swift; sourceTree = "<group>"; };
+		0EDC0B2A2AA0A46A00B91B2C /* OnOffButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnOffButton.swift; sourceTree = "<group>"; };
+		0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimateHelper.swift; sourceTree = "<group>"; };
+		0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
+		0EDC0B332AA0A5EB00B91B2C /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		0EDC0B382AA0A62300B91B2C /* CustomOnOffButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOnOffButton.xib; sourceTree = "<group>"; };
+		0EDC0B392AA0A62300B91B2C /* CustomOnOffButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOnOffButton.swift; sourceTree = "<group>"; };
+		0EDDEC242AA1BAEB00E32087 /* PlayingBackground1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PlayingBackground1.mp3; sourceTree = "<group>"; };
+		0EDDEC292AA1C6F000E32087 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
+		0EDDEC2A2AA1C6F000E32087 /* failed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = failed.mp3; sourceTree = "<group>"; };
 		258D287A1FC2293C06EA96CE /* Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig"; path = "Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig"; sourceTree = "<group>"; };
 		2CA491813F3E4465F40705D2 /* Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig"; path = "Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig"; sourceTree = "<group>"; };
 		8625A7BDAF5BDB5E0016DF55 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brach_Nha_Khmer_Quiz_Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3D98882A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brach-Nha-Khmer-Quiz-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC3D988F2A8E2A86001A05CE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FC3D988F2A8E2A86001A05CE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		FC3D98922A8E2A86001A05CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FC3D98942A8E2A87001A05CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3D98972A8E2A87001A05CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -71,6 +103,7 @@
 		0E68C9222A9B307400ACF84D /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
+				0EDC0B362AA0A5F000B91B2C /* SettingView */,
 				0E68C9232A9B307F00ACF84D /* ChoosePlayerModeCustomSagement */,
 			);
 			path = "Custom View";
@@ -89,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				0EA44D452A97353600B5539A /* PlayMode.swift */,
+				0E8BFF722AA43584000E5AC7 /* AudioMode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -97,6 +131,8 @@
 			isa = PBXGroup;
 			children = (
 				0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */,
+				0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */,
+				0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -105,9 +141,82 @@
 			isa = PBXGroup;
 			children = (
 				0EA44D362A97177600B5539A /* UIViewExtension.swift */,
+				0E9881602AA47A7D00D326CC /* SoundEffect.swift */,
 				0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		0EDC0B242AA0A3E700B91B2C /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FC3D988F2A8E2A86001A05CE /* MainViewController.swift */,
+				FCE105FF2A97679900AAEDD0 /* LevelViewController.swift */,
+				0E8B56E32A8F517800395E05 /* GameChoosingViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		0EDC0B252AA0A3F800B91B2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FC3D98912A8E2A86001A05CE /* Main.storyboard */,
+				FC3D98962A8E2A87001A05CE /* LaunchScreen.storyboard */,
+				0EDC0B372AA0A61A00B91B2C /* CustomSwitchButton */,
+				FCE106012A99E51000AAEDD0 /* Level Game Custom Cell */,
+				0E68C9222A9B307400ACF84D /* Custom View */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0EDC0B362AA0A5F000B91B2C /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				0EDC0B332AA0A5EB00B91B2C /* SettingView.swift */,
+				0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
+		0EDC0B372AA0A61A00B91B2C /* CustomSwitchButton */ = {
+			isa = PBXGroup;
+			children = (
+				0EDC0B392AA0A62300B91B2C /* CustomOnOffButton.swift */,
+				0EDC0B382AA0A62300B91B2C /* CustomOnOffButton.xib */,
+			);
+			path = CustomSwitchButton;
+			sourceTree = "<group>";
+		};
+		0EDDEC222AA194CF00E32087 /* Globle */ = {
+			isa = PBXGroup;
+			children = (
+				0E68C92A2A9B356F00ACF84D /* Constant.swift */,
+				0E98815C2AA46F8600D326CC /* GlobleVariable.swift */,
+			);
+			path = Globle;
+			sourceTree = "<group>";
+		};
+		0EDDEC232AA194DA00E32087 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0EDDEC2E2AA1C6F500E32087 /* Sound Effect */,
+				0EDDEC242AA1BAEB00E32087 /* PlayingBackground1.mp3 */,
+				0E9881662AA6E12C00D326CC /* background.mp3 */,
+				0E98815A2AA46F2200D326CC /* playBackground.mp3 */,
+				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
+				0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0EDDEC2E2AA1C6F500E32087 /* Sound Effect */ = {
+			isa = PBXGroup;
+			children = (
+				0EDDEC292AA1C6F000E32087 /* correct.mp3 */,
+				0E9881622AA5AA1100D326CC /* pressed.mp3 */,
+				0EDDEC2A2AA1C6F000E32087 /* failed.mp3 */,
+			);
+			path = "Sound Effect";
 			sourceTree = "<group>";
 		};
 		44491726AFD7A6E36AFEE5DF /* Pods */ = {
@@ -148,23 +257,17 @@
 		FC3D988A2A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game */ = {
 			isa = PBXGroup;
 			children = (
+				0EDDEC232AA194DA00E32087 /* Utilities */,
+				0EDDEC222AA194CF00E32087 /* Globle */,
+				0EDC0B252AA0A3F800B91B2C /* View */,
+				0EDC0B242AA0A3E700B91B2C /* View Controller */,
 				FCCDD2312A9CB68200672A8C /* View Model */,
-				FCE106012A99E51000AAEDD0 /* Level Game Custom Cell */,
-				0E68C9222A9B307400ACF84D /* Custom View */,
 				0E6F8A9E2A989E6700B480F5 /* Helper */,
 				0E6F8A9D2A989E5E00B480F5 /* Model */,
 				0EA44D352A9716FF00B5539A /* Extension */,
-				FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */,
 				FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */,
-				FC3D988F2A8E2A86001A05CE /* ViewController.swift */,
-				FCE105FF2A97679900AAEDD0 /* LevelViewController.swift */,
-				0E8B56E32A8F517800395E05 /* GameChoosingViewController.swift */,
-				FC3D98912A8E2A86001A05CE /* Main.storyboard */,
-				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
-				FC3D98962A8E2A87001A05CE /* LaunchScreen.storyboard */,
+				FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */,
 				FC3D98992A8E2A87001A05CE /* Info.plist */,
-				0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */,
-				0E68C92A2A9B356F00ACF84D /* Constant.swift */,
 			);
 			path = "Brach-Nha-Khmer-Quiz-Game";
 			sourceTree = "<group>";
@@ -172,6 +275,7 @@
 		FCCDD2312A9CB68200672A8C /* View Model */ = {
 			isa = PBXGroup;
 			children = (
+				0EDC0B2A2AA0A46A00B91B2C /* OnOffButton.swift */,
 				FCCDD2322A9CB6B100672A8C /* LevelViewModel.swift */,
 			);
 			path = "View Model";
@@ -247,10 +351,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				FC3D98982A8E2A87001A05CE /* LaunchScreen.storyboard in Resources */,
+				0EDC0B342AA0A5EB00B91B2C /* SettingView.xib in Resources */,
 				0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */,
+				0E98815B2AA46F2200D326CC /* playBackground.mp3 in Resources */,
+				0EDDEC2C2AA1C6F000E32087 /* correct.mp3 in Resources */,
 				0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */,
 				FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */,
+				0EDC0B3A2AA0A62300B91B2C /* CustomOnOffButton.xib in Resources */,
+				0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */,
+				0E9881632AA5AA1100D326CC /* pressed.mp3 in Resources */,
+				0EDDEC2D2AA1C6F000E32087 /* failed.mp3 in Resources */,
 				FC3D98932A8E2A86001A05CE /* Main.storyboard in Resources */,
+				0E9881672AA6E12C00D326CC /* background.mp3 in Resources */,
 				FCE106052A99E5B300AAEDD0 /* LevelCustomCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -306,16 +418,24 @@
 			files = (
 				0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */,
 				0EA44D372A97177600B5539A /* UIViewExtension.swift in Sources */,
-				FC3D98902A8E2A86001A05CE /* ViewController.swift in Sources */,
+				0E9881612AA47A7D00D326CC /* SoundEffect.swift in Sources */,
+				0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */,
+				FC3D98902A8E2A86001A05CE /* MainViewController.swift in Sources */,
 				FCE106002A97679900AAEDD0 /* LevelViewController.swift in Sources */,
 				FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */,
 				FCCDD2332A9CB6B100672A8C /* LevelViewModel.swift in Sources */,
 				FCE106042A99E5B300AAEDD0 /* LevelCustomCell.swift in Sources */,
+				0E98815D2AA46F8600D326CC /* GlobleVariable.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
 				0E8B56E42A8F517800395E05 /* GameChoosingViewController.swift in Sources */,
+				0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */,
 				0EA44D462A97353600B5539A /* PlayMode.swift in Sources */,
+				0EDC0B3B2AA0A62300B91B2C /* CustomOnOffButton.swift in Sources */,
 				0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */,
 				0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */,
+				0EDC0B2D2AA0A49700B91B2C /* ViewAnimateHelper.swift in Sources */,
+				0EDC0B2B2AA0A46A00B91B2C /* OnOffButton.swift in Sources */,
+				0E8BFF732AA43584000E5AC7 /* AudioMode.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
 				0EA44D3B2A97293A00B5539A /* UIColorExtension.swift in Sources */,
 			);

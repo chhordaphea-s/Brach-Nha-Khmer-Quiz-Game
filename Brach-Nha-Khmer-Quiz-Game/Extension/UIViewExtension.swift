@@ -5,7 +5,6 @@
 //  Created by Aing Hongsin on 8/24/23.
 //
 
-import Foundation
 import UIKit
 
 extension UIView {
@@ -39,8 +38,9 @@ extension UIView {
     }
 }
 
+
 extension UIView {
-   func roundCorners(corners: UIRectCorner, radius: CGFloat) {
+    func roundCorners(corners: UIRectCorner, radius: CGFloat) {
         let path = UIBezierPath(roundedRect: bounds, byRoundingCorners: corners, cornerRadii: CGSize(width: radius, height: radius))
         let mask = CAShapeLayer()
         mask.path = path.cgPath
@@ -77,3 +77,5 @@ extension UIView {
     }
 
 }
+
+

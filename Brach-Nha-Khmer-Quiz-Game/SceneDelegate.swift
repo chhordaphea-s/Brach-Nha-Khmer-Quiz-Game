@@ -18,6 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
         guard let _ = (scene as? UIWindowScene) else { return }
         
+        playMusic()
         
     }
 
@@ -49,6 +50,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+
+    
+    func playMusic() {
+        let musicStatus = userdefault.bool(forKey: Constant.userdefault.musicBackground)
+        if musicStatus {
+            backgroundMusic.player?.play()
+        } else {
+            backgroundMusic.player?.pause()
+        }
+    }
+    
 
 }
 
