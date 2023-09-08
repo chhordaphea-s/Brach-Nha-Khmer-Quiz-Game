@@ -18,6 +18,7 @@ struct HintView {
     
 }
 
-enum HintType {
-    case answer, halfhalf
+enum HintType: String  {
+    case answer = "ប្រាបចម្លើយ";
+    case halfhalf = "៥០:៥០";
 }

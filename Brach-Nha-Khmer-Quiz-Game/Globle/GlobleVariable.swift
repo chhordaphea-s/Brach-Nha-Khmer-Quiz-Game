@@ -12,8 +12,11 @@ let userdefault = UserDefaults.standard
 let backgroundMusic = AudioHelper(audioName: "background", player: nil, loop: true)
 var buttonSoudEffect = AudioHelper()
 
-var soundEffect: Bool {
-    return userdefault.bool(forKey: Constant.userdefault.soundEffect)
-}
+var soundEffect: Bool { return userdefault.bool(forKey: Constant.userdefault.soundEffect) }
 var vibrate: Bool = true
+
+var halfHint: Int { return userdefault.integer(forKey: Constant.userdefault.halfHint)  }
+var answerHint: Int {  return userdefault.integer(forKey: Constant.userdefault.answerHint) }
+var totalScore: Int { return userdefault.integer(forKey: Constant.userdefault.totalScore) }
+var totalStar: Int { return userdefault.integer(forKey: Constant.userdefault.totalStar) }
 

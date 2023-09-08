@@ -11,6 +11,8 @@ class LevelViewController: UIViewController {
 
     @IBOutlet weak var levelCollectionView: UICollectionView!
     
+    let answerHintView = HintPopupView()
+    
     let sampleData = [
         LevelViewModel(star: 3, levelNum: 1),
         LevelViewModel(star: 1, levelNum: 2),
@@ -58,6 +60,22 @@ class LevelViewController: UIViewController {
         
     }
     
+    
+    func popUpAnswerHintView() {
+
+        let width: Float = 324
+        let height: Float = 276
+        
+        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: answerHintView, width: width, height: height)
+        
+        NSLayoutConstraint.activate([
+            answerHintView.widthAnchor.constraint(equalToConstant: CGFloat(width)),
+            answerHintView.heightAnchor.constraint(equalToConstant: CGFloat(height)),
+            answerHintView.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            answerHintView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
+        ])
+    }
+
 }
 
 extension LevelViewController: UICollectionViewDataSource, UICollectionViewDelegate {
@@ -78,7 +96,22 @@ extension LevelViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print(sampleData[indexPath.row].levelNum)
+//        print(sampleData[indexPath.row].levelNum)
+        
+        let answerHint = HintView(hinType: .answer, number: 3)
+        let halfHint = HintView(hinType: .halfhalf, number: 3)
+
+        switch indexPath.row {
+        case 1:
+            answerHintView.setup(data: answerHint)
+        case 2:
+            answerHintView.setup(data: halfHint)
+        default:
+            answerHintView.setup(data: halfHint)
+        }
+        popUpAnswerHintView()
+
     }
     
 }
+
