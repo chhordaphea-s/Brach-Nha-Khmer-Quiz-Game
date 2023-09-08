@@ -234,6 +234,10 @@
                         <outletCollection property="scoreBackground" destination="HBs-ci-sA1" collectionClass="NSMutableArray" id="y6e-93-dav"/>
                         <outletCollection property="scoreBackground" destination="4BP-1i-WGL" collectionClass="NSMutableArray" id="hcx-g2-sCB"/>
                         <outletCollection property="scoreBackground" destination="ohb-dC-7mn" collectionClass="NSMutableArray" id="upQ-bS-U1R"/>
+                        <outletCollection property="score" destination="3hi-H0-h9c" collectionClass="NSMutableArray" id="E4a-P0-gjf"/>
+                        <outletCollection property="score" destination="69l-sb-l6a" collectionClass="NSMutableArray" id="Qsw-i5-XeH"/>
+                        <outletCollection property="score" destination="x3v-mq-wgh" collectionClass="NSMutableArray" id="kEO-he-Cf1"/>
+                        <outletCollection property="score" destination="F92-Aa-wK2" collectionClass="NSMutableArray" id="GW9-eT-fm7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

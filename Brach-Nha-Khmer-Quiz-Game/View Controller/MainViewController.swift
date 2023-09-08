@@ -11,6 +11,8 @@ class MainViewController: UIViewController {
 
     @IBOutlet weak var playButton: UIView!
     @IBOutlet var scoreBackground: [UIStackView]!
+    @IBOutlet var score: [UILabel]!
+
     
     let settingView = SettingView()
     let playButtonPressed = UITapGestureRecognizer()
@@ -19,12 +21,15 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        getScore()
+
         customizePlayButton()
         customizeScoreBoard()
         setupSettingView()
 
         playButtonPressed.addTarget(self, action: #selector(playButtonActive))
         playButton.addGestureRecognizer(playButtonPressed)
+        
         
     }
     
@@ -39,9 +44,20 @@ class MainViewController: UIViewController {
         playButtonEffect()
         switchToAnotherScreen()
         
+        
     }
     
     // MARK: FUNCTION
+    
+    func getScore() {
+        let scoreUD = [totalScore, totalStar, answerHint, halfHint]
+        
+        var index: Int = 0
+        for l in score {
+            l.text = "\(scoreUD[index])"
+            index += 1
+        }
+    }
     
     func setupSettingView() {
         settingView.delegate = self

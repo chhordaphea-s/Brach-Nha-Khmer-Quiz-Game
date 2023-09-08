@@ -66,7 +66,11 @@ class Constant {
     struct userdefault {
         static let musicBackground = "musicBackgroundKey",
                     soundEffect = "soundEffectKey",
-                    vibrate = "vibrateKey"
+                    vibrate = "vibrateKey",
+                    halfHint = "HalfHint",
+                    answerHint = "AnswerHint",
+                    totalScore = "TotalScore",
+                    totalStar = "TotalStar"
         
     }
     
