@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22138.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22113"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AKbalthom-KOUPREY-Jais.ttf">
+            <string>AKbalthomKOUPREYJais</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="hintPopupView" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="314" height="276"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaA-TC-nX3">
+                    <rect key="frame" x="0.0" y="68" width="314" height="208"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="អ្នកទទួលបានជំនួយ ប្រាប់ចម្លើយ ចំនួន ៣" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QBB-uN-PNz">
+                            <rect key="frame" x="24" y="91" width="266.33333333333331" height="32.666666666666657"/>
+                            <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="18"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXe-K9-V3S">
+                            <rect key="frame" x="57" y="146" width="200" height="42"/>
+                            <color key="backgroundColor" name="Primary"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="csS-nJ-Sj2"/>
+                                <constraint firstAttribute="height" constant="42" id="j1s-Vs-sMJ"/>
+                            </constraints>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="ទទួលបាន">
+                                <fontDescription key="titleFontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="18"/>
+                                <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </buttonConfiguration>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="soundFileName" value="correct"/>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="getPressedButton:" destination="-1" eventType="touchUpInside" id="UXL-N3-3ER"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="fXe-K9-V3S" firstAttribute="centerX" secondItem="xaA-TC-nX3" secondAttribute="centerX" id="Hnq-Ta-LMU"/>
+                        <constraint firstAttribute="bottom" secondItem="fXe-K9-V3S" secondAttribute="bottom" constant="20" id="Iyo-wP-BAG"/>
+                        <constraint firstItem="QBB-uN-PNz" firstAttribute="top" secondItem="xaA-TC-nX3" secondAttribute="top" constant="91" id="nhJ-D1-Y2B"/>
+                        <constraint firstItem="QBB-uN-PNz" firstAttribute="centerX" secondItem="xaA-TC-nX3" secondAttribute="centerX" id="ul3-Mg-4Of"/>
+                        <constraint firstAttribute="height" constant="208" id="xNV-44-jmE"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="answerHnit" translatesAutoresizingMaskIntoConstraints="NO" id="dQo-rH-EZQ">
+                    <rect key="frame" x="57" y="0.0" width="200" height="137"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="Skn-dB-Ope"/>
+                        <constraint firstAttribute="height" constant="137" id="wPI-DE-Mzh"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="xaA-TC-nX3" secondAttribute="bottom" id="IBU-ve-zQM"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="xaA-TC-nX3" secondAttribute="trailing" id="KOH-sk-hNZ"/>
+                <constraint firstItem="dQo-rH-EZQ" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="bnc-1c-D3L"/>
+                <constraint firstItem="dQo-rH-EZQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="e3A-XX-MAN"/>
+                <constraint firstItem="xaA-TC-nX3" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="mhT-Yw-INn"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="118" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="answerHnit" width="141" height="134"/>
+        <namedColor name="Primary">
+            <color red="0.51764705882352946" green="0.71372549019607845" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
