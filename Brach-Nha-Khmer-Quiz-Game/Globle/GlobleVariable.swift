@@ -9,6 +9,8 @@ import Foundation
 
 let userdefault = UserDefaults.standard
 
+var getData: GameData?
+
 let backgroundMusic = AudioHelper(audioName: "background", player: nil, loop: true)
 var buttonSoudEffect = AudioHelper()
 

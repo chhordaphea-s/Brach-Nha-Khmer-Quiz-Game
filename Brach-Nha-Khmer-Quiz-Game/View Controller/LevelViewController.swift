@@ -96,20 +96,8 @@ extension LevelViewController: UICollectionViewDataSource, UICollectionViewDeleg
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print(sampleData[indexPath.row].levelNum)
-        
-        let answerHint = HintView(hinType: .answer, number: 3)
-        let halfHint = HintView(hinType: .halfhalf, number: 3)
-
-        switch indexPath.row {
-        case 1:
-            answerHintView.setup(data: answerHint)
-        case 2:
-            answerHintView.setup(data: halfHint)
-        default:
-            answerHintView.setup(data: halfHint)
-        }
-        popUpAnswerHintView()
+        print(sampleData[indexPath.row].levelNum)
+//
 
     }
     

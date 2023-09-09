@@ -14,6 +14,9 @@
 		0E8B56E42A8F517800395E05 /* GameChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8B56E32A8F517800395E05 /* GameChoosingViewController.swift */; };
 		0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */; };
 		0E8BFF732AA43584000E5AC7 /* AudioMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF722AA43584000E5AC7 /* AudioMode.swift */; };
+		0E93ADF02AAC2F3C0073E7ED /* GameData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E93ADEF2AAC2F3C0073E7ED /* GameData.json */; };
+		0E93ADF22AAC2F570073E7ED /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E93ADF12AAC2F570073E7ED /* GameData.swift */; };
+		0E93ADF62AAC62AF0073E7ED /* FetchGameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E93ADF52AAC62AF0073E7ED /* FetchGameData.swift */; };
 		0E98815B2AA46F2200D326CC /* playBackground.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E98815A2AA46F2200D326CC /* playBackground.mp3 */; };
 		0E98815D2AA46F8600D326CC /* GlobleVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98815C2AA46F8600D326CC /* GlobleVariable.swift */; };
 		0E9881612AA47A7D00D326CC /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9881602AA47A7D00D326CC /* SoundEffect.swift */; };
@@ -57,6 +60,9 @@
 		0E8B56E32A8F517800395E05 /* GameChoosingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameChoosingViewController.swift; sourceTree = "<group>"; };
 		0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
 		0E8BFF722AA43584000E5AC7 /* AudioMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMode.swift; sourceTree = "<group>"; };
+		0E93ADEF2AAC2F3C0073E7ED /* GameData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameData.json; sourceTree = "<group>"; };
+		0E93ADF12AAC2F570073E7ED /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		0E93ADF52AAC62AF0073E7ED /* FetchGameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FetchGameData.swift; sourceTree = "<group>"; };
 		0E98815A2AA46F2200D326CC /* playBackground.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBackground.mp3; sourceTree = "<group>"; };
 		0E98815C2AA46F8600D326CC /* GlobleVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobleVariable.swift; sourceTree = "<group>"; };
 		0E9881602AA47A7D00D326CC /* SoundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
@@ -131,6 +137,7 @@
 			isa = PBXGroup;
 			children = (
 				0EA44D452A97353600B5539A /* PlayMode.swift */,
+				0E93ADF12AAC2F570073E7ED /* GameData.swift */,
 				0E8BFF722AA43584000E5AC7 /* AudioMode.swift */,
 			);
 			path = Model;
@@ -142,6 +149,7 @@
 				0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */,
 				0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */,
 				0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */,
+				0E93ADF52AAC62AF0073E7ED /* FetchGameData.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -221,6 +229,7 @@
 				0E9881662AA6E12C00D326CC /* background.mp3 */,
 				0E98815A2AA46F2200D326CC /* playBackground.mp3 */,
 				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
+				0E93ADEF2AAC2F3C0073E7ED /* GameData.json */,
 				0E98816F2AA9C56500D326CC /* animation_lm8xam1w.json */,
 				0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */,
 			);
@@ -376,6 +385,7 @@
 				0E98815B2AA46F2200D326CC /* playBackground.mp3 in Resources */,
 				0EDDEC2C2AA1C6F000E32087 /* correct.mp3 in Resources */,
 				0E98816C2AA9AE5900D326CC /* HintPopupView.xib in Resources */,
+				0E93ADF02AAC2F3C0073E7ED /* GameData.json in Resources */,
 				0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */,
 				FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */,
 				0EDC0B3A2AA0A62300B91B2C /* CustomOnOffButton.xib in Resources */,
@@ -444,6 +454,8 @@
 				0EA44D372A97177600B5539A /* UIViewExtension.swift in Sources */,
 				0E9881612AA47A7D00D326CC /* SoundEffect.swift in Sources */,
 				0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */,
+				0E93ADF62AAC62AF0073E7ED /* FetchGameData.swift in Sources */,
+				0E93ADF22AAC2F570073E7ED /* GameData.swift in Sources */,
 				FC3D98902A8E2A86001A05CE /* MainViewController.swift in Sources */,
 				FCE106002A97679900AAEDD0 /* LevelViewController.swift in Sources */,
 				FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */,
