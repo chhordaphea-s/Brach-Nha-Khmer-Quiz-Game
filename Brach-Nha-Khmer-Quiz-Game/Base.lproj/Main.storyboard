@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="8d2-q1-hWG">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -158,13 +158,13 @@
                                 <rect key="frame" x="65" y="787.33333333333337" width="300" height="54"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចូលលេង" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgD-JP-w3H">
-                                        <rect key="frame" x="101" y="10.333333333333258" width="98.333333333333314" height="33.666666666666664"/>
+                                        <rect key="frame" x="101" y="10" width="98.333333333333314" height="33.666666666666664"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playIcon" translatesAutoresizingMaskIntoConstraints="NO" id="eMH-7a-M2C">
-                                        <rect key="frame" x="240" y="-5.3333333333333712" width="65" height="65"/>
+                                        <rect key="frame" x="240" y="-5.6666666666667425" width="65" height="65"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="65" id="2LI-z4-v1Q"/>
                                             <constraint firstAttribute="width" constant="65" id="ciH-oG-8zU"/>
@@ -188,7 +188,7 @@
                             <constraint firstItem="XFp-eM-FNb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="30" id="1Pc-Ke-bKZ"/>
                             <constraint firstItem="HBs-ci-sA1" firstAttribute="top" secondItem="bPH-Zz-OrZ" secondAttribute="bottom" constant="15" id="1nh-Sw-D8C"/>
                             <constraint firstItem="4BP-1i-WGL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="5Da-Fz-ffr"/>
-                            <constraint firstItem="D8n-3R-qBp" firstAttribute="top" secondItem="aw0-IF-Ltr" secondAttribute="bottom" constant="340" id="7VR-Ud-7oc"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="nTi-h8-bac" secondAttribute="bottom" constant="56.670000000000002" id="9Ab-pD-k7P"/>
                             <constraint firstItem="lwm-U8-PNN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="AWg-78-cZd"/>
                             <constraint firstAttribute="bottom" secondItem="Bgp-ZQ-HzN" secondAttribute="bottom" id="Eaw-WC-ywE"/>
                             <constraint firstItem="ohb-dC-7mn" firstAttribute="top" secondItem="4BP-1i-WGL" secondAttribute="bottom" constant="15" id="FB7-e8-7Kv"/>
@@ -307,7 +307,206 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpg-7R-dYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1637" y="-3"/>
+            <point key="canvasLocation" x="1616" y="-9"/>
+        </scene>
+        <!--Answer View Controller-->
+        <scene sceneID="O81-fY-Msr">
+            <objects>
+                <viewController storyboardIdentifier="AnswerViewController" id="8d2-q1-hWG" customClass="AnswerViewController" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u5K-iC-kSR">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="countryside4 1" translatesAutoresizingMaskIntoConstraints="NO" id="Pq1-bS-p1P">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OS1-mD-XoS" customClass="HintTellAnswerButton" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="536" width="125" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="2WQ-OT-cVw"/>
+                                    <constraint firstAttribute="height" constant="33" id="6h2-fe-HgJ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFC-H6-Yih">
+                                <rect key="frame" x="16" y="75" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="2lN-SJ-5NT"/>
+                                    <constraint firstAttribute="height" constant="32" id="faw-74-yOe"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Pause"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ពិន្ទុ​ ១០០" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnW-3e-8gS">
+                                <rect key="frame" x="175.66666666666666" y="75" width="78.666666666666657" height="40"/>
+                                <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="Jg6-dm-LA0">
+                                <rect key="frame" x="342" y="84" width="72" height="22"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="4IF-T0-fJc">
+                                        <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="lsw-DL-8Gf"/>
+                                            <constraint firstAttribute="height" constant="22" id="mCo-oe-knw"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="gcq-L7-lbd">
+                                        <rect key="frame" x="25" y="0.0" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="JhW-sO-uXg"/>
+                                            <constraint firstAttribute="width" constant="22" id="ei7-3W-1c6"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="1sv-dc-DfF">
+                                        <rect key="frame" x="50" y="0.0" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="22" id="h4p-Uq-aAY"/>
+                                            <constraint firstAttribute="width" constant="22" id="joU-JV-ZJn"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="សំណួរទី១" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ltl-Js-hyt">
+                                <rect key="frame" x="16" y="147" width="67.666666666666671" height="27.666666666666657"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="x1y-KW-mrm">
+                                <rect key="frame" x="16" y="189.66666666666666" width="398" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="q2V-ih-6ET"/>
+                                </constraints>
+                                <color key="progressTintColor" name="Primary"/>
+                                <color key="trackTintColor" name="noProgressTint"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </progressView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" text="កំប៉ុកក្រពុំ​​ អង្គុយលើភ្នំ​​ រំសាយសក់លែង" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeD-oy-jSS">
+                                <rect key="frame" x="16" y="215.66666666666666" width="287.66666666666669" height="38"/>
+                                <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="21"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nAA-hw-8uU">
+                                <rect key="frame" x="35" y="612" width="360" height="246"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L9w-Ol-ffb" customClass="AnswerButton" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="360" height="54"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="0jC-Yf-dgX"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tz0-gb-HbK" customClass="AnswerButton" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="64" width="360" height="54"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="THt-Xc-G4S"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="B2L-2q-eRr" customClass="AnswerButton" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="128" width="360" height="54"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="6q7-Yf-5rl"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A0g-Cv-Pk5" customClass="AnswerButton" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="192" width="360" height="54"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="54" id="JQx-DQ-guK"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ynG-PX-2us" customClass="HintHalfHalfButton" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+                                <rect key="frame" x="305" y="536" width="125" height="33"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="125" id="jXq-qU-PsX"/>
+                                    <constraint firstAttribute="height" constant="33" id="oS4-Rr-HKk"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="98j-Kr-fRb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="pnW-3e-8gS" firstAttribute="centerX" secondItem="u5K-iC-kSR" secondAttribute="centerX" id="0pr-E9-UgZ"/>
+                            <constraint firstItem="98j-Kr-fRb" firstAttribute="trailing" secondItem="x1y-KW-mrm" secondAttribute="trailing" constant="16" id="2pt-DL-667"/>
+                            <constraint firstItem="Pq1-bS-p1P" firstAttribute="centerX" secondItem="u5K-iC-kSR" secondAttribute="centerX" id="36Y-lU-ZBu"/>
+                            <constraint firstItem="nAA-hw-8uU" firstAttribute="top" secondItem="ynG-PX-2us" secondAttribute="bottom" constant="43" id="6DD-wV-Xoz"/>
+                            <constraint firstItem="pnW-3e-8gS" firstAttribute="top" secondItem="98j-Kr-fRb" secondAttribute="top" constant="16" id="8mt-pO-5bb"/>
+                            <constraint firstItem="98j-Kr-fRb" firstAttribute="trailing" secondItem="Jg6-dm-LA0" secondAttribute="trailing" constant="16" id="CZB-36-WBJ"/>
+                            <constraint firstItem="nAA-hw-8uU" firstAttribute="centerX" secondItem="u5K-iC-kSR" secondAttribute="centerX" id="Csv-Qm-3ya"/>
+                            <constraint firstItem="xFC-H6-Yih" firstAttribute="leading" secondItem="98j-Kr-fRb" secondAttribute="leading" constant="16" id="DLk-W5-vHL"/>
+                            <constraint firstItem="nAA-hw-8uU" firstAttribute="top" secondItem="OS1-mD-XoS" secondAttribute="bottom" constant="43" id="RHf-xX-mDe"/>
+                            <constraint firstItem="x1y-KW-mrm" firstAttribute="top" secondItem="Ltl-Js-hyt" secondAttribute="bottom" constant="15" id="SKx-V0-opc"/>
+                            <constraint firstItem="xFC-H6-Yih" firstAttribute="top" secondItem="98j-Kr-fRb" secondAttribute="top" constant="16" id="SZt-dF-YN6"/>
+                            <constraint firstItem="ynG-PX-2us" firstAttribute="trailing" secondItem="98j-Kr-fRb" secondAttribute="trailing" id="UHq-KH-D2o"/>
+                            <constraint firstItem="x1y-KW-mrm" firstAttribute="leading" secondItem="98j-Kr-fRb" secondAttribute="leading" constant="16" id="Vxk-OM-aXV"/>
+                            <constraint firstItem="Pq1-bS-p1P" firstAttribute="centerY" secondItem="u5K-iC-kSR" secondAttribute="centerY" id="WjE-Rj-qNa"/>
+                            <constraint firstItem="Jg6-dm-LA0" firstAttribute="centerY" secondItem="pnW-3e-8gS" secondAttribute="centerY" id="YtC-5e-ODs"/>
+                            <constraint firstItem="Ltl-Js-hyt" firstAttribute="leading" secondItem="98j-Kr-fRb" secondAttribute="leading" constant="16" id="ckZ-yW-k9p"/>
+                            <constraint firstItem="Ltl-Js-hyt" firstAttribute="top" secondItem="xFC-H6-Yih" secondAttribute="bottom" constant="40" id="lHZ-iz-ZiK"/>
+                            <constraint firstItem="HeD-oy-jSS" firstAttribute="top" secondItem="x1y-KW-mrm" secondAttribute="bottom" constant="18" id="q7I-Lw-pcB"/>
+                            <constraint firstItem="98j-Kr-fRb" firstAttribute="bottom" secondItem="nAA-hw-8uU" secondAttribute="bottom" constant="40" id="qVZ-G6-Dvk"/>
+                            <constraint firstItem="OS1-mD-XoS" firstAttribute="leading" secondItem="98j-Kr-fRb" secondAttribute="leading" id="rCj-44-BIx"/>
+                            <constraint firstItem="nAA-hw-8uU" firstAttribute="leading" secondItem="98j-Kr-fRb" secondAttribute="leading" constant="35" id="rho-aK-EBH"/>
+                            <constraint firstItem="HeD-oy-jSS" firstAttribute="leading" secondItem="98j-Kr-fRb" secondAttribute="leading" constant="16" id="ydJ-Hn-pHe"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="PauseButton" destination="xFC-H6-Yih" id="cr3-TF-Zk4"/>
+                        <outlet property="Question" destination="HeD-oy-jSS" id="VRU-9y-Zl0"/>
+                        <outlet property="QuestionNum" destination="Ltl-Js-hyt" id="0IM-we-xPk"/>
+                        <outlet property="ScoreCounting" destination="pnW-3e-8gS" id="xVs-kO-FPb"/>
+                        <outlet property="hintAnswerButton" destination="OS1-mD-XoS" id="j8S-YZ-n3w"/>
+                        <outlet property="hintHaftHaftButton" destination="ynG-PX-2us" id="I8z-wd-xBT"/>
+                        <outlet property="timeCountDown" destination="x1y-KW-mrm" id="8aG-oG-GLf"/>
+                        <outletCollection property="lifePlaying" destination="4IF-T0-fJc" collectionClass="NSMutableArray" id="hxU-pP-gYI"/>
+                        <outletCollection property="lifePlaying" destination="gcq-L7-lbd" collectionClass="NSMutableArray" id="Xyd-Aa-OyP"/>
+                        <outletCollection property="lifePlaying" destination="1sv-dc-DfF" collectionClass="NSMutableArray" id="Qv9-9s-DvH"/>
+                        <outletCollection property="answerView" destination="L9w-Ol-ffb" collectionClass="NSMutableArray" id="Qe2-dx-fUe"/>
+                        <outletCollection property="answerView" destination="tz0-gb-HbK" collectionClass="NSMutableArray" id="xPp-os-Pwc"/>
+                        <outletCollection property="answerView" destination="B2L-2q-eRr" collectionClass="NSMutableArray" id="WKN-Vb-23V"/>
+                        <outletCollection property="answerView" destination="A0g-Cv-Pk5" collectionClass="NSMutableArray" id="XSa-Vq-sXd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ba1-eS-uxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2299.5348837209303" y="-9.0128755364806867"/>
         </scene>
         <!--Game Choosing View Controller-->
         <scene sceneID="q2c-o7-XUo">
@@ -585,10 +784,12 @@
         <image name="Game Background 1" width="370" height="100"/>
         <image name="Game Background 2" width="370" height="100"/>
         <image name="Game Background 3" width="370" height="100"/>
-        <image name="GearSix" width="40" height="40"/>
+        <image name="GearSix" width="37" height="37"/>
         <image name="Group 5" width="76" height="76"/>
         <image name="Group 95" width="224" height="203"/>
+        <image name="Heart" width="21" height="20"/>
         <image name="Monkey" width="105" height="77"/>
+        <image name="Pause" width="32" height="32"/>
         <image name="boygirl" width="156" height="145"/>
         <image name="countryside4 1" width="430" height="932"/>
         <image name="hint" width="35" height="34"/>
@@ -598,8 +799,14 @@
         <image name="score" width="32" height="33"/>
         <image name="stars" width="43" height="28"/>
         <image name="temple" width="110" height="86"/>
+        <namedColor name="Primary">
+            <color red="0.51764705882352946" green="0.71372549019607845" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="StarColor">
             <color red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="noProgressTint">
+            <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="scoreboard">
             <color red="0.16470588235294117" green="0.2627450980392157" blue="0.039215686274509803" alpha="0.56999999284744263" colorSpace="custom" customColorSpace="sRGB"/>

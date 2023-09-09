@@ -45,7 +45,12 @@ class LevelViewController: UIViewController {
         levelCollectionView.register(UINib.init(nibName: "LevelCustomCell", bundle: nil), forCellWithReuseIdentifier: "LevelCustomCell")
     }
     
-
+    func switchToAnotherScreen(){
+        let controller = storyboard?.instantiateViewController(withIdentifier: "AnswerViewController") as! AnswerViewController
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .crossDissolve
+        self.present(controller, animated: true, completion: nil)
+    }
     
     
     
@@ -78,6 +83,9 @@ extension LevelViewController: UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(sampleData[indexPath.row].levelNum)
+        switchToAnotherScreen()
     }
+    
+    
     
 }
