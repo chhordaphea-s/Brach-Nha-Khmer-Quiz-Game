@@ -20,9 +20,11 @@ class AnswerButton: UIView {
     
     weak var delegate: AnswerButtonDelegate?
     
+    var title = ""
     var index : Int = 0
     var correctAnswer : String = ""
     var isEnable : Bool = true
+    
     
     // MARK: - body
     override init(frame: CGRect) {
@@ -42,7 +44,7 @@ class AnswerButton: UIView {
         ButtonEffectAnimation.shared.popEffect(button: self)
         
         if let touch = touches.first {
-            let currentTouch = touch.location(in: self)
+            _ = touch.location(in: self)
             
             var statusAnswer = false
             if answerLabel.text == correctAnswer {
@@ -55,9 +57,9 @@ class AnswerButton: UIView {
             }
             
             
-            if isEnable==true{
+            if isEnable == true{
                 delegate?.didSelect(index: index, status: statusAnswer)
-                isEnable==false
+                isEnable = false
             }
             
         }
@@ -77,15 +79,23 @@ class AnswerButton: UIView {
     
     func setup(data: AnswerView) {
         answerLabel.text = data.title
+        self.title = data.title
         self.index = data.index
         self.correctAnswer = data.correctAnswer
         
         
     }
     
-    func findCorrectAnswer() {
-        
+    func checkCorrectAnswer() -> Bool {
+        if answerLabel.text == correctAnswer {
+           return true
+        }
+        else {
+            return false
+        }
     }
+    
+   
     
     func handleCorrectAnswer() {
         print("true")

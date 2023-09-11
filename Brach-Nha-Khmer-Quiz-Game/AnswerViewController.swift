@@ -26,15 +26,15 @@ class AnswerViewController: UIViewController {
         AnswerView(index: 3, title: "កាហ្វេ", correctAnswer: "បារី")
     ]
     
-    var isAnimated : Bool = false
     let durationOfAnimationInSecond = -5.0
     var failureNumOfGame : Int = 0
+    var incorrectAnswer = [AnswerButton]()
+    var correctAnswer = AnswerButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAnswerIntoButton()
         setProgressTime()
-        hintAnswerButton.delegate = self
         
         hintAnswerButton.roundCorners(corners: [.bottomRight, .topRight], radius: 15)
         hintHaftHaftButton.roundCorners(corners: [.bottomLeft, .topLeft], radius: 15)
@@ -75,34 +75,89 @@ class AnswerViewController: UIViewController {
         }
     }
     
-    func useHintAnswerForButton() {
-        
-    }
-    
-    
     
     
     // set animation to hint
     
     @objc func ActivateHintAnswerButton() {
         print("Hint Answer Used!")
-        curveAnimation(view: hintAnswerButton, animationOptions: .curveEaseOut, defaultXMovement: -240, isReset: isAnimated)
-        isAnimated.toggle()
+        curveAnimation(view: hintAnswerButton, animationOptions: .curveEaseOut, defaultXMovement: -240, isReset: false, completion: nil)
         
-        
+        for view in answerView {
+            if view.checkCorrectAnswer() {
+                ButtonEffectAnimation.shared.triggerRightAnswer(button: view)
+            }
+        }
     }
     
     @objc func ActivateHintHalfHalfButton() {
         print("Hint HalfHalf Used!")
-        curveAnimation(view: hintHaftHaftButton, animationOptions: .curveEaseOut, defaultXMovement: 240, isReset: isAnimated)
-        isAnimated.toggle()
+        curveAnimation(view: hintHaftHaftButton, animationOptions: .curveEaseOut, defaultXMovement: 240, isReset: false, completion: nil)
+        
+        
+        for view in answerView {
+            if !view.checkCorrectAnswer() {
+                incorrectAnswer.append(view)
+            }
+            else {
+                correctAnswer = view
+            }
+        }
+                
+        for view in incorrectAnswer {
+            if !view.isEnable {
+                incorrectAnswer.removeAll(where: { $0 == view })
+            }
+        }
+                
+        let randomIncorrectAnswer = incorrectAnswer.randomElement()
+        
+        var xMovement:CGFloat = 400
+
+        if incorrectAnswer.count == 1 {
+            for each in answerView {
+                if each != correctAnswer {
+                    if each.isEnable {
+                        curveAnimation(view: each, animationOptions: .curveEaseOut, defaultXMovement: xMovement, isReset: false, completion: {
+                            each.isHidden = false
+                        })
+                        
+                    }
+                }
+            }
+        } else {
+            for each in answerView {
+                if each != randomIncorrectAnswer && each != correctAnswer {
+                    if each.isEnable {
+                        curveAnimation(view: each, animationOptions: .curveEaseOut, defaultXMovement: xMovement, isReset: false, completion: {
+                            each.isHidden = false
+                        })
+                        xMovement *= -1
+
+                        
+                    }
+                }
+                
+            }
+        }
+        
+
+        
     }
     
+//    func getIncorrectAnswer(data: [AnswerButton]) -> AnswerButton {
+//        var btnThatClicables = data
+//
+//
+//        return randomIncorrectAnswer ?? AnswerButton()
+//    }
     
-    func curveAnimation(view: UIView, animationOptions: UIView.AnimationOptions, defaultXMovement: CGFloat, isReset: Bool) {
+    func curveAnimation(view: UIView, animationOptions: UIView.AnimationOptions, defaultXMovement: CGFloat, isReset: Bool, completion: (() -> Void)? = nil) {
       UIView.animate(withDuration: durationOfAnimationInSecond, delay: 0, options: animationOptions, animations: {
         view.transform = isReset ? .identity : CGAffineTransform.identity.translatedBy(x: defaultXMovement, y: 0)
-      }, completion: nil)
+      }, completion: {_ in
+          completion?()
+      })
     }
     
     func transitionAnimation(view: UIView, animationOptions: UIView.AnimationOptions, isReset: Bool) {
@@ -127,10 +182,4 @@ extension AnswerViewController: AnswerButtonDelegate {
         }
     }
     
-}
-
-extension AnswerViewController: HintAnswerButtonDelegate {
-    func didSelect() {
-        answerView[0].ha
-    }
 }

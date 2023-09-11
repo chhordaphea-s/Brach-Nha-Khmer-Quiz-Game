@@ -7,18 +7,13 @@
 
 import UIKit
 
-protocol HintAnswerButtonDelegate: NSObjectProtocol {
-    func didSelect()
-}
 
 class HintTellAnswerButton: UIView {
         
     
     @IBOutlet weak var backgroundView: UIView!
     @IBOutlet weak var strokeView: UIView!
-    
-    weak var delegate: HintAnswerButtonDelegate?
-    
+        
     var type: HintType = .answer
     var num: Int = 0
     var enable: Bool = true
@@ -36,18 +31,6 @@ class HintTellAnswerButton: UIView {
         commonInit()
     }
     
-    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super.touchesEnded(touches, with: event)
-        
-        ButtonEffectAnimation.shared.popEffect(button: self)
-        
-        if let touch = touches.first {
-            let currentTouch = touch.location(in: self)
-            
-            delegate?.didSelect()
-            
-        }
-    }
     
     private func commonInit() {
         let bundle = Bundle.init(for: HintTellAnswerButton.self)
