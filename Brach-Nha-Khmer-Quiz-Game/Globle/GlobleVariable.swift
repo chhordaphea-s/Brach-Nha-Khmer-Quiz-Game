@@ -9,7 +9,22 @@ import Foundation
 
 let userdefault = UserDefaults.standard
 
-var getData: GameData?
+var gameData: GameData? = {
+    if let url = Bundle.main.url(forResource: "GameData", withExtension: "json") {
+        do {
+            let data = try Data(contentsOf: url)
+
+            let decoder = JSONDecoder()
+            let jsonData = try decoder.decode(GameData .self, from: data)
+
+            print("Load data successgully")
+            return jsonData
+        } catch {
+            print("error:\(error)")
+        }
+    }
+    return nil
+}()
 
 let backgroundMusic = AudioHelper(audioName: "background", player: nil, loop: true)
 var buttonSoudEffect = AudioHelper()
