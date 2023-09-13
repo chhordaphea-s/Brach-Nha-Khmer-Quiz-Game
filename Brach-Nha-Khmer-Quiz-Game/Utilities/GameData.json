@@ -1,6 +1,7 @@
 {
     "Riddle": {
-        "title": "ពាក្យបណ្ដៅខ្មែរ",
+        "key": "riddle",
+        "title": "ពាក្យបណ្ដៅ",
         "object": "ទាយ",
         "description": "",
         "levels": [
@@ -507,6 +508,7 @@
         ]
     },
     "Proverb": {
+        "key": "proverb",
         "title": "សុភាសិត",
         "object": "បំពេញចណ្លោះ",
         "description": "",
@@ -1014,6 +1016,7 @@
         ]
     },
     "GeneralKnowlage": {
+        "key": "generalknowledge",
         "title": "ចំណេះដឹងទូទៅ",
         "object": "ឆ្លើយសំណួរ",
         "description": "Khmer General Knowlage គឺជាហ្គេមដែលអ្នកប្រើប្រាស់ត្រូវជ្រើសរើសចម្លើយម្តង។ យើងបង្កើតក្នុងគោលបំណងដើម្បីធ្វើឱ្យវាសប្បាយ និងបង្កើនចំណេះដឹងទូទៅ។",

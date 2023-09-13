@@ -12,7 +12,6 @@ class GameChoosingViewController: UIViewController {
     
     @IBOutlet weak var imageBackground: UIImageView!
     @IBOutlet var gameButtonView: [UIView]!
-
     @IBOutlet weak var playerModeSagementControl: ChoosePlayerModeCustomSagement!
     
     
@@ -35,18 +34,26 @@ class GameChoosingViewController: UIViewController {
     @IBAction func riddleButtonPressed(_ sender: UITapGestureRecognizer) {
         ButtonEffectAnimation.shared.popEffect(button: gameButtonView[0], sclaEffect: 0.9)
         print("Khmer Riddle")
-        switchToAnotherScreen()
+        
+        if let data = gameData?.Riddle {
+            switchToAnotherScreen(game: data)
+        }
     }
     
     @IBAction func khmerProverButtonPressed(_ sender: UITapGestureRecognizer) {
         ButtonEffectAnimation.shared.popEffect(button: gameButtonView[1], sclaEffect: 0.9)
         print("Khmer Proverb")
-        switchToAnotherScreen()
+        
+        if let data = gameData?.Proverb {
+            switchToAnotherScreen(game: data)
+        }
     }
     @IBAction func generalKnowlage(_ sender: UITapGestureRecognizer) {
         ButtonEffectAnimation.shared.popEffect(button: gameButtonView[2], sclaEffect: 0.9)
         print("Khmer General Knowlate")
-        switchToAnotherScreen()
+        if let data = gameData?.GeneralKnowlage {
+            switchToAnotherScreen(game: data)
+        }
         
     }
     
@@ -75,10 +82,11 @@ class GameChoosingViewController: UIViewController {
     
 
     
-    func switchToAnotherScreen(){
+    func switchToAnotherScreen(game: Game){
         let controller = storyboard?.instantiateViewController(withIdentifier: "LevelViewController") as! LevelViewController
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .crossDissolve
+        controller.game = game
         self.present(controller, animated: true)
     }
 }

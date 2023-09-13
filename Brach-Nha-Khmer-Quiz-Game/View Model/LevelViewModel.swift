@@ -6,12 +6,18 @@
 //
 
 import Foundation
+import UIKit
+
 struct LevelViewModel{
-    let star : Int
+    let color1 : CGColor
+    let color2 : CGColor
     let levelNum : Int
+    let star : Int
     
-    init(star: Int, levelNum: Int) {
-        self.star = star
+    init(color1: CGColor, color2: CGColor, levelNum: Int, star: Int) {
+        self.color1 = color1
+        self.color2 = color2
         self.levelNum = levelNum
+        self.star = star
     }
 }
