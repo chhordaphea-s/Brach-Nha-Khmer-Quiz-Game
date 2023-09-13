@@ -18,8 +18,3 @@ struct HintButton {
         self.num = num
     }
 }
-
-enum HintType {
-case answer, halfhalf
-}
-

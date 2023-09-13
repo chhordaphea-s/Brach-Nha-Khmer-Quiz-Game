@@ -7,11 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E1BD08E2AB2208700F7BBA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08A2AB2208600F7BBA5 /* Main.storyboard */; };
+		0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08C2AB2208700F7BBA5 /* LaunchScreen.storyboard */; };
+		0E1BD0932AB220DF00F7BBA5 /* GameChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0902AB220DF00F7BBA5 /* GameChoosingViewController.swift */; };
+		0E1BD0942AB220DF00F7BBA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0912AB220DF00F7BBA5 /* MainViewController.swift */; };
+		0E1BD0952AB220DF00F7BBA5 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0922AB220DF00F7BBA5 /* LevelViewController.swift */; };
 		0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */; };
 		0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */; };
 		0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C92A2A9B356F00ACF84D /* Constant.swift */; };
 		0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */; };
-		0E8B56E42A8F517800395E05 /* GameChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8B56E32A8F517800395E05 /* GameChoosingViewController.swift */; };
 		0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */; };
 		0E8BFF732AA43584000E5AC7 /* AudioMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF722AA43584000E5AC7 /* AudioMode.swift */; };
 		0E93ADF02AAC2F3C0073E7ED /* GameData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E93ADEF2AAC2F3C0073E7ED /* GameData.json */; };
@@ -41,14 +45,7 @@
 		9ACAE1A7220D8574C05B4853 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8625A7BDAF5BDB5E0016DF55 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */; };
 		FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */; };
 		FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */; };
-		FC3D98902A8E2A86001A05CE /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988F2A8E2A86001A05CE /* MainViewController.swift */; };
-		FC3D98932A8E2A86001A05CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98912A8E2A86001A05CE /* Main.storyboard */; };
 		FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98942A8E2A87001A05CE /* Assets.xcassets */; };
-		FC3D98982A8E2A87001A05CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98962A8E2A87001A05CE /* LaunchScreen.storyboard */; };
-		FCE106002A97679900AAEDD0 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE105FF2A97679900AAEDD0 /* LevelViewController.swift */; };
-		FCE106042A99E5B300AAEDD0 /* LevelCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */; };
-		FCE106052A99E5B300AAEDD0 /* LevelCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */; };
-		FCF09C2B2AB16AF2009A63DF /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF09C2A2AB16AF2009A63DF /* LevelViewModel.swift */; };
 		FCDA06B02AA59D9F00A2A239 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */; };
 		FCDA06B32AA6F8D700A2A239 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06B22AA6F8D700A2A239 /* AnswerButton.swift */; };
 		FCDA06B62AA6F91C00A2A239 /* AnswerButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA06B52AA6F91C00A2A239 /* AnswerButton.xib */; };
@@ -59,15 +56,22 @@
 		FCDA06CA2AA85C4F00A2A239 /* HintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06C92AA85C4F00A2A239 /* HintButton.swift */; };
 		FCDA06CD2AA8991C00A2A239 /* HintTellAnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06CC2AA8991C00A2A239 /* HintTellAnswerButton.swift */; };
 		FCDA06CF2AA8992A00A2A239 /* HintTellAnswerButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA06CE2AA8992A00A2A239 /* HintTellAnswerButton.xib */; };
+		FCE106042A99E5B300AAEDD0 /* LevelCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */; };
+		FCE106052A99E5B300AAEDD0 /* LevelCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */; };
+		FCF09C2B2AB16AF2009A63DF /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF09C2A2AB16AF2009A63DF /* LevelViewModel.swift */; };
 		FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF478332AA9CD6800075DAC /* UIProgressViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E1BD08B2AB2208600F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0E1BD08D2AB2208700F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0E1BD0902AB220DF00F7BBA5 /* GameChoosingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameChoosingViewController.swift; sourceTree = "<group>"; };
+		0E1BD0912AB220DF00F7BBA5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0E1BD0922AB220DF00F7BBA5 /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosePlayerModeCustomSagement.xib; sourceTree = "<group>"; };
 		0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerModeCustomSagement.swift; sourceTree = "<group>"; };
 		0E68C92A2A9B356F00ACF84D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEffectAnimation.swift; sourceTree = "<group>"; };
-		0E8B56E32A8F517800395E05 /* GameChoosingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameChoosingViewController.swift; sourceTree = "<group>"; };
 		0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
 		0E8BFF722AA43584000E5AC7 /* AudioMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMode.swift; sourceTree = "<group>"; };
 		0E93ADEF2AAC2F3C0073E7ED /* GameData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameData.json; sourceTree = "<group>"; };
@@ -100,15 +104,8 @@
 		FC3D98882A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brach-Nha-Khmer-Quiz-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FC3D988F2A8E2A86001A05CE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		FC3D98922A8E2A86001A05CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		FC3D98942A8E2A87001A05CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		FC3D98972A8E2A87001A05CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		FC3D98942A8E2A87001A05CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		FC3D98992A8E2A87001A05CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCE105FF2A97679900AAEDD0 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
-		FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCustomCell.swift; sourceTree = "<group>"; };
-		FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCustomCell.xib; sourceTree = "<group>"; };
-		FCF09C2A2AB16AF2009A63DF /* LevelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		FCDA06B22AA6F8D700A2A239 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		FCDA06B52AA6F91C00A2A239 /* AnswerButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerButton.xib; sourceTree = "<group>"; };
@@ -119,6 +116,9 @@
 		FCDA06C92AA85C4F00A2A239 /* HintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
 		FCDA06CC2AA8991C00A2A239 /* HintTellAnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintTellAnswerButton.swift; sourceTree = "<group>"; };
 		FCDA06CE2AA8992A00A2A239 /* HintTellAnswerButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintTellAnswerButton.xib; sourceTree = "<group>"; };
+		FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCustomCell.swift; sourceTree = "<group>"; };
+		FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCustomCell.xib; sourceTree = "<group>"; };
+		FCF09C2A2AB16AF2009A63DF /* LevelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		FCF478332AA9CD6800075DAC /* UIProgressViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -199,9 +199,9 @@
 		0EDC0B242AA0A3E700B91B2C /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				FC3D988F2A8E2A86001A05CE /* MainViewController.swift */,
-				FCE105FF2A97679900AAEDD0 /* LevelViewController.swift */,
-				0E8B56E32A8F517800395E05 /* GameChoosingViewController.swift */,
+				0E1BD0902AB220DF00F7BBA5 /* GameChoosingViewController.swift */,
+				0E1BD0922AB220DF00F7BBA5 /* LevelViewController.swift */,
+				0E1BD0912AB220DF00F7BBA5 /* MainViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -209,8 +209,8 @@
 		0EDC0B252AA0A3F800B91B2C /* View */ = {
 			isa = PBXGroup;
 			children = (
-				FC3D98912A8E2A86001A05CE /* Main.storyboard */,
-				FC3D98962A8E2A87001A05CE /* LaunchScreen.storyboard */,
+				0E1BD08C2AB2208700F7BBA5 /* LaunchScreen.storyboard */,
+				0E1BD08A2AB2208600F7BBA5 /* Main.storyboard */,
 				0EDC0B372AA0A61A00B91B2C /* CustomSwitchButton */,
 				FCE106012A99E51000AAEDD0 /* Level Game Custom Cell */,
 			);
@@ -251,8 +251,8 @@
 				0EDDEC242AA1BAEB00E32087 /* PlayingBackground1.mp3 */,
 				0E9881662AA6E12C00D326CC /* background.mp3 */,
 				0E98815A2AA46F2200D326CC /* playBackground.mp3 */,
-				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
 				0E93ADEF2AAC2F3C0073E7ED /* GameData.json */,
+				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
 				0E98816F2AA9C56500D326CC /* animation_lm8xam1w.json */,
 				0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */,
 			);
@@ -318,14 +318,8 @@
 				0EA44D352A9716FF00B5539A /* Extension */,
 				FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */,
 				FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */,
-				FC3D988F2A8E2A86001A05CE /* ViewController.swift */,
-				FCE105FF2A97679900AAEDD0 /* LevelViewController.swift */,
 				FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */,
-				0E8B56E32A8F517800395E05 /* GameChoosingViewController.swift */,
-				FC3D98912A8E2A86001A05CE /* Main.storyboard */,
-				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
 				FCDA06BE2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf */,
-				FC3D98962A8E2A87001A05CE /* LaunchScreen.storyboard */,
 				FC3D98992A8E2A87001A05CE /* Info.plist */,
 			);
 			path = "Brach-Nha-Khmer-Quiz-Game";
@@ -440,13 +434,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				FCDA06C82AA8542200A2A239 /* HintHalfHalfButton.xib in Resources */,
-				FC3D98982A8E2A87001A05CE /* LaunchScreen.storyboard in Resources */,
 				0EDC0B342AA0A5EB00B91B2C /* SettingView.xib in Resources */,
 				0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */,
 				0E98815B2AA46F2200D326CC /* playBackground.mp3 in Resources */,
+				0E1BD08E2AB2208700F7BBA5 /* Main.storyboard in Resources */,
 				0EDDEC2C2AA1C6F000E32087 /* correct.mp3 in Resources */,
 				0E98816C2AA9AE5900D326CC /* HintPopupView.xib in Resources */,
 				0E93ADF02AAC2F3C0073E7ED /* GameData.json in Resources */,
+				0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */,
 				FCDA06BF2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf in Resources */,
 				0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */,
 				FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */,
@@ -454,7 +449,6 @@
 				0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */,
 				0E9881632AA5AA1100D326CC /* pressed.mp3 in Resources */,
 				0EDDEC2D2AA1C6F000E32087 /* failed.mp3 in Resources */,
-				FC3D98932A8E2A86001A05CE /* Main.storyboard in Resources */,
 				0E9881702AA9C56500D326CC /* animation_lm8xam1w.json in Resources */,
 				0E9881672AA6E12C00D326CC /* background.mp3 in Resources */,
 				FCDA06B62AA6F91C00A2A239 /* AnswerButton.xib in Resources */,
@@ -515,23 +509,21 @@
 				0E98816E2AA9BA9100D326CC /* HintView.swift in Sources */,
 				0E98816A2AA9AE4D00D326CC /* HintPopupView.swift in Sources */,
 				0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */,
+				0E1BD0952AB220DF00F7BBA5 /* LevelViewController.swift in Sources */,
 				0EA44D372A97177600B5539A /* UIViewExtension.swift in Sources */,
 				0E9881612AA47A7D00D326CC /* SoundEffect.swift in Sources */,
 				0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */,
+				0E1BD0932AB220DF00F7BBA5 /* GameChoosingViewController.swift in Sources */,
 				0E93ADF22AAC2F570073E7ED /* GameData.swift in Sources */,
-				FC3D98902A8E2A86001A05CE /* MainViewController.swift in Sources */,
-				FCE106002A97679900AAEDD0 /* LevelViewController.swift in Sources */,
 				FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */,
 				FCE106042A99E5B300AAEDD0 /* LevelCustomCell.swift in Sources */,
 				0E98815D2AA46F8600D326CC /* Global.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
-				0E8B56E42A8F517800395E05 /* GameChoosingViewController.swift in Sources */,
+				0E1BD0942AB220DF00F7BBA5 /* MainViewController.swift in Sources */,
 				0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */,
 				FCDA06C62AA8541200A2A239 /* HintHalfHalfButton.swift in Sources */,
 				FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */,
-				FC3D98902A8E2A86001A05CE /* ViewController.swift in Sources */,
 				FCDA06CA2AA85C4F00A2A239 /* HintButton.swift in Sources */,
-				FCCDD2332A9CB6B100672A8C /* LevelViewModel.swift in Sources */,
 				FCDA06B82AA7060200A2A239 /* AnswerView.swift in Sources */,
 				FCDA06B32AA6F8D700A2A239 /* AnswerButton.swift in Sources */,
 				FCDA06CD2AA8991C00A2A239 /* HintTellAnswerButton.swift in Sources */,
@@ -552,18 +544,18 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		FC3D98912A8E2A86001A05CE /* Main.storyboard */ = {
+		0E1BD08A2AB2208600F7BBA5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FC3D98922A8E2A86001A05CE /* Base */,
+				0E1BD08B2AB2208600F7BBA5 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		FC3D98962A8E2A87001A05CE /* LaunchScreen.storyboard */ = {
+		0E1BD08C2AB2208700F7BBA5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				FC3D98972A8E2A87001A05CE /* Base */,
+				0E1BD08D2AB2208700F7BBA5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
