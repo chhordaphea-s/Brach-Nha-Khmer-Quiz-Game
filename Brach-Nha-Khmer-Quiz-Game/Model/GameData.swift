@@ -21,12 +21,14 @@ struct GameData: Decodable {
 }
 
 struct Game: Decodable {
+    let key: String
     let title: String
     let object: String
     let description: String
     let levels: [Level]
     
-    init(title: String, object: String, description: String, levels: [Level]) {
+    init(key: String, title: String, object: String, description: String, levels: [Level]) {
+        self.key = key
         self.title = title
         self.object = object
         self.description = description

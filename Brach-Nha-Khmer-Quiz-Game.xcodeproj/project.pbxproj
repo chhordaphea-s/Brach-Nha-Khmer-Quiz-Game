@@ -45,10 +45,10 @@
 		FC3D98932A8E2A86001A05CE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98912A8E2A86001A05CE /* Main.storyboard */; };
 		FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98942A8E2A87001A05CE /* Assets.xcassets */; };
 		FC3D98982A8E2A87001A05CE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98962A8E2A87001A05CE /* LaunchScreen.storyboard */; };
-		FCCDD2332A9CB6B100672A8C /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCCDD2322A9CB6B100672A8C /* LevelViewModel.swift */; };
 		FCE106002A97679900AAEDD0 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE105FF2A97679900AAEDD0 /* LevelViewController.swift */; };
 		FCE106042A99E5B300AAEDD0 /* LevelCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */; };
 		FCE106052A99E5B300AAEDD0 /* LevelCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */; };
+		FCF09C2B2AB16AF2009A63DF /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF09C2A2AB16AF2009A63DF /* LevelViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -94,10 +94,10 @@
 		FC3D98942A8E2A87001A05CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FC3D98972A8E2A87001A05CE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FC3D98992A8E2A87001A05CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		FCCDD2322A9CB6B100672A8C /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		FCE105FF2A97679900AAEDD0 /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCustomCell.swift; sourceTree = "<group>"; };
 		FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCustomCell.xib; sourceTree = "<group>"; };
+		FCF09C2A2AB16AF2009A63DF /* LevelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -301,7 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				0EDC0B2A2AA0A46A00B91B2C /* OnOffButton.swift */,
-				FCCDD2322A9CB6B100672A8C /* LevelViewModel.swift */,
+				FCF09C2A2AB16AF2009A63DF /* LevelViewModel.swift */,
 				0E98816D2AA9BA9100D326CC /* HintView.swift */,
 			);
 			path = "View Model";
@@ -455,7 +455,6 @@
 				FC3D98902A8E2A86001A05CE /* MainViewController.swift in Sources */,
 				FCE106002A97679900AAEDD0 /* LevelViewController.swift in Sources */,
 				FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */,
-				FCCDD2332A9CB6B100672A8C /* LevelViewModel.swift in Sources */,
 				FCE106042A99E5B300AAEDD0 /* LevelCustomCell.swift in Sources */,
 				0E98815D2AA46F8600D326CC /* GlobleVariable.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
@@ -468,6 +467,7 @@
 				0EDC0B2D2AA0A49700B91B2C /* ViewAnimateHelper.swift in Sources */,
 				0EDC0B2B2AA0A46A00B91B2C /* OnOffButton.swift in Sources */,
 				0E8BFF732AA43584000E5AC7 /* AudioMode.swift in Sources */,
+				FCF09C2B2AB16AF2009A63DF /* LevelViewModel.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
 				0EA44D3B2A97293A00B5539A /* UIColorExtension.swift in Sources */,
 			);
@@ -617,7 +617,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S4SC57X43S;
+				DEVELOPMENT_TEAM = 453LSDFZ53;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Brach-Nha-Khmer-Quiz-Game/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -630,7 +630,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.einoyakoreal.Brach-Nha-Khmer-Quiz-Game";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chhordaphea.Brach-Nha-Khmer-Quiz-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -646,7 +646,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S4SC57X43S;
+				DEVELOPMENT_TEAM = 453LSDFZ53;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Brach-Nha-Khmer-Quiz-Game/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -659,7 +659,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.einoyakoreal.Brach-Nha-Khmer-Quiz-Game";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.chhordaphea.Brach-Nha-Khmer-Quiz-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
