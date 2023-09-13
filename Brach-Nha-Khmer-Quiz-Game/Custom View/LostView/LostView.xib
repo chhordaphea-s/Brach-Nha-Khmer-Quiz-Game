@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22138.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22113"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="AKbalthom-KOUPREY-Jais.ttf">
+            <string>AKbalthomKOUPREYJais</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="LostView" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+            <connections>
+                <outlet property="leaveGameViewButton" destination="Gnk-zF-qFV" id="PtI-A4-OmN"/>
+                <outlet property="playAdsViewButton" destination="1WF-3j-k04" id="Vwk-sf-RMi"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="282" height="396"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vaV-Of-Qzf">
+                    <rect key="frame" x="0.0" y="51" width="282" height="345"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gnk-zF-qFV" userLabel="LeaveButton">
+                            <rect key="frame" x="21" y="274" width="240" height="50"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FRE-dl-rdG">
+                                    <rect key="frame" x="1" y="1" width="238" height="44"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="បញ្ចប់ការលេង" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KJi-Jb-QkC">
+                                            <rect key="frame" x="71.666666666666657" y="5.6666666666666856" width="94.666666666666657" height="32.666666666666664"/>
+                                            <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ArrowFatRight" translatesAutoresizingMaskIntoConstraints="NO" id="RsF-Fk-WZq">
+                                            <rect key="frame" x="171.33333333333334" y="13" width="18" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="18" id="TUg-eF-TVm"/>
+                                                <constraint firstAttribute="height" constant="18" id="Wpf-mo-cN2"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="Orange Color"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstItem="KJi-Jb-QkC" firstAttribute="centerY" secondItem="FRE-dl-rdG" secondAttribute="centerY" id="7GF-4b-mfd"/>
+                                        <constraint firstItem="RsF-Fk-WZq" firstAttribute="leading" secondItem="KJi-Jb-QkC" secondAttribute="trailing" constant="5" id="KcO-GM-jVa"/>
+                                        <constraint firstItem="RsF-Fk-WZq" firstAttribute="centerY" secondItem="FRE-dl-rdG" secondAttribute="centerY" id="WMC-2v-p4h"/>
+                                        <constraint firstItem="KJi-Jb-QkC" firstAttribute="centerX" secondItem="FRE-dl-rdG" secondAttribute="centerX" id="ejw-Cg-Kap"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="det-Us-s2u" appends="YES" id="zRt-qo-ygD"/>
+                                    </connections>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" name="Border Color"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="FRE-dl-rdG" secondAttribute="trailing" constant="1" id="02V-pG-8gN"/>
+                                <constraint firstAttribute="bottom" secondItem="FRE-dl-rdG" secondAttribute="bottom" constant="5" id="42l-o6-26e"/>
+                                <constraint firstItem="FRE-dl-rdG" firstAttribute="top" secondItem="Gnk-zF-qFV" secondAttribute="top" constant="1" id="YdJ-ew-5Li"/>
+                                <constraint firstItem="FRE-dl-rdG" firstAttribute="leading" secondItem="Gnk-zF-qFV" secondAttribute="leading" constant="1" id="akm-5y-Qxh"/>
+                                <constraint firstAttribute="height" constant="50" id="uhE-Ra-2ZJ"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="soundFileName" value="failed"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1WF-3j-k04" userLabel="AdsButton">
+                            <rect key="frame" x="21" y="214" width="240" height="50"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ktf-Ez-oyr">
+                                    <rect key="frame" x="1" y="1" width="238" height="44"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="មើលវីដេអូ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yoc-Bz-yrB">
+                                            <rect key="frame" x="85.333333333333314" y="5.6666666666666856" width="67.666666666666686" height="32.666666666666664"/>
+                                            <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="18"/>
+                                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="VideoIcon" translatesAutoresizingMaskIntoConstraints="NO" id="enK-GI-we7">
+                                            <rect key="frame" x="158" y="13" width="18" height="18"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="18" id="djs-Cx-XJF"/>
+                                                <constraint firstAttribute="width" constant="18" id="nmd-dM-weA"/>
+                                            </constraints>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="Primary"/>
+                                    <gestureRecognizers/>
+                                    <constraints>
+                                        <constraint firstItem="Yoc-Bz-yrB" firstAttribute="centerY" secondItem="ktf-Ez-oyr" secondAttribute="centerY" id="0fL-hU-9mL"/>
+                                        <constraint firstItem="enK-GI-we7" firstAttribute="leading" secondItem="Yoc-Bz-yrB" secondAttribute="trailing" constant="5" id="4nO-0J-srG"/>
+                                        <constraint firstItem="Yoc-Bz-yrB" firstAttribute="centerX" secondItem="ktf-Ez-oyr" secondAttribute="centerX" id="jSg-Bb-je2"/>
+                                        <constraint firstItem="enK-GI-we7" firstAttribute="centerY" secondItem="ktf-Ez-oyr" secondAttribute="centerY" id="u3u-Os-uHs"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                            <real key="value" value="15"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <outletCollection property="gestureRecognizers" destination="ZZW-LB-vyl" appends="YES" id="2jK-rt-xzF"/>
+                                    </connections>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" name="Border Color"/>
+                            <gestureRecognizers/>
+                            <constraints>
+                                <constraint firstItem="ktf-Ez-oyr" firstAttribute="top" secondItem="1WF-3j-k04" secondAttribute="top" constant="1" id="26L-Iy-FTe"/>
+                                <constraint firstAttribute="trailing" secondItem="ktf-Ez-oyr" secondAttribute="trailing" constant="1" id="HgY-iy-4oe"/>
+                                <constraint firstItem="ktf-Ez-oyr" firstAttribute="leading" secondItem="1WF-3j-k04" secondAttribute="leading" constant="1" id="I4r-5E-fet"/>
+                                <constraint firstAttribute="bottom" secondItem="ktf-Ez-oyr" secondAttribute="bottom" constant="5" id="tCF-g4-yft"/>
+                                <constraint firstAttribute="height" constant="50" id="zH4-zw-sFq"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                    <real key="value" value="15"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="soundFileName" value="pressed"/>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="កុំបោះបង់អី!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YAH-Xl-SKH">
+                            <rect key="frame" x="41" y="86" width="200" height="42"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="200" id="oAi-ET-rzF"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="23"/>
+                            <color key="textColor" name="Text Color"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8B-I3-aR5">
+                            <rect key="frame" x="0.0" y="138" width="282" height="50.666666666666657"/>
+                            <string key="text">​មើលវីដេអូខាងក្រោម​ ដើម្បីមានឱកាសទទួលយក
+ជីវិត ១​ បន្ថែមបន្តលេង​វគ្គនេះ</string>
+                            <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="14"/>
+                            <color key="textColor" name="TextColor2"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="345" id="1Bh-n0-nZg"/>
+                        <constraint firstAttribute="trailing" secondItem="Gnk-zF-qFV" secondAttribute="trailing" constant="21" id="6eI-RB-xtK"/>
+                        <constraint firstItem="b8B-I3-aR5" firstAttribute="leading" secondItem="vaV-Of-Qzf" secondAttribute="leading" id="Cya-as-5uu"/>
+                        <constraint firstAttribute="trailing" secondItem="b8B-I3-aR5" secondAttribute="trailing" id="U3j-Tq-ypt"/>
+                        <constraint firstItem="YAH-Xl-SKH" firstAttribute="top" secondItem="vaV-Of-Qzf" secondAttribute="top" constant="86" id="UsH-mk-8l5"/>
+                        <constraint firstItem="1WF-3j-k04" firstAttribute="leading" secondItem="vaV-Of-Qzf" secondAttribute="leading" constant="21" id="ZfY-od-j2B"/>
+                        <constraint firstItem="YAH-Xl-SKH" firstAttribute="centerX" secondItem="vaV-Of-Qzf" secondAttribute="centerX" id="b9t-Bx-9cY"/>
+                        <constraint firstItem="Gnk-zF-qFV" firstAttribute="leading" secondItem="vaV-Of-Qzf" secondAttribute="leading" constant="21" id="cwD-rR-tdM"/>
+                        <constraint firstAttribute="trailing" secondItem="1WF-3j-k04" secondAttribute="trailing" constant="21" id="f4w-XQ-zeU"/>
+                        <constraint firstItem="b8B-I3-aR5" firstAttribute="top" secondItem="YAH-Xl-SKH" secondAttribute="bottom" constant="10" id="rxy-uz-Qv8"/>
+                        <constraint firstAttribute="bottom" secondItem="Gnk-zF-qFV" secondAttribute="bottom" constant="21" id="xsq-cj-9qa"/>
+                        <constraint firstItem="Gnk-zF-qFV" firstAttribute="top" secondItem="1WF-3j-k04" secondAttribute="bottom" constant="10" id="zWP-zz-Ya7"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="szg-Up-NFr">
+                    <rect key="frame" x="78.666666666666686" y="0.0" width="125" height="125"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="125" id="SM3-kJ-Ssr"/>
+                        <constraint firstAttribute="height" constant="125" id="qhA-G2-B1K"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <constraints>
+                <constraint firstItem="vaV-Of-Qzf" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="0c3-45-VAC"/>
+                <constraint firstItem="vaV-Of-Qzf" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="7De-Ec-pdJ"/>
+                <constraint firstAttribute="bottom" secondItem="vaV-Of-Qzf" secondAttribute="bottom" id="EIk-5q-Aqv"/>
+                <constraint firstItem="szg-Up-NFr" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="MyN-ep-qvB"/>
+                <constraint firstItem="szg-Up-NFr" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="fqx-Qx-w6H"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="138.93129770992365" y="19.718309859154932"/>
+        </view>
+        <tapGestureRecognizer id="det-Us-s2u">
+            <connections>
+                <action selector="LeaveGameButtonPressed:" destination="-1" id="DKK-Oq-N8g"/>
+            </connections>
+        </tapGestureRecognizer>
+        <tapGestureRecognizer id="ZZW-LB-vyl">
+            <connections>
+                <action selector="playAdsButtonPressed:" destination="-1" id="aNx-wx-ClT"/>
+            </connections>
+        </tapGestureRecognizer>
+    </objects>
+    <resources>
+        <image name="ArrowFatRight" width="17" height="19"/>
+        <image name="Heart" width="125" height="119"/>
+        <image name="VideoIcon" width="19" height="21"/>
+        <namedColor name="Border Color">
+            <color red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="Orange Color">
+            <color red="0.92156862745098034" green="0.44313725490196076" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Primary">
+            <color red="0.51764705882352946" green="0.71372549019607845" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="Text Color">
+            <color red="0.20399999618530273" green="0.20000000298023224" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="TextColor2">
+            <color red="0.52156862745098043" green="0.50980392156862742" blue="0.50980392156862742" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

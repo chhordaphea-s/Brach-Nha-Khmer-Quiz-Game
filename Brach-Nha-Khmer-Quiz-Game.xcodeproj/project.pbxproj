@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E5159762AB16FF90079C1C7 /* LostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5159752AB16FF90079C1C7 /* LostView.swift */; };
+		0E5159782AB170050079C1C7 /* LostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E5159772AB170050079C1C7 /* LostView.xib */; };
 		0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */; };
 		0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */; };
 		0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C92A2A9B356F00ACF84D /* Constant.swift */; };
@@ -52,6 +54,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E5159752AB16FF90079C1C7 /* LostView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostView.swift; sourceTree = "<group>"; };
+		0E5159772AB170050079C1C7 /* LostView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LostView.xib; sourceTree = "<group>"; };
 		0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosePlayerModeCustomSagement.xib; sourceTree = "<group>"; };
 		0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerModeCustomSagement.swift; sourceTree = "<group>"; };
 		0E68C92A2A9B356F00ACF84D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -112,9 +116,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E5159742AB16FCB0079C1C7 /* LostView */ = {
+			isa = PBXGroup;
+			children = (
+				0E5159752AB16FF90079C1C7 /* LostView.swift */,
+				0E5159772AB170050079C1C7 /* LostView.xib */,
+			);
+			path = LostView;
+			sourceTree = "<group>";
+		};
 		0E68C9222A9B307400ACF84D /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
+				0E5159742AB16FCB0079C1C7 /* LostView */,
 				0E9881682AA9AE1300D326CC /* AnswerHintView */,
 				0EDC0B362AA0A5F000B91B2C /* SettingView */,
 				0E68C9232A9B307F00ACF84D /* ChoosePlayerModeCustomSagement */,
@@ -384,6 +398,7 @@
 				0E98816C2AA9AE5900D326CC /* HintPopupView.xib in Resources */,
 				0E93ADF02AAC2F3C0073E7ED /* GameData.json in Resources */,
 				0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */,
+				0E5159782AB170050079C1C7 /* LostView.xib in Resources */,
 				FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */,
 				0EDC0B3A2AA0A62300B91B2C /* CustomOnOffButton.xib in Resources */,
 				0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */,
@@ -463,6 +478,7 @@
 				0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */,
 				0EA44D462A97353600B5539A /* PlayMode.swift in Sources */,
 				0EDC0B3B2AA0A62300B91B2C /* CustomOnOffButton.swift in Sources */,
+				0E5159762AB16FF90079C1C7 /* LostView.swift in Sources */,
 				0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */,
 				0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */,
 				0EDC0B2D2AA0A49700B91B2C /* ViewAnimateHelper.swift in Sources */,
