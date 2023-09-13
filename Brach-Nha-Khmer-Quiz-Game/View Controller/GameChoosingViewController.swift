@@ -51,7 +51,8 @@ class GameChoosingViewController: UIViewController {
     }
     
     @IBAction func settingButtonPressed(_ sender: UIButton) {
-        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 326)
+//        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 326)
+        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 270)
     }
     
     // MARK: - Function
@@ -68,7 +69,8 @@ class GameChoosingViewController: UIViewController {
     
     func setupSettingView() {
         settingView.delegate = self
-        settingView.setup(type: .playing)
+        settingView.setup(type: .normal)
+//        settingView.setup(type: .playing)
     }
     
 
