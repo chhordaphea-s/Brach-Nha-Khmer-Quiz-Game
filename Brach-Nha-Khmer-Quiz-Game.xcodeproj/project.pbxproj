@@ -17,7 +17,7 @@
 		0E93ADF02AAC2F3C0073E7ED /* GameData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E93ADEF2AAC2F3C0073E7ED /* GameData.json */; };
 		0E93ADF22AAC2F570073E7ED /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E93ADF12AAC2F570073E7ED /* GameData.swift */; };
 		0E98815B2AA46F2200D326CC /* playBackground.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E98815A2AA46F2200D326CC /* playBackground.mp3 */; };
-		0E98815D2AA46F8600D326CC /* GlobleVariable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98815C2AA46F8600D326CC /* GlobleVariable.swift */; };
+		0E98815D2AA46F8600D326CC /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98815C2AA46F8600D326CC /* Global.swift */; };
 		0E9881612AA47A7D00D326CC /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9881602AA47A7D00D326CC /* SoundEffect.swift */; };
 		0E9881632AA5AA1100D326CC /* pressed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E9881622AA5AA1100D326CC /* pressed.mp3 */; };
 		0E9881672AA6E12C00D326CC /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E9881662AA6E12C00D326CC /* background.mp3 */; };
@@ -62,7 +62,7 @@
 		0E93ADEF2AAC2F3C0073E7ED /* GameData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameData.json; sourceTree = "<group>"; };
 		0E93ADF12AAC2F570073E7ED /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
 		0E98815A2AA46F2200D326CC /* playBackground.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBackground.mp3; sourceTree = "<group>"; };
-		0E98815C2AA46F8600D326CC /* GlobleVariable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobleVariable.swift; sourceTree = "<group>"; };
+		0E98815C2AA46F8600D326CC /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
 		0E9881602AA47A7D00D326CC /* SoundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
 		0E9881622AA5AA1100D326CC /* pressed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pressed.mp3; sourceTree = "<group>"; };
 		0E9881662AA6E12C00D326CC /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
@@ -213,7 +213,7 @@
 			isa = PBXGroup;
 			children = (
 				0E68C92A2A9B356F00ACF84D /* Constant.swift */,
-				0E98815C2AA46F8600D326CC /* GlobleVariable.swift */,
+				0E98815C2AA46F8600D326CC /* Global.swift */,
 			);
 			path = Globle;
 			sourceTree = "<group>";
@@ -457,7 +457,7 @@
 				FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */,
 				FCCDD2332A9CB6B100672A8C /* LevelViewModel.swift in Sources */,
 				FCE106042A99E5B300AAEDD0 /* LevelCustomCell.swift in Sources */,
-				0E98815D2AA46F8600D326CC /* GlobleVariable.swift in Sources */,
+				0E98815D2AA46F8600D326CC /* Global.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
 				0E8B56E42A8F517800395E05 /* GameChoosingViewController.swift in Sources */,
 				0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */,
