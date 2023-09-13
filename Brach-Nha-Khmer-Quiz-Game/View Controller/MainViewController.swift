@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import GoogleMobileAds
+
 
 class MainViewController: UIViewController {
 
@@ -16,12 +18,17 @@ class MainViewController: UIViewController {
     
     let settingView = SettingView()
     let playButtonPressed = UITapGestureRecognizer()
+    
+    private var interstitial: GADInterstitialAd?
+
+    let lostView = LostView()
 
     // MARK: - Body
     
     override func viewDidLoad() {
         super.viewDidLoad()
         getScore()
+        adsLoads()
 
         customizePlayButton()
         customizeScoreBoard()
@@ -30,6 +37,7 @@ class MainViewController: UIViewController {
         playButtonPressed.addTarget(self, action: #selector(playButtonActive))
         playButton.addGestureRecognizer(playButtonPressed)
         
+        lostView.delegate = self
         
     }
     
@@ -47,10 +55,24 @@ class MainViewController: UIViewController {
         
     }
     @IBAction func inAppPhurcheaseButtonPressed(_ sender: UIButton) {
-        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: LostView(), width: 282, height: 396)
+        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: lostView, width: 282, height: 396)
     }
     
     // MARK: FUNCTION
+    
+    func adsLoads() {
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID: "ca-app-pub-3940256099942544/4411468910",
+                                    request: request,
+                          completionHandler: { [self] ad, error in
+                            if let error = error {
+                              print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                              return
+                            }
+                            interstitial = ad
+                          }
+        )
+    }
     
     func getScore() {
         let scoreUD = [totalScore, totalStar, answerHint, halfHint]
@@ -115,8 +137,20 @@ class MainViewController: UIViewController {
 extension MainViewController: SettingViewDelegate {
     func quitGame() {}
     
-    func dismissButton(_ view: UIView) {
+    func dismissButton(_ view: UIView)  {
         ViewAnimateHelper.shared.animateViewOut(self.view, popUpView: view)
     }
 }
 
+
+extension MainViewController: LostViewDelegate {
+    func displayAds() {
+        if interstitial != nil {
+            interstitial?.present(fromRootViewController: self)
+        } else {
+          print("Ad wasn't ready")
+        }
+    }
+    
+    
+}

@@ -7,10 +7,17 @@
 
 import UIKit
 
+protocol LostViewDelegate: NSObjectProtocol {
+    func displayAds()
+}
+
 class LostView: UIView {
 
     @IBOutlet weak var playAdsViewButton: UIView!
     @IBOutlet weak var leaveGameViewButton: UIView!
+    
+    weak var delegate: LostViewDelegate?
+
     
     // MARK: BODY
     override init(frame: CGRect) {
@@ -27,7 +34,9 @@ class LostView: UIView {
     @IBAction func playAdsButtonPressed(_ sender: UITapGestureRecognizer) {
         ButtonEffectAnimation.shared.popEffect(button: playAdsViewButton)
         print("Play Ads")
-
+        
+        delegate?.displayAds()
+        
     }
     
     
@@ -48,7 +57,9 @@ class LostView: UIView {
             contentView.frame = self.bounds
             contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         }
-    }
+            }
+    
+
 
 
 }
