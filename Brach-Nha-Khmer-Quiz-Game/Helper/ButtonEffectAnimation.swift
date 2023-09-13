@@ -24,5 +24,29 @@ class ButtonEffectAnimation {
         })
     }
     
+    func triggerRightAnswer(button: UIView, sclaEffect: Float = 1.1) {
+
+        popOutAnimation(view: button)
+    }
+    
+    private func popInAnimation(view: UIView, sclaEffect: Float = 1) {
+        UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [.curveEaseIn, .allowUserInteraction], animations: {
+            view.transform = CGAffineTransform(scaleX: CGFloat(sclaEffect), y: CGFloat(sclaEffect))
+        }, completion: {_ in
+            self.popOutAnimation(view: view)
+        })
+        
+    }
+                       
+    private func popOutAnimation(view: UIView, sclaEffect: Float = 1.07) {
+
+        
+        UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [.curveEaseOut, .allowUserInteraction] , animations: {
+            view.transform = CGAffineTransform(scaleX: CGFloat(sclaEffect), y: CGFloat(sclaEffect))
+        }, completion: {_ in
+            self.popInAnimation(view: view)
+        })
+    }
+    
 
 }
