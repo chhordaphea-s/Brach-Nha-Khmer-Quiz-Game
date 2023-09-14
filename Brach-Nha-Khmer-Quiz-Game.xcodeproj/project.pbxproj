@@ -221,6 +221,7 @@
 				0E1BD0902AB220DF00F7BBA5 /* GameChoosingViewController.swift */,
 				0E1BD0922AB220DF00F7BBA5 /* LevelViewController.swift */,
 				0E1BD0912AB220DF00F7BBA5 /* MainViewController.swift */,
+				FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -336,7 +337,6 @@
 				0EA44D352A9716FF00B5539A /* Extension */,
 				FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */,
 				FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */,
-				FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */,
 			);
 			path = "Brach-Nha-Khmer-Quiz-Game";
 			sourceTree = "<group>";
