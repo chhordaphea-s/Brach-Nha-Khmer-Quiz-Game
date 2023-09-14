@@ -105,7 +105,7 @@
 		FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FC3D98942A8E2A87001A05CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
-		FC3D98992A8E2A87001A05CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FC3D98992A8E2A87001A05CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		FCDA06B22AA6F8D700A2A239 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		FCDA06B52AA6F91C00A2A239 /* AnswerButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerButton.xib; sourceTree = "<group>"; };
@@ -134,6 +134,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E1BD09D2AB2C22C00F7BBA5 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				FCDA06BE2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf */,
+				0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		0E1BD09E2AB2C23700F7BBA5 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				0EDDEC242AA1BAEB00E32087 /* PlayingBackground1.mp3 */,
+				0E9881662AA6E12C00D326CC /* background.mp3 */,
+				0E98815A2AA46F2200D326CC /* playBackground.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		0E68C9222A9B307400ACF84D /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
@@ -248,13 +267,12 @@
 			isa = PBXGroup;
 			children = (
 				0EDDEC2E2AA1C6F500E32087 /* Sound Effect */,
-				0EDDEC242AA1BAEB00E32087 /* PlayingBackground1.mp3 */,
-				0E9881662AA6E12C00D326CC /* background.mp3 */,
-				0E98815A2AA46F2200D326CC /* playBackground.mp3 */,
-				0E93ADEF2AAC2F3C0073E7ED /* GameData.json */,
+				0E1BD09E2AB2C23700F7BBA5 /* Music */,
+				0E1BD09D2AB2C22C00F7BBA5 /* Font */,
 				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
+				FC3D98992A8E2A87001A05CE /* Info.plist */,
+				0E93ADEF2AAC2F3C0073E7ED /* GameData.json */,
 				0E98816F2AA9C56500D326CC /* animation_lm8xam1w.json */,
-				0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -319,8 +337,6 @@
 				FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */,
 				FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */,
 				FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */,
-				FCDA06BE2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf */,
-				FC3D98992A8E2A87001A05CE /* Info.plist */,
 			);
 			path = "Brach-Nha-Khmer-Quiz-Game";
 			sourceTree = "<group>";
