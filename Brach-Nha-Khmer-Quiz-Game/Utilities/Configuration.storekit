@@ -1,0 +1,187 @@
+{
+  "identifier" : "6099B981",
+  "nonRenewingSubscriptions" : [
+
+  ],
+  "products" : [
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "F4F56F1E",
+      "localizations" : [
+        {
+          "description" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន៣",
+          "displayName" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន៣",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.BrachNhaKhmerQuizGame.answerHint3x",
+      "referenceName" : "answerHint3x",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "E0FB88A5",
+      "localizations" : [
+        {
+          "description" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន៩",
+          "displayName" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន៩",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.BrachNhaKhmerQuizGame.answerHint9x",
+      "referenceName" : "answerHint9x",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "9.99",
+      "familyShareable" : false,
+      "internalID" : "C6B6F597",
+      "localizations" : [
+        {
+          "description" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន២០",
+          "displayName" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន២០",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.BrachNhaKhmerQuizGame.answerHint20x",
+      "referenceName" : "answrHint20x",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "D50E6543",
+      "localizations" : [
+        {
+          "description" : "ជំនួយ៖ ៥០:៥០ ចំនួន៣",
+          "displayName" : "ជំនួយ៖ ៥០:៥០ ចំនួន៣",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.BrachNhaKhmerQuizGame.halfHint3x",
+      "referenceName" : "halfHint3x",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "39A2C085",
+      "localizations" : [
+        {
+          "description" : "ជំនួយ៖ ៥០:៥០ ចំនួន៩",
+          "displayName" : "ជំនួយ៖ ៥០:៥០ ចំនួន៩",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.BrachNhaKhmerQuizGame.halfHint9x",
+      "referenceName" : "halfHint9x",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "9.99",
+      "familyShareable" : false,
+      "internalID" : "E688E4E7",
+      "localizations" : [
+        {
+          "description" : "ជំនួយ៖ ៥០:៥០ ចំនួន២០",
+          "displayName" : "ជំនួយ៖ ៥០:៥០ ចំនួន២០",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.BrachNhaKhmerQuizGame.halfHint20x",
+      "referenceName" : "halfHint20x",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0",
+      "familyShareable" : false,
+      "internalID" : "203431BE",
+      "localizations" : [
+        {
+          "description" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន១",
+          "displayName" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន១",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.BrachNhaKhmerQuizGame.answerHint1x",
+      "referenceName" : "answerHint1x",
+      "type" : "NonConsumable"
+    },
+    {
+      "displayPrice" : "0",
+      "familyShareable" : false,
+      "internalID" : "E7DBE5EF",
+      "localizations" : [
+        {
+          "description" : "ជំនួយ៖ ៥០:៥០ ចំនួន១",
+          "displayName" : "ជំនួយ៖ ៥០:៥០ ចំនួន១",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.BrachNhaKhmerQuizGame.halfHint1x",
+      "referenceName" : "halfHint1x",
+      "type" : "NonConsumable"
+    }
+  ],
+  "settings" : {
+    "_failTransactionsEnabled" : false,
+    "_locale" : "en_US",
+    "_storefront" : "USA",
+    "_storeKitErrors" : [
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Load Products"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Purchase"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Verification"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Store Sync"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Subscription Status"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "App Transaction"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Manage Subscriptions Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Refund Request Sheet"
+      },
+      {
+        "current" : null,
+        "enabled" : false,
+        "name" : "Offer Code Redeem Sheet"
+      }
+    ]
+  },
+  "subscriptionGroups" : [
+
+  ],
+  "version" : {
+    "major" : 3,
+    "minor" : 0
+  }
+}

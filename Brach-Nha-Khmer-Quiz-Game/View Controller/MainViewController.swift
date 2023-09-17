@@ -30,13 +30,16 @@ class MainViewController: UIViewController {
         playButtonPressed.addTarget(self, action: #selector(playButtonActive))
         playButton.addGestureRecognizer(playButtonPressed)
         
-        
     }
     
     
     // MARK: BUTTON
     @IBAction func settingButtonPressed(_ sender: UIButton) {
         ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 270)
+    }
+    
+    @IBAction func storeButtonPressed(_ sender: UIButton) {
+        switchToStoreViewController()
     }
     
     @objc func playButtonActive() {
@@ -104,6 +107,14 @@ class MainViewController: UIViewController {
         controller.modalTransitionStyle = .crossDissolve
         self.present(controller, animated: true)
         
+    }
+    
+    func switchToStoreViewController() {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "BuyHintViewController") as! StoreViewController
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .crossDissolve
+        controller.backDirection = self
+        self.present(controller, animated: true)
     }
   
 

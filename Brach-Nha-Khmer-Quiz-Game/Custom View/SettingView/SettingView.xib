@@ -35,7 +35,7 @@
                         <constraint firstAttribute="width" constant="100" id="eCu-Bg-qnJ"/>
                     </constraints>
                     <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="24"/>
-                    <nil key="textColor"/>
+                    <color key="textColor" name="Text Color"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="MhA-yj-3YL">
@@ -58,11 +58,10 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="តន្ត្រី" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wly-aF-z3S">
                                     <rect key="frame" x="21" y="-3" width="32" height="38"/>
                                     <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="21"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" name="Text Color"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="Vef-tO-8bl" firstAttribute="centerY" secondItem="HbT-XW-Df9" secondAttribute="centerY" id="GHz-mk-xzF"/>
                                 <constraint firstItem="wly-aF-z3S" firstAttribute="leading" secondItem="HbT-XW-Df9" secondAttribute="leading" constant="21" id="HKQ-t4-lpK"/>
@@ -89,11 +88,10 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="សម្លេង" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3B-0U-EAw">
                                     <rect key="frame" x="21.000000000000004" y="-3" width="52.333333333333343" height="38"/>
                                     <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="21"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" name="Text Color"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstItem="a3B-0U-EAw" firstAttribute="centerY" secondItem="Xl5-sO-7GW" secondAttribute="centerY" id="0OS-mT-6Jd"/>
                                 <constraint firstItem="a3B-0U-EAw" firstAttribute="leading" secondItem="Xl5-sO-7GW" secondAttribute="leading" constant="21" id="2ic-1o-5Kj"/>
@@ -120,11 +118,10 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="រំញ័រ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gR5-1U-vD5">
                                     <rect key="frame" x="21" y="-3" width="33" height="38"/>
                                     <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="21"/>
-                                    <nil key="textColor"/>
+                                    <color key="textColor" name="Text Color"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                             </subviews>
-                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             <constraints>
                                 <constraint firstAttribute="trailing" secondItem="x6K-Ge-yN0" secondAttribute="trailing" constant="16" id="4a6-ia-asy"/>
                                 <constraint firstAttribute="height" constant="32" id="BpI-Fp-XMx"/>
@@ -146,6 +143,7 @@
                     <state key="normal" title="Button"/>
                     <buttonConfiguration key="configuration" style="plain">
                         <imageReference key="image" image="multiply" catalog="system" renderingMode="original"/>
+                        <color key="baseForegroundColor" name="Text Color"/>
                     </buttonConfiguration>
                     <userDefinedRuntimeAttributes>
                         <userDefinedRuntimeAttribute type="string" keyPath="soundFileName" value="pressed"/>
@@ -209,7 +207,7 @@
                 </view>
             </subviews>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
-            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="MhA-yj-3YL" firstAttribute="top" secondItem="MW4-fh-oKJ" secondAttribute="bottom" constant="30" id="0Qc-t1-g6q"/>
                 <constraint firstAttribute="trailing" secondItem="sKS-Gg-O3W" secondAttribute="trailing" constant="16" id="1u5-tm-6VU"/>
@@ -242,16 +240,16 @@
         <image name="ArrowFatRight" width="17" height="19"/>
         <image name="multiply" catalog="system" width="128" height="111"/>
         <namedColor name="Border Color">
-            <color red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="Orange Color">
             <color red="0.92156862745098034" green="0.44313725490196076" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="Text Color">
+            <color red="0.20399999618530273" green="0.20000000298023224" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBrownColor">
             <color red="0.63529411764705879" green="0.51764705882352946" blue="0.36862745098039218" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

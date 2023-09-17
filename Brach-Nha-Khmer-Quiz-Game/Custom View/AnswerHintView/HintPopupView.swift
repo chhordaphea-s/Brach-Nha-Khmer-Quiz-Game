@@ -7,10 +7,16 @@
 
 import UIKit
 
+protocol HintPopupViewDelegate: NSObjectProtocol {
+    func dismissHintView(_ view: UIView)
+}
+
 class HintPopupView: UIView {
     
     @IBOutlet weak var message: UILabel!
     @IBOutlet weak var hintImage: UIImageView!
+    
+    weak var delegate: HintPopupViewDelegate?
     
     var hintType: HintType = .answer
     var number = 0
@@ -24,6 +30,16 @@ class HintPopupView: UIView {
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         commonInit()
+    }
+    
+    
+    @IBAction func getPressedButton(_ sender: UIButton) {
+        ButtonEffectAnimation.shared.popEffect(button: sender)
+    
+        delegate?.dismissHintView(self)
+        
+        print("You get \(self.number) help more")
+        
     }
     
     
@@ -45,13 +61,13 @@ class HintPopupView: UIView {
         
         
         if hintType == .answer {
-            let n = answerHint + 3
+            let n = answerHint + number
             print(n)
             userdefault.set(n, forKey: Constant.userdefault.answerHint)
 
             hintImage.image = UIImage(named: "answerHnit")
         } else {
-            let n = halfHint + 3
+            let n = halfHint + number
             print(n)
 
             userdefault.set(n, forKey: Constant.userdefault.halfHint)
@@ -62,11 +78,6 @@ class HintPopupView: UIView {
         message.text = "អ្នកទទួលបានជំនួយ \(hintType.rawValue) ចំនួន \(number)"
 
     }
-    
-    @IBAction func getPressedButton(_ sender: UIButton) {
-        ButtonEffectAnimation.shared.popEffect(button: sender)
-        print("You get 3 help more")
-        
-    }
+
     
 }

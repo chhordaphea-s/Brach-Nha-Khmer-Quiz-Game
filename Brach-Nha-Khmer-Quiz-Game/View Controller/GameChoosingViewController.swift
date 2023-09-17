@@ -62,6 +62,10 @@ class GameChoosingViewController: UIViewController {
         ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 270)
     }
     
+    @IBAction func storeButtonPressed(_ sender: UIButton) {
+        switchToStoreViewController()
+    }
+    
     // MARK: - Function
     private func customizeGameButton() {
         let colors = [0xCBF5D6, 0xCBEDF5, 0xF5CAEF]
@@ -87,6 +91,14 @@ class GameChoosingViewController: UIViewController {
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .crossDissolve
         controller.game = game
+        self.present(controller, animated: true)
+    }
+    
+    func switchToStoreViewController() {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "BuyHintViewController") as! StoreViewController
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .crossDissolve
+        controller.backDirection = self
         self.present(controller, animated: true)
     }
 }
