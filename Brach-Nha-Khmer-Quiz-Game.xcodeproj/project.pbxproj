@@ -20,6 +20,8 @@
 		0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */; };
 		0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */; };
 		0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C92A2A9B356F00ACF84D /* Constant.swift */; };
+		0E6D72912AB81ABC005C3129 /* LostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D728F2AB81ABB005C3129 /* LostView.swift */; };
+		0E6D72922AB81ABC005C3129 /* LostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D72902AB81ABB005C3129 /* LostView.xib */; };
 		0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */; };
 		0E7CEFA32AB6B0BE00D500F8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7CEFA22AB6B0BE00D500F8 /* Product.swift */; };
 		0E7CEFA62AB7484600D500F8 /* HintProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7CEFA52AB7484600D500F8 /* HintProduct.swift */; };
@@ -83,6 +85,8 @@
 		0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosePlayerModeCustomSagement.xib; sourceTree = "<group>"; };
 		0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerModeCustomSagement.swift; sourceTree = "<group>"; };
 		0E68C92A2A9B356F00ACF84D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0E6D728F2AB81ABB005C3129 /* LostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostView.swift; sourceTree = "<group>"; };
+		0E6D72902AB81ABB005C3129 /* LostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LostView.xib; sourceTree = "<group>"; };
 		0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEffectAnimation.swift; sourceTree = "<group>"; };
 		0E7CEFA22AB6B0BE00D500F8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0E7CEFA42AB6B2B800D500F8 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
@@ -180,7 +184,7 @@
 		0E68C9222A9B307400ACF84D /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
-				0E5159742AB16FCB0079C1C7 /* LostView */,
+				0E6D728E2AB81ABB005C3129 /* LostView */,
 				0E9881682AA9AE1300D326CC /* AnswerHintView */,
 				0EDC0B362AA0A5F000B91B2C /* SettingView */,
 				FCDA06CB2AA898CD00A2A239 /* HintTellAnswerButton */,
@@ -198,6 +202,15 @@
 				0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */,
 			);
 			path = ChoosePlayerModeCustomSagement;
+			sourceTree = "<group>";
+		};
+		0E6D728E2AB81ABB005C3129 /* LostView */ = {
+			isa = PBXGroup;
+			children = (
+				0E6D728F2AB81ABB005C3129 /* LostView.swift */,
+				0E6D72902AB81ABB005C3129 /* LostView.xib */,
+			);
+			path = LostView;
 			sourceTree = "<group>";
 		};
 		0E6F8A9D2A989E5E00B480F5 /* Model */ = {
@@ -493,7 +506,7 @@
 				0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */,
 				FCDA06BF2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf in Resources */,
 				0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */,
-				0E5159782AB170050079C1C7 /* LostView.xib in Resources */,
+				0E6D72922AB81ABC005C3129 /* LostView.xib in Resources */,
 				FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */,
 				0EDC0B3A2AA0A62300B91B2C /* CustomOnOffButton.xib in Resources */,
 				0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */,
@@ -574,6 +587,7 @@
 				FCDA06C62AA8541200A2A239 /* HintHalfHalfButton.swift in Sources */,
 				FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */,
 				FCDA06CA2AA85C4F00A2A239 /* HintButton.swift in Sources */,
+				0E6D72912AB81ABC005C3129 /* LostView.swift in Sources */,
 				0E1BD0AC2AB3195C00F7BBA5 /* HintCustomCell.swift in Sources */,
 				FCDA06B82AA7060200A2A239 /* AnswerView.swift in Sources */,
 				0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */,
@@ -581,7 +595,6 @@
 				FCDA06CD2AA8991C00A2A239 /* HintTellAnswerButton.swift in Sources */,
 				0EA44D462A97353600B5539A /* PlayMode.swift in Sources */,
 				0EDC0B3B2AA0A62300B91B2C /* CustomOnOffButton.swift in Sources */,
-				0E5159762AB16FF90079C1C7 /* LostView.swift in Sources */,
 				0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */,
 				0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */,
 				0E7CEFA32AB6B0BE00D500F8 /* Product.swift in Sources */,

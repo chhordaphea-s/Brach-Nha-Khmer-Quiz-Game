@@ -58,9 +58,7 @@ class MainViewController: UIViewController {
         
         
     }
-    @IBAction func inAppPhurcheaseButtonPressed(_ sender: UIButton) {
-        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: lostView, width: 282, height: 396)
-    }
+
     
     // MARK: FUNCTION
     
