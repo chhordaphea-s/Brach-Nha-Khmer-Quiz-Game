@@ -77,18 +77,22 @@ class Constant {
     // MARK: PRODUCT
     struct product {
         struct productID {
-            static let answerProductID = [
+            static let answerProductsID = [
                         "com.BrachNhaKhmerQuizGame.answerHint1x",
                         "com.BrachNhaKhmerQuizGame.answerHint3x",
                         "com.BrachNhaKhmerQuizGame.answerHint9x",
                         "com.BrachNhaKhmerQuizGame.answerHint20x"
                         ],
-                       halfProductID = [
+                       halfProductsID = [
                            "com.BrachNhaKhmerQuizGame.halfHint1x",
                            "com.BrachNhaKhmerQuizGame.halfHint3x",
                            "com.BrachNhaKhmerQuizGame.halfHint9x",
                            "com.BrachNhaKhmerQuizGame.halfHint20x"
-                       ]
+                       ],
+                    freeProductsID = [
+                        "com.BrachNhaKhmerQuizGame.answerHint1x",
+                        "com.BrachNhaKhmerQuizGame.halfHint1x"
+                    ]
             
             static let answerFreeProductID = "com.BrachNhaKhmerQuizGame.answerHint1x",
                        halfHintFreeProductID = "com.BrachNhaKhmerQuizGame.halfHint1x"

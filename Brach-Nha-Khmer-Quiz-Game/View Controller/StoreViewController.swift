@@ -8,6 +8,7 @@
 import UIKit
 import StoreKit
 import BetterSegmentedControl
+import GoogleMobileAds
 
 
 
@@ -26,9 +27,11 @@ class StoreViewController: UIViewController {
     var filterProducts = [SKProduct]()
     var selectHintProduct: HintProduct?
     
+//    var insterstitialAds = InterstitialAdsHelper()
 
-    
-    
+    private var interstitial: GADInterstitialAd?
+    var adsUsed = false
+
     // MARK: - Body
     
     override func viewDidLoad() {
@@ -42,6 +45,10 @@ class StoreViewController: UIViewController {
 
         fetchProduct()
 
+//        insterstitialAds.adsLoads()
+//        insterstitialAds.delegate = self
+        
+        adsLoads()
     }
     
     @IBAction func restoreButtonPressed(_ sender: UIButton) {
@@ -68,7 +75,7 @@ class StoreViewController: UIViewController {
 
     
     // MARK: - Function
-    
+
     func setupCollectionView() {
         hintCollectionView.delegate = self
         hintCollectionView.dataSource = self
@@ -92,13 +99,13 @@ class StoreViewController: UIViewController {
         
         if hintSelected == .answer {
             products.forEach { product in
-                if Constant.product.productID.answerProductID.contains(product.productIdentifier) {
+                if Constant.product.productID.answerProductsID.contains(product.productIdentifier) {
                     filterProducts.append(product)
                 }
             }
         } else if hintSelected == .halfhalf {
             products.forEach { product in
-                if Constant.product.productID.halfProductID.contains(product.productIdentifier) {
+                if Constant.product.productID.halfProductsID.contains(product.productIdentifier) {
                     filterProducts.append(product)
                 }
             }
@@ -157,16 +164,19 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let product = filterProducts[indexPath.row]
+        let tmpHintProduct = HintProduct(product: product)
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "HintCustomCell", for: indexPath) as! HintCustomCell
         
         print("product: ", product.productIdentifier)
         
-        let data = HintCustomCellModel(type: hintSelected,
+        let data = HintCustomCellModel(type: tmpHintProduct.getHintType() ?? hintSelected,
                                        title: product.localizedTitle,
-                                       amount: 3,
-                                       price: Float(truncating: product.price),
-                                       priceBackground: Constant.product.color[indexPath.row] )
+                                       amount: tmpHintProduct.getAmount(),
+                                       price: tmpHintProduct.getPrice(),
+                                       priceBackground: Constant.product.color[indexPath.row],
+                                       enable: tmpHintProduct.isFree() && self.adsUsed ? false : true
+        )
         cell.cellConfiguration(data: data)
 
             
@@ -176,20 +186,26 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectHintProduct = HintProduct(product: filterProducts[indexPath.row])
         
-        print("selectProduct: \(selectHintProduct?.getTitle()), amount: \(selectHintProduct?.getAmount()), type: \(selectHintProduct?.getHintType()?.rawValue)")
+        
+
         
         guard let hint = selectHintProduct else {return}
         
-        if filterProducts[indexPath.row].productIdentifier != Constant.product.productID.answerFreeProductID &&
-            filterProducts[indexPath.row].productIdentifier != Constant.product.productID.halfHintFreeProductID  {
+        
+        print("selectProduct: \(String(describing: hint.getTitle())), amount: \(String(describing: hint.getAmount())), type: \(String(describing: hint.getHintType()?.rawValue))")
+        
+        
+        if !Constant.product.productID.freeProductsID.contains(filterProducts[indexPath.row].productIdentifier)  {
             
             let payment = SKPayment(product: hint.getProduct())
             SKPaymentQueue.default().add(payment)
             
         } else {
-            increaseHint(hintProduct: hint)
+            displayAds(controller: self)
         }
      }
+    
+
     
     func increaseHint(hintProduct: HintProduct) {
         hintView.setup(data: hintProduct.getHintView())
@@ -237,12 +253,10 @@ extension StoreViewController: SKPaymentTransactionObserver {
                 print("purchasing")
             case .purchased:
                 print("purchased")
-                SKPaymentQueue.default().finishTransaction($0)
-                
                 if let hint = selectHintProduct {
                     increaseHint(hintProduct: hint)
                 }
-                
+                SKPaymentQueue.default().finishTransaction($0)
             case .failed:
                 print("failed")
                 SKPaymentQueue.default().finishTransaction($0)
@@ -260,4 +274,58 @@ extension StoreViewController: SKPaymentTransactionObserver {
     }
     
     
+}
+
+// MARK: InterstitialAds
+
+extension StoreViewController {
+    
+    func adsLoads() {
+        let request = GADRequest()
+        GADInterstitialAd.load(withAdUnitID: "ca-app-pub-3940256099942544/4411468910",
+                               request: request,
+                               completionHandler: { [self] ad, error in
+            if let error = error {
+                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
+                return
+            }
+            interstitial = ad
+            interstitial?.fullScreenContentDelegate = self
+        }
+        )
+        
+    }
+    
+    func displayAds(controller: UIViewController) {
+        if interstitial != nil {
+            interstitial?.present(fromRootViewController: controller)
+        } else {
+            print("Ad wasn't ready")
+
+        }
+    }
+}
+
+
+extension StoreViewController: GADFullScreenContentDelegate {
+    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
+      print("Ad did fail to present full screen content.")
+        print("Error: ", error)
+    }
+
+    /// Tells the delegate that the ad will present full screen content.
+    func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+      print("Ad will present full screen content.")
+    }
+
+    /// Tells the delegate that the ad dismissed full screen content.
+    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
+        print("Ad did dismiss full screen content.")
+        
+        guard let hint = selectHintProduct else { return }
+        
+        increaseHint(hintProduct: hint)
+        adsUsed = true
+        hintCollectionView.reloadData()
+    }
 }

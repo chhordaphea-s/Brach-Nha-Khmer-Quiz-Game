@@ -20,13 +20,12 @@ class HintCustomCell: UICollectionViewCell {
         // Initialization code
     }
 
-    
     func cellConfiguration(data: HintCustomCellModel) {
         hintImage.image = data.getImage()
 //        text.text = "ជំនួយ៖ \(data.type.rawValue)"
         text.text = data.title
         
-        priceBackground.backgroundColor = data.priceBackground
+        priceBackground.backgroundColor = data.enable ? data.priceBackground : UIColor.systemGray
         price.text = data.price == 0 ? "ឥតគិតថ្លៃ" : "$ \(data.price)"
     }
     

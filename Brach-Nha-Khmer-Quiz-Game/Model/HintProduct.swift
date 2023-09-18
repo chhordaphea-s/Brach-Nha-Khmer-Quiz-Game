@@ -14,12 +14,14 @@ struct HintProduct {
     private let title: String?
     private let hintType: HintType?
     private let amount: Int?
+    private let price: Float?
     
-    init(product: SKProduct, title: String? = nil, hintType: HintType? = nil, amount: Int? = nil) {
+    init(product: SKProduct, title: String? = nil, hintType: HintType? = nil, amount: Int? = nil, price: Float? = nil) {
         self.product = product
         self.title = title
         self.hintType = hintType
         self.amount = amount
+        self.price = price
     }
     
     func getProduct() -> SKProduct {
@@ -28,15 +30,15 @@ struct HintProduct {
     
     func getHintType() -> HintType? {
         
-        if Constant.product.productID.answerProductID.contains(self.product.productIdentifier) {
+        if Constant.product.productID.answerProductsID.contains(self.product.productIdentifier) {
             return .answer
-        } else if Constant.product.productID.halfProductID.contains(self.product.productIdentifier) {
+        } else if Constant.product.productID.halfProductsID.contains(self.product.productIdentifier) {
             return .halfhalf
         }
         return nil
     }
     
-    func getAmount() -> Int? {
+    func getAmount() -> Int {
         switch self.product.productIdentifier {
         case Product.answerHint1x.rawValue:
             return 1
@@ -55,18 +57,26 @@ struct HintProduct {
         case Product.halfHint20x.rawValue:
             return 20
         default:
-            return nil
+            return 0
         }
         
     }
     
-    func getTitle() -> String? {
+    func getTitle() -> String {
         let type = getHintType()
-        return type?.rawValue
+        return type?.rawValue ?? ""
+    }
+    
+    func getPrice() -> Float {
+        return Float(truncating: self.product.price)
+    }
+    
+    func isFree() -> Bool {
+        return Float(truncating: self.product.price) == 0
     }
     
     func getHintView() -> HintView {
-        return HintView(hinType: self.getHintType() ?? .answer, number: self.getAmount() ?? 0)
+        return HintView(hinType: self.getHintType() ?? .answer, number: self.getAmount())
     }
     
 }
