@@ -180,6 +180,7 @@
 		0E68C9222A9B307400ACF84D /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
+				0E5159742AB16FCB0079C1C7 /* LostView */,
 				0E9881682AA9AE1300D326CC /* AnswerHintView */,
 				0EDC0B362AA0A5F000B91B2C /* SettingView */,
 				FCDA06CB2AA898CD00A2A239 /* HintTellAnswerButton */,
@@ -492,6 +493,7 @@
 				0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */,
 				FCDA06BF2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf in Resources */,
 				0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */,
+				0E5159782AB170050079C1C7 /* LostView.xib in Resources */,
 				FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */,
 				0EDC0B3A2AA0A62300B91B2C /* CustomOnOffButton.xib in Resources */,
 				0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */,
@@ -579,6 +581,7 @@
 				FCDA06CD2AA8991C00A2A239 /* HintTellAnswerButton.swift in Sources */,
 				0EA44D462A97353600B5539A /* PlayMode.swift in Sources */,
 				0EDC0B3B2AA0A62300B91B2C /* CustomOnOffButton.swift in Sources */,
+				0E5159762AB16FF90079C1C7 /* LostView.swift in Sources */,
 				0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */,
 				0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */,
 				0E7CEFA32AB6B0BE00D500F8 /* Product.swift in Sources */,
