@@ -6,6 +6,7 @@ target 'Brach-Nha-Khmer-Quiz-Game' do
   use_frameworks!
 
   pod 'BetterSegmentedControl', '~> 2.0'
+  pod 'Google-Mobile-Ads-SDK'
 
   # Pods for Brach-Nha-Khmer-Quiz-Game
 

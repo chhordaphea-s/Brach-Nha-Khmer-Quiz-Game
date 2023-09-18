@@ -36,6 +36,8 @@ class SettingView: UIView {
         commonInit()
     }
     
+    // MARK: Button
+    
     @IBAction func dismissButton(_ sender: UIButton) {
         delegate?.dismissButton(self)
     }

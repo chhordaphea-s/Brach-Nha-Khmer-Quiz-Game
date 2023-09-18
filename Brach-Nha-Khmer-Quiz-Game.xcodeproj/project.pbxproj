@@ -12,10 +12,19 @@
 		0E1BD0932AB220DF00F7BBA5 /* GameChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0902AB220DF00F7BBA5 /* GameChoosingViewController.swift */; };
 		0E1BD0942AB220DF00F7BBA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0912AB220DF00F7BBA5 /* MainViewController.swift */; };
 		0E1BD0952AB220DF00F7BBA5 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0922AB220DF00F7BBA5 /* LevelViewController.swift */; };
+		0E1BD0A52AB30D4F00F7BBA5 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0A42AB30D4F00F7BBA5 /* StoreViewController.swift */; };
+		0E1BD0A72AB3117E00F7BBA5 /* HintCustomCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0A62AB3117E00F7BBA5 /* HintCustomCellModel.swift */; };
+		0E1BD0AC2AB3195C00F7BBA5 /* HintCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0AA2AB3195C00F7BBA5 /* HintCustomCell.swift */; };
+		0E1BD0AD2AB3195C00F7BBA5 /* HintCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD0AB2AB3195C00F7BBA5 /* HintCustomCell.xib */; };
+		0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */; };
 		0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */; };
 		0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */; };
 		0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C92A2A9B356F00ACF84D /* Constant.swift */; };
+		0E6D72912AB81ABC005C3129 /* LostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D728F2AB81ABB005C3129 /* LostView.swift */; };
+		0E6D72922AB81ABC005C3129 /* LostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D72902AB81ABB005C3129 /* LostView.xib */; };
 		0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */; };
+		0E7CEFA32AB6B0BE00D500F8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7CEFA22AB6B0BE00D500F8 /* Product.swift */; };
+		0E7CEFA62AB7484600D500F8 /* HintProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7CEFA52AB7484600D500F8 /* HintProduct.swift */; };
 		0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */; };
 		0E8BFF732AA43584000E5AC7 /* AudioMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF722AA43584000E5AC7 /* AudioMode.swift */; };
 		0E93ADF02AAC2F3C0073E7ED /* GameData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E93ADEF2AAC2F3C0073E7ED /* GameData.json */; };
@@ -68,10 +77,20 @@
 		0E1BD0902AB220DF00F7BBA5 /* GameChoosingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameChoosingViewController.swift; sourceTree = "<group>"; };
 		0E1BD0912AB220DF00F7BBA5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		0E1BD0922AB220DF00F7BBA5 /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		0E1BD0A42AB30D4F00F7BBA5 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		0E1BD0A62AB3117E00F7BBA5 /* HintCustomCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintCustomCellModel.swift; sourceTree = "<group>"; };
+		0E1BD0AA2AB3195C00F7BBA5 /* HintCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintCustomCell.swift; sourceTree = "<group>"; };
+		0E1BD0AB2AB3195C00F7BBA5 /* HintCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintCustomCell.xib; sourceTree = "<group>"; };
+		0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
 		0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosePlayerModeCustomSagement.xib; sourceTree = "<group>"; };
 		0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerModeCustomSagement.swift; sourceTree = "<group>"; };
 		0E68C92A2A9B356F00ACF84D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0E6D728F2AB81ABB005C3129 /* LostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostView.swift; sourceTree = "<group>"; };
+		0E6D72902AB81ABB005C3129 /* LostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LostView.xib; sourceTree = "<group>"; };
 		0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEffectAnimation.swift; sourceTree = "<group>"; };
+		0E7CEFA22AB6B0BE00D500F8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0E7CEFA42AB6B2B800D500F8 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		0E7CEFA52AB7484600D500F8 /* HintProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintProduct.swift; sourceTree = "<group>"; };
 		0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
 		0E8BFF722AA43584000E5AC7 /* AudioMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMode.swift; sourceTree = "<group>"; };
 		0E93ADEF2AAC2F3C0073E7ED /* GameData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameData.json; sourceTree = "<group>"; };
@@ -153,9 +172,19 @@
 			path = Music;
 			sourceTree = "<group>";
 		};
+		0E1BD09F2AB309A800F7BBA5 /* HintCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				0E1BD0AA2AB3195C00F7BBA5 /* HintCustomCell.swift */,
+				0E1BD0AB2AB3195C00F7BBA5 /* HintCustomCell.xib */,
+			);
+			path = HintCustomCell;
+			sourceTree = "<group>";
+		};
 		0E68C9222A9B307400ACF84D /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
+				0E6D728E2AB81ABB005C3129 /* LostView */,
 				0E9881682AA9AE1300D326CC /* AnswerHintView */,
 				0EDC0B362AA0A5F000B91B2C /* SettingView */,
 				FCDA06CB2AA898CD00A2A239 /* HintTellAnswerButton */,
@@ -175,12 +204,23 @@
 			path = ChoosePlayerModeCustomSagement;
 			sourceTree = "<group>";
 		};
+		0E6D728E2AB81ABB005C3129 /* LostView */ = {
+			isa = PBXGroup;
+			children = (
+				0E6D728F2AB81ABB005C3129 /* LostView.swift */,
+				0E6D72902AB81ABB005C3129 /* LostView.xib */,
+			);
+			path = LostView;
+			sourceTree = "<group>";
+		};
 		0E6F8A9D2A989E5E00B480F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				0EA44D452A97353600B5539A /* PlayMode.swift */,
 				0E93ADF12AAC2F570073E7ED /* GameData.swift */,
 				0E8BFF722AA43584000E5AC7 /* AudioMode.swift */,
+				0E7CEFA22AB6B0BE00D500F8 /* Product.swift */,
+				0E7CEFA52AB7484600D500F8 /* HintProduct.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,6 +231,7 @@
 				0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */,
 				0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */,
 				0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */,
+				0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -222,6 +263,7 @@
 				0E1BD0922AB220DF00F7BBA5 /* LevelViewController.swift */,
 				0E1BD0912AB220DF00F7BBA5 /* MainViewController.swift */,
 				FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */,
+				0E1BD0A42AB30D4F00F7BBA5 /* StoreViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -229,6 +271,7 @@
 		0EDC0B252AA0A3F800B91B2C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0E1BD09F2AB309A800F7BBA5 /* HintCustomCell */,
 				0E1BD08C2AB2208700F7BBA5 /* LaunchScreen.storyboard */,
 				0E1BD08A2AB2208600F7BBA5 /* Main.storyboard */,
 				0EDC0B372AA0A61A00B91B2C /* CustomSwitchButton */,
@@ -274,6 +317,7 @@
 				FC3D98992A8E2A87001A05CE /* Info.plist */,
 				0E93ADEF2AAC2F3C0073E7ED /* GameData.json */,
 				0E98816F2AA9C56500D326CC /* animation_lm8xam1w.json */,
+				0E7CEFA42AB6B2B800D500F8 /* Configuration.storekit */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -349,6 +393,7 @@
 				0E98816D2AA9BA9100D326CC /* HintView.swift */,
 				FCDA06B72AA7060200A2A239 /* AnswerView.swift */,
 				FCDA06C92AA85C4F00A2A239 /* HintButton.swift */,
+				0E1BD0A62AB3117E00F7BBA5 /* HintCustomCellModel.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -453,6 +498,7 @@
 				0EDC0B342AA0A5EB00B91B2C /* SettingView.xib in Resources */,
 				0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */,
 				0E98815B2AA46F2200D326CC /* playBackground.mp3 in Resources */,
+				0E1BD0AD2AB3195C00F7BBA5 /* HintCustomCell.xib in Resources */,
 				0E1BD08E2AB2208700F7BBA5 /* Main.storyboard in Resources */,
 				0EDDEC2C2AA1C6F000E32087 /* correct.mp3 in Resources */,
 				0E98816C2AA9AE5900D326CC /* HintPopupView.xib in Resources */,
@@ -460,6 +506,7 @@
 				0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */,
 				FCDA06BF2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf in Resources */,
 				0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */,
+				0E6D72922AB81ABC005C3129 /* LostView.xib in Resources */,
 				FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */,
 				0EDC0B3A2AA0A62300B91B2C /* CustomOnOffButton.xib in Resources */,
 				0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */,
@@ -540,17 +587,24 @@
 				FCDA06C62AA8541200A2A239 /* HintHalfHalfButton.swift in Sources */,
 				FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */,
 				FCDA06CA2AA85C4F00A2A239 /* HintButton.swift in Sources */,
+				0E6D72912AB81ABC005C3129 /* LostView.swift in Sources */,
+				0E1BD0AC2AB3195C00F7BBA5 /* HintCustomCell.swift in Sources */,
 				FCDA06B82AA7060200A2A239 /* AnswerView.swift in Sources */,
+				0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */,
 				FCDA06B32AA6F8D700A2A239 /* AnswerButton.swift in Sources */,
 				FCDA06CD2AA8991C00A2A239 /* HintTellAnswerButton.swift in Sources */,
 				0EA44D462A97353600B5539A /* PlayMode.swift in Sources */,
 				0EDC0B3B2AA0A62300B91B2C /* CustomOnOffButton.swift in Sources */,
 				0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */,
 				0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */,
+				0E7CEFA32AB6B0BE00D500F8 /* Product.swift in Sources */,
 				0EDC0B2D2AA0A49700B91B2C /* ViewAnimateHelper.swift in Sources */,
 				0EDC0B2B2AA0A46A00B91B2C /* OnOffButton.swift in Sources */,
+				0E7CEFA62AB7484600D500F8 /* HintProduct.swift in Sources */,
+				0E1BD0A52AB30D4F00F7BBA5 /* StoreViewController.swift in Sources */,
 				0E8BFF732AA43584000E5AC7 /* AudioMode.swift in Sources */,
 				FCF09C2B2AB16AF2009A63DF /* LevelViewModel.swift in Sources */,
+				0E1BD0A72AB3117E00F7BBA5 /* HintCustomCellModel.swift in Sources */,
 				FCDA06B02AA59D9F00A2A239 /* AnswerViewController.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
 				0EA44D3B2A97293A00B5539A /* UIColorExtension.swift in Sources */,
@@ -701,7 +755,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 453LSDFZ53;
+				DEVELOPMENT_TEAM = S4SC57X43S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Brach-Nha-Khmer-Quiz-Game/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -714,7 +768,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chhordaphea.Brach-Nha-Khmer-Quiz-Game";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.einoyakoreal.Brach-Nha-Khmer-Quiz-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -733,7 +787,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 453LSDFZ53;
+				DEVELOPMENT_TEAM = S4SC57X43S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Brach-Nha-Khmer-Quiz-Game/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -746,7 +800,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.chhordaphea.Brach-Nha-Khmer-Quiz-Game";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.einoyakoreal.Brach-Nha-Khmer-Quiz-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

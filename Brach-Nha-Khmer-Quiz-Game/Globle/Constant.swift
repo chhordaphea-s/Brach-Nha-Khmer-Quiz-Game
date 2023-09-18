@@ -74,4 +74,37 @@ class Constant {
         
     }
     
+    // MARK: PRODUCT
+    struct product {
+        struct productID {
+            static let answerProductsID = [
+                        "com.BrachNhaKhmerQuizGame.answerHint1x",
+                        "com.BrachNhaKhmerQuizGame.answerHint3x",
+                        "com.BrachNhaKhmerQuizGame.answerHint9x",
+                        "com.BrachNhaKhmerQuizGame.answerHint20x"
+                        ],
+                       halfProductsID = [
+                           "com.BrachNhaKhmerQuizGame.halfHint1x",
+                           "com.BrachNhaKhmerQuizGame.halfHint3x",
+                           "com.BrachNhaKhmerQuizGame.halfHint9x",
+                           "com.BrachNhaKhmerQuizGame.halfHint20x"
+                       ],
+                    freeProductsID = [
+                        "com.BrachNhaKhmerQuizGame.answerHint1x",
+                        "com.BrachNhaKhmerQuizGame.halfHint1x"
+                    ]
+            
+            static let answerFreeProductID = "com.BrachNhaKhmerQuizGame.answerHint1x",
+                       halfHintFreeProductID = "com.BrachNhaKhmerQuizGame.halfHint1x"
+        }
+        
+        static let color = [
+            UIColor(rgb: 0x48BDFF),
+            UIColor(rgb: 0xC163FB),
+            UIColor(rgb: 0x4DA836),
+            UIColor(rgb: 0x36A1A8)
+        ]
+        
+    }
+    
 }

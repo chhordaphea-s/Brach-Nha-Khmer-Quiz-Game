@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import GoogleMobileAds
+
 
 class MainViewController: UIViewController {
 
@@ -16,6 +18,7 @@ class MainViewController: UIViewController {
     
     let settingView = SettingView()
     let playButtonPressed = UITapGestureRecognizer()
+    
 
     // MARK: - Body
     
@@ -29,14 +32,17 @@ class MainViewController: UIViewController {
 
         playButtonPressed.addTarget(self, action: #selector(playButtonActive))
         playButton.addGestureRecognizer(playButtonPressed)
-        
-        
+
     }
     
     
     // MARK: BUTTON
     @IBAction func settingButtonPressed(_ sender: UIButton) {
         ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 270)
+    }
+    
+    @IBAction func storeButtonPressed(_ sender: UIButton) {
+        switchToStoreViewController()
     }
     
     @objc func playButtonActive() {
@@ -46,8 +52,11 @@ class MainViewController: UIViewController {
         
         
     }
+
     
     // MARK: FUNCTION
+    
+
     
     func getScore() {
         let scoreUD = [totalScore, totalStar, answerHint, halfHint]
@@ -105,6 +114,14 @@ class MainViewController: UIViewController {
         self.present(controller, animated: true)
         
     }
+    
+    func switchToStoreViewController() {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "BuyHintViewController") as! StoreViewController
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .crossDissolve
+        controller.backDirection = self
+        self.present(controller, animated: true)
+    }
   
 
 }
@@ -112,8 +129,7 @@ class MainViewController: UIViewController {
 extension MainViewController: SettingViewDelegate {
     func quitGame() {}
     
-    func dismissButton(_ view: UIView) {
+    func dismissButton(_ view: UIView)  {
         ViewAnimateHelper.shared.animateViewOut(self.view, popUpView: view)
     }
 }
-
