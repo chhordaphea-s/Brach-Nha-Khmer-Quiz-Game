@@ -18,6 +18,18 @@ struct GameData: Decodable {
         self.Riddle = Riddle
     }
     
+    func getGameByKey(key: String) -> Game? {
+        switch key {
+        case GeneralKnowlage.key:
+            return GeneralKnowlage
+        case Proverb.key:
+            return Proverb
+        case Riddle.key:
+            return Riddle
+        default :
+            return nil
+        }
+    }
 }
 
 struct Game: Decodable {
@@ -38,7 +50,7 @@ struct Game: Decodable {
 
 struct Level: Decodable {
     let level: Int
-    let questions: [Question]
+    var questions: [Question]
     
     init(level: Int, questions: [Question]) {
         self.level = level
@@ -49,7 +61,7 @@ struct Level: Decodable {
 struct Question: Decodable {
     let question: String
     let answer: String
-    let possibleAnswer: [String]?
+    var possibleAnswer: [String]?
     
     init(question: String, answer: String, possibleAnswer: [String]?) {
         self.question = question

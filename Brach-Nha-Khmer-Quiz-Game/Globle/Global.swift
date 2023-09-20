@@ -9,7 +9,7 @@ import Foundation
 
 let userdefault = UserDefaults.standard
 
-var gameData: GameData? = {
+let gameData: GameData? = {
     if let url = Bundle.main.url(forResource: "GameData", withExtension: "json") {
         do {
             let data = try Data(contentsOf: url)
@@ -40,7 +40,7 @@ var totalStar: Int { return userdefault.integer(forKey: Constant.userdefault.tot
 
 
 // MARK: FUNCTION
-func getPossiableAnswer(game: Game, level: Int, question: Int) {
+func getPossiableAnswer(game: Game, level: Int, question: Int) -> [String] {
     let correctAns = game.levels[level-1].questions[question-1].answer
     var allAnswer: [String] = []
     var possiableAnswwer: [String] = [correctAns]
@@ -62,7 +62,18 @@ func getPossiableAnswer(game: Game, level: Int, question: Int) {
     }
     
     possiableAnswwer.shuffle()
+    return possiableAnswwer
+}
+
+func convertEngNumToKhNum(engNum: Int) -> String{
+    var khNumStr = ""
+
+    let khNum = ["០", "១", "២", "៣", "៤", "៥", "៦", "៧", "៨", "៩"]
+    var engString = String(engNum)
     
-    print("Possiable Answer: ", possiableAnswwer)
-    print("Answer: ", correctAns)
+    for each in engString {
+        let i = Int(String(each)) ?? 0
+        khNumStr += khNum[i]
+    }
+    return khNumStr
 }

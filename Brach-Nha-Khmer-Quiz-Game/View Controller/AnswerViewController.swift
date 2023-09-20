@@ -10,14 +10,16 @@ import UIKit
 class AnswerViewController: UIViewController {
     
     @IBOutlet weak var PauseButton: UIButton!
-    @IBOutlet weak var ScoreCounting: UILabel!
+    @IBOutlet weak var scoreCounting: UILabel!
     @IBOutlet var lifePlaying: [UIImageView]!
-    @IBOutlet weak var QuestionNum: UILabel!
+    @IBOutlet weak var questionNum: UILabel!
     @IBOutlet weak var timeCountDown: UIProgressView!
-    @IBOutlet weak var Question: UILabel!
+    @IBOutlet weak var question: UILabel!
     @IBOutlet weak var hintAnswerButton: HintTellAnswerButton!
     @IBOutlet weak var hintHaftHaftButton: HintHalfHalfButton!
     @IBOutlet var answerView: [AnswerButton]!
+    
+    var gamePlay: GamePlay? = nil
     
     let sampleAnswer = [
         AnswerView(index: 0,title: "បារី", correctAnswer: "បារី"),
@@ -27,12 +29,12 @@ class AnswerViewController: UIViewController {
     ]
     
     let durationOfAnimationInSecond = -5.0
-    var failureNumOfGame : Int = 0
     var incorrectAnswer = [AnswerButton]()
     var correctAnswer = AnswerButton()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupGameData()
         setupAnswerIntoButton()
         setProgressTime()
         
@@ -52,16 +54,31 @@ class AnswerViewController: UIViewController {
 
     }
     
-
     func setLifeOfGame() {
-        for life in 0..<failureNumOfGame {
+        for life in 0..<(gamePlay?.fail ?? 0) {
             lifePlaying[life].isHidden = true
             
         }
     }
     
+    func getQuestion(level: Level, numOfQuestion: Int) -> String{
+        return level.questions[numOfQuestion-1].question
+    }
+    
+    func setupGameData() {
+        guard let gamePlayData = gamePlay else { return }
+        
+        scoreCounting.text = "ពិន្ទុ \(gamePlayData.score)"
+        setLifeOfGame()
+        questionNum.text = "សំណួរទី\(convertEngNumToKhNum(engNum: gamePlayData.question))"
+        question.text = getQuestion(level: gamePlayData.level, numOfQuestion: gamePlayData.question)
+        
+    }
+
+    
+    
     func setProgressTime() {
-        timeCountDown.setAnimatedProgress(progress: 0, duration: 50){
+        timeCountDown.setAnimatedProgress(progress: 0, duration: 45){
             print("Done")
         }
     }
@@ -177,9 +194,10 @@ extension AnswerViewController: AnswerButtonDelegate {
         print(index)
         
         if status==false {
-            failureNumOfGame += 1
+            gamePlay?.fail += 1
             setLifeOfGame()
         }
     }
     
 }
+
