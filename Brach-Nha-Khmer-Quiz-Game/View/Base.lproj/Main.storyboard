@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IfP-oB-GcI">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -367,6 +367,12 @@
                                 </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="Pause"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="soundFileName" value="pressed"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="8d2-q1-hWG" eventType="touchUpInside" id="yTf-FR-SKS"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ពិន្ទុ​ ១០០" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pnW-3e-8gS">
                                 <rect key="frame" x="175.66666666666666" y="75" width="78.666666666666657" height="40"/>
@@ -419,8 +425,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" text="កំប៉ុកក្រពុំ​​ អង្គុយលើភ្នំ​​ រំសាយសក់លែង" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeD-oy-jSS">
-                                <rect key="frame" x="16" y="216.66666666666666" width="287.66666666666669" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" text="កំប៉ុកក្រពុំ​​ អង្គុយលើភ្នំ​​ រំសាយសក់លែង" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeD-oy-jSS">
+                                <rect key="frame" x="16" y="216.66666666666666" width="398" height="38"/>
                                 <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -494,6 +500,7 @@
                             <constraint firstItem="98j-Kr-fRb" firstAttribute="trailing" secondItem="x1y-KW-mrm" secondAttribute="trailing" constant="16" id="2pt-DL-667"/>
                             <constraint firstItem="Pq1-bS-p1P" firstAttribute="centerX" secondItem="u5K-iC-kSR" secondAttribute="centerX" id="36Y-lU-ZBu"/>
                             <constraint firstItem="98j-Kr-fRb" firstAttribute="bottom" secondItem="L9w-Ol-ffb" secondAttribute="bottom" constant="168" id="44d-2Q-bOi"/>
+                            <constraint firstItem="98j-Kr-fRb" firstAttribute="trailing" secondItem="HeD-oy-jSS" secondAttribute="trailing" constant="16" id="5WC-k9-IqF"/>
                             <constraint firstItem="98j-Kr-fRb" firstAttribute="bottom" secondItem="B2L-2q-eRr" secondAttribute="bottom" constant="232" id="6Ra-gx-037"/>
                             <constraint firstItem="98j-Kr-fRb" firstAttribute="bottom" secondItem="OS1-mD-XoS" secondAttribute="bottom" constant="329" id="7st-5c-oIz"/>
                             <constraint firstItem="pnW-3e-8gS" firstAttribute="top" secondItem="98j-Kr-fRb" secondAttribute="top" constant="16" id="8mt-pO-5bb"/>
@@ -524,15 +531,15 @@
                         <outlet property="hintHaftHaftButton" destination="ynG-PX-2us" id="I8z-wd-xBT"/>
                         <outlet property="question" destination="HeD-oy-jSS" id="VRU-9y-Zl0"/>
                         <outlet property="questionNum" destination="Ltl-Js-hyt" id="0IM-we-xPk"/>
-                        <outlet property="scoreCounting" destination="pnW-3e-8gS" id="xVs-kO-FPb"/>
+                        <outlet property="score" destination="pnW-3e-8gS" id="xVs-kO-FPb"/>
                         <outlet property="timeCountDown" destination="x1y-KW-mrm" id="8aG-oG-GLf"/>
                         <outletCollection property="LifePlaying" destination="4IF-T0-fJc" collectionClass="NSMutableArray" id="hxU-pP-gYI"/>
                         <outletCollection property="LifePlaying" destination="gcq-L7-lbd" collectionClass="NSMutableArray" id="Xyd-Aa-OyP"/>
                         <outletCollection property="LifePlaying" destination="1sv-dc-DfF" collectionClass="NSMutableArray" id="Qv9-9s-DvH"/>
-                        <outletCollection property="answerView" destination="L9w-Ol-ffb" collectionClass="NSMutableArray" id="Qe2-dx-fUe"/>
-                        <outletCollection property="answerView" destination="tz0-gb-HbK" collectionClass="NSMutableArray" id="xPp-os-Pwc"/>
-                        <outletCollection property="answerView" destination="B2L-2q-eRr" collectionClass="NSMutableArray" id="WKN-Vb-23V"/>
-                        <outletCollection property="answerView" destination="A0g-Cv-Pk5" collectionClass="NSMutableArray" id="XSa-Vq-sXd"/>
+                        <outletCollection property="answerView" destination="B2L-2q-eRr" collectionClass="NSMutableArray" id="bpl-lQ-DAl"/>
+                        <outletCollection property="answerView" destination="L9w-Ol-ffb" collectionClass="NSMutableArray" id="AHl-Ja-H21"/>
+                        <outletCollection property="answerView" destination="A0g-Cv-Pk5" collectionClass="NSMutableArray" id="Gd5-1H-aJi"/>
+                        <outletCollection property="answerView" destination="tz0-gb-HbK" collectionClass="NSMutableArray" id="KNO-Cq-OY5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ba1-eS-uxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -551,7 +558,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" text="បក្សីបក្សាស្លាប ជើងបួនទាប ស្លាបបួនខ្មៅ កើតកូនកើតចៅ ខុសមេខុសបា" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7X-hw-IkO">
-                                <rect key="frame" x="30" y="434.66666666666669" width="370" height="63"/>
+                                <rect key="frame" x="30" y="417.33333333333331" width="370" height="97.666666666666686"/>
                                 <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="27"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -591,13 +598,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ពិន្ទុ​ ១០០" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iv9-8I-gMT">
-                                <rect key="frame" x="181.33333333333334" y="75" width="67.666666666666657" height="25.666666666666671"/>
+                                <rect key="frame" x="175.66666666666666" y="75" width="78.666666666666657" height="40"/>
                                 <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="22"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="QFy-cc-Zvn">
-                                <rect key="frame" x="342" y="77" width="72" height="22"/>
+                                <rect key="frame" x="342" y="84" width="72" height="22"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="exn-Ud-yHC">
                                         <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
@@ -626,7 +633,7 @@
                                 <rect key="frame" x="72" y="830" width="286" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចុចទីនេះដើម្បីឆ្លើយសំណួរ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNJ-xh-hof">
-                                        <rect key="frame" x="79.333333333333343" y="7.3333333333333721" width="127.33333333333334" height="15.333333333333336"/>
+                                        <rect key="frame" x="83.333333333333343" y="3.3333333333333721" width="119.33333333333334" height="23.666666666666668"/>
                                         <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>

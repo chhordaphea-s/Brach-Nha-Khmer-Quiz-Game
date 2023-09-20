@@ -25,4 +25,10 @@ extension UIProgressView {
             }
         }
     }
+    
+    func timeRemainder(duration: Float = 1) -> Int{
+        let timeRemainder = self.progress * duration
+        return Int(timeRemainder)
+    }
+    
 }

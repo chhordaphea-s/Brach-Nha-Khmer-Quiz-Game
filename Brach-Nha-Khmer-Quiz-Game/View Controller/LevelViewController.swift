@@ -119,7 +119,6 @@ extension LevelViewController: UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         guard let levelData = game?.levels[indexPath.row] else { return }
-        print(levelData)
         switchToReadingQuestionScreen(levelData: levelData)
     
     }

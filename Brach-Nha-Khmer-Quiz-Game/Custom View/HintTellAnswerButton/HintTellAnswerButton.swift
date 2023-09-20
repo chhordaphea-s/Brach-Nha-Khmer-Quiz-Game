@@ -56,6 +56,12 @@ class HintTellAnswerButton: UIView {
         self.type = data.type
         self.num = data.num
         self.enable = data.enable
+        
+        if !enable {
+            self.isHidden = true
+        }
+        
+        
     }
     
         

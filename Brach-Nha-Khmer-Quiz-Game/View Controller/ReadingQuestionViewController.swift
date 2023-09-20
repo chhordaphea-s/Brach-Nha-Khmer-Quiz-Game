@@ -77,11 +77,10 @@ class ReadingQuestionViewController: UIViewController {
         question.text = getQuestion(level: gamePlayData.level,
                     numOfQuestion: gamePlayData.question)
         
-        DispatchQueue.main.async {
-            if self.gamePlay?.level.questions[gamePlayData.question].possibleAnswer == nil {
-                self.gamePlay?.level.questions[gamePlayData.question].possibleAnswer = getPossiableAnswer(game: currentGame, level: gamePlayData.level.level, question: gamePlayData.question)
-            }
+        if self.gamePlay?.level.questions[gamePlayData.question - 1].possibleAnswer == nil {
+            self.gamePlay?.level.questions[gamePlayData.question - 1].possibleAnswer = getPossiableAnswer(game: currentGame, level: gamePlayData.level.level, question: gamePlayData.question)
         }
+        
     }
 
     func setProgressTime() {
@@ -93,6 +92,7 @@ class ReadingQuestionViewController: UIViewController {
     
     func switchToAnswerScreen() {
         let controller = storyboard?.instantiateViewController(withIdentifier: "AnswerViewController") as! AnswerViewController
+        controller.gamePlay = gamePlay
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .crossDissolve
         self.present(controller, animated: true)
