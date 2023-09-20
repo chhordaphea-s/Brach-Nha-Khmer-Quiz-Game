@@ -16,28 +16,6 @@ class LevelViewController: UIViewController {
     
     let answerHintView = HintPopupView()
     
-//    let sampleData = [
-//        LevelViewModel(star: 3, levelNum: 1),
-//        LevelViewModel(star: 1, levelNum: 2),
-//        LevelViewModel(star: 2, levelNum: 3),
-//        LevelViewModel(star: 3, levelNum: 4),
-//        LevelViewModel(star: 3, levelNum: 5),
-//        LevelViewModel(star: 3, levelNum: 6),
-//        LevelViewModel(star: 3, levelNum: 7),
-//        LevelViewModel(star: 3, levelNum: 8),
-//        LevelViewModel(star: 3, levelNum: 9),
-//        LevelViewModel(star: 3, levelNum: 10),
-//        LevelViewModel(star: 3, levelNum: 11),
-//        LevelViewModel(star: 3, levelNum: 12),
-//        LevelViewModel(star: 3, levelNum: 13),
-//        LevelViewModel(star: 3, levelNum: 14),
-//        LevelViewModel(star: 3, levelNum: 15),
-//        LevelViewModel(star: 3, levelNum: 16),
-//        LevelViewModel(star: 3, levelNum: 17),
-//        LevelViewModel(star: 3, levelNum: 18),
-//        LevelViewModel(star: 3, levelNum: 19),
-//        LevelViewModel(star: 0, levelNum: 20)
-//    ]
     
     
     override func viewDidLoad() {
@@ -53,7 +31,26 @@ class LevelViewController: UIViewController {
     
 
     @IBAction func backButtonPressed(_ sender: UIButton) {
-        switchToAnotherScreen()
+        backToLevelScreen()
+    }
+    
+    func switchToReadingQuestionScreen(levelData: Level) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ReadingQuestionViewController") as! ReadingQuestionViewController
+        
+        controller.gamePlay = GamePlay(gameKey: game?.key ?? "",
+                                       level: levelData,
+                                       question: 1,
+                                       score: 0,
+                                       fail: 0,
+                                       timings: 0,
+                                       answerHint: HintButton(type: .answer, num: answerHint, enable: true),
+                                       halfhalfHint: HintButton(type: .halfhalf, num: halfHint, enable: true),
+                                       star: 0,
+                                       highestScore: 0)
+        
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .crossDissolve
+        self.present(controller, animated: true)
     }
     
     func configGameTitle() {
@@ -73,7 +70,7 @@ class LevelViewController: UIViewController {
         }
     }
     
-    func switchToAnotherScreen(){
+    func backToLevelScreen(){
         let controller = storyboard?.instantiateViewController(withIdentifier: "GameChoosingViewController") as! GameChoosingViewController
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .crossDissolve
@@ -121,9 +118,10 @@ extension LevelViewController: UICollectionViewDataSource, UICollectionViewDeleg
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        print(game?.levels[indexPath.row].level ?? 0)
-//        ButtonEffectAnimation.shared.popEffect(button: )
-
+        guard let levelData = game?.levels[indexPath.row] else { return }
+        print(levelData)
+        switchToReadingQuestionScreen(levelData: levelData)
+    
     }
     
 }

@@ -20,18 +20,7 @@ class LevelCustomCell: UICollectionViewCell {
         // Initialization code
     }
     
-    func convertEngNumToKhNum(engNum: Int) -> String{
-        var khNumStr = ""
-
-        let khNum = ["០", "១", "២", "៣", "៤", "៥", "៦", "៧", "៨", "៩"]
-        var engString = String(engNum)
-        
-        for each in engString {
-            let i = Int(String(each)) ?? 0
-            khNumStr += khNum[i]
-        }
-        return khNumStr
-    }
+    
 
     
     func levelGradientColor(color1: CGColor, color2: CGColor){

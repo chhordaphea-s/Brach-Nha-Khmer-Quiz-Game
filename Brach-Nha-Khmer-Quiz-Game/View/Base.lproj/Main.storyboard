@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IfP-oB-GcI">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
@@ -407,7 +407,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="x1y-KW-mrm">
-                                <rect key="frame" x="16" y="192" width="398" height="8"/>
+                                <rect key="frame" x="16" y="190.66666666666666" width="398" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="q2V-ih-6ET"/>
                                 </constraints>
@@ -420,7 +420,7 @@
                                 </userDefinedRuntimeAttributes>
                             </progressView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" text="កំប៉ុកក្រពុំ​​ អង្គុយលើភ្នំ​​ រំសាយសក់លែង" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeD-oy-jSS">
-                                <rect key="frame" x="16" y="218" width="287.66666666666669" height="38"/>
+                                <rect key="frame" x="16" y="216.66666666666666" width="287.66666666666669" height="38"/>
                                 <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -501,7 +501,7 @@
                             <constraint firstItem="xFC-H6-Yih" firstAttribute="leading" secondItem="98j-Kr-fRb" secondAttribute="leading" constant="16" id="DLk-W5-vHL"/>
                             <constraint firstItem="L9w-Ol-ffb" firstAttribute="centerX" secondItem="u5K-iC-kSR" secondAttribute="centerX" id="GNW-Ou-UZg"/>
                             <constraint firstItem="98j-Kr-fRb" firstAttribute="bottom" secondItem="tz0-gb-HbK" secondAttribute="bottom" constant="40" id="MZA-dc-aVu"/>
-                            <constraint firstItem="x1y-KW-mrm" firstAttribute="top" secondItem="Ltl-Js-hyt" secondAttribute="bottom" constant="17.329999999999998" id="SKx-V0-opc"/>
+                            <constraint firstItem="x1y-KW-mrm" firstAttribute="top" secondItem="Ltl-Js-hyt" secondAttribute="bottom" constant="16" id="SKx-V0-opc"/>
                             <constraint firstItem="xFC-H6-Yih" firstAttribute="top" secondItem="98j-Kr-fRb" secondAttribute="top" constant="16" id="SZt-dF-YN6"/>
                             <constraint firstItem="ynG-PX-2us" firstAttribute="trailing" secondItem="98j-Kr-fRb" secondAttribute="trailing" id="UHq-KH-D2o"/>
                             <constraint firstItem="B2L-2q-eRr" firstAttribute="centerX" secondItem="u5K-iC-kSR" secondAttribute="centerX" id="VCr-QK-gdv"/>
@@ -520,11 +520,11 @@
                     </view>
                     <connections>
                         <outlet property="PauseButton" destination="xFC-H6-Yih" id="cr3-TF-Zk4"/>
-                        <outlet property="Question" destination="HeD-oy-jSS" id="VRU-9y-Zl0"/>
-                        <outlet property="QuestionNum" destination="Ltl-Js-hyt" id="0IM-we-xPk"/>
-                        <outlet property="ScoreCounting" destination="pnW-3e-8gS" id="xVs-kO-FPb"/>
                         <outlet property="hintAnswerButton" destination="OS1-mD-XoS" id="j8S-YZ-n3w"/>
                         <outlet property="hintHaftHaftButton" destination="ynG-PX-2us" id="I8z-wd-xBT"/>
+                        <outlet property="question" destination="HeD-oy-jSS" id="VRU-9y-Zl0"/>
+                        <outlet property="questionNum" destination="Ltl-Js-hyt" id="0IM-we-xPk"/>
+                        <outlet property="scoreCounting" destination="pnW-3e-8gS" id="xVs-kO-FPb"/>
                         <outlet property="timeCountDown" destination="x1y-KW-mrm" id="8aG-oG-GLf"/>
                         <outletCollection property="LifePlaying" destination="4IF-T0-fJc" collectionClass="NSMutableArray" id="hxU-pP-gYI"/>
                         <outletCollection property="LifePlaying" destination="gcq-L7-lbd" collectionClass="NSMutableArray" id="Xyd-Aa-OyP"/>
@@ -537,7 +537,162 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ba1-eS-uxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3039" y="-9"/>
+            <point key="canvasLocation" x="3723" y="-9"/>
+        </scene>
+        <!--Reading Question View Controller-->
+        <scene sceneID="oLT-Qw-syv">
+            <objects>
+                <viewController storyboardIdentifier="ReadingQuestionViewController" id="uUY-dp-YuD" customClass="ReadingQuestionViewController" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kvP-iS-cEU">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="countryside4 1" translatesAutoresizingMaskIntoConstraints="NO" id="Z19-C1-YPE" customClass="ReadingQuestionViewController">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" text="បក្សីបក្សាស្លាប ជើងបួនទាប ស្លាបបួនខ្មៅ កើតកូនកើតចៅ ខុសមេខុសបា" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T7X-hw-IkO">
+                                <rect key="frame" x="30" y="434.66666666666669" width="370" height="63"/>
+                                <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="27"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="សំណួរទី១" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HX-WA-mrQ">
+                                <rect key="frame" x="16" y="147" width="67.666666666666671" height="27.666666666666657"/>
+                                <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="mq1-nf-KPV">
+                                <rect key="frame" x="16" y="190.66666666666666" width="398" height="8"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="8" id="n8x-MK-qSQ"/>
+                                </constraints>
+                                <color key="progressTintColor" name="Primary"/>
+                                <color key="trackTintColor" name="noProgressTint"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ihC-7J-aq7">
+                                <rect key="frame" x="16" y="75" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="5fJ-B3-5a9"/>
+                                    <constraint firstAttribute="height" constant="32" id="lIw-TR-aaq"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="Pause"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="soundFileName" value="pressed"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="pauseButtonPressed:" destination="uUY-dp-YuD" eventType="touchUpInside" id="hVj-Kx-P3e"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ពិន្ទុ​ ១០០" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iv9-8I-gMT">
+                                <rect key="frame" x="181.33333333333334" y="75" width="67.666666666666657" height="25.666666666666671"/>
+                                <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="QFy-cc-Zvn">
+                                <rect key="frame" x="342" y="77" width="72" height="22"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="exn-Ud-yHC">
+                                        <rect key="frame" x="0.0" y="0.0" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="7KL-5Q-2FQ"/>
+                                            <constraint firstAttribute="height" constant="22" id="DK2-qE-a7d"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="vee-7t-u0H">
+                                        <rect key="frame" x="25" y="0.0" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="09N-OO-Pbi"/>
+                                            <constraint firstAttribute="height" constant="22" id="MiP-hU-WNU"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Heart" translatesAutoresizingMaskIntoConstraints="NO" id="DsB-cH-5Qf">
+                                        <rect key="frame" x="50" y="0.0" width="22" height="22"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="22" id="131-Ea-jJG"/>
+                                            <constraint firstAttribute="height" constant="22" id="32Y-Tb-Dqv"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WxS-Zz-ZV7">
+                                <rect key="frame" x="72" y="830" width="286" height="30"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចុចទីនេះដើម្បីឆ្លើយសំណួរ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNJ-xh-hof">
+                                        <rect key="frame" x="79.333333333333343" y="7.3333333333333721" width="127.33333333333334" height="15.333333333333336"/>
+                                        <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="13"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" name="backgroundSkipQuestion"/>
+                                <constraints>
+                                    <constraint firstItem="BNJ-xh-hof" firstAttribute="centerY" secondItem="WxS-Zz-ZV7" secondAttribute="centerY" id="8sU-Ub-igi"/>
+                                    <constraint firstItem="BNJ-xh-hof" firstAttribute="centerX" secondItem="WxS-Zz-ZV7" secondAttribute="centerX" id="P9p-x8-3KF"/>
+                                    <constraint firstAttribute="height" constant="30" id="iyQ-eh-av4"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                        <color key="value" name="borderSkipQuestion"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="lsV-9I-h1c"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="iv9-8I-gMT" firstAttribute="top" secondItem="lsV-9I-h1c" secondAttribute="top" constant="16" id="39w-rF-q3Q"/>
+                            <constraint firstAttribute="bottom" secondItem="WxS-Zz-ZV7" secondAttribute="bottom" constant="72" id="5gm-Ch-foz"/>
+                            <constraint firstItem="Z19-C1-YPE" firstAttribute="centerY" secondItem="kvP-iS-cEU" secondAttribute="centerY" id="6RH-AK-0b6"/>
+                            <constraint firstItem="2HX-WA-mrQ" firstAttribute="top" secondItem="ihC-7J-aq7" secondAttribute="bottom" constant="40" id="8Nc-bg-on6"/>
+                            <constraint firstItem="ihC-7J-aq7" firstAttribute="top" secondItem="lsV-9I-h1c" secondAttribute="top" constant="16" id="8p9-zV-ltA"/>
+                            <constraint firstItem="ihC-7J-aq7" firstAttribute="leading" secondItem="lsV-9I-h1c" secondAttribute="leading" constant="16" id="9p8-d6-I0D"/>
+                            <constraint firstItem="mq1-nf-KPV" firstAttribute="top" secondItem="2HX-WA-mrQ" secondAttribute="bottom" constant="16" id="NO0-AT-RhN"/>
+                            <constraint firstItem="mq1-nf-KPV" firstAttribute="leading" secondItem="lsV-9I-h1c" secondAttribute="leading" constant="16" id="TL4-ko-jR1"/>
+                            <constraint firstAttribute="trailing" secondItem="T7X-hw-IkO" secondAttribute="trailing" constant="30" id="UOn-Uh-0H7"/>
+                            <constraint firstItem="WxS-Zz-ZV7" firstAttribute="leading" secondItem="lsV-9I-h1c" secondAttribute="leading" constant="72" id="alu-Pz-yIb"/>
+                            <constraint firstItem="lsV-9I-h1c" firstAttribute="trailing" secondItem="QFy-cc-Zvn" secondAttribute="trailing" constant="16" id="cHa-CP-KM2"/>
+                            <constraint firstItem="2HX-WA-mrQ" firstAttribute="leading" secondItem="lsV-9I-h1c" secondAttribute="leading" constant="16" id="cR2-hk-cOR"/>
+                            <constraint firstItem="lsV-9I-h1c" firstAttribute="trailing" secondItem="WxS-Zz-ZV7" secondAttribute="trailing" constant="72" id="eh8-EG-GbL"/>
+                            <constraint firstItem="lsV-9I-h1c" firstAttribute="trailing" secondItem="mq1-nf-KPV" secondAttribute="trailing" constant="16" id="eun-d9-uga"/>
+                            <constraint firstItem="Z19-C1-YPE" firstAttribute="centerX" secondItem="kvP-iS-cEU" secondAttribute="centerX" id="ghX-CV-8TO"/>
+                            <constraint firstItem="T7X-hw-IkO" firstAttribute="centerY" secondItem="kvP-iS-cEU" secondAttribute="centerY" id="lZX-cv-jkm"/>
+                            <constraint firstItem="iv9-8I-gMT" firstAttribute="centerX" secondItem="kvP-iS-cEU" secondAttribute="centerX" id="oiv-bi-Zf8"/>
+                            <constraint firstItem="QFy-cc-Zvn" firstAttribute="centerY" secondItem="iv9-8I-gMT" secondAttribute="centerY" id="ubE-aQ-DID"/>
+                            <constraint firstItem="T7X-hw-IkO" firstAttribute="centerX" secondItem="kvP-iS-cEU" secondAttribute="centerX" id="wiX-DZ-btB"/>
+                            <constraint firstItem="T7X-hw-IkO" firstAttribute="leading" secondItem="lsV-9I-h1c" secondAttribute="leading" constant="30" id="xVE-l9-Co0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="continueButton" destination="WxS-Zz-ZV7" id="VPc-O3-fbe"/>
+                        <outlet property="progressBar" destination="mq1-nf-KPV" id="h1J-bL-h7u"/>
+                        <outlet property="question" destination="T7X-hw-IkO" id="dnh-kH-vhe"/>
+                        <outlet property="questionOrder" destination="2HX-WA-mrQ" id="ytu-Rb-c03"/>
+                        <outlet property="score" destination="iv9-8I-gMT" id="x6X-RB-swg"/>
+                        <outletCollection property="lifePlaying" destination="DsB-cH-5Qf" collectionClass="NSMutableArray" id="nwh-IA-MJj"/>
+                        <outletCollection property="lifePlaying" destination="vee-7t-u0H" collectionClass="NSMutableArray" id="Qet-xM-d6d"/>
+                        <outletCollection property="lifePlaying" destination="exn-Ud-yHC" collectionClass="NSMutableArray" id="RdA-D8-B94"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Sa5-xP-AzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3006.9767441860463" y="-9.0128755364806867"/>
         </scene>
         <!--Game Choosing View Controller-->
         <scene sceneID="q2c-o7-XUo">
@@ -857,6 +1012,12 @@
         </namedColor>
         <namedColor name="Text Color">
             <color red="0.20399999618530273" green="0.20000000298023224" blue="0.18799999356269836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="backgroundSkipQuestion">
+            <color red="0.63137254901960782" green="0.60392156862745094" blue="0.60392156862745094" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="borderSkipQuestion">
+            <color red="1" green="1" blue="1" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="noProgressTint">
             <color red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
