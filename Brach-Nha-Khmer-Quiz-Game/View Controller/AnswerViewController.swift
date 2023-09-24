@@ -27,14 +27,21 @@ class AnswerViewController: UIViewController {
     var incorrectAnswer = [AnswerButton]()
     var correctAnswer = AnswerButton()
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
         hideButton(views: answerView)
         hideHintButton()
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
         setupGameData()
         setupSettingView()
         setupAnswerIntoButton()
         setProgressTime()
+        setupHint()
         
         
         hintAnswerButton.roundCorners(corners: [.bottomRight, .topRight], radius: 15)
@@ -57,6 +64,18 @@ class AnswerViewController: UIViewController {
     @IBAction func pauseButtonPressed(_ sender: UIButton) {
         ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 348)
         ButtonEffectAnimation.shared.popEffect(button: sender)
+    }
+    
+    func setupHint() {
+        guard let gamePlayData = gamePlay else { return }
+        
+        hintAnswerButton.setupData(data: HintButton(type: gamePlayData.answerHint.type, 
+                                                    num: gamePlayData.answerHint.num,
+                                                    enable: gamePlayData.answerHint.enable))
+        
+        hintHaftHaftButton.setupData(data: HintButton(type: gamePlayData.halfhalfHint.type, 
+                                                      num: gamePlayData.halfhalfHint.num,
+                                                      enable: gamePlayData.halfhalfHint.enable))
     }
     
     func setupSettingView() {
@@ -270,7 +289,7 @@ class AnswerViewController: UIViewController {
         
         gamePlay?.question += 1
         controller.gamePlay = gamePlay
-        
+    
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .crossDissolve
         self.present(controller, animated: true)
