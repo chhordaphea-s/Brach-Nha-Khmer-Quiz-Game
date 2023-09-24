@@ -9,7 +9,7 @@ import Foundation
 
 struct HintButton {
     let type: HintType
-    let enable: Bool
+    var enable: Bool
     var num: Int
     
     init(type: HintType, num: Int, enable: Bool) {

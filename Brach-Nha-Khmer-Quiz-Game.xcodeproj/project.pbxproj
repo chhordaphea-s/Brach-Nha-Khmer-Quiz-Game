@@ -68,6 +68,8 @@
 		FCE106042A99E5B300AAEDD0 /* LevelCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */; };
 		FCE106052A99E5B300AAEDD0 /* LevelCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */; };
 		FCF09C2B2AB16AF2009A63DF /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF09C2A2AB16AF2009A63DF /* LevelViewModel.swift */; };
+		FCF09C2F2AB30A49009A63DF /* ReadingQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF09C2E2AB30A49009A63DF /* ReadingQuestionViewController.swift */; };
+		FCF09C312AB94F20009A63DF /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF09C302AB94F20009A63DF /* GamePlay.swift */; };
 		FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF478332AA9CD6800075DAC /* UIProgressViewExtension.swift */; };
 /* End PBXBuildFile section */
 
@@ -138,6 +140,8 @@
 		FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCustomCell.swift; sourceTree = "<group>"; };
 		FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCustomCell.xib; sourceTree = "<group>"; };
 		FCF09C2A2AB16AF2009A63DF /* LevelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
+		FCF09C2E2AB30A49009A63DF /* ReadingQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingQuestionViewController.swift; sourceTree = "<group>"; };
+		FCF09C302AB94F20009A63DF /* GamePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
 		FCF478332AA9CD6800075DAC /* UIProgressViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -264,6 +268,7 @@
 				0E1BD0912AB220DF00F7BBA5 /* MainViewController.swift */,
 				FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */,
 				0E1BD0A42AB30D4F00F7BBA5 /* StoreViewController.swift */,
+				FCF09C2E2AB30A49009A63DF /* ReadingQuestionViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -394,6 +399,7 @@
 				FCDA06B72AA7060200A2A239 /* AnswerView.swift */,
 				FCDA06C92AA85C4F00A2A239 /* HintButton.swift */,
 				0E1BD0A62AB3117E00F7BBA5 /* HintCustomCellModel.swift */,
+				FCF09C302AB94F20009A63DF /* GamePlay.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -582,9 +588,11 @@
 				FCE106042A99E5B300AAEDD0 /* LevelCustomCell.swift in Sources */,
 				0E98815D2AA46F8600D326CC /* Global.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
+				FCF09C312AB94F20009A63DF /* GamePlay.swift in Sources */,
 				0E1BD0942AB220DF00F7BBA5 /* MainViewController.swift in Sources */,
 				0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */,
 				FCDA06C62AA8541200A2A239 /* HintHalfHalfButton.swift in Sources */,
+				FCF09C2F2AB30A49009A63DF /* ReadingQuestionViewController.swift in Sources */,
 				FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */,
 				FCDA06CA2AA85C4F00A2A239 /* HintButton.swift in Sources */,
 				0E6D72912AB81ABC005C3129 /* LostView.swift in Sources */,
