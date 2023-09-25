@@ -21,14 +21,25 @@ struct GameData: Decodable {
     func getGameByKey(key: String) -> Game? {
         switch key {
         case GeneralKnowlage.key:
-            return GeneralKnowlage
+            return self.GeneralKnowlage
         case Proverb.key:
-            return Proverb
+            return self.Proverb
         case Riddle.key:
-            return Riddle
+            return self.Riddle
         default :
             return nil
         }
+    }
+    
+    func getLevelGameFromLevelNum(gameKey: String, levelNum: Int) -> Level? {
+        let game = self.getGameByKey(key: gameKey)!
+        for lvl in game.levels {
+            if lvl.level == levelNum {
+                return lvl
+            }
+        }
+        
+        return nil
     }
 }
 

@@ -46,7 +46,9 @@ class LevelViewController: UIViewController {
                                        answerHint: HintButton(type: .answer, num: answerHint, enable: true),
                                        halfhalfHint: HintButton(type: .halfhalf, num: halfHint, enable: true),
                                        star: 0,
-                                       highestScore: 0)
+                                       highestScore: 0,
+                                       countTimer: Date()
+        )
         
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .crossDissolve

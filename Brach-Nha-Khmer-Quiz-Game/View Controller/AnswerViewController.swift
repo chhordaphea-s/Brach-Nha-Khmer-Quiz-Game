@@ -121,7 +121,7 @@ class AnswerViewController: UIViewController {
 
     
     func setProgressTime() {
-        timeCountDown.setAnimatedProgress(progress: 0, duration: 50){
+        timeCountDown.setAnimatedProgress(progress: 0, duration: 40){
             if self.gamePlay?.fail ?? 0 < 2 {
                 self.gamePlay?.fail += 1
             } else {
@@ -330,16 +330,31 @@ class AnswerViewController: UIViewController {
         viewWillAppear(true)
         viewDidLoad()
     }
+    func switchToWinOrLoseScreen(){
+        guard let gamePlayData = gamePlay else {return}
+
+        let controller = storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .crossDissolve
+        
+        gamePlay?.timings = Int(NSDate().timeIntervalSince(gamePlayData.countTimer))
+
+        controller.gamePlay = gamePlay
+        self.present(controller, animated: true)
+    }
 
 }
 
 extension AnswerViewController: AnswerButtonDelegate {
     
     func didSelect(index: Int, status: Bool) {
+//        guard let gamePlayData = gamePlay else {return}
+        
         print(index)
         if gamePlay?.fail ?? 0 >= 3 {
             return
         }
+        
         
         if !status {
             
@@ -367,8 +382,11 @@ extension AnswerViewController: AnswerButtonDelegate {
             buttonSoudEffect.player?.play()
             
             DispatchQueue.main.asyncAfter(deadline: .now()+2) {
-                if self.gamePlay?.question ?? 0 <= 5 {
+                if self.gamePlay?.question ?? 0 < 5 {
                     self.switchToReadingQuestionScreen()
+                }
+                else {
+                    self.switchToWinOrLoseScreen()
                 }
             }
         
