@@ -17,6 +17,7 @@ class WinOrLoseViewController: UIViewController {
     @IBOutlet weak var highestScoreLabel: UILabel!
     @IBOutlet weak var replayButton: UIView!
     @IBOutlet weak var nextGameButton: UIView!
+    @IBOutlet var stars: [StarView]!
     
     var gamePlay: GamePlay? = nil
     
@@ -27,16 +28,32 @@ class WinOrLoseViewController: UIViewController {
         setupTotalScore()
         displayMessages()
         setupHighestScore()
+        displayStars()
 
     }
     
     
     @IBAction func replayTapGesture(_ sender: UITapGestureRecognizer) {
+        guard let gamePlayData = gamePlay else {return}
+
         ButtonEffectAnimation.shared.popEffect(button: replayButton)
+        
+        switchToReadingQuestionScreen(key: gamePlayData.gameKey,
+                                      level: gamePlayData.level,
+                                      highestScore: gamePlayData.highestScore)
     }
     
     @IBAction func nextGameTapGesture(_ sender: Any) {
+        guard let gamePlayData = gamePlay else {return}
+        guard let nextLvl = gameData?.getLevelGameFromLevelNum(gameKey: gamePlayData.gameKey, 
+                                                               levelNum: gamePlayData.level.level + 1)else { return }
+
         ButtonEffectAnimation.shared.popEffect(button: nextGameButton)
+        
+        
+        switchToReadingQuestionScreen(key: gamePlayData.gameKey,
+                                      level: nextLvl,
+                                      highestScore: 0)
     }
     
     func setupTotalScore() {
@@ -81,6 +98,52 @@ class WinOrLoseViewController: UIViewController {
         }
         
         
+    }
+    
+    func displayStars() {
+        guard let gamePlayData = gamePlay else {return}
+        var numOfStar = 0
+        
+        if gamePlayData.question == 5 {
+            if gamePlayData.score < 500 {
+                numOfStar = 1
+            } else if gamePlayData.score < 800 {
+                numOfStar = 2
+            } else {
+                numOfStar = 3
+            }
+        }
+        
+        DispatchQueue.main.async {
+            for i in 0..<numOfStar {
+                let sec: Double = Double(i) * 0.2
+                DispatchQueue.main.asyncAfter(deadline: .now() + sec) {
+                    self.stars[i].activateStar(status: true)
+                }
+            }
+        }
+        
+    }
+    
+    func switchToReadingQuestionScreen(key: String, level: Level, highestScore: Int) {
+        let controller = storyboard?.instantiateViewController(withIdentifier: "ReadingQuestionViewController") as! ReadingQuestionViewController
+        
+        controller.gamePlay = GamePlay(gameKey: key,
+                                       level: level,
+                                       question: 1,
+                                       score: 0,
+                                       fail: 0,
+                                       timings: 0,
+                                       answerHint: HintButton(type: .answer, num: answerHint, enable: true),
+                                       halfhalfHint: HintButton(type: .halfhalf, num: halfHint, enable: true),
+                                       star: 0,
+                                       highestScore: highestScore,
+                                       countTimer: Date()
+        )
+        
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .crossDissolve
+        self.present(controller, animated: true)
     }
     
     

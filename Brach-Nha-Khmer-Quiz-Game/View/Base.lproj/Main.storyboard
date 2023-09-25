@@ -816,10 +816,39 @@
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GZM-yd-6Je">
                                 <rect key="frame" x="0.0" y="303" width="430" height="268"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UEg-mV-1Jq" customClass="StarView" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+                                        <rect key="frame" x="90" y="9" width="250" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="Phn-YY-aTL"/>
+                                            <constraint firstAttribute="height" constant="250" id="WZe-KI-AHv"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nJo-4p-fVS" customClass="StarView" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+                                        <rect key="frame" x="20" y="29" width="160" height="160"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="160" id="6lM-KU-BUV"/>
+                                            <constraint firstAttribute="height" constant="160" id="gFK-Tn-Gke"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2q3-be-LUb" customClass="StarView" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
+                                        <rect key="frame" x="250" y="29" width="160" height="160"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="160" id="Vpf-eN-dDD"/>
+                                            <constraint firstAttribute="width" constant="160" id="h8H-fu-ynM"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
                                 <color key="backgroundColor" name="backgroundstar"/>
                                 <constraints>
+                                    <constraint firstItem="UEg-mV-1Jq" firstAttribute="centerY" secondItem="GZM-yd-6Je" secondAttribute="centerY" id="5dd-kk-Vgz"/>
+                                    <constraint firstItem="UEg-mV-1Jq" firstAttribute="centerX" secondItem="GZM-yd-6Je" secondAttribute="centerX" id="C3g-NI-AUR"/>
                                     <constraint firstAttribute="width" constant="430" id="Luy-Te-flA"/>
+                                    <constraint firstItem="2q3-be-LUb" firstAttribute="top" secondItem="UEg-mV-1Jq" secondAttribute="top" constant="20" id="OgQ-Km-Gca"/>
+                                    <constraint firstItem="2q3-be-LUb" firstAttribute="leading" secondItem="UEg-mV-1Jq" secondAttribute="trailing" constant="-90" id="On7-Yu-aP4"/>
+                                    <constraint firstItem="UEg-mV-1Jq" firstAttribute="leading" secondItem="nJo-4p-fVS" secondAttribute="trailing" constant="-90" id="fXR-5M-nSq"/>
                                     <constraint firstAttribute="height" constant="268" id="k8m-iu-KBm"/>
+                                    <constraint firstItem="UEg-mV-1Jq" firstAttribute="top" secondItem="nJo-4p-fVS" secondAttribute="top" constant="-20" id="srC-8Q-Elt"/>
                                 </constraints>
                             </view>
                         </subviews>
@@ -856,6 +885,9 @@
                         <outlet property="subMessageLabel" destination="lcz-O7-1el" id="1aI-oI-1wY"/>
                         <outlet property="totalScoreLabel" destination="1wJ-eI-MHf" id="Ty1-b6-zS6"/>
                         <outlet property="totalTimingLabel" destination="IM4-kx-fxN" id="Y8k-vA-h2p"/>
+                        <outletCollection property="stars" destination="UEg-mV-1Jq" collectionClass="NSMutableArray" id="Ipe-BT-gya"/>
+                        <outletCollection property="stars" destination="nJo-4p-fVS" collectionClass="NSMutableArray" id="eR5-XC-HTh"/>
+                        <outletCollection property="stars" destination="2q3-be-LUb" collectionClass="NSMutableArray" id="sPv-ma-YZY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="baJ-ZB-JKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

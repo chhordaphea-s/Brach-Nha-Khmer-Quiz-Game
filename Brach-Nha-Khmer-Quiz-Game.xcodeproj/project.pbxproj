@@ -47,6 +47,9 @@
 		FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */; };
 		FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98942A8E2A87001A05CE /* Assets.xcassets */; };
 		FC9CE4192AC01F390076F310 /* WinOrLoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9CE4182AC01F390076F310 /* WinOrLoseViewController.swift */; };
+		FC9CE41C2AC144390076F310 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9CE41B2AC144390076F310 /* StarView.swift */; };
+		FC9CE41E2AC144490076F310 /* StarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9CE41D2AC144490076F310 /* StarView.xib */; };
+		FC9CE4242AC1550A0076F310 /* YellowStarAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = FC9CE4232AC1550A0076F310 /* YellowStarAnimation.json */; };
 		FCDA06B02AA59D9F00A2A239 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */; };
 		FCDA06B32AA6F8D700A2A239 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06B22AA6F8D700A2A239 /* AnswerButton.swift */; };
 		FCDA06B62AA6F91C00A2A239 /* AnswerButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA06B52AA6F91C00A2A239 /* AnswerButton.xib */; };
@@ -110,6 +113,9 @@
 		FC3D98942A8E2A87001A05CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		FC3D98992A8E2A87001A05CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
 		FC9CE4182AC01F390076F310 /* WinOrLoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinOrLoseViewController.swift; sourceTree = "<group>"; };
+		FC9CE41B2AC144390076F310 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
+		FC9CE41D2AC144490076F310 /* StarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarView.xib; sourceTree = "<group>"; };
+		FC9CE4232AC1550A0076F310 /* YellowStarAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = YellowStarAnimation.json; sourceTree = "<group>"; };
 		FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		FCDA06B22AA6F8D700A2A239 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		FCDA06B52AA6F91C00A2A239 /* AnswerButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerButton.xib; sourceTree = "<group>"; };
@@ -162,6 +168,7 @@
 		0E68C9222A9B307400ACF84D /* Custom View */ = {
 			isa = PBXGroup;
 			children = (
+				FC9CE41A2AC144080076F310 /* StarView */,
 				0E9881682AA9AE1300D326CC /* AnswerHintView */,
 				0EDC0B362AA0A5F000B91B2C /* SettingView */,
 				FCDA06CB2AA898CD00A2A239 /* HintTellAnswerButton */,
@@ -280,6 +287,7 @@
 				0E1BD09D2AB2C22C00F7BBA5 /* Font */,
 				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
 				FC3D98992A8E2A87001A05CE /* Info.plist */,
+				FC9CE4232AC1550A0076F310 /* YellowStarAnimation.json */,
 				0E93ADEF2AAC2F3C0073E7ED /* GameData.json */,
 				0E98816F2AA9C56500D326CC /* animation_lm8xam1w.json */,
 			);
@@ -347,6 +355,15 @@
 				FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */,
 			);
 			path = "Brach-Nha-Khmer-Quiz-Game";
+			sourceTree = "<group>";
+		};
+		FC9CE41A2AC144080076F310 /* StarView */ = {
+			isa = PBXGroup;
+			children = (
+				FC9CE41B2AC144390076F310 /* StarView.swift */,
+				FC9CE41D2AC144490076F310 /* StarView.xib */,
+			);
+			path = StarView;
 			sourceTree = "<group>";
 		};
 		FCCDD2312A9CB68200672A8C /* View Model */ = {
@@ -458,6 +475,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FC9CE41E2AC144490076F310 /* StarView.xib in Resources */,
 				FCDA06C82AA8542200A2A239 /* HintHalfHalfButton.xib in Resources */,
 				0EDC0B342AA0A5EB00B91B2C /* SettingView.xib in Resources */,
 				0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */,
@@ -478,6 +496,7 @@
 				0E9881672AA6E12C00D326CC /* background.mp3 in Resources */,
 				FCDA06B62AA6F91C00A2A239 /* AnswerButton.xib in Resources */,
 				FCE106052A99E5B300AAEDD0 /* LevelCustomCell.xib in Resources */,
+				FC9CE4242AC1550A0076F310 /* YellowStarAnimation.json in Resources */,
 				FCDA06CF2AA8992A00A2A239 /* HintTellAnswerButton.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -549,6 +568,7 @@
 				0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */,
 				FCDA06C62AA8541200A2A239 /* HintHalfHalfButton.swift in Sources */,
 				FCF09C2F2AB30A49009A63DF /* ReadingQuestionViewController.swift in Sources */,
+				FC9CE41C2AC144390076F310 /* StarView.swift in Sources */,
 				FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */,
 				FCDA06CA2AA85C4F00A2A239 /* HintButton.swift in Sources */,
 				FCDA06B82AA7060200A2A239 /* AnswerView.swift in Sources */,

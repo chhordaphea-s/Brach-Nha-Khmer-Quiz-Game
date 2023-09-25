@@ -7,6 +7,7 @@ target 'Brach-Nha-Khmer-Quiz-Game' do
 
   pod 'BetterSegmentedControl', '~> 2.0'
   pod 'Hero'
+  pod 'lottie-ios' 
 
   # Pods for Brach-Nha-Khmer-Quiz-Game
 

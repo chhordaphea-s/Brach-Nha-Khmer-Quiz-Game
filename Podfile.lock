@@ -1,16 +1,24 @@
 PODS:
   - BetterSegmentedControl (2.0.1)
+  - Hero (1.6.2)
+  - lottie-ios (4.3.1)
 
 DEPENDENCIES:
   - BetterSegmentedControl (~> 2.0)
+  - Hero
+  - lottie-ios
 
 SPEC REPOS:
   trunk:
     - BetterSegmentedControl
+    - Hero
+    - lottie-ios
 
 SPEC CHECKSUMS:
   BetterSegmentedControl: 09607b27861d49cbce48b7673b74f9150a3d371a
+  Hero: c69009dbc9e2f0472e081adc644dba05fcedae72
+  lottie-ios: 6279047f1cc31b395e11f1fc24f3dab68cbf0df2
 
-PODFILE CHECKSUM: b3c06fd366bea0f61a98c7296061e2edad7e8a92
+PODFILE CHECKSUM: 621db6553123b2ebb1faa7a6a4cb7cd0ff6662b8
 
-COCOAPODS: 1.12.1
+COCOAPODS: 1.13.0
