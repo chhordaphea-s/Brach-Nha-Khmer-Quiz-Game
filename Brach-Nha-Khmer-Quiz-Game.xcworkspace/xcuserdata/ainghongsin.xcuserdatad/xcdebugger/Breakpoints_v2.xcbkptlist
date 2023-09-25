@@ -14,10 +14,42 @@
             filePath = "Brach-Nha-Khmer-Quiz-Game/View Controller/AnswerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "426"
-            endingLineNumber = "426"
-            landmarkName = "displayAds(controller:)"
+            startingLineNumber = "429"
+            endingLineNumber = "429"
+            landmarkName = "adsLoads()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B6C620FD-730B-42E5-8D5A-3B2C34DEB8F4 - c74d4d14ccee2a29"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in Brach_Nha_Khmer_Quiz_Game.AnswerViewController.displayAds(controller: __C.UIViewController) -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/View%20Controller/AnswerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "426"
+                  endingLineNumber = "426"
+                  offsetFromSymbolStart = "65">
+               </Location>
+               <Location
+                  uuid = "B6C620FD-730B-42E5-8D5A-3B2C34DEB8F4 - 9fe8c89b42065875"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.AnswerViewController.adsLoads() -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/View%20Controller/AnswerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "426"
+                  endingLineNumber = "426"
+                  offsetFromSymbolStart = "32">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -30,10 +62,42 @@
             filePath = "Brach-Nha-Khmer-Quiz-Game/View Controller/AnswerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "344"
-            endingLineNumber = "344"
-            landmarkName = "didSelect(index:status:)"
+            startingLineNumber = "343"
+            endingLineNumber = "343"
+            landmarkName = "switchToWinOrLoseScreen()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "0D5548AA-A9DA-4EFB-9AAC-5252B649DC4C - fcc661ccb0315a09"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.AnswerViewController.didSelect(index: Swift.Int, status: Swift.Bool) -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/View%20Controller/AnswerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "344"
+                  endingLineNumber = "344"
+                  offsetFromSymbolStart = "716">
+               </Location>
+               <Location
+                  uuid = "0D5548AA-A9DA-4EFB-9AAC-5252B649DC4C - 67d93dfe93f798e6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.AnswerViewController.switchToWinOrLoseScreen() -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/View%20Controller/AnswerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "344"
+                  endingLineNumber = "344"
+                  offsetFromSymbolStart = "1644">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -46,10 +110,42 @@
             filePath = "Brach-Nha-Khmer-Quiz-Game/View Controller/AnswerViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "340"
-            endingLineNumber = "340"
-            landmarkName = "didSelect(index:status:)"
+            startingLineNumber = "339"
+            endingLineNumber = "339"
+            landmarkName = "switchToWinOrLoseScreen()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "DF72EEAD-C05F-4CDA-AC94-436856BCB560 - fcc661ccb0315a95"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.AnswerViewController.didSelect(index: Swift.Int, status: Swift.Bool) -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/View%20Controller/AnswerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "340"
+                  endingLineNumber = "340"
+                  offsetFromSymbolStart = "473">
+               </Location>
+               <Location
+                  uuid = "DF72EEAD-C05F-4CDA-AC94-436856BCB560 - 67d93dfe93f7987a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.AnswerViewController.switchToWinOrLoseScreen() -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/View%20Controller/AnswerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "340"
+                  endingLineNumber = "340"
+                  offsetFromSymbolStart = "860">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

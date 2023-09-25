@@ -9,6 +9,7 @@ import UIKit
 
 protocol LostViewDelegate: NSObjectProtocol {
     func displayAds()
+    func gotoFinishScreen()
 }
 
 class LostView: UIView {
@@ -42,7 +43,9 @@ class LostView: UIView {
     
     @IBAction func LeaveGameButtonPressed(_ sender: UITapGestureRecognizer) {
         ButtonEffectAnimation.shared.popEffect(button: leaveGameViewButton)
-        print("Leave game")
+//        print("Leave game")
+        delegate?.gotoFinishScreen()
+        
     }
     
 

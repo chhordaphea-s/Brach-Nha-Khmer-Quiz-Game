@@ -274,8 +274,8 @@ class AnswerViewController: UIViewController {
     }
     
     func scoreCounting() {
-        gamePlay?.score += timeCountDown.timeRemainder(duration: 50) * 4
-        print(timeCountDown.timeRemainder(duration: 50))
+        gamePlay?.score += timeCountDown.timeRemainder(duration: 40) * 4
+
         setScore()
     }
     
@@ -291,8 +291,7 @@ class AnswerViewController: UIViewController {
             gamePlay?.halfhalfHint.num -= 1
             
             userdefault.set(gamePlay?.halfhalfHint.num, forKey: Constant.userdefault.halfHint)
-        default:
-                return
+
         }
     }
     
@@ -411,6 +410,10 @@ extension AnswerViewController: SettingViewDelegate {
 }
 
 extension AnswerViewController: LostViewDelegate {
+    func gotoFinishScreen() {
+        switchToWinOrLoseScreen()
+    }
+    
     func displayAds() {
         lostView.animateViewOut(baseView: self.view, popUpView: lostView)
         displayAds(controller: self)
@@ -465,11 +468,9 @@ extension AnswerViewController: GADFullScreenContentDelegate {
         print("Ad did dismiss full screen content.")
         
         if watchedAd {
-            self.reloadViewController()
+            reloadViewController()
         } else {
-            guard let gameD = gameData else { return }
-            guard let gamePlayData = gamePlay else { return }
-            switchToAnotherScreen(game: gameD.getGameByKey(key: gamePlayData.gameKey)!)
+            switchToWinOrLoseScreen()
         }
     }
 }

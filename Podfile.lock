@@ -41,6 +41,8 @@ PODS:
   - "GoogleUtilities/NSData+zlib (7.11.5)"
   - GoogleUtilities/Reachability (7.11.5):
     - GoogleUtilities/Logger
+  - Hero (1.6.2)
+  - lottie-ios (4.3.1)
   - nanopb (2.30909.0):
     - nanopb/decode (= 2.30909.0)
     - nanopb/encode (= 2.30909.0)
@@ -51,6 +53,8 @@ PODS:
 DEPENDENCIES:
   - BetterSegmentedControl (~> 2.0)
   - Google-Mobile-Ads-SDK
+  - Hero
+  - lottie-ios
 
 SPEC REPOS:
   trunk:
@@ -59,6 +63,8 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleUserMessagingPlatform
     - GoogleUtilities
+    - Hero
+    - lottie-ios
     - nanopb
     - PromisesObjC
 
@@ -68,9 +74,11 @@ SPEC CHECKSUMS:
   GoogleAppMeasurement: 7fee012a868315d418f365fbc8d394d8e020e749
   GoogleUserMessagingPlatform: dce302b8f1b84d6e945812ee7a15c3f65a102cbf
   GoogleUtilities: 13e2c67ede716b8741c7989e26893d151b2b2084
+  Hero: c69009dbc9e2f0472e081adc644dba05fcedae72
+  lottie-ios: 6279047f1cc31b395e11f1fc24f3dab68cbf0df2
   nanopb: b552cce312b6c8484180ef47159bc0f65a1f0431
   PromisesObjC: c50d2056b5253dadbd6c2bea79b0674bd5a52fa4
 
-PODFILE CHECKSUM: 08452ec929816229df14d0d6025bb59576fff6c9
+PODFILE CHECKSUM: 97c0605540ef608d72b712b3d439f4dc901cdf2d
 
 COCOAPODS: 1.13.0
