@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22138.1" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22154" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22113"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22130"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -364,7 +364,7 @@
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xFC-H6-Yih">
-                                <rect key="frame" x="16" y="59" width="32" height="32"/>
+                                <rect key="frame" x="16" y="75" width="32" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="32" id="2lN-SJ-5NT"/>
                                     <constraint firstAttribute="height" constant="32" id="faw-74-yOe"/>
@@ -411,13 +411,13 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="សំណួរទី១" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ltl-Js-hyt">
-                                <rect key="frame" x="16" y="131" width="67.666666666666671" height="27.666666666666657"/>
+                                <rect key="frame" x="16" y="147" width="67.666666666666671" height="27.666666666666657"/>
                                 <fontDescription key="fontDescription" name="AppleColorEmoji" family="Apple Color Emoji" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="x1y-KW-mrm">
-                                <rect key="frame" x="16" y="176" width="398" height="8"/>
+                                <rect key="frame" x="16" y="190.66666666666666" width="398" height="8"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="8" id="q2V-ih-6ET"/>
                                 </constraints>
@@ -429,8 +429,8 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </progressView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" text="កំប៉ុកក្រពុំ​​ អង្គុយលើភ្នំ​​ រំសាយសក់លែង" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeD-oy-jSS">
-                                <rect key="frame" x="16" y="202" width="287.66666666666669" height="38"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="751" text="កំប៉ុកក្រពុំ​​ អង្គុយលើភ្នំ​​ រំសាយសក់លែង" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HeD-oy-jSS">
+                                <rect key="frame" x="16" y="216.66666666666666" width="398" height="38"/>
                                 <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="21"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -548,7 +548,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ba1-eS-uxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3723" y="-9"/>
+            <point key="canvasLocation" x="4722" y="-9"/>
         </scene>
         <!--Reading Question View Controller-->
         <scene sceneID="oLT-Qw-syv">
@@ -703,7 +703,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sa5-xP-AzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3006.9767441860463" y="-9.0128755364806867"/>
+            <point key="canvasLocation" x="3954" y="-9"/>
         </scene>
         <!--Game Choosing View Controller-->
         <scene sceneID="q2c-o7-XUo">
@@ -1111,7 +1111,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2w-LR-1EC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2752" y="686"/>
+            <point key="canvasLocation" x="1994" y="673"/>
         </scene>
     </scenes>
     <designables>

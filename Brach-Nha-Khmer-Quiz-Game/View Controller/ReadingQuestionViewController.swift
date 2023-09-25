@@ -79,6 +79,8 @@ class ReadingQuestionViewController: UIViewController {
         
         if self.gamePlay?.level.questions[gamePlayData.question - 1].possibleAnswer == nil {
             self.gamePlay?.level.questions[gamePlayData.question - 1].possibleAnswer = getPossiableAnswer(game: currentGame, level: gamePlayData.level.level, question: gamePlayData.question)
+        } else {
+            gamePlay?.level.questions[gamePlayData.question - 1].possibleAnswer?.shuffle()
         }
         
     }
