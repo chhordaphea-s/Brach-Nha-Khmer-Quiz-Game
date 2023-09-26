@@ -7,7 +7,7 @@
 
 import UIKit
 import GoogleMobileAds
-
+import Hero
 
 class AnswerViewController: UIViewController {
     
@@ -43,6 +43,8 @@ class AnswerViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hero.isEnabled = true
+        question.hero.modifiers = [.translate(y:100), .scale(0.6)]
         
         setupGameData()
         setupSettingView()
