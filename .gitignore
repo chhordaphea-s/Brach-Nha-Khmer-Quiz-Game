@@ -71,3 +71,8 @@ fastlane/screenshots
 fastlane/test_output
 Brach-Nha-Khmer-Quiz-Game.xcworkspace/xcuserdata/ainghongsin.xcuserdatad/UserInterfaceState.xcuserstate
 Pods/
+Pods/Manifest.lock
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig
