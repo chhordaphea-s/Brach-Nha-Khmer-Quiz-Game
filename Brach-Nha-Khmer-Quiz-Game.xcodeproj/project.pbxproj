@@ -1,0 +1,866 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0E1BD08E2AB2208700F7BBA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08A2AB2208600F7BBA5 /* Main.storyboard */; };
+		0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08C2AB2208700F7BBA5 /* LaunchScreen.storyboard */; };
+		0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */; };
+		0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */; };
+		0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */; };
+		0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C92A2A9B356F00ACF84D /* Constant.swift */; };
+		0E6D72912AB81ABC005C3129 /* LostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D728F2AB81ABB005C3129 /* LostView.swift */; };
+		0E6D72922AB81ABC005C3129 /* LostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D72902AB81ABB005C3129 /* LostView.xib */; };
+		0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */; };
+		0E7CEFA32AB6B0BE00D500F8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7CEFA22AB6B0BE00D500F8 /* Product.swift */; };
+		0E7CEFA62AB7484600D500F8 /* HintProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7CEFA52AB7484600D500F8 /* HintProduct.swift */; };
+		0E8170382AC2CA2F00E2A270 /* WinOrLoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170312AC2CA2E00E2A270 /* WinOrLoseViewController.swift */; };
+		0E8170392AC2CA2F00E2A270 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170322AC2CA2F00E2A270 /* AnswerViewController.swift */; };
+		0E81703A2AC2CA2F00E2A270 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170332AC2CA2F00E2A270 /* LevelViewController.swift */; };
+		0E81703B2AC2CA2F00E2A270 /* GameChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170342AC2CA2F00E2A270 /* GameChoosingViewController.swift */; };
+		0E81703C2AC2CA2F00E2A270 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170352AC2CA2F00E2A270 /* MainViewController.swift */; };
+		0E81703D2AC2CA2F00E2A270 /* ReadingQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170362AC2CA2F00E2A270 /* ReadingQuestionViewController.swift */; };
+		0E81703E2AC2CA2F00E2A270 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170372AC2CA2F00E2A270 /* StoreViewController.swift */; };
+		0E8170462AC2CA3D00E2A270 /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E81703F2AC2CA3D00E2A270 /* GamePlay.swift */; };
+		0E8170472AC2CA3D00E2A270 /* OnOffButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170402AC2CA3D00E2A270 /* OnOffButton.swift */; };
+		0E8170482AC2CA3D00E2A270 /* HintCustomCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170412AC2CA3D00E2A270 /* HintCustomCellModel.swift */; };
+		0E8170492AC2CA3D00E2A270 /* HintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170422AC2CA3D00E2A270 /* HintButton.swift */; };
+		0E81704A2AC2CA3D00E2A270 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170432AC2CA3D00E2A270 /* AnswerView.swift */; };
+		0E81704B2AC2CA3D00E2A270 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170442AC2CA3D00E2A270 /* HintView.swift */; };
+		0E81704C2AC2CA3D00E2A270 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170452AC2CA3D00E2A270 /* LevelViewModel.swift */; };
+		0E81704F2AC2CA7C00E2A270 /* HintCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E81704D2AC2CA7C00E2A270 /* HintCustomCell.xib */; };
+		0E8170502AC2CA7C00E2A270 /* HintCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E81704E2AC2CA7C00E2A270 /* HintCustomCell.swift */; };
+		0E8170532AC2CA8700E2A270 /* CustomOnOffButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170512AC2CA8600E2A270 /* CustomOnOffButton.swift */; };
+		0E8170542AC2CA8700E2A270 /* CustomOnOffButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8170522AC2CA8600E2A270 /* CustomOnOffButton.xib */; };
+		0E8170572AC2CA9200E2A270 /* LevelCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170552AC2CA9100E2A270 /* LevelCustomCell.swift */; };
+		0E8170582AC2CA9200E2A270 /* LevelCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8170562AC2CA9200E2A270 /* LevelCustomCell.xib */; };
+		0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */; };
+		0E8BFF732AA43584000E5AC7 /* AudioMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF722AA43584000E5AC7 /* AudioMode.swift */; };
+		0E93ADF02AAC2F3C0073E7ED /* GameData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E93ADEF2AAC2F3C0073E7ED /* GameData.json */; };
+		0E93ADF22AAC2F570073E7ED /* GameData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E93ADF12AAC2F570073E7ED /* GameData.swift */; };
+		0E98815B2AA46F2200D326CC /* playBackground.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E98815A2AA46F2200D326CC /* playBackground.mp3 */; };
+		0E98815D2AA46F8600D326CC /* Global.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98815C2AA46F8600D326CC /* Global.swift */; };
+		0E9881612AA47A7D00D326CC /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9881602AA47A7D00D326CC /* SoundEffect.swift */; };
+		0E9881632AA5AA1100D326CC /* pressed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E9881622AA5AA1100D326CC /* pressed.mp3 */; };
+		0E9881672AA6E12C00D326CC /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E9881662AA6E12C00D326CC /* background.mp3 */; };
+		0E98816A2AA9AE4D00D326CC /* HintPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9881692AA9AE4D00D326CC /* HintPopupView.swift */; };
+		0E98816C2AA9AE5900D326CC /* HintPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E98816B2AA9AE5800D326CC /* HintPopupView.xib */; };
+		0EA44D372A97177600B5539A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D362A97177600B5539A /* UIViewExtension.swift */; };
+		0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */; };
+		0EA44D3B2A97293A00B5539A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */; };
+		0EA44D462A97353600B5539A /* PlayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D452A97353600B5539A /* PlayMode.swift */; };
+		0EDC0B2D2AA0A49700B91B2C /* ViewAnimateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */; };
+		0EDC0B342AA0A5EB00B91B2C /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */; };
+		0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0B332AA0A5EB00B91B2C /* SettingView.swift */; };
+		0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EDDEC242AA1BAEB00E32087 /* PlayingBackground1.mp3 */; };
+		0EDDEC2C2AA1C6F000E32087 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EDDEC292AA1C6F000E32087 /* correct.mp3 */; };
+		0EDDEC2D2AA1C6F000E32087 /* failed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EDDEC2A2AA1C6F000E32087 /* failed.mp3 */; };
+		9ACAE1A7220D8574C05B4853 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8625A7BDAF5BDB5E0016DF55 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */; };
+		FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */; };
+		FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */; };
+		FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98942A8E2A87001A05CE /* Assets.xcassets */; };
+		FC9CE41C2AC144390076F310 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9CE41B2AC144390076F310 /* StarView.swift */; };
+		FC9CE41E2AC144490076F310 /* StarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9CE41D2AC144490076F310 /* StarView.xib */; };
+		FC9CE4242AC1550A0076F310 /* YellowStarAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = FC9CE4232AC1550A0076F310 /* YellowStarAnimation.json */; };
+		FCDA06B32AA6F8D700A2A239 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06B22AA6F8D700A2A239 /* AnswerButton.swift */; };
+		FCDA06B62AA6F91C00A2A239 /* AnswerButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA06B52AA6F91C00A2A239 /* AnswerButton.xib */; };
+		FCDA06BF2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCDA06BE2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf */; };
+		FCDA06C62AA8541200A2A239 /* HintHalfHalfButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06C52AA8541200A2A239 /* HintHalfHalfButton.swift */; };
+		FCDA06C82AA8542200A2A239 /* HintHalfHalfButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA06C72AA8542200A2A239 /* HintHalfHalfButton.xib */; };
+		FCDA06CD2AA8991C00A2A239 /* HintTellAnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06CC2AA8991C00A2A239 /* HintTellAnswerButton.swift */; };
+		FCDA06CF2AA8992A00A2A239 /* HintTellAnswerButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA06CE2AA8992A00A2A239 /* HintTellAnswerButton.xib */; };
+		FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF478332AA9CD6800075DAC /* UIProgressViewExtension.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		0E1BD08B2AB2208600F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0E1BD08D2AB2208700F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
+		0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosePlayerModeCustomSagement.xib; sourceTree = "<group>"; };
+		0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerModeCustomSagement.swift; sourceTree = "<group>"; };
+		0E68C92A2A9B356F00ACF84D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		0E6D728F2AB81ABB005C3129 /* LostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostView.swift; sourceTree = "<group>"; };
+		0E6D72902AB81ABB005C3129 /* LostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LostView.xib; sourceTree = "<group>"; };
+		0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEffectAnimation.swift; sourceTree = "<group>"; };
+		0E7CEFA22AB6B0BE00D500F8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		0E7CEFA42AB6B2B800D500F8 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
+		0E7CEFA52AB7484600D500F8 /* HintProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintProduct.swift; sourceTree = "<group>"; };
+		0E8170312AC2CA2E00E2A270 /* WinOrLoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinOrLoseViewController.swift; sourceTree = "<group>"; };
+		0E8170322AC2CA2F00E2A270 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		0E8170332AC2CA2F00E2A270 /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		0E8170342AC2CA2F00E2A270 /* GameChoosingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameChoosingViewController.swift; sourceTree = "<group>"; };
+		0E8170352AC2CA2F00E2A270 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0E8170362AC2CA2F00E2A270 /* ReadingQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingQuestionViewController.swift; sourceTree = "<group>"; };
+		0E8170372AC2CA2F00E2A270 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		0E81703F2AC2CA3D00E2A270 /* GamePlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
+		0E8170402AC2CA3D00E2A270 /* OnOffButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnOffButton.swift; sourceTree = "<group>"; };
+		0E8170412AC2CA3D00E2A270 /* HintCustomCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintCustomCellModel.swift; sourceTree = "<group>"; };
+		0E8170422AC2CA3D00E2A270 /* HintButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
+		0E8170432AC2CA3D00E2A270 /* AnswerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
+		0E8170442AC2CA3D00E2A270 /* HintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
+		0E8170452AC2CA3D00E2A270 /* LevelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
+		0E81704D2AC2CA7C00E2A270 /* HintCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HintCustomCell.xib; sourceTree = "<group>"; };
+		0E81704E2AC2CA7C00E2A270 /* HintCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintCustomCell.swift; sourceTree = "<group>"; };
+		0E8170512AC2CA8600E2A270 /* CustomOnOffButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOnOffButton.swift; sourceTree = "<group>"; };
+		0E8170522AC2CA8600E2A270 /* CustomOnOffButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOnOffButton.xib; sourceTree = "<group>"; };
+		0E8170552AC2CA9100E2A270 /* LevelCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelCustomCell.swift; sourceTree = "<group>"; };
+		0E8170562AC2CA9200E2A270 /* LevelCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelCustomCell.xib; sourceTree = "<group>"; };
+		0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
+		0E8BFF722AA43584000E5AC7 /* AudioMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMode.swift; sourceTree = "<group>"; };
+		0E93ADEF2AAC2F3C0073E7ED /* GameData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameData.json; sourceTree = "<group>"; };
+		0E93ADF12AAC2F570073E7ED /* GameData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameData.swift; sourceTree = "<group>"; };
+		0E98815A2AA46F2200D326CC /* playBackground.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = playBackground.mp3; sourceTree = "<group>"; };
+		0E98815C2AA46F8600D326CC /* Global.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Global.swift; sourceTree = "<group>"; };
+		0E9881602AA47A7D00D326CC /* SoundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
+		0E9881622AA5AA1100D326CC /* pressed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pressed.mp3; sourceTree = "<group>"; };
+		0E9881662AA6E12C00D326CC /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
+		0E9881692AA9AE4D00D326CC /* HintPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintPopupView.swift; sourceTree = "<group>"; };
+		0E98816B2AA9AE5800D326CC /* HintPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintPopupView.xib; sourceTree = "<group>"; };
+		0EA44D362A97177600B5539A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AKbalthom-KOUPREY-Jais.ttf"; sourceTree = "<group>"; };
+		0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
+		0EA44D452A97353600B5539A /* PlayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMode.swift; sourceTree = "<group>"; };
+		0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimateHelper.swift; sourceTree = "<group>"; };
+		0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
+		0EDC0B332AA0A5EB00B91B2C /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
+		0EDDEC242AA1BAEB00E32087 /* PlayingBackground1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PlayingBackground1.mp3; sourceTree = "<group>"; };
+		0EDDEC292AA1C6F000E32087 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
+		0EDDEC2A2AA1C6F000E32087 /* failed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = failed.mp3; sourceTree = "<group>"; };
+		258D287A1FC2293C06EA96CE /* Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig"; path = "Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig"; sourceTree = "<group>"; };
+		2CA491813F3E4465F40705D2 /* Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig"; path = "Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig"; sourceTree = "<group>"; };
+		8625A7BDAF5BDB5E0016DF55 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brach_Nha_Khmer_Quiz_Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3D98882A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brach-Nha-Khmer-Quiz-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		FC3D98942A8E2A87001A05CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
+		FC3D98992A8E2A87001A05CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		FC9CE41B2AC144390076F310 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
+		FC9CE41D2AC144490076F310 /* StarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarView.xib; sourceTree = "<group>"; };
+		FC9CE4232AC1550A0076F310 /* YellowStarAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = YellowStarAnimation.json; sourceTree = "<group>"; };
+		FCDA06B22AA6F8D700A2A239 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
+		FCDA06B52AA6F91C00A2A239 /* AnswerButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerButton.xib; sourceTree = "<group>"; };
+		FCDA06BE2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AKbalthom KhmerHand.ttf"; sourceTree = "<group>"; };
+		FCDA06C52AA8541200A2A239 /* HintHalfHalfButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintHalfHalfButton.swift; sourceTree = "<group>"; };
+		FCDA06C72AA8542200A2A239 /* HintHalfHalfButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintHalfHalfButton.xib; sourceTree = "<group>"; };
+		FCDA06CC2AA8991C00A2A239 /* HintTellAnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintTellAnswerButton.swift; sourceTree = "<group>"; };
+		FCDA06CE2AA8992A00A2A239 /* HintTellAnswerButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintTellAnswerButton.xib; sourceTree = "<group>"; };
+		FCF478332AA9CD6800075DAC /* UIProgressViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressViewExtension.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		FC3D98852A8E2A86001A05CE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9ACAE1A7220D8574C05B4853 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0E1BD09D2AB2C22C00F7BBA5 /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				FCDA06BE2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf */,
+				0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		0E1BD09E2AB2C23700F7BBA5 /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				0EDDEC242AA1BAEB00E32087 /* PlayingBackground1.mp3 */,
+				0E9881662AA6E12C00D326CC /* background.mp3 */,
+				0E98815A2AA46F2200D326CC /* playBackground.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
+		0E1BD09F2AB309A800F7BBA5 /* HintCustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				0E81704E2AC2CA7C00E2A270 /* HintCustomCell.swift */,
+				0E81704D2AC2CA7C00E2A270 /* HintCustomCell.xib */,
+			);
+			path = HintCustomCell;
+			sourceTree = "<group>";
+		};
+		0E68C9222A9B307400ACF84D /* Custom View */ = {
+			isa = PBXGroup;
+			children = (
+				0E6D728E2AB81ABB005C3129 /* LostView */,
+				FC9CE41A2AC144080076F310 /* StarView */,
+				0E9881682AA9AE1300D326CC /* AnswerHintView */,
+				0EDC0B362AA0A5F000B91B2C /* SettingView */,
+				FCDA06CB2AA898CD00A2A239 /* HintTellAnswerButton */,
+				FCDA06C42AA853A700A2A239 /* HintHalfHalfButton */,
+				FCDA06B12AA6F89100A2A239 /* AnswerButton */,
+				0E68C9232A9B307F00ACF84D /* ChoosePlayerModeCustomSagement */,
+			);
+			path = "Custom View";
+			sourceTree = "<group>";
+		};
+		0E68C9232A9B307F00ACF84D /* ChoosePlayerModeCustomSagement */ = {
+			isa = PBXGroup;
+			children = (
+				0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */,
+				0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */,
+			);
+			path = ChoosePlayerModeCustomSagement;
+			sourceTree = "<group>";
+		};
+		0E6D728E2AB81ABB005C3129 /* LostView */ = {
+			isa = PBXGroup;
+			children = (
+				0E6D728F2AB81ABB005C3129 /* LostView.swift */,
+				0E6D72902AB81ABB005C3129 /* LostView.xib */,
+			);
+			path = LostView;
+			sourceTree = "<group>";
+		};
+		0E6F8A9D2A989E5E00B480F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0EA44D452A97353600B5539A /* PlayMode.swift */,
+				0E93ADF12AAC2F570073E7ED /* GameData.swift */,
+				0E8BFF722AA43584000E5AC7 /* AudioMode.swift */,
+				0E7CEFA22AB6B0BE00D500F8 /* Product.swift */,
+				0E7CEFA52AB7484600D500F8 /* HintProduct.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0E6F8A9E2A989E6700B480F5 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */,
+				0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */,
+				0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */,
+				0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		0E9881682AA9AE1300D326CC /* AnswerHintView */ = {
+			isa = PBXGroup;
+			children = (
+				0E9881692AA9AE4D00D326CC /* HintPopupView.swift */,
+				0E98816B2AA9AE5800D326CC /* HintPopupView.xib */,
+			);
+			path = AnswerHintView;
+			sourceTree = "<group>";
+		};
+		0EA44D352A9716FF00B5539A /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				0EA44D362A97177600B5539A /* UIViewExtension.swift */,
+				0E9881602AA47A7D00D326CC /* SoundEffect.swift */,
+				0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */,
+				FCF478332AA9CD6800075DAC /* UIProgressViewExtension.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		0EDC0B242AA0A3E700B91B2C /* View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0E8170322AC2CA2F00E2A270 /* AnswerViewController.swift */,
+				0E8170342AC2CA2F00E2A270 /* GameChoosingViewController.swift */,
+				0E8170332AC2CA2F00E2A270 /* LevelViewController.swift */,
+				0E8170352AC2CA2F00E2A270 /* MainViewController.swift */,
+				0E8170362AC2CA2F00E2A270 /* ReadingQuestionViewController.swift */,
+				0E8170372AC2CA2F00E2A270 /* StoreViewController.swift */,
+				0E8170312AC2CA2E00E2A270 /* WinOrLoseViewController.swift */,
+			);
+			path = "View Controller";
+			sourceTree = "<group>";
+		};
+		0EDC0B252AA0A3F800B91B2C /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0E1BD09F2AB309A800F7BBA5 /* HintCustomCell */,
+				0E1BD08C2AB2208700F7BBA5 /* LaunchScreen.storyboard */,
+				0E1BD08A2AB2208600F7BBA5 /* Main.storyboard */,
+				0EDC0B372AA0A61A00B91B2C /* CustomSwitchButton */,
+				FCE106012A99E51000AAEDD0 /* Level Game Custom Cell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		0EDC0B362AA0A5F000B91B2C /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				0EDC0B332AA0A5EB00B91B2C /* SettingView.swift */,
+				0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */,
+			);
+			path = SettingView;
+			sourceTree = "<group>";
+		};
+		0EDC0B372AA0A61A00B91B2C /* CustomSwitchButton */ = {
+			isa = PBXGroup;
+			children = (
+				0E8170512AC2CA8600E2A270 /* CustomOnOffButton.swift */,
+				0E8170522AC2CA8600E2A270 /* CustomOnOffButton.xib */,
+			);
+			path = CustomSwitchButton;
+			sourceTree = "<group>";
+		};
+		0EDDEC222AA194CF00E32087 /* Globle */ = {
+			isa = PBXGroup;
+			children = (
+				0E68C92A2A9B356F00ACF84D /* Constant.swift */,
+				0E98815C2AA46F8600D326CC /* Global.swift */,
+			);
+			path = Globle;
+			sourceTree = "<group>";
+		};
+		0EDDEC232AA194DA00E32087 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				0EDDEC2E2AA1C6F500E32087 /* Sound Effect */,
+				0E1BD09E2AB2C23700F7BBA5 /* Music */,
+				0E1BD09D2AB2C22C00F7BBA5 /* Font */,
+				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
+				FC3D98992A8E2A87001A05CE /* Info.plist */,
+				FC9CE4232AC1550A0076F310 /* YellowStarAnimation.json */,
+				0E93ADEF2AAC2F3C0073E7ED /* GameData.json */,
+				0E7CEFA42AB6B2B800D500F8 /* Configuration.storekit */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		0EDDEC2E2AA1C6F500E32087 /* Sound Effect */ = {
+			isa = PBXGroup;
+			children = (
+				0EDDEC292AA1C6F000E32087 /* correct.mp3 */,
+				0E9881622AA5AA1100D326CC /* pressed.mp3 */,
+				0EDDEC2A2AA1C6F000E32087 /* failed.mp3 */,
+			);
+			path = "Sound Effect";
+			sourceTree = "<group>";
+		};
+		44491726AFD7A6E36AFEE5DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				258D287A1FC2293C06EA96CE /* Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig */,
+				2CA491813F3E4465F40705D2 /* Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		73935C76798FF0C796361FB4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8625A7BDAF5BDB5E0016DF55 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		FC3D987F2A8E2A86001A05CE = {
+			isa = PBXGroup;
+			children = (
+				FC3D988A2A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game */,
+				FC3D98892A8E2A86001A05CE /* Products */,
+				44491726AFD7A6E36AFEE5DF /* Pods */,
+				73935C76798FF0C796361FB4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		FC3D98892A8E2A86001A05CE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FC3D98882A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		FC3D988A2A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game */ = {
+			isa = PBXGroup;
+			children = (
+				0EDDEC232AA194DA00E32087 /* Utilities */,
+				0EDDEC222AA194CF00E32087 /* Globle */,
+				0E68C9222A9B307400ACF84D /* Custom View */,
+				0EDC0B252AA0A3F800B91B2C /* View */,
+				0EDC0B242AA0A3E700B91B2C /* View Controller */,
+				FCCDD2312A9CB68200672A8C /* View Model */,
+				0E6F8A9E2A989E6700B480F5 /* Helper */,
+				0E6F8A9D2A989E5E00B480F5 /* Model */,
+				0EA44D352A9716FF00B5539A /* Extension */,
+				FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */,
+				FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */,
+			);
+			path = "Brach-Nha-Khmer-Quiz-Game";
+			sourceTree = "<group>";
+		};
+		FC9CE41A2AC144080076F310 /* StarView */ = {
+			isa = PBXGroup;
+			children = (
+				FC9CE41B2AC144390076F310 /* StarView.swift */,
+				FC9CE41D2AC144490076F310 /* StarView.xib */,
+			);
+			path = StarView;
+			sourceTree = "<group>";
+		};
+		FCCDD2312A9CB68200672A8C /* View Model */ = {
+			isa = PBXGroup;
+			children = (
+				0E8170432AC2CA3D00E2A270 /* AnswerView.swift */,
+				0E81703F2AC2CA3D00E2A270 /* GamePlay.swift */,
+				0E8170422AC2CA3D00E2A270 /* HintButton.swift */,
+				0E8170412AC2CA3D00E2A270 /* HintCustomCellModel.swift */,
+				0E8170442AC2CA3D00E2A270 /* HintView.swift */,
+				0E8170452AC2CA3D00E2A270 /* LevelViewModel.swift */,
+				0E8170402AC2CA3D00E2A270 /* OnOffButton.swift */,
+			);
+			path = "View Model";
+			sourceTree = "<group>";
+		};
+		FCDA06B12AA6F89100A2A239 /* AnswerButton */ = {
+			isa = PBXGroup;
+			children = (
+				FCDA06B22AA6F8D700A2A239 /* AnswerButton.swift */,
+				FCDA06B52AA6F91C00A2A239 /* AnswerButton.xib */,
+			);
+			path = AnswerButton;
+			sourceTree = "<group>";
+		};
+		FCDA06C42AA853A700A2A239 /* HintHalfHalfButton */ = {
+			isa = PBXGroup;
+			children = (
+				FCDA06C52AA8541200A2A239 /* HintHalfHalfButton.swift */,
+				FCDA06C72AA8542200A2A239 /* HintHalfHalfButton.xib */,
+			);
+			path = HintHalfHalfButton;
+			sourceTree = "<group>";
+		};
+		FCDA06CB2AA898CD00A2A239 /* HintTellAnswerButton */ = {
+			isa = PBXGroup;
+			children = (
+				FCDA06CC2AA8991C00A2A239 /* HintTellAnswerButton.swift */,
+				FCDA06CE2AA8992A00A2A239 /* HintTellAnswerButton.xib */,
+			);
+			path = HintTellAnswerButton;
+			sourceTree = "<group>";
+		};
+		FCE106012A99E51000AAEDD0 /* Level Game Custom Cell */ = {
+			isa = PBXGroup;
+			children = (
+				0E8170552AC2CA9100E2A270 /* LevelCustomCell.swift */,
+				0E8170562AC2CA9200E2A270 /* LevelCustomCell.xib */,
+			);
+			path = "Level Game Custom Cell";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		FC3D98872A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC3D989C2A8E2A87001A05CE /* Build configuration list for PBXNativeTarget "Brach-Nha-Khmer-Quiz-Game" */;
+			buildPhases = (
+				53EB88C28AD2C3D00CA237FA /* [CP] Check Pods Manifest.lock */,
+				FC3D98842A8E2A86001A05CE /* Sources */,
+				FC3D98852A8E2A86001A05CE /* Frameworks */,
+				FC3D98862A8E2A86001A05CE /* Resources */,
+				3FFF9AD48A676CEC04062DD3 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Brach-Nha-Khmer-Quiz-Game";
+			productName = "Brach-Nha-Khmer-Quiz-Game";
+			productReference = FC3D98882A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		FC3D98802A8E2A86001A05CE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					FC3D98872A8E2A86001A05CE = {
+						CreatedOnToolsVersion = 14.3.1;
+					};
+				};
+			};
+			buildConfigurationList = FC3D98832A8E2A86001A05CE /* Build configuration list for PBXProject "Brach-Nha-Khmer-Quiz-Game" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = FC3D987F2A8E2A86001A05CE;
+			productRefGroup = FC3D98892A8E2A86001A05CE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				FC3D98872A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		FC3D98862A8E2A86001A05CE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FC9CE41E2AC144490076F310 /* StarView.xib in Resources */,
+				FCDA06C82AA8542200A2A239 /* HintHalfHalfButton.xib in Resources */,
+				0E81704F2AC2CA7C00E2A270 /* HintCustomCell.xib in Resources */,
+				0EDC0B342AA0A5EB00B91B2C /* SettingView.xib in Resources */,
+				0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */,
+				0E98815B2AA46F2200D326CC /* playBackground.mp3 in Resources */,
+				0E1BD08E2AB2208700F7BBA5 /* Main.storyboard in Resources */,
+				0EDDEC2C2AA1C6F000E32087 /* correct.mp3 in Resources */,
+				0E98816C2AA9AE5900D326CC /* HintPopupView.xib in Resources */,
+				0E93ADF02AAC2F3C0073E7ED /* GameData.json in Resources */,
+				0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */,
+				FCDA06BF2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf in Resources */,
+				0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */,
+				0E6D72922AB81ABC005C3129 /* LostView.xib in Resources */,
+				FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */,
+				0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */,
+				0E8170582AC2CA9200E2A270 /* LevelCustomCell.xib in Resources */,
+				0E9881632AA5AA1100D326CC /* pressed.mp3 in Resources */,
+				0EDDEC2D2AA1C6F000E32087 /* failed.mp3 in Resources */,
+				0E9881672AA6E12C00D326CC /* background.mp3 in Resources */,
+				0E8170542AC2CA8700E2A270 /* CustomOnOffButton.xib in Resources */,
+				FCDA06B62AA6F91C00A2A239 /* AnswerButton.xib in Resources */,
+				FC9CE4242AC1550A0076F310 /* YellowStarAnimation.json in Resources */,
+				FCDA06CF2AA8992A00A2A239 /* HintTellAnswerButton.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3FFF9AD48A676CEC04062DD3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		53EB88C28AD2C3D00CA237FA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Brach-Nha-Khmer-Quiz-Game-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		FC3D98842A8E2A86001A05CE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0E98816A2AA9AE4D00D326CC /* HintPopupView.swift in Sources */,
+				0E8170502AC2CA7C00E2A270 /* HintCustomCell.swift in Sources */,
+				0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */,
+				0EA44D372A97177600B5539A /* UIViewExtension.swift in Sources */,
+				0E9881612AA47A7D00D326CC /* SoundEffect.swift in Sources */,
+				0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */,
+				0E93ADF22AAC2F570073E7ED /* GameData.swift in Sources */,
+				FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */,
+				0E81703E2AC2CA2F00E2A270 /* StoreViewController.swift in Sources */,
+				0E8170532AC2CA8700E2A270 /* CustomOnOffButton.swift in Sources */,
+				0E8170492AC2CA3D00E2A270 /* HintButton.swift in Sources */,
+				0E98815D2AA46F8600D326CC /* Global.swift in Sources */,
+				0E8170392AC2CA2F00E2A270 /* AnswerViewController.swift in Sources */,
+				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
+				0E8170482AC2CA3D00E2A270 /* HintCustomCellModel.swift in Sources */,
+				0E8170382AC2CA2F00E2A270 /* WinOrLoseViewController.swift in Sources */,
+				0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */,
+				FCDA06C62AA8541200A2A239 /* HintHalfHalfButton.swift in Sources */,
+				FC9CE41C2AC144390076F310 /* StarView.swift in Sources */,
+				FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */,
+				0E6D72912AB81ABC005C3129 /* LostView.swift in Sources */,
+				0E81703D2AC2CA2F00E2A270 /* ReadingQuestionViewController.swift in Sources */,
+				0E81704B2AC2CA3D00E2A270 /* HintView.swift in Sources */,
+				0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */,
+				FCDA06B32AA6F8D700A2A239 /* AnswerButton.swift in Sources */,
+				FCDA06CD2AA8991C00A2A239 /* HintTellAnswerButton.swift in Sources */,
+				0E8170572AC2CA9200E2A270 /* LevelCustomCell.swift in Sources */,
+				0E8170472AC2CA3D00E2A270 /* OnOffButton.swift in Sources */,
+				0EA44D462A97353600B5539A /* PlayMode.swift in Sources */,
+				0E81703A2AC2CA2F00E2A270 /* LevelViewController.swift in Sources */,
+				0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */,
+				0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */,
+				0E7CEFA32AB6B0BE00D500F8 /* Product.swift in Sources */,
+				0E81704C2AC2CA3D00E2A270 /* LevelViewModel.swift in Sources */,
+				0E8170462AC2CA3D00E2A270 /* GamePlay.swift in Sources */,
+				0EDC0B2D2AA0A49700B91B2C /* ViewAnimateHelper.swift in Sources */,
+				0E81704A2AC2CA3D00E2A270 /* AnswerView.swift in Sources */,
+				0E7CEFA62AB7484600D500F8 /* HintProduct.swift in Sources */,
+				0E81703C2AC2CA2F00E2A270 /* MainViewController.swift in Sources */,
+				0E8BFF732AA43584000E5AC7 /* AudioMode.swift in Sources */,
+				0E81703B2AC2CA2F00E2A270 /* GameChoosingViewController.swift in Sources */,
+				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
+				0EA44D3B2A97293A00B5539A /* UIColorExtension.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		0E1BD08A2AB2208600F7BBA5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E1BD08B2AB2208600F7BBA5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0E1BD08C2AB2208700F7BBA5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0E1BD08D2AB2208700F7BBA5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		FC3D989A2A8E2A87001A05CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		FC3D989B2A8E2A87001A05CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		FC3D989D2A8E2A87001A05CE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 258D287A1FC2293C06EA96CE /* Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4SC57X43S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Brach-Nha-Khmer-Quiz-Game/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.einoyakoreal.Brach-Nha-Khmer-Quiz-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		FC3D989E2A8E2A87001A05CE /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2CA491813F3E4465F40705D2 /* Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = S4SC57X43S;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Brach-Nha-Khmer-Quiz-Game/Info.plist";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.einoyakoreal.Brach-Nha-Khmer-Quiz-Game";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		FC3D98832A8E2A86001A05CE /* Build configuration list for PBXProject "Brach-Nha-Khmer-Quiz-Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3D989A2A8E2A87001A05CE /* Debug */,
+				FC3D989B2A8E2A87001A05CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FC3D989C2A8E2A87001A05CE /* Build configuration list for PBXNativeTarget "Brach-Nha-Khmer-Quiz-Game" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FC3D989D2A8E2A87001A05CE /* Debug */,
+				FC3D989E2A8E2A87001A05CE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = FC3D98802A8E2A86001A05CE /* Project object */;
+}
