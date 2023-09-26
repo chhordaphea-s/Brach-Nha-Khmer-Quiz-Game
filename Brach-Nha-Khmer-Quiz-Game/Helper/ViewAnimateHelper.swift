@@ -15,7 +15,7 @@ class ViewAnimateHelper {
     
     private init() {}
         
-    func animateViewIn(_ baseView: UIView, popUpView: UIView, width: Float, height: Float) {
+    func animateViewIn(_ baseView: UIView, popUpView: UIView, width: Float, height: Float, tapBackground: Bool = true) {
 
         let backgroundView = UIView()
         backgroundView.tag = 1
@@ -25,8 +25,10 @@ class ViewAnimateHelper {
         backgroundView.isUserInteractionEnabled = true
         baseView.addSubview(backgroundView)
 
-        let tapGasture = UITapGestureRecognizer(target: self, action: #selector(dismissView(_:)))
-        backgroundView.addGestureRecognizer(tapGasture)
+        if tapBackground {
+            let tapGasture = UITapGestureRecognizer(target: self, action: #selector(dismissView(_:)))
+            backgroundView.addGestureRecognizer(tapGasture)
+        }
         
         self.baseView = baseView
         self.popUpView = popUpView

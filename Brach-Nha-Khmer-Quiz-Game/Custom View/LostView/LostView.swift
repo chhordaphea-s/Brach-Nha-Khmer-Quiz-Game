@@ -9,6 +9,7 @@ import UIKit
 
 protocol LostViewDelegate: NSObjectProtocol {
     func displayAds()
+    func gotoFinishScreen()
 }
 
 class LostView: UIView {
@@ -42,7 +43,9 @@ class LostView: UIView {
     
     @IBAction func LeaveGameButtonPressed(_ sender: UITapGestureRecognizer) {
         ButtonEffectAnimation.shared.popEffect(button: leaveGameViewButton)
-        print("Leave game")
+//        print("Leave game")
+        delegate?.gotoFinishScreen()
+        
     }
     
 
@@ -58,8 +61,14 @@ class LostView: UIView {
             contentView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         }
             }
+}
+
+extension LostView {
+    func animateViewIn(baseView: UIView, popUpView: UIView) {
+        ViewAnimateHelper.shared.animateViewIn(baseView, popUpView: popUpView, width: 282, height: 396, tapBackground: false)
+    }
     
-
-
-
+    func animateViewOut(baseView: UIView, popUpView: UIView) {
+        ViewAnimateHelper.shared.animateViewOut(baseView, popUpView: popUpView)
+    }
 }

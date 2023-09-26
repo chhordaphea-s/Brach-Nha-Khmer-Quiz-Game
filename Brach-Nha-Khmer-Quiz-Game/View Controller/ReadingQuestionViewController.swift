@@ -79,6 +79,8 @@ class ReadingQuestionViewController: UIViewController {
         
         if self.gamePlay?.level.questions[gamePlayData.question - 1].possibleAnswer == nil {
             self.gamePlay?.level.questions[gamePlayData.question - 1].possibleAnswer = getPossiableAnswer(game: currentGame, level: gamePlayData.level.level, question: gamePlayData.question)
+        } else {
+            gamePlay?.level.questions[gamePlayData.question - 1].possibleAnswer?.shuffle()
         }
         
     }
@@ -98,6 +100,13 @@ class ReadingQuestionViewController: UIViewController {
         self.present(controller, animated: true)
     }
     
+    func switchToLevelScreen(game: Game){
+        let controller = storyboard?.instantiateViewController(withIdentifier: "LevelViewController") as! LevelViewController
+        controller.modalPresentationStyle = .fullScreen
+        controller.modalTransitionStyle = .crossDissolve
+        controller.game = game
+        self.present(controller, animated: true)
+    }
     
     
 
@@ -106,7 +115,13 @@ class ReadingQuestionViewController: UIViewController {
 
 
 extension ReadingQuestionViewController: SettingViewDelegate {
-    func quitGame() {}
+    func quitGame() {
+        guard let gamePlayData = gamePlay else { return }
+        guard let game = gameData?.getGameByKey(key: gamePlayData.gameKey) else { return }
+        
+        switchToLevelScreen(game: game)
+    }
+     
     
     func dismissButton(_ view: UIView) {
         ViewAnimateHelper.shared.animateViewOut(self.view, popUpView: view)

@@ -130,4 +130,15 @@ class AnswerButton: UIView {
         view.layer.addSublayer(layer0)
     }
     
+    func reset() {
+        title = ""
+        index = 0
+        correctAnswer = ""
+        isEnable = true
+        
+        rightAndwrong.isHidden = true
+        answerBackgroundColor.backgroundColor = UIColor.white
+        answerLabel.textColor = Constant.color.getTextColor()
+    }
+    
 }
