@@ -8,11 +8,24 @@
 import Foundation
 import UIKit
 
+private var progressTimerKey: UInt8 = 0
+
+
 extension UIProgressView {
+
+    private var progressTimer: Timer? {
+        get {
+            return objc_getAssociatedObject(self, &progressTimerKey) as? Timer
+        }
+        set {
+            objc_setAssociatedObject(self, &progressTimerKey, newValue, .OBJC_ASSOCIATION_RETAIN_NONATOMIC)
+        }
+    }
+    
     @available(iOS 10.0, *)
     func setAnimatedProgress(progress: Float = 0, duration: Float = 50, completion: (() -> ())? = nil) {
         
-        Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
+        progressTimer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
             DispatchQueue.main.async {
                 let current = self.progress
                 self.setProgress(current-(1/(100 * duration)), animated: true)
@@ -32,5 +45,8 @@ extension UIProgressView {
         return Int(timeRemainder)
     }
 
+    func pauseProgress() {
+        progressTimer?.invalidate()
+    }
     
 }
