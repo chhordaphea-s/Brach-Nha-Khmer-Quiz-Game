@@ -9,13 +9,6 @@
 /* Begin PBXBuildFile section */
 		0E1BD08E2AB2208700F7BBA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08A2AB2208600F7BBA5 /* Main.storyboard */; };
 		0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08C2AB2208700F7BBA5 /* LaunchScreen.storyboard */; };
-		0E1BD0932AB220DF00F7BBA5 /* GameChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0902AB220DF00F7BBA5 /* GameChoosingViewController.swift */; };
-		0E1BD0942AB220DF00F7BBA5 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0912AB220DF00F7BBA5 /* MainViewController.swift */; };
-		0E1BD0952AB220DF00F7BBA5 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0922AB220DF00F7BBA5 /* LevelViewController.swift */; };
-		0E1BD0A52AB30D4F00F7BBA5 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0A42AB30D4F00F7BBA5 /* StoreViewController.swift */; };
-		0E1BD0A72AB3117E00F7BBA5 /* HintCustomCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0A62AB3117E00F7BBA5 /* HintCustomCellModel.swift */; };
-		0E1BD0AC2AB3195C00F7BBA5 /* HintCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0AA2AB3195C00F7BBA5 /* HintCustomCell.swift */; };
-		0E1BD0AD2AB3195C00F7BBA5 /* HintCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD0AB2AB3195C00F7BBA5 /* HintCustomCell.xib */; };
 		0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */; };
 		0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */; };
 		0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */; };
@@ -25,6 +18,26 @@
 		0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */; };
 		0E7CEFA32AB6B0BE00D500F8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7CEFA22AB6B0BE00D500F8 /* Product.swift */; };
 		0E7CEFA62AB7484600D500F8 /* HintProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7CEFA52AB7484600D500F8 /* HintProduct.swift */; };
+		0E8170382AC2CA2F00E2A270 /* WinOrLoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170312AC2CA2E00E2A270 /* WinOrLoseViewController.swift */; };
+		0E8170392AC2CA2F00E2A270 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170322AC2CA2F00E2A270 /* AnswerViewController.swift */; };
+		0E81703A2AC2CA2F00E2A270 /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170332AC2CA2F00E2A270 /* LevelViewController.swift */; };
+		0E81703B2AC2CA2F00E2A270 /* GameChoosingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170342AC2CA2F00E2A270 /* GameChoosingViewController.swift */; };
+		0E81703C2AC2CA2F00E2A270 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170352AC2CA2F00E2A270 /* MainViewController.swift */; };
+		0E81703D2AC2CA2F00E2A270 /* ReadingQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170362AC2CA2F00E2A270 /* ReadingQuestionViewController.swift */; };
+		0E81703E2AC2CA2F00E2A270 /* StoreViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170372AC2CA2F00E2A270 /* StoreViewController.swift */; };
+		0E8170462AC2CA3D00E2A270 /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E81703F2AC2CA3D00E2A270 /* GamePlay.swift */; };
+		0E8170472AC2CA3D00E2A270 /* OnOffButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170402AC2CA3D00E2A270 /* OnOffButton.swift */; };
+		0E8170482AC2CA3D00E2A270 /* HintCustomCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170412AC2CA3D00E2A270 /* HintCustomCellModel.swift */; };
+		0E8170492AC2CA3D00E2A270 /* HintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170422AC2CA3D00E2A270 /* HintButton.swift */; };
+		0E81704A2AC2CA3D00E2A270 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170432AC2CA3D00E2A270 /* AnswerView.swift */; };
+		0E81704B2AC2CA3D00E2A270 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170442AC2CA3D00E2A270 /* HintView.swift */; };
+		0E81704C2AC2CA3D00E2A270 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170452AC2CA3D00E2A270 /* LevelViewModel.swift */; };
+		0E81704F2AC2CA7C00E2A270 /* HintCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E81704D2AC2CA7C00E2A270 /* HintCustomCell.xib */; };
+		0E8170502AC2CA7C00E2A270 /* HintCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E81704E2AC2CA7C00E2A270 /* HintCustomCell.swift */; };
+		0E8170532AC2CA8700E2A270 /* CustomOnOffButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170512AC2CA8600E2A270 /* CustomOnOffButton.swift */; };
+		0E8170542AC2CA8700E2A270 /* CustomOnOffButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8170522AC2CA8600E2A270 /* CustomOnOffButton.xib */; };
+		0E8170572AC2CA9200E2A270 /* LevelCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170552AC2CA9100E2A270 /* LevelCustomCell.swift */; };
+		0E8170582AC2CA9200E2A270 /* LevelCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8170562AC2CA9200E2A270 /* LevelCustomCell.xib */; };
 		0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */; };
 		0E8BFF732AA43584000E5AC7 /* AudioMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF722AA43584000E5AC7 /* AudioMode.swift */; };
 		0E93ADF02AAC2F3C0073E7ED /* GameData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E93ADEF2AAC2F3C0073E7ED /* GameData.json */; };
@@ -36,17 +49,13 @@
 		0E9881672AA6E12C00D326CC /* background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E9881662AA6E12C00D326CC /* background.mp3 */; };
 		0E98816A2AA9AE4D00D326CC /* HintPopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E9881692AA9AE4D00D326CC /* HintPopupView.swift */; };
 		0E98816C2AA9AE5900D326CC /* HintPopupView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E98816B2AA9AE5800D326CC /* HintPopupView.xib */; };
-		0E98816E2AA9BA9100D326CC /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E98816D2AA9BA9100D326CC /* HintView.swift */; };
 		0EA44D372A97177600B5539A /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D362A97177600B5539A /* UIViewExtension.swift */; };
 		0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */; };
 		0EA44D3B2A97293A00B5539A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */; };
 		0EA44D462A97353600B5539A /* PlayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D452A97353600B5539A /* PlayMode.swift */; };
-		0EDC0B2B2AA0A46A00B91B2C /* OnOffButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0B2A2AA0A46A00B91B2C /* OnOffButton.swift */; };
 		0EDC0B2D2AA0A49700B91B2C /* ViewAnimateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */; };
 		0EDC0B342AA0A5EB00B91B2C /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */; };
 		0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0B332AA0A5EB00B91B2C /* SettingView.swift */; };
-		0EDC0B3A2AA0A62300B91B2C /* CustomOnOffButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC0B382AA0A62300B91B2C /* CustomOnOffButton.xib */; };
-		0EDC0B3B2AA0A62300B91B2C /* CustomOnOffButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0B392AA0A62300B91B2C /* CustomOnOffButton.swift */; };
 		0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EDDEC242AA1BAEB00E32087 /* PlayingBackground1.mp3 */; };
 		0EDDEC2C2AA1C6F000E32087 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EDDEC292AA1C6F000E32087 /* correct.mp3 */; };
 		0EDDEC2D2AA1C6F000E32087 /* failed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EDDEC2A2AA1C6F000E32087 /* failed.mp3 */; };
@@ -54,38 +63,22 @@
 		FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */; };
 		FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */; };
 		FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98942A8E2A87001A05CE /* Assets.xcassets */; };
-		FC9CE4192AC01F390076F310 /* WinOrLoseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9CE4182AC01F390076F310 /* WinOrLoseViewController.swift */; };
 		FC9CE41C2AC144390076F310 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9CE41B2AC144390076F310 /* StarView.swift */; };
 		FC9CE41E2AC144490076F310 /* StarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9CE41D2AC144490076F310 /* StarView.xib */; };
 		FC9CE4242AC1550A0076F310 /* YellowStarAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = FC9CE4232AC1550A0076F310 /* YellowStarAnimation.json */; };
-		FCDA06B02AA59D9F00A2A239 /* AnswerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */; };
 		FCDA06B32AA6F8D700A2A239 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06B22AA6F8D700A2A239 /* AnswerButton.swift */; };
 		FCDA06B62AA6F91C00A2A239 /* AnswerButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA06B52AA6F91C00A2A239 /* AnswerButton.xib */; };
-		FCDA06B82AA7060200A2A239 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06B72AA7060200A2A239 /* AnswerView.swift */; };
 		FCDA06BF2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCDA06BE2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf */; };
 		FCDA06C62AA8541200A2A239 /* HintHalfHalfButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06C52AA8541200A2A239 /* HintHalfHalfButton.swift */; };
 		FCDA06C82AA8542200A2A239 /* HintHalfHalfButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA06C72AA8542200A2A239 /* HintHalfHalfButton.xib */; };
-		FCDA06CA2AA85C4F00A2A239 /* HintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06C92AA85C4F00A2A239 /* HintButton.swift */; };
 		FCDA06CD2AA8991C00A2A239 /* HintTellAnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06CC2AA8991C00A2A239 /* HintTellAnswerButton.swift */; };
 		FCDA06CF2AA8992A00A2A239 /* HintTellAnswerButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA06CE2AA8992A00A2A239 /* HintTellAnswerButton.xib */; };
-		FCE106042A99E5B300AAEDD0 /* LevelCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */; };
-		FCE106052A99E5B300AAEDD0 /* LevelCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */; };
-		FCF09C2B2AB16AF2009A63DF /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF09C2A2AB16AF2009A63DF /* LevelViewModel.swift */; };
-		FCF09C2F2AB30A49009A63DF /* ReadingQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF09C2E2AB30A49009A63DF /* ReadingQuestionViewController.swift */; };
-		FCF09C312AB94F20009A63DF /* GamePlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF09C302AB94F20009A63DF /* GamePlay.swift */; };
 		FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF478332AA9CD6800075DAC /* UIProgressViewExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0E1BD08B2AB2208600F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E1BD08D2AB2208700F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0E1BD0902AB220DF00F7BBA5 /* GameChoosingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameChoosingViewController.swift; sourceTree = "<group>"; };
-		0E1BD0912AB220DF00F7BBA5 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
-		0E1BD0922AB220DF00F7BBA5 /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
-		0E1BD0A42AB30D4F00F7BBA5 /* StoreViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
-		0E1BD0A62AB3117E00F7BBA5 /* HintCustomCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintCustomCellModel.swift; sourceTree = "<group>"; };
-		0E1BD0AA2AB3195C00F7BBA5 /* HintCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintCustomCell.swift; sourceTree = "<group>"; };
-		0E1BD0AB2AB3195C00F7BBA5 /* HintCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintCustomCell.xib; sourceTree = "<group>"; };
 		0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
 		0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosePlayerModeCustomSagement.xib; sourceTree = "<group>"; };
 		0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerModeCustomSagement.swift; sourceTree = "<group>"; };
@@ -96,6 +89,26 @@
 		0E7CEFA22AB6B0BE00D500F8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0E7CEFA42AB6B2B800D500F8 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
 		0E7CEFA52AB7484600D500F8 /* HintProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintProduct.swift; sourceTree = "<group>"; };
+		0E8170312AC2CA2E00E2A270 /* WinOrLoseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinOrLoseViewController.swift; sourceTree = "<group>"; };
+		0E8170322AC2CA2F00E2A270 /* AnswerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
+		0E8170332AC2CA2F00E2A270 /* LevelViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		0E8170342AC2CA2F00E2A270 /* GameChoosingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameChoosingViewController.swift; sourceTree = "<group>"; };
+		0E8170352AC2CA2F00E2A270 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		0E8170362AC2CA2F00E2A270 /* ReadingQuestionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReadingQuestionViewController.swift; sourceTree = "<group>"; };
+		0E8170372AC2CA2F00E2A270 /* StoreViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreViewController.swift; sourceTree = "<group>"; };
+		0E81703F2AC2CA3D00E2A270 /* GamePlay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
+		0E8170402AC2CA3D00E2A270 /* OnOffButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnOffButton.swift; sourceTree = "<group>"; };
+		0E8170412AC2CA3D00E2A270 /* HintCustomCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintCustomCellModel.swift; sourceTree = "<group>"; };
+		0E8170422AC2CA3D00E2A270 /* HintButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
+		0E8170432AC2CA3D00E2A270 /* AnswerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
+		0E8170442AC2CA3D00E2A270 /* HintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
+		0E8170452AC2CA3D00E2A270 /* LevelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
+		0E81704D2AC2CA7C00E2A270 /* HintCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HintCustomCell.xib; sourceTree = "<group>"; };
+		0E81704E2AC2CA7C00E2A270 /* HintCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintCustomCell.swift; sourceTree = "<group>"; };
+		0E8170512AC2CA8600E2A270 /* CustomOnOffButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOnOffButton.swift; sourceTree = "<group>"; };
+		0E8170522AC2CA8600E2A270 /* CustomOnOffButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOnOffButton.xib; sourceTree = "<group>"; };
+		0E8170552AC2CA9100E2A270 /* LevelCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelCustomCell.swift; sourceTree = "<group>"; };
+		0E8170562AC2CA9200E2A270 /* LevelCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelCustomCell.xib; sourceTree = "<group>"; };
 		0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
 		0E8BFF722AA43584000E5AC7 /* AudioMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMode.swift; sourceTree = "<group>"; };
 		0E93ADEF2AAC2F3C0073E7ED /* GameData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameData.json; sourceTree = "<group>"; };
@@ -107,17 +120,13 @@
 		0E9881662AA6E12C00D326CC /* background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = background.mp3; sourceTree = "<group>"; };
 		0E9881692AA9AE4D00D326CC /* HintPopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintPopupView.swift; sourceTree = "<group>"; };
 		0E98816B2AA9AE5800D326CC /* HintPopupView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintPopupView.xib; sourceTree = "<group>"; };
-		0E98816D2AA9BA9100D326CC /* HintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
 		0EA44D362A97177600B5539A /* UIViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AKbalthom-KOUPREY-Jais.ttf"; sourceTree = "<group>"; };
 		0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0EA44D452A97353600B5539A /* PlayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMode.swift; sourceTree = "<group>"; };
-		0EDC0B2A2AA0A46A00B91B2C /* OnOffButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OnOffButton.swift; sourceTree = "<group>"; };
 		0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimateHelper.swift; sourceTree = "<group>"; };
 		0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
 		0EDC0B332AA0A5EB00B91B2C /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		0EDC0B382AA0A62300B91B2C /* CustomOnOffButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOnOffButton.xib; sourceTree = "<group>"; };
-		0EDC0B392AA0A62300B91B2C /* CustomOnOffButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomOnOffButton.swift; sourceTree = "<group>"; };
 		0EDDEC242AA1BAEB00E32087 /* PlayingBackground1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PlayingBackground1.mp3; sourceTree = "<group>"; };
 		0EDDEC292AA1C6F000E32087 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
 		0EDDEC2A2AA1C6F000E32087 /* failed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = failed.mp3; sourceTree = "<group>"; };
@@ -129,25 +138,16 @@
 		FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		FC3D98942A8E2A87001A05CE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = ../Assets.xcassets; sourceTree = "<group>"; };
 		FC3D98992A8E2A87001A05CE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
-		FC9CE4182AC01F390076F310 /* WinOrLoseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WinOrLoseViewController.swift; sourceTree = "<group>"; };
 		FC9CE41B2AC144390076F310 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
 		FC9CE41D2AC144490076F310 /* StarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarView.xib; sourceTree = "<group>"; };
 		FC9CE4232AC1550A0076F310 /* YellowStarAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = YellowStarAnimation.json; sourceTree = "<group>"; };
-		FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerViewController.swift; sourceTree = "<group>"; };
 		FCDA06B22AA6F8D700A2A239 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		FCDA06B52AA6F91C00A2A239 /* AnswerButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerButton.xib; sourceTree = "<group>"; };
-		FCDA06B72AA7060200A2A239 /* AnswerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
 		FCDA06BE2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AKbalthom KhmerHand.ttf"; sourceTree = "<group>"; };
 		FCDA06C52AA8541200A2A239 /* HintHalfHalfButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintHalfHalfButton.swift; sourceTree = "<group>"; };
 		FCDA06C72AA8542200A2A239 /* HintHalfHalfButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintHalfHalfButton.xib; sourceTree = "<group>"; };
-		FCDA06C92AA85C4F00A2A239 /* HintButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
 		FCDA06CC2AA8991C00A2A239 /* HintTellAnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HintTellAnswerButton.swift; sourceTree = "<group>"; };
 		FCDA06CE2AA8992A00A2A239 /* HintTellAnswerButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HintTellAnswerButton.xib; sourceTree = "<group>"; };
-		FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelCustomCell.swift; sourceTree = "<group>"; };
-		FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LevelCustomCell.xib; sourceTree = "<group>"; };
-		FCF09C2A2AB16AF2009A63DF /* LevelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
-		FCF09C2E2AB30A49009A63DF /* ReadingQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReadingQuestionViewController.swift; sourceTree = "<group>"; };
-		FCF09C302AB94F20009A63DF /* GamePlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamePlay.swift; sourceTree = "<group>"; };
 		FCF478332AA9CD6800075DAC /* UIProgressViewExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIProgressViewExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -185,8 +185,8 @@
 		0E1BD09F2AB309A800F7BBA5 /* HintCustomCell */ = {
 			isa = PBXGroup;
 			children = (
-				0E1BD0AA2AB3195C00F7BBA5 /* HintCustomCell.swift */,
-				0E1BD0AB2AB3195C00F7BBA5 /* HintCustomCell.xib */,
+				0E81704E2AC2CA7C00E2A270 /* HintCustomCell.swift */,
+				0E81704D2AC2CA7C00E2A270 /* HintCustomCell.xib */,
 			);
 			path = HintCustomCell;
 			sourceTree = "<group>";
@@ -270,13 +270,13 @@
 		0EDC0B242AA0A3E700B91B2C /* View Controller */ = {
 			isa = PBXGroup;
 			children = (
-				0E1BD0902AB220DF00F7BBA5 /* GameChoosingViewController.swift */,
-				0E1BD0922AB220DF00F7BBA5 /* LevelViewController.swift */,
-				0E1BD0912AB220DF00F7BBA5 /* MainViewController.swift */,
-				FCDA06AF2AA59D9F00A2A239 /* AnswerViewController.swift */,
-				0E1BD0A42AB30D4F00F7BBA5 /* StoreViewController.swift */,
-				FCF09C2E2AB30A49009A63DF /* ReadingQuestionViewController.swift */,
-				FC9CE4182AC01F390076F310 /* WinOrLoseViewController.swift */,
+				0E8170322AC2CA2F00E2A270 /* AnswerViewController.swift */,
+				0E8170342AC2CA2F00E2A270 /* GameChoosingViewController.swift */,
+				0E8170332AC2CA2F00E2A270 /* LevelViewController.swift */,
+				0E8170352AC2CA2F00E2A270 /* MainViewController.swift */,
+				0E8170362AC2CA2F00E2A270 /* ReadingQuestionViewController.swift */,
+				0E8170372AC2CA2F00E2A270 /* StoreViewController.swift */,
+				0E8170312AC2CA2E00E2A270 /* WinOrLoseViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -305,8 +305,8 @@
 		0EDC0B372AA0A61A00B91B2C /* CustomSwitchButton */ = {
 			isa = PBXGroup;
 			children = (
-				0EDC0B392AA0A62300B91B2C /* CustomOnOffButton.swift */,
-				0EDC0B382AA0A62300B91B2C /* CustomOnOffButton.xib */,
+				0E8170512AC2CA8600E2A270 /* CustomOnOffButton.swift */,
+				0E8170522AC2CA8600E2A270 /* CustomOnOffButton.xib */,
 			);
 			path = CustomSwitchButton;
 			sourceTree = "<group>";
@@ -410,13 +410,13 @@
 		FCCDD2312A9CB68200672A8C /* View Model */ = {
 			isa = PBXGroup;
 			children = (
-				0EDC0B2A2AA0A46A00B91B2C /* OnOffButton.swift */,
-				FCF09C2A2AB16AF2009A63DF /* LevelViewModel.swift */,
-				0E98816D2AA9BA9100D326CC /* HintView.swift */,
-				FCDA06B72AA7060200A2A239 /* AnswerView.swift */,
-				FCDA06C92AA85C4F00A2A239 /* HintButton.swift */,
-				0E1BD0A62AB3117E00F7BBA5 /* HintCustomCellModel.swift */,
-				FCF09C302AB94F20009A63DF /* GamePlay.swift */,
+				0E8170432AC2CA3D00E2A270 /* AnswerView.swift */,
+				0E81703F2AC2CA3D00E2A270 /* GamePlay.swift */,
+				0E8170422AC2CA3D00E2A270 /* HintButton.swift */,
+				0E8170412AC2CA3D00E2A270 /* HintCustomCellModel.swift */,
+				0E8170442AC2CA3D00E2A270 /* HintView.swift */,
+				0E8170452AC2CA3D00E2A270 /* LevelViewModel.swift */,
+				0E8170402AC2CA3D00E2A270 /* OnOffButton.swift */,
 			);
 			path = "View Model";
 			sourceTree = "<group>";
@@ -451,8 +451,8 @@
 		FCE106012A99E51000AAEDD0 /* Level Game Custom Cell */ = {
 			isa = PBXGroup;
 			children = (
-				FCE106022A99E5B300AAEDD0 /* LevelCustomCell.swift */,
-				FCE106032A99E5B300AAEDD0 /* LevelCustomCell.xib */,
+				0E8170552AC2CA9100E2A270 /* LevelCustomCell.swift */,
+				0E8170562AC2CA9200E2A270 /* LevelCustomCell.xib */,
 			);
 			path = "Level Game Custom Cell";
 			sourceTree = "<group>";
@@ -519,10 +519,10 @@
 			files = (
 				FC9CE41E2AC144490076F310 /* StarView.xib in Resources */,
 				FCDA06C82AA8542200A2A239 /* HintHalfHalfButton.xib in Resources */,
+				0E81704F2AC2CA7C00E2A270 /* HintCustomCell.xib in Resources */,
 				0EDC0B342AA0A5EB00B91B2C /* SettingView.xib in Resources */,
 				0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */,
 				0E98815B2AA46F2200D326CC /* playBackground.mp3 in Resources */,
-				0E1BD0AD2AB3195C00F7BBA5 /* HintCustomCell.xib in Resources */,
 				0E1BD08E2AB2208700F7BBA5 /* Main.storyboard in Resources */,
 				0EDDEC2C2AA1C6F000E32087 /* correct.mp3 in Resources */,
 				0E98816C2AA9AE5900D326CC /* HintPopupView.xib in Resources */,
@@ -532,13 +532,13 @@
 				0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */,
 				0E6D72922AB81ABC005C3129 /* LostView.xib in Resources */,
 				FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */,
-				0EDC0B3A2AA0A62300B91B2C /* CustomOnOffButton.xib in Resources */,
 				0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */,
+				0E8170582AC2CA9200E2A270 /* LevelCustomCell.xib in Resources */,
 				0E9881632AA5AA1100D326CC /* pressed.mp3 in Resources */,
 				0EDDEC2D2AA1C6F000E32087 /* failed.mp3 in Resources */,
 				0E9881672AA6E12C00D326CC /* background.mp3 in Resources */,
+				0E8170542AC2CA8700E2A270 /* CustomOnOffButton.xib in Resources */,
 				FCDA06B62AA6F91C00A2A239 /* AnswerButton.xib in Resources */,
-				FCE106052A99E5B300AAEDD0 /* LevelCustomCell.xib in Resources */,
 				FC9CE4242AC1550A0076F310 /* YellowStarAnimation.json in Resources */,
 				FCDA06CF2AA8992A00A2A239 /* HintTellAnswerButton.xib in Resources */,
 			);
@@ -593,47 +593,47 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E98816E2AA9BA9100D326CC /* HintView.swift in Sources */,
 				0E98816A2AA9AE4D00D326CC /* HintPopupView.swift in Sources */,
+				0E8170502AC2CA7C00E2A270 /* HintCustomCell.swift in Sources */,
 				0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */,
-				0E1BD0952AB220DF00F7BBA5 /* LevelViewController.swift in Sources */,
 				0EA44D372A97177600B5539A /* UIViewExtension.swift in Sources */,
 				0E9881612AA47A7D00D326CC /* SoundEffect.swift in Sources */,
 				0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */,
-				0E1BD0932AB220DF00F7BBA5 /* GameChoosingViewController.swift in Sources */,
 				0E93ADF22AAC2F570073E7ED /* GameData.swift in Sources */,
 				FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */,
-				FCE106042A99E5B300AAEDD0 /* LevelCustomCell.swift in Sources */,
+				0E81703E2AC2CA2F00E2A270 /* StoreViewController.swift in Sources */,
+				0E8170532AC2CA8700E2A270 /* CustomOnOffButton.swift in Sources */,
+				0E8170492AC2CA3D00E2A270 /* HintButton.swift in Sources */,
 				0E98815D2AA46F8600D326CC /* Global.swift in Sources */,
+				0E8170392AC2CA2F00E2A270 /* AnswerViewController.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
-				FCF09C312AB94F20009A63DF /* GamePlay.swift in Sources */,
-				0E1BD0942AB220DF00F7BBA5 /* MainViewController.swift in Sources */,
+				0E8170482AC2CA3D00E2A270 /* HintCustomCellModel.swift in Sources */,
+				0E8170382AC2CA2F00E2A270 /* WinOrLoseViewController.swift in Sources */,
 				0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */,
 				FCDA06C62AA8541200A2A239 /* HintHalfHalfButton.swift in Sources */,
-				FCF09C2F2AB30A49009A63DF /* ReadingQuestionViewController.swift in Sources */,
 				FC9CE41C2AC144390076F310 /* StarView.swift in Sources */,
 				FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */,
-				FCDA06CA2AA85C4F00A2A239 /* HintButton.swift in Sources */,
 				0E6D72912AB81ABC005C3129 /* LostView.swift in Sources */,
-				0E1BD0AC2AB3195C00F7BBA5 /* HintCustomCell.swift in Sources */,
-				FCDA06B82AA7060200A2A239 /* AnswerView.swift in Sources */,
+				0E81703D2AC2CA2F00E2A270 /* ReadingQuestionViewController.swift in Sources */,
+				0E81704B2AC2CA3D00E2A270 /* HintView.swift in Sources */,
 				0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */,
 				FCDA06B32AA6F8D700A2A239 /* AnswerButton.swift in Sources */,
 				FCDA06CD2AA8991C00A2A239 /* HintTellAnswerButton.swift in Sources */,
+				0E8170572AC2CA9200E2A270 /* LevelCustomCell.swift in Sources */,
+				0E8170472AC2CA3D00E2A270 /* OnOffButton.swift in Sources */,
 				0EA44D462A97353600B5539A /* PlayMode.swift in Sources */,
-				0EDC0B3B2AA0A62300B91B2C /* CustomOnOffButton.swift in Sources */,
+				0E81703A2AC2CA2F00E2A270 /* LevelViewController.swift in Sources */,
 				0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */,
 				0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */,
 				0E7CEFA32AB6B0BE00D500F8 /* Product.swift in Sources */,
+				0E81704C2AC2CA3D00E2A270 /* LevelViewModel.swift in Sources */,
+				0E8170462AC2CA3D00E2A270 /* GamePlay.swift in Sources */,
 				0EDC0B2D2AA0A49700B91B2C /* ViewAnimateHelper.swift in Sources */,
-				0EDC0B2B2AA0A46A00B91B2C /* OnOffButton.swift in Sources */,
+				0E81704A2AC2CA3D00E2A270 /* AnswerView.swift in Sources */,
 				0E7CEFA62AB7484600D500F8 /* HintProduct.swift in Sources */,
-				0E1BD0A52AB30D4F00F7BBA5 /* StoreViewController.swift in Sources */,
+				0E81703C2AC2CA2F00E2A270 /* MainViewController.swift in Sources */,
 				0E8BFF732AA43584000E5AC7 /* AudioMode.swift in Sources */,
-				FCF09C2B2AB16AF2009A63DF /* LevelViewModel.swift in Sources */,
-				0E1BD0A72AB3117E00F7BBA5 /* HintCustomCellModel.swift in Sources */,
-				FCDA06B02AA59D9F00A2A239 /* AnswerViewController.swift in Sources */,
-				FC9CE4192AC01F390076F310 /* WinOrLoseViewController.swift in Sources */,
+				0E81703B2AC2CA2F00E2A270 /* GameChoosingViewController.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
 				0EA44D3B2A97293A00B5539A /* UIColorExtension.swift in Sources */,
 			);
@@ -783,7 +783,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 453LSDFZ53;
+				DEVELOPMENT_TEAM = S4SC57X43S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Brach-Nha-Khmer-Quiz-Game/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -796,7 +796,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hongsin.Brach-Nha-Khmer-Quiz-Game";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.einoyakoreal.Brach-Nha-Khmer-Quiz-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -815,7 +815,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 453LSDFZ53;
+				DEVELOPMENT_TEAM = S4SC57X43S;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Brach-Nha-Khmer-Quiz-Game/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -828,7 +828,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.hongsin.Brach-Nha-Khmer-Quiz-Game";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.einoyakoreal.Brach-Nha-Khmer-Quiz-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
