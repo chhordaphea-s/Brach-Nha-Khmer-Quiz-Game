@@ -14,7 +14,7 @@ class MainViewController: UIViewController {
     @IBOutlet weak var playButton: UIView!
     @IBOutlet var scoreBackground: [UIStackView]!
     @IBOutlet var score: [UILabel]!
-
+    @IBOutlet weak var brachNha: UIImageView!
     
     let settingView = SettingView()
     let playButtonPressed = UITapGestureRecognizer()
@@ -24,6 +24,9 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.hero.isEnabled = true
+        brachNha.hero.modifiers = [.translate(y:100)]
+        
         getScore()
 
         customizePlayButton()
