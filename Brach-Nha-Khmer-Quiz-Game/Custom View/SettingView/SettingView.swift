@@ -92,9 +92,9 @@ class SettingView: UIView {
     
     func musicBackgroundHaneler(status: Bool) {
         if status {
-            backgroundMusic.player?.play()
+            backgroundMusic.play()
         } else {
-            backgroundMusic.player?.pause()
+            backgroundMusic.pause()
         }
         userdefault.set(status, forKey: Constant.userdefault.musicBackground)
     }
@@ -104,7 +104,6 @@ class SettingView: UIView {
     }
     
     func vibrateHandler(status: Bool) {
-        vibrate = status
         userdefault.set(status, forKey: Constant.userdefault.vibrate)
     }
     

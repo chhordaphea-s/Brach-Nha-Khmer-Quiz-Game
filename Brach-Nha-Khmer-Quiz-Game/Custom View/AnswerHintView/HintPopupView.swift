@@ -35,6 +35,8 @@ class HintPopupView: UIView {
     
     @IBAction func getPressedButton(_ sender: UIButton) {
         ButtonEffectAnimation.shared.popEffect(button: sender)
+        
+        buttonSoudEffect = AudioHelper(audioName: "collectHint")
     
         delegate?.dismissHintView(self)
         

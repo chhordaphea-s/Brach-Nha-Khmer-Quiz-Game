@@ -209,10 +209,7 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func increaseHint(hintProduct: HintProduct) {
         hintView.setup(data: hintProduct.getHintView())
-        
-        buttonSoudEffect = AudioHelper(audioName: "correct", loop: false)
-        buttonSoudEffect.player?.play()
-    
+
         ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: hintView, width: 314, height: 276)
     }
 }

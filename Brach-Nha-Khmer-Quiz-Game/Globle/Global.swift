@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import UIKit
+import AudioToolbox
 
 let userdefault = UserDefaults.standard
 
@@ -30,7 +32,8 @@ let backgroundMusic = AudioHelper(audioName: "background", player: nil, loop: tr
 var buttonSoudEffect = AudioHelper()
 
 var soundEffect: Bool { return userdefault.bool(forKey: Constant.userdefault.soundEffect) }
-var vibrate: Bool = true
+var vibrate: Bool { return userdefault.bool(forKey: Constant.userdefault.vibrate) }
+
 
 var halfHint: Int { return userdefault.integer(forKey: Constant.userdefault.halfHint)  }
 var answerHint: Int {  return userdefault.integer(forKey: Constant.userdefault.answerHint) }
@@ -76,4 +79,32 @@ func convertEngNumToKhNum(engNum: Int) -> String{
         khNumStr += khNum[i]
     }
     return khNumStr
+}
+
+
+
+func performButtonVibrate(vibrateType: UINotificationFeedbackGenerator.FeedbackType) {
+    if !vibrate { return }
+    UINotificationFeedbackGenerator().notificationOccurred(vibrateType)
+}
+
+func peformVibrate(win: Bool) {
+    if win {
+        AudioServicesPlaySystemSound(SystemSoundID(1329))
+    } else {
+//       AudioServicesPlaySystemSound(SystemSoundID(1027))
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
+
+
+    }
+
+    
+//                AudioServicesPlaySystemSound(SystemSoundID(1301))
+//               AudioServicesPlaySystemSound(SystemSoundID(1027))
+//               AudioServicesPlaySystemSound(SystemSoundID(1028))
+//                let alert = SystemSoundID(1011)
+//                AudioServicesPlaySystemSoundWithCompletion(alert, nil)
+//               AudioServicesPlaySystemSound(SystemSoundID(1333))
+//               AudioServicesPlaySystemSound(SystemSoundID(4095))
+            
 }

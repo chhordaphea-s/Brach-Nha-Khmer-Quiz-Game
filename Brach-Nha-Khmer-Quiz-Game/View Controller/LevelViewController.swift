@@ -36,19 +36,16 @@ class LevelViewController: UIViewController {
     
     func switchToReadingQuestionScreen(levelData: Level) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "ReadingQuestionViewController") as! ReadingQuestionViewController
+
         
         controller.gamePlay = GamePlay(gameKey: game?.key ?? "",
+                                       startPlayTime: Date(),
                                        level: levelData,
-                                       question: 1,
-                                       score: 0,
-                                       fail: 0,
-                                       timings: 0,
                                        answerHint: HintButton(type: .answer, num: answerHint, enable: true),
                                        halfhalfHint: HintButton(type: .halfhalf, num: halfHint, enable: true),
                                        star: 0,
-                                       highestScore: 0,
-                                       countTimer: Date()
-        )
+                                       highestScore: 0)
+        
         
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .crossDissolve
@@ -111,7 +108,7 @@ extension LevelViewController: UICollectionViewDataSource, UICollectionViewDeleg
         let tmpData = LevelViewModel(color1: setupColorLevelForEachGame()[0],
                                   color2: setupColorLevelForEachGame()[1],
                                   levelNum: game?.levels[indexPath.row].level ?? 0,
-                                  star: 1)
+                                  star: 0)
         
         cell.cellConfiguration(data: tmpData)
         

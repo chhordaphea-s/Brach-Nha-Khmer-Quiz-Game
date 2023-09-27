@@ -10,6 +10,7 @@
 		0E1BD08E2AB2208700F7BBA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08A2AB2208600F7BBA5 /* Main.storyboard */; };
 		0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08C2AB2208700F7BBA5 /* LaunchScreen.storyboard */; };
 		0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */; };
+		0E5AB3072AC3E24C00ABA86E /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */; };
 		0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */; };
 		0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */; };
 		0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C92A2A9B356F00ACF84D /* Constant.swift */; };
@@ -38,6 +39,10 @@
 		0E8170542AC2CA8700E2A270 /* CustomOnOffButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8170522AC2CA8600E2A270 /* CustomOnOffButton.xib */; };
 		0E8170572AC2CA9200E2A270 /* LevelCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170552AC2CA9100E2A270 /* LevelCustomCell.swift */; };
 		0E8170582AC2CA9200E2A270 /* LevelCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E8170562AC2CA9200E2A270 /* LevelCustomCell.xib */; };
+		0E81705A2AC2CDDA00E2A270 /* collectHint.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E8170592AC2CDDA00E2A270 /* collectHint.mp3 */; };
+		0E81705E2AC2CE7700E2A270 /* lostGame.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E81705D2AC2CE7700E2A270 /* lostGame.mp3 */; };
+		0E8170602AC2D09400E2A270 /* winner.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0E81705F2AC2D09400E2A270 /* winner.mp3 */; };
+		0E8170642AC3466800E2A270 /* RewardedInterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170632AC3466800E2A270 /* RewardedInterstitialAd.swift */; };
 		0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */; };
 		0E8BFF732AA43584000E5AC7 /* AudioMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8BFF722AA43584000E5AC7 /* AudioMode.swift */; };
 		0E93ADF02AAC2F3C0073E7ED /* GameData.json in Resources */ = {isa = PBXBuildFile; fileRef = 0E93ADEF2AAC2F3C0073E7ED /* GameData.json */; };
@@ -80,6 +85,7 @@
 		0E1BD08B2AB2208600F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E1BD08D2AB2208700F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
+		0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 		0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosePlayerModeCustomSagement.xib; sourceTree = "<group>"; };
 		0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerModeCustomSagement.swift; sourceTree = "<group>"; };
 		0E68C92A2A9B356F00ACF84D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -109,6 +115,10 @@
 		0E8170522AC2CA8600E2A270 /* CustomOnOffButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomOnOffButton.xib; sourceTree = "<group>"; };
 		0E8170552AC2CA9100E2A270 /* LevelCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelCustomCell.swift; sourceTree = "<group>"; };
 		0E8170562AC2CA9200E2A270 /* LevelCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LevelCustomCell.xib; sourceTree = "<group>"; };
+		0E8170592AC2CDDA00E2A270 /* collectHint.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = collectHint.mp3; sourceTree = "<group>"; };
+		0E81705D2AC2CE7700E2A270 /* lostGame.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = lostGame.mp3; sourceTree = "<group>"; };
+		0E81705F2AC2D09400E2A270 /* winner.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = winner.mp3; sourceTree = "<group>"; };
+		0E8170632AC3466800E2A270 /* RewardedInterstitialAd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = RewardedInterstitialAd.swift; path = ../../../TimerX/TimerX/Helper/RewardedInterstitialAd.swift; sourceTree = "<group>"; };
 		0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioHelper.swift; sourceTree = "<group>"; };
 		0E8BFF722AA43584000E5AC7 /* AudioMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioMode.swift; sourceTree = "<group>"; };
 		0E93ADEF2AAC2F3C0073E7ED /* GameData.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = GameData.json; sourceTree = "<group>"; };
@@ -243,6 +253,8 @@
 				0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */,
 				0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */,
 				0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */,
+				0E8170632AC3466800E2A270 /* RewardedInterstitialAd.swift */,
+				0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -338,6 +350,9 @@
 		0EDDEC2E2AA1C6F500E32087 /* Sound Effect */ = {
 			isa = PBXGroup;
 			children = (
+				0E8170592AC2CDDA00E2A270 /* collectHint.mp3 */,
+				0E81705F2AC2D09400E2A270 /* winner.mp3 */,
+				0E81705D2AC2CE7700E2A270 /* lostGame.mp3 */,
 				0EDDEC292AA1C6F000E32087 /* correct.mp3 */,
 				0E9881622AA5AA1100D326CC /* pressed.mp3 */,
 				0EDDEC2A2AA1C6F000E32087 /* failed.mp3 */,
@@ -524,8 +539,10 @@
 				0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */,
 				0E98815B2AA46F2200D326CC /* playBackground.mp3 in Resources */,
 				0E1BD08E2AB2208700F7BBA5 /* Main.storyboard in Resources */,
+				0E81705E2AC2CE7700E2A270 /* lostGame.mp3 in Resources */,
 				0EDDEC2C2AA1C6F000E32087 /* correct.mp3 in Resources */,
 				0E98816C2AA9AE5900D326CC /* HintPopupView.xib in Resources */,
+				0E81705A2AC2CDDA00E2A270 /* collectHint.mp3 in Resources */,
 				0E93ADF02AAC2F3C0073E7ED /* GameData.json in Resources */,
 				0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */,
 				FCDA06BF2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf in Resources */,
@@ -534,6 +551,7 @@
 				FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */,
 				0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */,
 				0E8170582AC2CA9200E2A270 /* LevelCustomCell.xib in Resources */,
+				0E8170602AC2D09400E2A270 /* winner.mp3 in Resources */,
 				0E9881632AA5AA1100D326CC /* pressed.mp3 in Resources */,
 				0EDDEC2D2AA1C6F000E32087 /* failed.mp3 in Resources */,
 				0E9881672AA6E12C00D326CC /* background.mp3 in Resources */,
@@ -626,7 +644,9 @@
 				0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */,
 				0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */,
 				0E7CEFA32AB6B0BE00D500F8 /* Product.swift in Sources */,
+				0E5AB3072AC3E24C00ABA86E /* TimerHelper.swift in Sources */,
 				0E81704C2AC2CA3D00E2A270 /* LevelViewModel.swift in Sources */,
+				0E8170642AC3466800E2A270 /* RewardedInterstitialAd.swift in Sources */,
 				0E8170462AC2CA3D00E2A270 /* GamePlay.swift in Sources */,
 				0EDC0B2D2AA0A49700B91B2C /* ViewAnimateHelper.swift in Sources */,
 				0E81704A2AC2CA3D00E2A270 /* AnswerView.swift in Sources */,
