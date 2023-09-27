@@ -22,8 +22,16 @@ class MainViewController: UIViewController {
 
     // MARK: - Body
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        hideButton(views: scoreBackground)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        ButtonEffectAnimation.shared.triggerRightAnswer(button: playButton)
+
         getScore()
 
         customizePlayButton()
@@ -32,7 +40,12 @@ class MainViewController: UIViewController {
 
         playButtonPressed.addTarget(self, action: #selector(playButtonActive))
         playButton.addGestureRecognizer(playButtonPressed)
-
+        
+        
+        DispatchQueue.main.async {
+            self.animateScoreBoard(views: self.scoreBackground)
+        }
+        
     }
     
     
@@ -63,10 +76,55 @@ class MainViewController: UIViewController {
         
         var index: Int = 0
         for l in score {
-            l.text = "\(scoreUD[index])"
+            l.text = "\(convertEngNumToKhNum(engNum: scoreUD[index]))"
             index += 1
         }
     }
+    
+    func hideButton(views: [UIView]) {
+        let screenWidth = UIScreen.main.bounds.width
+        for view in views {
+            curveAnimation(view: view, animationOptions: .curveEaseOut, defaultXMovement: screenWidth, isReset: false)
+            view.isHidden = true
+
+        }
+    }
+    
+    func curveAnimation(view: UIView, animationOptions: UIView.AnimationOptions, defaultXMovement: CGFloat, isReset: Bool, completion: (() -> Void)? = nil) {
+        UIView.animate(withDuration: -0.5, delay: 0, options: animationOptions, animations: {
+        view.transform = isReset ? .identity : CGAffineTransform.identity.translatedBy(x: defaultXMovement, y: 0)
+      }, completion: {_ in
+          completion?()
+      })
+    }
+    
+    func animateScoreBoard(views: [UIView]) {
+        let screenWidth = UIScreen.main.bounds.width
+        let location = (screenWidth - view.frame.width)
+        
+        for i in 0..<views.count {
+            let sec: Double = Double(i) * 0.2
+            DispatchQueue.main.asyncAfter(deadline: .now() + sec) {
+                views[i].isHidden = false
+                self.curveAnimation(view: views[i], animationOptions: .curveEaseIn, defaultXMovement: location, isReset: false)
+            }
+        }
+    }
+    
+    func customizeScoreBoard(){
+        for view in scoreBackground {
+            view.isLayoutMarginsRelativeArrangement = true
+            
+            view.layer.cornerRadius = view.frame.size.height / 2
+            view.layer.masksToBounds = true
+            
+            view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
+            
+            view.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 15)
+        }
+        
+    }
+
     
     func setupSettingView() {
         settingView.delegate = self
@@ -93,19 +151,7 @@ class MainViewController: UIViewController {
         playButton.layer.masksToBounds = true
     }
 
-    func customizeScoreBoard(){
-        for view in scoreBackground {
-            view.isLayoutMarginsRelativeArrangement = true
-            
-            view.layer.cornerRadius = view.frame.size.height / 2
-            view.layer.masksToBounds = true
-            
-            view.layer.maskedCorners = [.layerMinXMinYCorner, .layerMinXMaxYCorner]
-            
-            view.directionalLayoutMargins = NSDirectionalEdgeInsets(top: 5, leading: 15, bottom: 5, trailing: 15)
-        }
-        
-    }
+    
     
     func switchToAnotherScreen(){
         let controller = storyboard?.instantiateViewController(withIdentifier: "GameChoosingViewController") as! GameChoosingViewController
