@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AudioToolbox
+
 
 class WinOrLoseViewController: UIViewController {
     
@@ -29,6 +31,7 @@ class WinOrLoseViewController: UIViewController {
         displayMessages()
         setupHighestScore()
         displayStars()
+        setupSoundEffect()
 
     }
     
@@ -55,6 +58,16 @@ class WinOrLoseViewController: UIViewController {
                                       level: nextLvl,
                                       highestScore: 0)
     }
+    
+    func setupSoundEffect() {
+        guard let gamePlayData = gamePlay else {return}
+        
+        peformVibrate(win: gamePlayData.question == 5 ? true : false)
+
+        buttonSoudEffect.musicConfigure(audioName: gamePlayData.question == 5 ? "winner" : "lostGame")
+
+    }
+    
     
     func setupTotalScore() {
         totalScoreLabel.text = convertEngNumToKhNum(engNum: gamePlay?.score ?? 0)
@@ -127,19 +140,14 @@ class WinOrLoseViewController: UIViewController {
     
     func switchToReadingQuestionScreen(key: String, level: Level, highestScore: Int) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "ReadingQuestionViewController") as! ReadingQuestionViewController
-        
+                
         controller.gamePlay = GamePlay(gameKey: key,
+                                       startPlayTime: Date(),
                                        level: level,
-                                       question: 1,
-                                       score: 0,
-                                       fail: 0,
-                                       timings: 0,
                                        answerHint: HintButton(type: .answer, num: answerHint, enable: true),
                                        halfhalfHint: HintButton(type: .halfhalf, num: halfHint, enable: true),
                                        star: 0,
-                                       highestScore: highestScore,
-                                       countTimer: Date()
-        )
+                                       highestScore: highestScore)
         
         controller.modalPresentationStyle = .fullScreen
         controller.modalTransitionStyle = .crossDissolve

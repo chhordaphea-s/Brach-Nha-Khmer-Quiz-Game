@@ -55,9 +55,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func playMusic() {
         let musicStatus = userdefault.bool(forKey: Constant.userdefault.musicBackground)
         if musicStatus {
-            backgroundMusic.player?.play()
+            backgroundMusic.play()
         } else {
-            backgroundMusic.player?.pause()
+            backgroundMusic.pause()
         }
     }
     

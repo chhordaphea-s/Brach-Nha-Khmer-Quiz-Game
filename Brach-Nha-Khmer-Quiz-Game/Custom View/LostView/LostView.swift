@@ -66,6 +66,8 @@ class LostView: UIView {
 extension LostView {
     func animateViewIn(baseView: UIView, popUpView: UIView) {
         ViewAnimateHelper.shared.animateViewIn(baseView, popUpView: popUpView, width: 282, height: 396, tapBackground: false)
+        buttonSoudEffect = AudioHelper(audioName: "lostGame", loop: false)
+        buttonSoudEffect.play()
     }
     
     func animateViewOut(baseView: UIView, popUpView: UIView) {

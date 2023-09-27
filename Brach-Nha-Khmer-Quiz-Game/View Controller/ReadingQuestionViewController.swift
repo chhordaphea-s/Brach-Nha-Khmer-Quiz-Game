@@ -20,20 +20,33 @@ class ReadingQuestionViewController: UIViewController {
     var gamePlay: GamePlay? = nil
     let settingView = SettingView()
     
+    let timer = TimerHelper()
+    
+    // MARK: - Body
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let tab = UITapGestureRecognizer(target: self, action: #selector(activateContinueButton(_:)))
+        continueButton.addGestureRecognizer(tab)
+        
+        ButtonEffectAnimation.shared.triggerRightAnswer(button: continueButton)
+
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGameData()
         setupSettingView()
-        
-        ButtonEffectAnimation.shared.triggerRightAnswer(button: continueButton)
-        
-        ActivateContinueButton()
-        setProgressTime()
-        
-        
-        let tab = UITapGestureRecognizer(target: self, action: #selector(ActivateContinueButton))
-        continueButton.addGestureRecognizer(tab)
+        setupTimer()
+
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timer.reset()
+    }
+    
     
     
     @IBAction func pauseButtonPressed(_ sender: UIButton) {
@@ -41,16 +54,26 @@ class ReadingQuestionViewController: UIViewController {
         ButtonEffectAnimation.shared.popEffect(button: sender)
     }
     
-    // MARK: ~Body
-    
-    @objc func ActivateContinueButton() {
+    @objc func activateContinueButton(_ sender: UITapGestureRecognizer) {
         print("Player ready!")
         ButtonEffectAnimation.shared.popEffect(button: continueButton)
         
+        progressBar.pauseProgress()
         switchToAnswerScreen()
         
         
     }
+    
+    
+    //  MARK: - Function
+    
+    func setupTimer() {
+        timer.setupTimer(duration: gamePlay?.readingTime ?? 0)
+        timer.delegate = self
+        timer.startCountDown()
+
+    }
+    
     
     func setupSettingView() {
         settingView.delegate = self
@@ -86,12 +109,12 @@ class ReadingQuestionViewController: UIViewController {
         
     }
 
-    func setProgressTime() {
-        progressBar.setAnimatedProgress(progress: 0, duration: 15){
-            print("Done")
-            self.switchToAnswerScreen()
-        }
-    }
+//    func setProgressTime() {
+//        progressBar.setAnimatedProgress(duration: Float(gamePlay?.readingTime ?? 0)) {
+//            print("Done")
+//            self.switchToAnswerScreen()
+//        }
+//    }
     
     func switchToAnswerScreen() {
         let controller = storyboard?.instantiateViewController(withIdentifier: "AnswerViewController") as! AnswerViewController
@@ -127,4 +150,15 @@ extension ReadingQuestionViewController: SettingViewDelegate {
     func dismissButton(_ view: UIView) {
         ViewAnimateHelper.shared.animateViewOut(self.view, popUpView: view)
     }
+}
+
+extension ReadingQuestionViewController: TimerHelperDelegate {
+    func loadTimer(timer: Timer, progress: Float) {
+        progressBar.setProgress(progress, animated: true)
+    }
+    
+    func didLoadTimer(timer: Timer) {
+        self.switchToAnswerScreen()
+    }
+
 }
