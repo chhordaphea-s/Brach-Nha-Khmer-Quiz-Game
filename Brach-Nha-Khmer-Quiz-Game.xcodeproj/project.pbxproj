@@ -66,6 +66,7 @@
 		FC9CE41C2AC144390076F310 /* StarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9CE41B2AC144390076F310 /* StarView.swift */; };
 		FC9CE41E2AC144490076F310 /* StarView.xib in Resources */ = {isa = PBXBuildFile; fileRef = FC9CE41D2AC144490076F310 /* StarView.xib */; };
 		FC9CE4242AC1550A0076F310 /* YellowStarAnimation.json in Resources */ = {isa = PBXBuildFile; fileRef = FC9CE4232AC1550A0076F310 /* YellowStarAnimation.json */; };
+		FC9CE4262AC2D2D70076F310 /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC9CE4252AC2D2D70076F310 /* DummyViewController.swift */; };
 		FCDA06B32AA6F8D700A2A239 /* AnswerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDA06B22AA6F8D700A2A239 /* AnswerButton.swift */; };
 		FCDA06B62AA6F91C00A2A239 /* AnswerButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = FCDA06B52AA6F91C00A2A239 /* AnswerButton.xib */; };
 		FCDA06BF2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = FCDA06BE2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf */; };
@@ -141,6 +142,7 @@
 		FC9CE41B2AC144390076F310 /* StarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarView.swift; sourceTree = "<group>"; };
 		FC9CE41D2AC144490076F310 /* StarView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarView.xib; sourceTree = "<group>"; };
 		FC9CE4232AC1550A0076F310 /* YellowStarAnimation.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = YellowStarAnimation.json; sourceTree = "<group>"; };
+		FC9CE4252AC2D2D70076F310 /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		FCDA06B22AA6F8D700A2A239 /* AnswerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnswerButton.swift; sourceTree = "<group>"; };
 		FCDA06B52AA6F91C00A2A239 /* AnswerButton.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AnswerButton.xib; sourceTree = "<group>"; };
 		FCDA06BE2AA84E5700A2A239 /* AKbalthom KhmerHand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AKbalthom KhmerHand.ttf"; sourceTree = "<group>"; };
@@ -277,6 +279,7 @@
 				0E8170362AC2CA2F00E2A270 /* ReadingQuestionViewController.swift */,
 				0E8170372AC2CA2F00E2A270 /* StoreViewController.swift */,
 				0E8170312AC2CA2E00E2A270 /* WinOrLoseViewController.swift */,
+				FC9CE4252AC2D2D70076F310 /* DummyViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -616,6 +619,7 @@
 				0E6D72912AB81ABC005C3129 /* LostView.swift in Sources */,
 				0E81703D2AC2CA2F00E2A270 /* ReadingQuestionViewController.swift in Sources */,
 				0E81704B2AC2CA3D00E2A270 /* HintView.swift in Sources */,
+				FC9CE4262AC2D2D70076F310 /* DummyViewController.swift in Sources */,
 				0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */,
 				FCDA06B32AA6F8D700A2A239 /* AnswerButton.swift in Sources */,
 				FCDA06CD2AA8991C00A2A239 /* HintTellAnswerButton.swift in Sources */,
@@ -783,7 +787,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S4SC57X43S;
+				DEVELOPMENT_TEAM = 453LSDFZ53;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Brach-Nha-Khmer-Quiz-Game/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -796,7 +800,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.einoyakoreal.Brach-Nha-Khmer-Quiz-Game";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hongsin.Brach-Nha-Khmer-Quiz-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -815,7 +819,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = S4SC57X43S;
+				DEVELOPMENT_TEAM = 453LSDFZ53;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Brach-Nha-Khmer-Quiz-Game/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -828,7 +832,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.einoyakoreal.Brach-Nha-Khmer-Quiz-Game";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hongsin.Brach-Nha-Khmer-Quiz-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
