@@ -157,6 +157,36 @@
                   endingLineNumber = "71"
                   offsetFromSymbolStart = "123">
                </Location>
+               <Location
+                  uuid = "70E7F255-2607-431F-B241-D40AE4CE5E4B - f4e513727cdd6615"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.AnswerViewController.viewWillDisappear(Swift.Bool) -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/View%20Controller/AnswerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "116">
+               </Location>
+               <Location
+                  uuid = "70E7F255-2607-431F-B241-D40AE4CE5E4B - f4e513727cdd6615"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.AnswerViewController.viewWillDisappear(Swift.Bool) -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/View%20Controller/AnswerViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "71"
+                  endingLineNumber = "71"
+                  offsetFromSymbolStart = "106">
+               </Location>
             </Locations>
          </BreakpointContent>
       </BreakpointProxy>
@@ -297,6 +327,38 @@
             endingLineNumber = "50"
             landmarkName = "pauseProgress()"
             landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "F3CE0AE6-C856-4279-A85B-6DF2150AC24C - 618758e0a9aa87b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.UIProgressView.pauseProgress() -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Extension/UIProgressViewExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "32">
+               </Location>
+               <Location
+                  uuid = "F3CE0AE6-C856-4279-A85B-6DF2150AC24C - 618758e0a9aa87b"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__C.UIProgressView.pauseProgress() -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Extension/UIProgressViewExtension.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "50"
+                  endingLineNumber = "50"
+                  offsetFromSymbolStart = "34">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
