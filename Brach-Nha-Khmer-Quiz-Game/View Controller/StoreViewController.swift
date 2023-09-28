@@ -22,12 +22,13 @@ class StoreViewController: UIViewController {
     let layout = PagingCollectionViewLayout()
     let hintView = HintPopupView()
     var hintSelected: HintType = .answer
-    var products = [SKProduct]()
+//    var products = [SKProduct]()
     var hints = [HintCustomCellModel]()
     var filterProducts = [SKProduct]()
     var selectHintProduct: HintProduct?
+
+    let storeKitHelper = StoreKitHelper()
     
-//    var insterstitialAds = InterstitialAdsHelper()
 
     private var interstitial: GADInterstitialAd?
     var adsUsed = false
@@ -36,14 +37,14 @@ class StoreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SKPaymentQueue.default().add(self)
         
         hintView.delegate = self
         
         setupCollectionView()
         setupSagementControl()
 
-        fetchProduct()
+        storeKitHelper.fetchProduct()
+        storeKitHelper.delegate = self
 
 //        insterstitialAds.adsLoads()
 //        insterstitialAds.delegate = self
@@ -98,13 +99,13 @@ class StoreViewController: UIViewController {
         filterProducts = []
         
         if hintSelected == .answer {
-            products.forEach { product in
+            storeKitHelper.products.forEach { product in
                 if Constant.product.productID.answerProductsID.contains(product.productIdentifier) {
                     filterProducts.append(product)
                 }
             }
         } else if hintSelected == .halfhalf {
-            products.forEach { product in
+            storeKitHelper.products.forEach { product in
                 if Constant.product.productID.halfProductsID.contains(product.productIdentifier) {
                     filterProducts.append(product)
                 }
@@ -223,55 +224,88 @@ extension StoreViewController: HintPopupViewDelegate {
 }
  
 // MARK: Product
-extension StoreViewController: SKProductsRequestDelegate {
-    
-    func fetchProduct() {
-        let request = SKProductsRequest(productIdentifiers: Set(Product.allCases.compactMap({ $0.rawValue })))
-        request.delegate = self
-        request.start()
+extension StoreViewController: StoreKitHelperDelegate {
+    func productRequest(response: SKProductsResponse) {
+        print("Count: ", response.products)
+        setupCollectionData()
+        self.hintCollectionView.reloadData()
     }
     
-    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        DispatchQueue.main.sync {
-            print("Count: ", response.products)
-            self.products = response.products
-            setupCollectionData()
-            self.hintCollectionView.reloadData()
+    func paymentTransactionObserver(transaction: SKPaymentTransaction, transactionState: SKPaymentTransactionState) {
+        switch transactionState{
+
+        case .purchasing:
+            print("purchasing")
+        case .purchased:
+            print("purchased")
+            if let hint = selectHintProduct {
+                increaseHint(hintProduct: hint)
+            }
+            SKPaymentQueue.default().finishTransaction(transaction)
+        case .failed:
+            print("failed")
+            SKPaymentQueue.default().finishTransaction(transaction)
+
+        case .restored:
+            print("restored")
+
+        case .deferred:
+            print("deferred")
+
+        @unknown default:
+            return
         }
     }
-}
 
-extension StoreViewController: SKPaymentTransactionObserver {
-    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        transactions.forEach({
-            switch $0.transactionState{
-                
-            case .purchasing:
-                print("purchasing")
-            case .purchased:
-                print("purchased")
-                if let hint = selectHintProduct {
-                    increaseHint(hintProduct: hint)
-                }
-                SKPaymentQueue.default().finishTransaction($0)
-            case .failed:
-                print("failed")
-                SKPaymentQueue.default().finishTransaction($0)
-
-            case .restored:
-                print("restored")
-
-            case .deferred:
-                print("deferred")
-
-            @unknown default:
-                return
-            }
-        })
-    }
     
     
+//    func fetchProduct() {
+//        let request = SKProductsRequest(productIdentifiers: Set(Product.allCases.compactMap({ $0.rawValue })))
+//        request.delegate = self
+//        request.start()
+//    }
+//    
+//    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
+//        DispatchQueue.main.sync {
+//            print("Count: ", response.products)
+//            self.products = response.products
+//            setupCollectionData()
+//            self.hintCollectionView.reloadData()
+//        }
+//    }
 }
+
+//extension StoreViewController: SKPaymentTransactionObserver {
+//    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
+//        transactions.forEach({
+//            switch $0.transactionState{
+//                
+//            case .purchasing:
+//                print("purchasing")
+//            case .purchased:
+//                print("purchased")
+//                if let hint = selectHintProduct {
+//                    increaseHint(hintProduct: hint)
+//                }
+//                SKPaymentQueue.default().finishTransaction($0)
+//            case .failed:
+//                print("failed")
+//                SKPaymentQueue.default().finishTransaction($0)
+//
+//            case .restored:
+//                print("restored")
+//
+//            case .deferred:
+//                print("deferred")
+//
+//            @unknown default:
+//                return
+//            }
+//        })
+//    }
+    
+    
+//}
 
 // MARK: InterstitialAds
 

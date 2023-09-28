@@ -8,7 +8,6 @@
 import UIKit
 import GoogleMobileAds
 
-
 class MainViewController: UIViewController {
 
     @IBOutlet weak var playButton: UIView!
@@ -18,6 +17,7 @@ class MainViewController: UIViewController {
     
     let settingView = SettingView()
     let playButtonPressed = UITapGestureRecognizer()
+    
     
 
     // MARK: - Body
@@ -58,8 +58,6 @@ class MainViewController: UIViewController {
 
     
     // MARK: FUNCTION
-    
-
     
     func getScore() {
         let scoreUD = [totalScore, totalStar, answerHint, halfHint]
