@@ -26,7 +26,7 @@ class RewardedInterstitialAd: NSObject, GADFullScreenContentDelegate {
             if let error = error {
                 return print("Failed to load rewarded interstitial ad with error: \(error.localizedDescription)")
             }
-            
+            print("Ads loaded successfully")
             self.rewardedInterstitialAd = ad
             self.rewardedInterstitialAd?.fullScreenContentDelegate = self
         }

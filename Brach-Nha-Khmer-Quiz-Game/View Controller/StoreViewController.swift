@@ -8,7 +8,6 @@
 import UIKit
 import StoreKit
 import BetterSegmentedControl
-import GoogleMobileAds
 
 
 
@@ -27,9 +26,9 @@ class StoreViewController: UIViewController {
     var filterProducts = [SKProduct]()
     var selectHintProduct: HintProduct?
     
-//    var insterstitialAds = InterstitialAdsHelper()
+    var rewardedInterstitialAd = RewardedInterstitialAd()
+    
 
-    private var interstitial: GADInterstitialAd?
     var adsUsed = false
 
     // MARK: - Body
@@ -45,10 +44,8 @@ class StoreViewController: UIViewController {
 
         fetchProduct()
 
-//        insterstitialAds.adsLoads()
-//        insterstitialAds.delegate = self
-        
-        adsLoads()
+        rewardedInterstitialAd.adsLoads(controller: self)
+        rewardedInterstitialAd.delegate = self
     }
     
     @IBAction func restoreButtonPressed(_ sender: UIButton) {
@@ -201,7 +198,7 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDataSou
             SKPaymentQueue.default().add(payment)
             
         } else {
-            displayAds(controller: self)
+            rewardedInterstitialAd.displayAds(controller: self)
         }
      }
     
@@ -275,54 +272,28 @@ extension StoreViewController: SKPaymentTransactionObserver {
 
 // MARK: InterstitialAds
 
-extension StoreViewController {
-    
-    func adsLoads() {
-        let request = GADRequest()
-        GADInterstitialAd.load(withAdUnitID: "ca-app-pub-3940256099942544/4411468910",
-                               request: request,
-                               completionHandler: { [self] ad, error in
-            if let error = error {
-                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
-                return
-            }
-            interstitial = ad
-            interstitial?.fullScreenContentDelegate = self
-        }
-        )
-        
-    }
-    
-    func displayAds(controller: UIViewController) {
-        if interstitial != nil {
-            interstitial?.present(fromRootViewController: controller)
-        } else {
-            print("Ad wasn't ready")
-
+extension StoreViewController: RewardedInterstitialAdDelegate {
+    func adLoaded(status: Bool) {
+        if status {
+            adsUsed = true
         }
     }
-}
-
-
-extension StoreViewController: GADFullScreenContentDelegate {
-    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-      print("Ad did fail to present full screen content.")
-        print("Error: ", error)
+    
+    func adError(error: Error) {
+        print("Error: ", error.localizedDescription)
     }
-
-    /// Tells the delegate that the ad will present full screen content.
-    func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-      print("Ad will present full screen content.")
-    }
-
-    /// Tells the delegate that the ad dismissed full screen content.
-    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        print("Ad did dismiss full screen content.")
-        
+    
+    func dismissScreen() {
         guard let hint = selectHintProduct else { return }
-        
-        increaseHint(hintProduct: hint)
-        adsUsed = true
-        hintCollectionView.reloadData()
+
+        if adsUsed {
+            increaseHint(hintProduct: hint)
+            hintCollectionView.reloadData()
+        }
     }
+    
+    
+
+    
+
 }
