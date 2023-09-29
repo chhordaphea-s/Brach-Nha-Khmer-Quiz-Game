@@ -125,13 +125,13 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចូលរួមតេស្តប្រាជ្ញាកម្សាន្តដ៏សម្បូរបែប" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aw0-IF-Ltr">
-                                <rect key="frame" x="97.666666666666686" y="282" width="235" height="20.333333333333314"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="102.66666666666669" y="282" width="225" height="31"/>
+                                <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="bPH-Zz-OrZ">
-                                <rect key="frame" x="330" y="372.33333333333331" width="100" height="45"/>
+                                <rect key="frame" x="328.33333333333331" y="383" width="101.66666666666669" height="45"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="score" translatesAutoresizingMaskIntoConstraints="NO" id="Ebe-6t-Vje">
                                         <rect key="frame" x="0.0" y="6.6666666666666856" width="32" height="32"/>
@@ -141,9 +141,9 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="៦០០០០" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3hi-H0-h9c">
-                                        <rect key="frame" x="51" y="11.666666666666687" width="49" height="21.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <rect key="frame" x="41" y="6.3333333333333144" width="60.666666666666657" height="32.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -154,7 +154,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="4BP-1i-WGL">
-                                <rect key="frame" x="330" y="492.33333333333326" width="100" height="45"/>
+                                <rect key="frame" x="328.33333333333331" y="503" width="101.66666666666669" height="45"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hint" translatesAutoresizingMaskIntoConstraints="NO" id="rfx-A9-c8N">
                                         <rect key="frame" x="0.0" y="6.6666666666666856" width="32" height="32"/>
@@ -164,9 +164,9 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="៦០០០០" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x3v-mq-wgh">
-                                        <rect key="frame" x="51" y="11.666666666666687" width="49" height="21.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <rect key="frame" x="41" y="6.3333333333333144" width="60.666666666666657" height="32.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -177,7 +177,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="HBs-ci-sA1">
-                                <rect key="frame" x="330" y="432.33333333333331" width="100" height="45"/>
+                                <rect key="frame" x="330" y="443" width="100" height="45"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="stars" translatesAutoresizingMaskIntoConstraints="NO" id="7hH-Gp-8v2">
                                         <rect key="frame" x="0.0" y="6.6666666666666856" width="32" height="32"/>
@@ -187,9 +187,9 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="៦០០" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="69l-sb-l6a">
-                                        <rect key="frame" x="70" y="11.666666666666687" width="30" height="21.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <rect key="frame" x="63.666666666666686" y="6.3333333333333144" width="36.333333333333343" height="32.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -200,7 +200,7 @@
                                 </constraints>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="ohb-dC-7mn">
-                                <rect key="frame" x="330" y="552.33333333333337" width="100" height="45"/>
+                                <rect key="frame" x="328.33333333333331" y="563" width="101.66666666666669" height="45"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="hint50" translatesAutoresizingMaskIntoConstraints="NO" id="skB-fb-Sv2">
                                         <rect key="frame" x="0.0" y="6.6666666666666288" width="32" height="32"/>
@@ -210,9 +210,9 @@
                                         </constraints>
                                     </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="៦០០០០" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F92-Aa-wK2">
-                                        <rect key="frame" x="51" y="11.666666666666631" width="49" height="21.666666666666671"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                        <color key="textColor" systemColor="secondarySystemBackgroundColor"/>
+                                        <rect key="frame" x="41" y="6.3333333333333712" width="60.666666666666657" height="32.666666666666664"/>
+                                        <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="18"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
@@ -223,22 +223,22 @@
                                 </constraints>
                             </stackView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="boygirl" translatesAutoresizingMaskIntoConstraints="NO" id="D8n-3R-qBp">
-                                <rect key="frame" x="137" y="642.33333333333337" width="156" height="145"/>
+                                <rect key="frame" x="137" y="646.33333333333337" width="156" height="145"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nTi-h8-bac">
-                                <rect key="frame" x="65" y="787.33333333333337" width="300" height="54"/>
+                                <rect key="frame" x="65" y="791.33333333333337" width="300" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចូលលេង" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgD-JP-w3H">
-                                        <rect key="frame" x="101" y="10" width="98.333333333333314" height="33.666666666666664"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="28"/>
-                                        <color key="textColor" name="Text Color"/>
+                                        <rect key="frame" x="107" y="1.3333333333332575" width="86.333333333333314" height="47"/>
+                                        <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="26"/>
+                                        <color key="textColor" name="Primary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playIcon" translatesAutoresizingMaskIntoConstraints="NO" id="eMH-7a-M2C">
-                                        <rect key="frame" x="240" y="-5.6666666666667425" width="65" height="65"/>
+                                        <rect key="frame" x="242" y="-6.6666666666667425" width="63" height="63"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="65" id="2LI-z4-v1Q"/>
-                                            <constraint firstAttribute="width" constant="65" id="ciH-oG-8zU"/>
+                                            <constraint firstAttribute="height" constant="63" id="2LI-z4-v1Q"/>
+                                            <constraint firstAttribute="width" constant="63" id="ciH-oG-8zU"/>
                                         </constraints>
                                     </imageView>
                                 </subviews>
@@ -247,7 +247,7 @@
                                     <constraint firstAttribute="width" constant="300" id="BV9-o2-3De"/>
                                     <constraint firstItem="EgD-JP-w3H" firstAttribute="centerY" secondItem="nTi-h8-bac" secondAttribute="centerY" id="fP6-Xa-qXn"/>
                                     <constraint firstAttribute="trailing" secondItem="eMH-7a-M2C" secondAttribute="trailing" constant="-5" id="hje-bz-4oW"/>
-                                    <constraint firstAttribute="height" constant="54" id="i8t-SR-l3h"/>
+                                    <constraint firstAttribute="height" constant="50" id="i8t-SR-l3h"/>
                                     <constraint firstItem="EgD-JP-w3H" firstAttribute="centerX" secondItem="nTi-h8-bac" secondAttribute="centerX" id="mJn-Ie-Ogh"/>
                                     <constraint firstItem="eMH-7a-M2C" firstAttribute="centerY" secondItem="nTi-h8-bac" secondAttribute="centerY" id="o4M-fs-eEZ"/>
                                 </constraints>
@@ -1605,9 +1605,6 @@
         <namedColor name="timings">
             <color red="0.6470588235294118" green="0.058823529411764705" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
-        <systemColor name="secondarySystemBackgroundColor">
-            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

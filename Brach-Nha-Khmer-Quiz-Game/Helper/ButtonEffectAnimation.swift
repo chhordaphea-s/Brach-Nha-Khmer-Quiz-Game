@@ -26,31 +26,45 @@ class ButtonEffectAnimation {
     
     func triggerRightAnswer(button: UIView, sclaEffect: Float = 1.1) {
 
-        popOutAnimation(view: button) {view in 
-            self.popInAnimation(view: view)
+        popOutAnimation(view: button, isTrigger: true) {view in
+            self.popInAnimation(view: view, isTrigger: true)
         }
     }
     
-    private func popInAnimation(view: UIView, sclaEffect: Float = 1) {
+    private func popInAnimation(view: UIView, isTrigger: Bool = false, sclaEffect: Float = 1 , completion: ((_ view: UIView)->())? = nil) {
         UIView.animate(withDuration: 1, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [.curveEaseIn, .allowUserInteraction], animations: {
             view.transform = CGAffineTransform(scaleX: CGFloat(sclaEffect), y: CGFloat(sclaEffect))
         }, completion: {_ in
-            self.popOutAnimation(view: view)
+            if isTrigger {
+                self.popOutAnimation(view: view, isTrigger: true)
+            } else {
+                completion?(view)
+            }
         })
         
     }
                        
-    func popOutAnimation(view: UIView, sclaEffect: Float = 1.07, completion: ((_ view: UIView)->())? = nil) {
+    func popOutAnimation(view: UIView, isTrigger: Bool = false, sclaEffect: Float = 1.07, completion: ((_ view: UIView)->())? = nil) {
 
         
         UIView.animate(withDuration: 0.4, delay: 0, usingSpringWithDamping: 0.5, initialSpringVelocity: 5, options: [.curveEaseOut, .allowUserInteraction] , animations: {
             view.transform = CGAffineTransform(scaleX: CGFloat(sclaEffect), y: CGFloat(sclaEffect))
         }, completion: {_ in
-            completion?(view)
+            if isTrigger {
+                self.popInAnimation(view: view, isTrigger: true)
+            } else {
+                completion?(view)
+            }
         })
     }
     
-    
+    func curveAnimation(view: UIView, animationOptions: UIView.AnimationOptions, defaultXMovement: CGFloat, isReset: Bool, completion: (() -> Void)? = nil) {
+        UIView.animate(withDuration: -0.5, delay: 0, options: animationOptions, animations: {
+        view.transform = isReset ? .identity : CGAffineTransform.identity.translatedBy(x: defaultXMovement, y: 0)
+      }, completion: {_ in
+          completion?()
+      })
+    }
     
 
 }
