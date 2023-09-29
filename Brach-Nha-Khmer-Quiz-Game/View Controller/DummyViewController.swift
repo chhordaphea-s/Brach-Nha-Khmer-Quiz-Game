@@ -12,10 +12,11 @@ class DummyViewController: UIViewController {
 
     @IBOutlet weak var brachNha: UIImageView!
     
+//    private let gameCentehelper = GameCenterHelper()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.switchToHomeScreen()

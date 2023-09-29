@@ -10,6 +10,7 @@
 		0E1BD08E2AB2208700F7BBA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08A2AB2208600F7BBA5 /* Main.storyboard */; };
 		0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08C2AB2208700F7BBA5 /* LaunchScreen.storyboard */; };
 		0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */; };
+		0E401F132AC68AC30058C191 /* GamerCenterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E401F122AC68AC30058C191 /* GamerCenterHelper.swift */; };
 		0E5AB3072AC3E24C00ABA86E /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */; };
 		0E5AB30B2AC4284400ABA86E /* RewardedInterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AB30A2AC4284400ABA86E /* RewardedInterstitialAd.swift */; };
 		0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */; };
@@ -86,6 +87,8 @@
 		0E1BD08B2AB2208600F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E1BD08D2AB2208700F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
+		0E401F122AC68AC30058C191 /* GamerCenterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamerCenterHelper.swift; sourceTree = "<group>"; };
+		0E401F142AC68B700058C191 /* Brach-Nha-Khmer-Quiz-Game.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Brach-Nha-Khmer-Quiz-Game.entitlements"; sourceTree = "<group>"; };
 		0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 		0E5AB30A2AC4284400ABA86E /* RewardedInterstitialAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedInterstitialAd.swift; sourceTree = "<group>"; };
 		0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosePlayerModeCustomSagement.xib; sourceTree = "<group>"; };
@@ -239,6 +242,7 @@
 		0E6F8A9D2A989E5E00B480F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0E81703F2AC2CA3D00E2A270 /* GamePlay.swift */,
 				0EA44D452A97353600B5539A /* PlayMode.swift */,
 				0E93ADF12AAC2F570073E7ED /* GameData.swift */,
 				0E8BFF722AA43584000E5AC7 /* AudioMode.swift */,
@@ -257,6 +261,7 @@
 				0E8BFF702AA43495000E5AC7 /* AudioHelper.swift */,
 				0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */,
 				0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */,
+				0E401F122AC68AC30058C191 /* GamerCenterHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -401,6 +406,7 @@
 		FC3D988A2A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game */ = {
 			isa = PBXGroup;
 			children = (
+				0E401F142AC68B700058C191 /* Brach-Nha-Khmer-Quiz-Game.entitlements */,
 				0EDDEC232AA194DA00E32087 /* Utilities */,
 				0EDDEC222AA194CF00E32087 /* Globle */,
 				0E68C9222A9B307400ACF84D /* Custom View */,
@@ -429,7 +435,6 @@
 			isa = PBXGroup;
 			children = (
 				0E8170432AC2CA3D00E2A270 /* AnswerView.swift */,
-				0E81703F2AC2CA3D00E2A270 /* GamePlay.swift */,
 				0E8170422AC2CA3D00E2A270 /* HintButton.swift */,
 				0E8170412AC2CA3D00E2A270 /* HintCustomCellModel.swift */,
 				0E8170442AC2CA3D00E2A270 /* HintView.swift */,
@@ -630,6 +635,7 @@
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
 				0E8170482AC2CA3D00E2A270 /* HintCustomCellModel.swift in Sources */,
 				0E8170382AC2CA2F00E2A270 /* WinOrLoseViewController.swift in Sources */,
+				0E401F132AC68AC30058C191 /* GamerCenterHelper.swift in Sources */,
 				0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */,
 				FCDA06C62AA8541200A2A239 /* HintHalfHalfButton.swift in Sources */,
 				FC9CE41C2AC144390076F310 /* StarView.swift in Sources */,
@@ -805,6 +811,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S4SC57X43S;
@@ -837,6 +844,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game.entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = S4SC57X43S;
