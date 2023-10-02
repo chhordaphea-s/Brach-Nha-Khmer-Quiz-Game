@@ -75,8 +75,8 @@ struct HintProduct {
         return Float(truncating: self.product.price) == 0
     }
     
-    func getHintView() -> HintView {
-        return HintView(hinType: self.getHintType() ?? .answer, number: self.getAmount())
+    func getHintView() -> Hint {
+        return Hint(hinType: self.getHintType() ?? .answer, number: self.getAmount())
     }
     
 }

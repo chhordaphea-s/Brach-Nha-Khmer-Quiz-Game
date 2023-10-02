@@ -57,7 +57,7 @@ class HintPopupView: UIView {
         }
     }
 
-    func setup(data: HintView) {
+    func setup(data: Hint) {
         self.hintType = data.hinType
         self.number = data.number
         

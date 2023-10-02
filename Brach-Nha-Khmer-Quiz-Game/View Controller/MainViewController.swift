@@ -18,6 +18,7 @@ class MainViewController: UIViewController {
     private let settingView = SettingView()
     private let playButtonPressed = UITapGestureRecognizer()
     
+    private let gameCenter = GameCentreHelper()
     
 
     // MARK: - Body
@@ -26,6 +27,8 @@ class MainViewController: UIViewController {
         super.viewWillAppear(true)
         
         hideButton(views: scoreBackground)
+        
+        gameCenter.authPlayer()
     }
     
     override func viewDidLoad() {

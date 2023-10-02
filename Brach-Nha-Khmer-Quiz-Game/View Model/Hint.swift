@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HintView {
+struct Hint: Codable {
     let hinType: HintType
     let number: Int
     
@@ -18,7 +18,7 @@ struct HintView {
     
 }
 
-enum HintType: String  {
+enum HintType: String, Codable  {
     case answer = "ប្រាបចម្លើយ";
     case halfhalf = "៥០:៥០";
 }

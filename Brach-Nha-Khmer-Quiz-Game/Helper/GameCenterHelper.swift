@@ -2,86 +2,58 @@
 //  GameCenterHelper.swift
 //  Brach-Nha-Khmer-Quiz-Game
 //
-//  Created by Aing Hongsin on 9/27/23.
+//  Created by Aing Hongsin on 10/2/23.
 //
 
-import Foundation
+
+import UIKit
 import GameKit
 
-class GameCenterHelper: NSObject, GKGameCenterControllerDelegate {
+class GameCentreHelper : NSObject, GKGameCenterControllerDelegate {
     
-    static let shared = GameCenterHelper()
+    static let shareInstance = GameCentreHelper()
+    let user = GKLocalPlayer.local
     
-    private override init() {
-        super.init()
-    }
-    
-    // Authenticate the player with Game Center
-    func authenticatePlayer() {
-        let localPlayer = GKLocalPlayer.local
-        
-        localPlayer.authenticateHandler = { viewController, error in
-            if let error = error {
-                print("Game Center authentication failed with error: \(error.localizedDescription)")
-            } else if let vc = viewController {
-                // Present the Game Center login view controller
-                UIApplication.shared.topViewController?.present(vc, animated: true, completion: nil)
-            } else if localPlayer.isAuthenticated {
-                print("Player authenticated with Game Center")
-            } else {
-                print("Player is not authenticated with Game Center")
-            }
-        }
-    }
-    
-    // Report an achievement to Game Center
-    func reportAchievement(_ identifier: String, percentComplete: Double) {
-        let achievement = GKAchievement(identifier: identifier)
-        achievement.percentComplete = percentComplete
-        achievement.showsCompletionBanner = true
-        
-        GKAchievement.report([achievement]) { error in
-            if let error = error {
-                print("Failed to report achievement: \(error.localizedDescription)")
-            } else {
-                print("Achievement reported successfully")
-            }
-        }
-    }
-    
-    // Show Game Center leaderboard
-    func showLeaderboard(leaderboardID: String) {
-        let gcViewController = GKGameCenterViewController()
-        gcViewController.gameCenterDelegate = self
-        gcViewController.viewState = .leaderboards
-        gcViewController.leaderboardIdentifier = leaderboardID
-        
-        UIApplication.shared.topViewController?.present(gcViewController, animated: true, completion: nil)
-    }
-    
-    // Dismiss Game Center view controller
+    /// dismiss when game centre view did finished
     func gameCenterViewControllerDidFinish(_ gameCenterViewController: GKGameCenterViewController) {
         gameCenterViewController.dismiss(animated: true, completion: nil)
     }
+
+    
+    /// auth the player
+    func authPlayer (){
+        let localPlayer = GKLocalPlayer.local
+        let topViewController = UIApplication.getTopViewController()
+        localPlayer.authenticateHandler = {
+            (view, error) in
+            if view != nil{
+                topViewController!.present(view!, animated: true, completion: nil)
+            }
+            else {
+                print(GKLocalPlayer.local.isAuthenticated)
+            }
+        }
+        
+    }
+    
 }
+
+// MARK: UIApplication extensions
 
 extension UIApplication {
-    var topViewController: UIViewController? {
-        return UIApplication.shared.windows.first?.rootViewController?.topViewController
+    
+    class func getTopViewController(base: UIViewController? = UIApplication.shared.windows.filter {$0.isKeyWindow}.first!.rootViewController) -> UIViewController? {
+        
+        if let nav = base as? UINavigationController {
+            return getTopViewController(base: nav.visibleViewController)
+            
+        } else if let tab = base as? UITabBarController, let selected = tab.selectedViewController {
+            return getTopViewController(base: selected)
+            
+        } else if let presented = base?.presentedViewController {
+            return getTopViewController(base: presented)
+        }
+        return base
     }
 }
 
-extension UIViewController {
-    var topViewController: UIViewController? {
-        if let presentedViewController = presentedViewController {
-            return presentedViewController.topViewController
-        }
-        if let navigationController = self as? UINavigationController {
-            return navigationController.visibleViewController?.topViewController
-        }
-        if let tabBarController = self as? UITabBarController {
-            return tabBarController.selectedViewController?.topViewController
-        }
-        return self
-    }
-}

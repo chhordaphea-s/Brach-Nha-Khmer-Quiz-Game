@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct GameData: Decodable {
+struct GameData: Codable {
     let GeneralKnowlage: Game
     let Proverb: Game
     let Riddle: Game
@@ -43,7 +43,7 @@ struct GameData: Decodable {
     }
 }
 
-struct Game: Decodable {
+struct Game: Codable {
     let key: String
     let title: String
     let object: String
@@ -59,7 +59,7 @@ struct Game: Decodable {
     }
 }
 
-struct Level: Decodable {
+struct Level: Codable {
     let level: Int
     var questions: [Question]
     
@@ -69,7 +69,7 @@ struct Level: Decodable {
     }
 }
 
-struct Question: Decodable {
+struct Question: Codable {
     let question: String
     let answer: String
     var possibleAnswer: [String]?
