@@ -32,13 +32,13 @@ class LevelViewController: UIViewController {
     // MARK: - Action
 
     @IBAction func backButtonPressed(_ sender: UIButton) {
-        self.dismiss(animated: true)
+        self.gotoViewControllerWithoutParam(newController: GameChoosingViewController())
     }
     
     @IBAction func swipGasture(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
         case .right:
-            self.dismiss(animated: true)
+            self.gotoViewControllerWithoutParam(newController: GameChoosingViewController())
         default:
             return
         }

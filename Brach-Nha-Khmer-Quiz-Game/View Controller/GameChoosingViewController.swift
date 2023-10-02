@@ -70,7 +70,7 @@ class GameChoosingViewController: UIViewController {
     @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
         case .right:
-            self.dismiss(animated: true)
+            self.gotoViewControllerWithoutParam(newController: MainViewController())
         default:
             return
         }

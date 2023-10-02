@@ -26,7 +26,8 @@ class StoreViewController: UIViewController {
     private var filterProducts = [SKProduct]()
     private var selectHintProduct: HintProduct?
 
-    private var interstitial: GADInterstitialAd?
+    private let rewardedInterstitialAd = RewardedInterstitialAd()
+    private let storeKitHelper = StoreKitHelper()
     private var adsUsed = false
 
     // MARK: - Body
