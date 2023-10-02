@@ -65,10 +65,11 @@
                             <constraint firstItem="B1G-4Q-zc8" firstAttribute="top" secondItem="NJn-Pb-lhf" secondAttribute="top" id="ken-am-D2p"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="sAg-w8-UNX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sga-jU-11z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="808" y="-9"/>
+            <point key="canvasLocation" x="2527" y="-9"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -299,11 +300,13 @@
                         <outletCollection property="score" destination="69l-sb-l6a" collectionClass="NSMutableArray" id="Qsw-i5-XeH"/>
                         <outletCollection property="score" destination="x3v-mq-wgh" collectionClass="NSMutableArray" id="kEO-he-Cf1"/>
                         <outletCollection property="score" destination="F92-Aa-wK2" collectionClass="NSMutableArray" id="GW9-eT-fm7"/>
+                        <segue destination="IfP-oB-GcI" kind="custom" id="JYb-7B-zqo"/>
+                        <segue destination="yyU-3z-0SV" kind="custom" id="OZF-9e-D0O"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1656.2790697674418" y="-9.0128755364806867"/>
+            <point key="canvasLocation" x="3398" y="-9"/>
         </scene>
         <!--Level View Controller-->
         <scene sceneID="FpE-RM-HKD">
@@ -317,7 +320,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fEf-qK-esX">
-                                <rect key="frame" x="16" y="59" width="42" height="42"/>
+                                <rect key="frame" x="16" y="75" width="42" height="42"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="42" id="3Br-zC-0x5"/>
                                     <constraint firstAttribute="width" constant="42" id="Qh5-Dd-TQT"/>
@@ -341,7 +344,7 @@
                                 </connections>
                             </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="y0V-Td-XXY">
-                                <rect key="frame" x="30" y="151" width="370" height="473"/>
+                                <rect key="frame" x="30" y="167" width="370" height="473"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="473" id="0B9-Bb-rgn"/>
                                     <constraint firstAttribute="width" constant="370" id="eCT-aT-R3Y"/>
@@ -376,6 +379,7 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="QrB-eU-WDN"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="DG4-bV-UGg" firstAttribute="centerX" secondItem="EFN-Bq-3HV" secondAttribute="centerX" id="2Xu-Ce-58x"/>
                             <constraint firstItem="cLm-98-6RS" firstAttribute="leading" secondItem="QrB-eU-WDN" secondAttribute="leading" id="Fgj-0N-Vnx"/>
@@ -385,9 +389,12 @@
                             <constraint firstItem="y0V-Td-XXY" firstAttribute="top" secondItem="fEf-qK-esX" secondAttribute="bottom" constant="50" id="aWi-Gn-MYn"/>
                             <constraint firstAttribute="bottom" secondItem="cLm-98-6RS" secondAttribute="bottom" id="hCV-YG-gWW"/>
                             <constraint firstItem="y0V-Td-XXY" firstAttribute="centerX" secondItem="EFN-Bq-3HV" secondAttribute="centerX" id="kEy-1z-iwO"/>
-                            <constraint firstItem="fEf-qK-esX" firstAttribute="top" secondItem="QrB-eU-WDN" secondAttribute="top" id="kS3-RK-eHg"/>
+                            <constraint firstItem="fEf-qK-esX" firstAttribute="top" secondItem="QrB-eU-WDN" secondAttribute="top" constant="16" id="kS3-RK-eHg"/>
                             <constraint firstItem="cLm-98-6RS" firstAttribute="top" secondItem="EFN-Bq-3HV" secondAttribute="top" id="y57-HI-wDY"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="H7i-Ri-Kjl" appends="YES" id="7te-Dm-2yb"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="levelCollectionView" destination="y0V-Td-XXY" id="UgQ-t3-MGz"/>
@@ -395,8 +402,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Hpg-7R-dYN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="H7i-Ri-Kjl">
+                    <connections>
+                        <action selector="swipGasture:" destination="bsQ-EY-7N7" id="BGA-Nk-SWv"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="3137" y="-9"/>
+            <point key="canvasLocation" x="5065" y="-355"/>
         </scene>
         <!--Answer View Controller-->
         <scene sceneID="O81-fY-Msr">
@@ -616,7 +628,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ba1-eS-uxw" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4782" y="-9"/>
+            <point key="canvasLocation" x="6682" y="-355"/>
         </scene>
         <!--Win Or Lose View Controller-->
         <scene sceneID="UQU-qb-tzw">
@@ -969,7 +981,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="5521" y="-9"/>
+            <point key="canvasLocation" x="7420" y="-355"/>
         </scene>
         <!--Reading Question View Controller-->
         <scene sceneID="oLT-Qw-syv">
@@ -1127,7 +1139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Sa5-xP-AzA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3954" y="-9"/>
+            <point key="canvasLocation" x="5853" y="-355"/>
         </scene>
         <!--Game Choosing View Controller-->
         <scene sceneID="q2c-o7-XUo">
@@ -1139,6 +1151,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="OMC-zF-kG7">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lHB-Om-7iU">
                                 <rect key="frame" x="360" y="59" width="42" height="42"/>
@@ -1390,6 +1403,9 @@
                             <constraint firstItem="OMC-zF-kG7" firstAttribute="top" secondItem="6eP-01-HdH" secondAttribute="top" id="xEd-Wy-BTs"/>
                             <constraint firstItem="OMC-zF-kG7" firstAttribute="leading" secondItem="w6j-FM-Cbh" secondAttribute="leading" id="yu2-Ge-gBx"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="bFO-z1-iUL" appends="YES" id="KLV-0R-1b7"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="KPZ-Ik-Omo"/>
                     <connections>
@@ -1398,6 +1414,7 @@
                         <outletCollection property="gameButtonView" destination="D1i-hr-sok" collectionClass="NSMutableArray" id="kuW-hc-aa9"/>
                         <outletCollection property="gameButtonView" destination="rDh-Dn-o2H" collectionClass="NSMutableArray" id="iRC-4B-YJa"/>
                         <outletCollection property="gameButtonView" destination="Wm7-8E-iDy" collectionClass="NSMutableArray" id="9Mt-g7-KRz"/>
+                        <segue destination="bsQ-EY-7N7" kind="custom" id="u6z-zR-hwg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qzZ-ml-vU0" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1416,19 +1433,25 @@
                         <action selector="generalKnowlage:" destination="IfP-oB-GcI" id="2Hl-lb-7tD"/>
                     </connections>
                 </tapGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="bFO-z1-iUL">
+                    <connections>
+                        <action selector="swipe:" destination="IfP-oB-GcI" id="DhD-NR-i9I"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="2401.3953488372094" y="-9.0128755364806867"/>
+            <point key="canvasLocation" x="4302" y="-355"/>
         </scene>
         <!--Store View Controller-->
         <scene sceneID="WUR-cy-hJd">
             <objects>
-                <viewController storyboardIdentifier="BuyHintViewController" id="yyU-3z-0SV" customClass="StoreViewController" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="StoreViewController" id="yyU-3z-0SV" customClass="StoreViewController" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="kvi-5u-ajb">
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" semanticContentAttribute="forceLeftToRight" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="h84-90-G0x">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NG3-X0-Dyh" customClass="BetterSegmentedControl" customModule="BetterSegmentedControl">
                                 <rect key="frame" x="30" y="540" width="370" height="42"/>
@@ -1467,25 +1490,6 @@
                                     <action selector="settingButtonPressed:" destination="IfP-oB-GcI" eventType="touchUpInside" id="u12-pL-va1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Bsc-lg-IgQ">
-                                <rect key="frame" x="360" y="59" width="42" height="42"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="42" id="03z-r9-CCF"/>
-                                    <constraint firstAttribute="height" constant="42" id="IbR-aM-67G"/>
-                                </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="arrow.clockwise" catalog="system">
-                                    <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" scale="large" weight="black"/>
-                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </buttonConfiguration>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="soundEffectName" value="Failed"/>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="soundFileName" value="pressed"/>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="restoreButtonPressed:" destination="yyU-3z-0SV" eventType="touchUpInside" id="JXh-5Y-JnP"/>
-                                </connections>
-                            </button>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="6Fg-1L-OQm">
                                 <rect key="frame" x="0.0" y="598" width="430" height="300"/>
                                 <constraints>
@@ -1512,12 +1516,11 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="IdW-La-Vxp"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
                         <constraints>
-                            <constraint firstItem="Bsc-lg-IgQ" firstAttribute="top" secondItem="IdW-La-Vxp" secondAttribute="top" id="35G-5a-qNb"/>
                             <constraint firstItem="6Fg-1L-OQm" firstAttribute="top" secondItem="NG3-X0-Dyh" secondAttribute="bottom" constant="16" id="4oA-F5-f8g"/>
                             <constraint firstAttribute="bottom" secondItem="h84-90-G0x" secondAttribute="bottom" id="7D6-fc-cUS"/>
                             <constraint firstItem="6Fg-1L-OQm" firstAttribute="leading" secondItem="IdW-La-Vxp" secondAttribute="leading" id="8Sr-Cm-opx"/>
-                            <constraint firstItem="IdW-La-Vxp" firstAttribute="trailing" secondItem="Bsc-lg-IgQ" secondAttribute="trailing" constant="28" id="ASf-JE-DxF"/>
                             <constraint firstItem="h84-90-G0x" firstAttribute="leading" secondItem="IdW-La-Vxp" secondAttribute="leading" id="JTt-L5-Yzq"/>
                             <constraint firstItem="IdW-La-Vxp" firstAttribute="trailing" secondItem="6Fg-1L-OQm" secondAttribute="trailing" id="LRx-Bw-Vmg"/>
                             <constraint firstItem="IdW-La-Vxp" firstAttribute="bottom" secondItem="6Fg-1L-OQm" secondAttribute="bottom" id="Rje-Bd-83k"/>
@@ -1527,6 +1530,9 @@
                             <constraint firstItem="h84-90-G0x" firstAttribute="top" secondItem="kvi-5u-ajb" secondAttribute="top" id="moe-tR-fR0"/>
                             <constraint firstItem="NG3-X0-Dyh" firstAttribute="centerX" secondItem="kvi-5u-ajb" secondAttribute="centerX" id="oAa-0b-kNg"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="5xA-aY-Fug" appends="YES" id="E5g-tq-yEa"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="customHintSagementControl" destination="NG3-X0-Dyh" id="A6s-dz-IpS"/>
@@ -1534,8 +1540,13 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="I2w-LR-1EC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="5xA-aY-Fug">
+                    <connections>
+                        <action selector="swapGesture:" destination="yyU-3z-0SV" id="iYv-jk-fDM"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1994" y="673"/>
+            <point key="canvasLocation" x="4302" y="371"/>
         </scene>
     </scenes>
     <designables>
@@ -1561,7 +1572,6 @@
         <image name="Nextgame" width="32" height="32"/>
         <image name="Pause" width="32" height="32"/>
         <image name="Replay" width="22" height="22"/>
-        <image name="arrow.clockwise" catalog="system" width="113" height="128"/>
         <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
         <image name="boygirl" width="156" height="145"/>
         <image name="countryside4 1" width="430" height="932"/>

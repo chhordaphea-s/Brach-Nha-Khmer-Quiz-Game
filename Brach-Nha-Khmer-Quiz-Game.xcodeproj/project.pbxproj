@@ -11,6 +11,9 @@
 		0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08C2AB2208700F7BBA5 /* LaunchScreen.storyboard */; };
 		0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */; };
 		0E401F132AC68AC30058C191 /* GamerCenterHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E401F122AC68AC30058C191 /* GamerCenterHelper.swift */; };
+		0E401F182AC69D390058C191 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E401F172AC69D390058C191 /* UIViewControllerExtension.swift */; };
+		0E401F1A2AC6A03A0058C191 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E401F192AC6A03A0058C191 /* ViewControllerModel.swift */; };
+		0E401F1E2AC6B3F30058C191 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E401F1D2AC6B3F30058C191 /* NavigationController.swift */; };
 		0E5AB3072AC3E24C00ABA86E /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */; };
 		0E5AB30B2AC4284400ABA86E /* RewardedInterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AB30A2AC4284400ABA86E /* RewardedInterstitialAd.swift */; };
 		0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */; };
@@ -89,6 +92,9 @@
 		0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
 		0E401F122AC68AC30058C191 /* GamerCenterHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GamerCenterHelper.swift; sourceTree = "<group>"; };
 		0E401F142AC68B700058C191 /* Brach-Nha-Khmer-Quiz-Game.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Brach-Nha-Khmer-Quiz-Game.entitlements"; sourceTree = "<group>"; };
+		0E401F172AC69D390058C191 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		0E401F192AC6A03A0058C191 /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
+		0E401F1D2AC6B3F30058C191 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 		0E5AB30A2AC4284400ABA86E /* RewardedInterstitialAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedInterstitialAd.swift; sourceTree = "<group>"; };
 		0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosePlayerModeCustomSagement.xib; sourceTree = "<group>"; };
@@ -248,6 +254,7 @@
 				0E8BFF722AA43584000E5AC7 /* AudioMode.swift */,
 				0E7CEFA22AB6B0BE00D500F8 /* Product.swift */,
 				0E7CEFA52AB7484600D500F8 /* HintProduct.swift */,
+				0E401F192AC6A03A0058C191 /* ViewControllerModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -282,6 +289,7 @@
 				0E9881602AA47A7D00D326CC /* SoundEffect.swift */,
 				0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */,
 				FCF478332AA9CD6800075DAC /* UIProgressViewExtension.swift */,
+				0E401F172AC69D390058C191 /* UIViewControllerExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -297,6 +305,7 @@
 				0E8170372AC2CA2F00E2A270 /* StoreViewController.swift */,
 				0E8170312AC2CA2E00E2A270 /* WinOrLoseViewController.swift */,
 				FC9CE4252AC2D2D70076F310 /* DummyViewController.swift */,
+				0E401F1D2AC6B3F30058C191 /* NavigationController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -622,6 +631,7 @@
 				0E98816A2AA9AE4D00D326CC /* HintPopupView.swift in Sources */,
 				0E8170502AC2CA7C00E2A270 /* HintCustomCell.swift in Sources */,
 				0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */,
+				0E401F1E2AC6B3F30058C191 /* NavigationController.swift in Sources */,
 				0EA44D372A97177600B5539A /* UIViewExtension.swift in Sources */,
 				0E9881612AA47A7D00D326CC /* SoundEffect.swift in Sources */,
 				0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */,
@@ -629,6 +639,7 @@
 				FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */,
 				0E81703E2AC2CA2F00E2A270 /* StoreViewController.swift in Sources */,
 				0E8170532AC2CA8700E2A270 /* CustomOnOffButton.swift in Sources */,
+				0E401F1A2AC6A03A0058C191 /* ViewControllerModel.swift in Sources */,
 				0E8170492AC2CA3D00E2A270 /* HintButton.swift in Sources */,
 				0E98815D2AA46F8600D326CC /* Global.swift in Sources */,
 				0E8170392AC2CA2F00E2A270 /* AnswerViewController.swift in Sources */,
@@ -639,6 +650,7 @@
 				0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */,
 				FCDA06C62AA8541200A2A239 /* HintHalfHalfButton.swift in Sources */,
 				FC9CE41C2AC144390076F310 /* StarView.swift in Sources */,
+				0E401F182AC69D390058C191 /* UIViewControllerExtension.swift in Sources */,
 				FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */,
 				0E6D72912AB81ABC005C3129 /* LostView.swift in Sources */,
 				0E81703D2AC2CA2F00E2A270 /* ReadingQuestionViewController.swift in Sources */,

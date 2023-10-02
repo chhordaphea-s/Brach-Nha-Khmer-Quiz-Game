@@ -16,23 +16,25 @@ class StoreViewController: UIViewController {
 
     @IBOutlet weak var hintCollectionView: UICollectionView!
     @IBOutlet weak var customHintSagementControl: BetterSegmentedControl!
+    @IBOutlet weak var backButton: UIButton!
     
-    var backDirection: UIViewController? = nil
-
-    let layout = PagingCollectionViewLayout()
-    let hintView = HintPopupView()
-    var hintSelected: HintType = .answer
-    var products = [SKProduct]()
-    var hints = [HintCustomCellModel]()
-    var filterProducts = [SKProduct]()
-    var selectHintProduct: HintProduct?
     
-//    var insterstitialAds = InterstitialAdsHelper()
+    private let layout = PagingCollectionViewLayout()
+    private let hintView = HintPopupView()
+    private var hintSelected: HintType = .answer
+    private var products = [SKProduct]()
+    private var hints = [HintCustomCellModel]()
+    private var filterProducts = [SKProduct]()
+    private var selectHintProduct: HintProduct?
 
     private var interstitial: GADInterstitialAd?
-    var adsUsed = false
+    private var adsUsed = false
 
     // MARK: - Body
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,23 +46,18 @@ class StoreViewController: UIViewController {
         setupSagementControl()
 
         fetchProduct()
-
-//        insterstitialAds.adsLoads()
-//        insterstitialAds.delegate = self
         
         adsLoads()
     }
-    
-    @IBAction func restoreButtonPressed(_ sender: UIButton) {
-        print("Restore Button Pressed ....")
-    }
+
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
-        backButton()
+        self.dismiss(animated: true)
     }
+    
     @IBAction func hintSagementChanged(_ sender: BetterSegmentedControl) {
         switch sender.index {
-        case 0:
+        case 0: 
             hintSelected = .answer
         case 1:
             hintSelected = .halfhalf
@@ -72,7 +69,15 @@ class StoreViewController: UIViewController {
         hintCollectionView.reloadData()
     }
     
-
+    @IBAction func swapGesture(_ sender: UISwipeGestureRecognizer) {
+        switch sender.direction {
+        case .right:
+            self.dismiss(animated: true)
+        default:
+            return
+        }
+    }
+    
     
     // MARK: - Function
 
@@ -123,23 +128,6 @@ class StoreViewController: UIViewController {
         
         return lrInset
     }
-    
-    func backButton() {
-        var controller = UIViewController()
-        
-        guard let bd = backDirection else { return }
-               
-        if bd.restorationIdentifier == "MainViewController" {
-            controller = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
-        } else if bd.restorationIdentifier == "GameChoosingViewController" {
-            controller = storyboard?.instantiateViewController(withIdentifier: "GameChoosingViewController") as! GameChoosingViewController
-        }
-        
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        self.present(controller, animated: true)
-    }
-    
     
     func setupSagementControl() {
         customHintSagementControl.segments = LabelSegment.segments(withTitles: ["ជំនួយ៖ \(HintType.answer.rawValue)", "ជំនួយ៖ \(HintType.halfhalf.rawValue)"],

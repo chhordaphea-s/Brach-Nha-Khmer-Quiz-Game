@@ -17,10 +17,10 @@ class ReadingQuestionViewController: UIViewController {
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var continueButton: UIView!
  
-    var gamePlay: GamePlay? = nil
-    let settingView = SettingView()
+    private let settingView = SettingView()
+    private let timer = TimerHelper()
     
-    let timer = TimerHelper()
+    var gamePlay: GamePlay? = nil
     
     // MARK: - Body
 
@@ -59,10 +59,8 @@ class ReadingQuestionViewController: UIViewController {
         ButtonEffectAnimation.shared.popEffect(button: continueButton)
         
         progressBar.pauseProgress()
-        switchToAnswerScreen()
-        
-        
-    }
+        guard let gamePlay = gamePlay else { return }
+        self.gotoAnswerViewController(data: gamePlay)    }
     
     
     //  MARK: - Function
@@ -108,32 +106,6 @@ class ReadingQuestionViewController: UIViewController {
         }
         
     }
-
-//    func setProgressTime() {
-//        progressBar.setAnimatedProgress(duration: Float(gamePlay?.readingTime ?? 0)) {
-//            print("Done")
-//            self.switchToAnswerScreen()
-//        }
-//    }
-    
-    func switchToAnswerScreen() {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "AnswerViewController") as! AnswerViewController
-        controller.gamePlay = gamePlay
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        self.present(controller, animated: true)
-    }
-    
-    func switchToLevelScreen(game: Game){
-        let controller = storyboard?.instantiateViewController(withIdentifier: "LevelViewController") as! LevelViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        controller.game = game
-        self.present(controller, animated: true)
-    }
-    
-    
-
 }
 
 
@@ -143,7 +115,7 @@ extension ReadingQuestionViewController: SettingViewDelegate {
         guard let gamePlayData = gamePlay else { return }
         guard let game = gameData?.getGameByKey(key: gamePlayData.gameKey) else { return }
         
-        switchToLevelScreen(game: game)
+        self.gotoLevelViewController(data: game)
     }
      
     
@@ -158,7 +130,8 @@ extension ReadingQuestionViewController: TimerHelperDelegate {
     }
     
     func didLoadTimer(timer: Timer) {
-        self.switchToAnswerScreen()
+        guard let gamePlay = gamePlay else { return }
+        self.gotoAnswerViewController(data: gamePlay)
     }
 
 }

@@ -16,15 +16,21 @@ class MainViewController: UIViewController {
     @IBOutlet var score: [UILabel]!
     @IBOutlet weak var brachNha: UIImageView!
     
-    let settingView = SettingView()
-    let playButtonPressed = UITapGestureRecognizer()
+    private let settingView = SettingView()
+    private let playButtonPressed = UITapGestureRecognizer()
     
 
     // MARK: - Body
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationController?.navigationBar.isHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hero.isEnabled = true
+        self.navigationController?.hero.isEnabled = true
         brachNha.hero.modifiers = [.translate(y:100)]
         
         getScore()
@@ -35,7 +41,6 @@ class MainViewController: UIViewController {
 
         playButtonPressed.addTarget(self, action: #selector(playButtonActive))
         playButton.addGestureRecognizer(playButtonPressed)
-
     }
     
     
@@ -45,22 +50,25 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func storeButtonPressed(_ sender: UIButton) {
-        switchToStoreViewController()
+        self.gotoViewControllerWithoutParam(newController: StoreViewController())
     }
     
     @objc func playButtonActive() {
         print("Play available!")
         playButtonEffect()
-        switchToAnotherScreen()
-        
-        
+        self.gotoViewControllerWithoutParam(newController: GameChoosingViewController())
     }
-
+    @IBAction func swapBack(_ sender: UISwipeGestureRecognizer) {
+        switch sender.direction {
+        case .right:
+            self.dismiss(animated: true)
+        default:
+            return
+        }
+    }
+    
     
     // MARK: FUNCTION
-    
-
-    
     func getScore() {
         let scoreUD = [totalScore, totalStar, answerHint, halfHint]
         
@@ -110,21 +118,21 @@ class MainViewController: UIViewController {
         
     }
     
-    func switchToAnotherScreen(){
-        let controller = storyboard?.instantiateViewController(withIdentifier: "GameChoosingViewController") as! GameChoosingViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        self.present(controller, animated: true)
-        
-    }
+//    func switchToAnotherScreen(){
+//        let controller = storyboard?.instantiateViewController(withIdentifier: "GameChoosingViewController") as! GameChoosingViewController
+//        controller.modalPresentationStyle = .fullScreen
+//        controller.modalTransitionStyle = .crossDissolve
+//        self.present(controller, animated: true)
+//        
+//    }
     
-    func switchToStoreViewController() {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "BuyHintViewController") as! StoreViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        controller.backDirection = self
-        self.present(controller, animated: true)
-    }
+//    func switchToStoreViewController() {
+//        let controller = storyboard?.instantiateViewController(withIdentifier: "\(StoreViewController.self)") as! StoreViewController
+//        controller.modalPresentationStyle = .fullScreen
+//        controller.modalTransitionStyle = .crossDissolve
+//        controller.backDirection = self
+//        self.present(controller, animated: true)
+//    }
   
 
 }
@@ -136,3 +144,5 @@ extension MainViewController: SettingViewDelegate {
         ViewAnimateHelper.shared.animateViewOut(self.view, popUpView: view)
     }
 }
+
+

@@ -14,7 +14,7 @@ class LevelViewController: UIViewController {
     
     var game: Game? = nil
     
-    let answerHintView = HintPopupView()
+    private let answerHintView = HintPopupView()
     
     
     
@@ -29,27 +29,35 @@ class LevelViewController: UIViewController {
         levelCollectionView.register(UINib.init(nibName: "LevelCustomCell", bundle: nil), forCellWithReuseIdentifier: "LevelCustomCell")
     }
     
+    // MARK: - Action
 
     @IBAction func backButtonPressed(_ sender: UIButton) {
-        backToLevelScreen()
+        self.dismiss(animated: true)
     }
     
+    @IBAction func swipGasture(_ sender: UISwipeGestureRecognizer) {
+        switch sender.direction {
+        case .right:
+            self.dismiss(animated: true)
+        default:
+            return
+        }
+    }
+    
+    
+    // MARK: - Function
     func switchToReadingQuestionScreen(levelData: Level) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "ReadingQuestionViewController") as! ReadingQuestionViewController
 
         
-        controller.gamePlay = GamePlay(gameKey: game?.key ?? "",
+        let gamePlay = GamePlay(gameKey: game?.key ?? "",
                                        startPlayTime: Date(),
                                        level: levelData,
                                        answerHint: HintButton(type: .answer, num: answerHint, enable: true),
                                        halfhalfHint: HintButton(type: .halfhalf, num: halfHint, enable: true),
                                        star: 0,
                                        highestScore: 0)
-        
-        
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        self.present(controller, animated: true)
+
+        self.gotoReadingQuestionViewController(data: gamePlay)
     }
     
     func configGameTitle() {
@@ -68,15 +76,7 @@ class LevelViewController: UIViewController {
             return [UIColor(rgb: 0x2FD85C).cgColor, UIColor(rgb: 0x379C73).cgColor]
         }
     }
-    
-    func backToLevelScreen(){
-        let controller = storyboard?.instantiateViewController(withIdentifier: "GameChoosingViewController") as! GameChoosingViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        self.present(controller, animated: true)
-        
-    }
-    
+
     
     func popUpAnswerHintView() {
 

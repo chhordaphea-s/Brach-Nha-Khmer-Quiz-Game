@@ -139,19 +139,15 @@ class WinOrLoseViewController: UIViewController {
     }
     
     func switchToReadingQuestionScreen(key: String, level: Level, highestScore: Int) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "ReadingQuestionViewController") as! ReadingQuestionViewController
                 
-        controller.gamePlay = GamePlay(gameKey: key,
+        let gamePlay = GamePlay(gameKey: key,
                                        startPlayTime: Date(),
                                        level: level,
                                        answerHint: HintButton(type: .answer, num: answerHint, enable: true),
                                        halfhalfHint: HintButton(type: .halfhalf, num: halfHint, enable: true),
                                        star: 0,
                                        highestScore: highestScore)
-        
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        self.present(controller, animated: true)
+        self.gotoReadingQuestionViewController(data: gamePlay)
     }
     
     
