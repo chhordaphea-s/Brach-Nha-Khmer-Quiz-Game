@@ -22,18 +22,19 @@ class AnswerViewController: UIViewController {
     @IBOutlet var answerView: [AnswerButton]!
     
     
-    let lostView = LostView()
-    let settingView = SettingView()
-    let rewardAds = RewardedInterstitialAd()
-
-    let timer = TimerHelper()
+    private let lostView = LostView()
+    private let settingView = SettingView()
+    private let rewardAds = RewardedInterstitialAd()
+    
     var gamePlay: GamePlay? = nil
-    var watchedAd = false
-    var choosedCorrectAnswer = false
+
+    private let timer = TimerHelper()
+    private var watchedAd = false
+    private var choosedCorrectAnswer = false
     
     
-    var incorrectAnswer = [AnswerButton]()
-    var correctAnswer = AnswerButton()
+    private var incorrectAnswer = [AnswerButton]()
+    private var correctAnswer = AnswerButton()
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -323,14 +324,9 @@ class AnswerViewController: UIViewController {
     
   
     func switchToReadingQuestionScreen() {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "ReadingQuestionViewController") as! ReadingQuestionViewController
-        
         gamePlay?.question += 1
-        controller.gamePlay = gamePlay
-    
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        self.present(controller, animated: true)
+        guard let gamePlay = gamePlay else { return }
+        self.gotoReadingQuestionViewController(data: gamePlay)
     }
     
     func reloadViewController() {
@@ -350,15 +346,9 @@ class AnswerViewController: UIViewController {
     }
     func switchToWinOrLoseScreen(){
         guard let gamePlayData = gamePlay else {return}
-
-        let controller = storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
         
         gamePlay?.timings = Int(NSDate().timeIntervalSince(gamePlayData.startPlayTime))
-
-        controller.gamePlay = gamePlay
-        self.present(controller, animated: true)
+        self.gotoWinOrLoseViewController(data: gamePlayData)
     }
 
 }

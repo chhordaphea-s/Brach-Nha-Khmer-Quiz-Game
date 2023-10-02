@@ -15,10 +15,10 @@ class GameChoosingViewController: UIViewController {
     @IBOutlet weak var playerModeSagementControl: ChoosePlayerModeCustomSagement!
     
     
-    var active: PlayMode = .singlePlayerMode
+    private var active: PlayMode = .singlePlayerMode
     
     
-    let settingView = SettingView()
+    private let settingView = SettingView()
     
     // MARK: - BODY
 
@@ -36,7 +36,7 @@ class GameChoosingViewController: UIViewController {
         print("Khmer Riddle")
         
         if let data = gameData?.Riddle {
-            switchToAnotherScreen(game: data)
+            self.gotoLevelViewController(data: data)
         }
     }
     
@@ -45,14 +45,14 @@ class GameChoosingViewController: UIViewController {
         print("Khmer Proverb")
         
         if let data = gameData?.Proverb {
-            switchToAnotherScreen(game: data)
+            self.gotoLevelViewController(data: data)
         }
     }
     @IBAction func generalKnowlage(_ sender: UITapGestureRecognizer) {
         ButtonEffectAnimation.shared.popEffect(button: gameButtonView[2], sclaEffect: 0.9)
         print("Khmer General Knowlate")
         if let data = gameData?.GeneralKnowlage {
-            switchToAnotherScreen(game: data)
+            self.gotoLevelViewController(data: data)
         }
         
     }
@@ -63,7 +63,17 @@ class GameChoosingViewController: UIViewController {
     }
     
     @IBAction func storeButtonPressed(_ sender: UIButton) {
-        switchToStoreViewController()
+        self.gotoViewControllerWithoutParam(newController: StoreViewController())
+    }
+    
+    
+    @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
+        switch sender.direction {
+        case .right:
+            self.dismiss(animated: true)
+        default:
+            return
+        }
     }
     
     // MARK: - Function
@@ -83,24 +93,7 @@ class GameChoosingViewController: UIViewController {
         settingView.setup(type: .normal)
 //        settingView.setup(type: .playing)
     }
-    
 
-    
-    func switchToAnotherScreen(game: Game){
-        let controller = storyboard?.instantiateViewController(withIdentifier: "LevelViewController") as! LevelViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        controller.game = game
-        self.present(controller, animated: true)
-    }
-    
-    func switchToStoreViewController() {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "BuyHintViewController") as! StoreViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        controller.backDirection = self
-        self.present(controller, animated: true)
-    }
 }
 
 extension GameChoosingViewController: SettingViewDelegate {

@@ -12,24 +12,14 @@ class DummyViewController: UIViewController {
 
     @IBOutlet weak var brachNha: UIImageView!
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
        
-       
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-            self.switchToHomeScreen()
+            self.gotoViewControllerWithoutParam(newController: MainViewController())
         }
     }
-    
-    func switchToHomeScreen(){
-        let controller = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .flipHorizontal
-        
-        self.present(controller, animated: true)
-    }
-    
-
 
 }

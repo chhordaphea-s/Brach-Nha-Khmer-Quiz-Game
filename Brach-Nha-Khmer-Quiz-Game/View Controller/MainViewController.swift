@@ -15,8 +15,8 @@ class MainViewController: UIViewController {
     @IBOutlet var score: [UILabel]!
     @IBOutlet weak var brachNha: UIImageView!
     
-    let settingView = SettingView()
-    let playButtonPressed = UITapGestureRecognizer()
+    private let settingView = SettingView()
+    private let playButtonPressed = UITapGestureRecognizer()
     
     
 
@@ -30,7 +30,7 @@ class MainViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.hero.isEnabled = true
+        self.navigationController?.hero.isEnabled = true
         brachNha.hero.modifiers = [.translate(y:100)]
         
         ButtonEffectAnimation.shared.triggerRightAnswer(button: playButton)
@@ -58,20 +58,25 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func storeButtonPressed(_ sender: UIButton) {
-        switchToStoreViewController()
+        self.gotoViewControllerWithoutParam(newController: StoreViewController())
     }
     
     @objc func playButtonActive() {
         print("Play available!")
         playButtonEffect()
-        switchToAnotherScreen()
-        
-        
+        self.gotoViewControllerWithoutParam(newController: GameChoosingViewController())
     }
-
+    @IBAction func swapBack(_ sender: UISwipeGestureRecognizer) {
+        switch sender.direction {
+        case .right:
+            self.dismiss(animated: true)
+        default:
+            return
+        }
+    }
+    
     
     // MARK: FUNCTION
-    
     func getScore() {
         let scoreUD = [totalScore, totalStar, answerHint, halfHint]
         
@@ -152,25 +157,6 @@ class MainViewController: UIViewController {
         playButton.layer.masksToBounds = true
     }
 
-    
-    
-    func switchToAnotherScreen(){
-        let controller = storyboard?.instantiateViewController(withIdentifier: "GameChoosingViewController") as! GameChoosingViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        self.present(controller, animated: true)
-        
-    }
-    
-    func switchToStoreViewController() {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "BuyHintViewController") as! StoreViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        controller.backDirection = self
-        self.present(controller, animated: true)
-    }
-  
-
 }
 
 extension MainViewController: SettingViewDelegate {
@@ -180,3 +166,5 @@ extension MainViewController: SettingViewDelegate {
         ViewAnimateHelper.shared.animateViewOut(self.view, popUpView: view)
     }
 }
+
+
