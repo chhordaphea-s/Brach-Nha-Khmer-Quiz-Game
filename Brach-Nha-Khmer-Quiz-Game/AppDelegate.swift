@@ -7,6 +7,10 @@
 
 import UIKit
 import GoogleMobileAds
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
+
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +21,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
                 
         GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
+        // Use Firebase library to configure APIs
+        FirebaseApp.configure()
 
         return true
     }

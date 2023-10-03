@@ -16,6 +16,7 @@
 		0E5AB3072AC3E24C00ABA86E /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */; };
 		0E5AB30B2AC4284400ABA86E /* RewardedInterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AB30A2AC4284400ABA86E /* RewardedInterstitialAd.swift */; };
 		0E5CE7C72ACAA07F003E7461 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CE7C62ACAA07F003E7461 /* UserData.swift */; };
+		0E5CE7CC2ACAC9BD003E7461 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E5CE7CB2ACAC9BD003E7461 /* GoogleService-Info.plist */; };
 		0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */; };
 		0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */; };
 		0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C92A2A9B356F00ACF84D /* Constant.swift */; };
@@ -98,6 +99,7 @@
 		0E5AB30A2AC4284400ABA86E /* RewardedInterstitialAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedInterstitialAd.swift; sourceTree = "<group>"; };
 		0E5CE7C62ACAA07F003E7461 /* UserData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
 		0E5CE7C82ACAAB16003E7461 /* Brach-Nha-Khmer-Quiz-Game.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Brach-Nha-Khmer-Quiz-Game.entitlements"; sourceTree = "<group>"; };
+		0E5CE7CB2ACAC9BD003E7461 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosePlayerModeCustomSagement.xib; sourceTree = "<group>"; };
 		0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerModeCustomSagement.swift; sourceTree = "<group>"; };
 		0E68C92A2A9B356F00ACF84D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -359,6 +361,7 @@
 				0E1BD09E2AB2C23700F7BBA5 /* Music */,
 				0E1BD09D2AB2C22C00F7BBA5 /* Font */,
 				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
+				0E5CE7CB2ACAC9BD003E7461 /* GoogleService-Info.plist */,
 				FC3D98992A8E2A87001A05CE /* Info.plist */,
 				FC9CE4232AC1550A0076F310 /* YellowStarAnimation.json */,
 				0E93ADEF2AAC2F3C0073E7ED /* GameData.json */,
@@ -572,6 +575,7 @@
 				0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */,
 				0E8170582AC2CA9200E2A270 /* LevelCustomCell.xib in Resources */,
 				0E8170602AC2D09400E2A270 /* winner.mp3 in Resources */,
+				0E5CE7CC2ACAC9BD003E7461 /* GoogleService-Info.plist in Resources */,
 				0E9881632AA5AA1100D326CC /* pressed.mp3 in Resources */,
 				0EDDEC2D2AA1C6F000E32087 /* failed.mp3 in Resources */,
 				0E9881672AA6E12C00D326CC /* background.mp3 in Resources */,

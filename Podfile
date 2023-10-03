@@ -10,6 +10,19 @@ target 'Brach-Nha-Khmer-Quiz-Game' do
   pod 'Hero'
   pod 'lottie-ios' 
 
+  
+  # Add the Firebase pod for Google Analytics
+  pod 'FirebaseAnalytics'
+
+  # For Analytics without IDFA collection capability, use this pod instead
+  # pod ‘Firebase/AnalyticsWithoutAdIdSupport’
+
+  # Add the pods for any other Firebase products you want to use in your app
+  # For example, to use Firebase Authentication and Cloud Firestore
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
+  
+  
   # Pods for Brach-Nha-Khmer-Quiz-Game
 
 end

@@ -18,7 +18,7 @@ class MainViewController: UIViewController {
     private let settingView = SettingView()
     private let playButtonPressed = UITapGestureRecognizer()
     
-    private let gameCenter = GameCentreHelper()
+    private let gameCenter = AuthenticateHelper()
     
 
     // MARK: - Body
@@ -28,7 +28,7 @@ class MainViewController: UIViewController {
         
         hideButton(views: scoreBackground)
         
-        gameCenter.authPlayer()
+
     }
     
     override func viewDidLoad() {
@@ -51,6 +51,8 @@ class MainViewController: UIViewController {
         DispatchQueue.main.async {
             self.animateScoreBoard(views: self.scoreBackground)
         }
+        
+        gameCenter.authPlayer()
         
     }
     
