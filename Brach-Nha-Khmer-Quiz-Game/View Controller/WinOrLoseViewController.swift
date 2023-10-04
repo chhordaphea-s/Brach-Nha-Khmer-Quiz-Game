@@ -19,11 +19,18 @@ class WinOrLoseViewController: UIViewController {
     @IBOutlet weak var highestScoreLabel: UILabel!
     @IBOutlet weak var replayButton: UIView!
     @IBOutlet weak var nextGameButton: UIView!
+    @IBOutlet weak var nextGameIcon: UIImageView!
+    @IBOutlet weak var menuButton: UIButton!
     @IBOutlet var stars: [StarView]!
     
     var gamePlay: GamePlay? = nil
     
     let databaseHelper = DatabaseHelper()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNextButton()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,8 +43,6 @@ class WinOrLoseViewController: UIViewController {
         setupSoundEffect()
         
         writeDataToDatabase()
-        
-
     }
     
     
@@ -52,19 +57,42 @@ class WinOrLoseViewController: UIViewController {
     }
     
     @IBAction func nextGameTapGesture(_ sender: Any) {
-        guard let gamePlayData = gamePlay else {return}
-        guard let nextLvl = gameData?.getLevelGameFromLevelNum(gameKey: gamePlayData.gameKey, 
-                                                               levelNum: gamePlayData.level.level + 1)else { return }
-
+        guard let gamePlay = gamePlay else {return}
         ButtonEffectAnimation.shared.popEffect(button: nextGameButton)
+
+        if gamePlay.question == 6 {
+            guard let nextLvl = gameData?.getLevelGameFromLevelNum(gameKey: gamePlay.gameKey,
+                                                                   levelNum: gamePlay.level.level + 1)else { return }
+
+            switchToReadingQuestionScreen(key: gamePlay.gameKey,
+                                          level: nextLvl,
+                                          highestScore: 0)
+        } else {
+            guard let gameData = gameData else { return }
+            guard let game = gameData.getGameByKey(key: gamePlay.gameKey) else { return }
+            
+            self.gotoLevelViewController(data: game)
+        }
+    }
+    
+    @IBAction func menuButtonPressed(_ sener: UIButton) {
+        guard let gameData = gameData else { return }
+        guard let gamePlay = gamePlay else {return}
+        guard let game = gameData.getGameByKey(key: gamePlay.gameKey) else { return }
         
-        
-        switchToReadingQuestionScreen(key: gamePlayData.gameKey,
-                                      level: nextLvl,
-                                      highestScore: 0)
+        self.gotoLevelViewController(data: game)
     }
     
     // MARK: - Function
+    
+    func configureNextButton() {
+        
+        if gamePlay?.question != 6 {
+            nextGameIcon.image = UIImage(named: "level")!
+            menuButton.isHidden = true
+            nextGameIcon.tintColor = .white
+        }
+    }
     
     func writeDataToDatabase() {
         guard let gamePlay = gamePlay else {return}
