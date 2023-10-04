@@ -49,6 +49,7 @@ class StoreViewController: UIViewController {
 
         rewardedInterstitialAd.adsLoads(controller: self)
         rewardedInterstitialAd.delegate = self
+        
     }
 
     
@@ -72,7 +73,7 @@ class StoreViewController: UIViewController {
     
     @IBAction func swapGesture(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
-        case .right:
+        case .right, .down:
             self.dismiss(animated: true)
         default:
             return

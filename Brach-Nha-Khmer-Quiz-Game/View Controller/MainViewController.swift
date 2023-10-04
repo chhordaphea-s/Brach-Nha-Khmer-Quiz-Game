@@ -62,10 +62,11 @@ class MainViewController: UIViewController {
         playButtonEffect()
         self.gotoViewControllerWithoutParam(newController: GameChoosingViewController())
     }
-    @IBAction func swapBack(_ sender: UISwipeGestureRecognizer) {
+    @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
-        case .right:
-            self.dismiss(animated: true)
+        case .up:
+            self.gotoViewControllerWithoutParam(newController: StoreViewController())
+
         default:
             return
         }
