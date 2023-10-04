@@ -26,7 +26,19 @@ struct GamePlay {
     var highestScore: Int
     
     
-    init(gameKey: String, readingTime: Double = 15, answerTime: Double = 40, multiplyer: Int = 5, startPlayTime: Date, level: Level, question: Int = 1, score: Int = 0, fail: Int = 0, timings: Int = 0, answerHint: HintButton, halfhalfHint: HintButton, star: Int, highestScore: Int) {
+    init(gameKey: String, 
+         readingTime: Double = 15,
+         answerTime: Double = 40,
+         multiplyer: Int = 5,
+         startPlayTime: Date, level: Level,
+         question: Int = 1,
+         score: Int = 0,
+         fail: Int = 0,
+         timings: Int = 0,
+         answerHint: HintButton,
+         halfhalfHint: HintButton,
+         star: Int = 0,
+         highestScore: Int) {
         self.gameKey = gameKey
         self.readingTime = readingTime
         self.answerTime = answerTime

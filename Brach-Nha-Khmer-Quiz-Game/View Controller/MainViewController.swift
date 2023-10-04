@@ -18,18 +18,14 @@ class MainViewController: UIViewController {
     private let settingView = SettingView()
     private let playButtonPressed = UITapGestureRecognizer()
     
-    
+    let databaseHelper = DatabaseHelper()
 
     // MARK: - Body
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        hideButton(views: scoreBackground)
-    }
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        hideButton(views: scoreBackground)
+
         self.navigationController?.hero.isEnabled = true
         brachNha.hero.modifiers = [.translate(y:100)]
         
@@ -66,10 +62,11 @@ class MainViewController: UIViewController {
         playButtonEffect()
         self.gotoViewControllerWithoutParam(newController: GameChoosingViewController())
     }
-    @IBAction func swapBack(_ sender: UISwipeGestureRecognizer) {
+    @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
-        case .right:
-            self.dismiss(animated: true)
+        case .up:
+            self.gotoViewControllerWithoutParam(newController: StoreViewController())
+
         default:
             return
         }
@@ -78,7 +75,14 @@ class MainViewController: UIViewController {
     
     // MARK: FUNCTION
     func getScore() {
-        let scoreUD = [totalScore, totalStar, answerHint, halfHint]
+        let userData = databaseHelper.fetchData()
+        guard let answerHint = userData.hint?.answerHint?.number else { return }
+        guard let halfHint = userData.hint?.halfHint?.number else { return }
+        
+        let scoreUD = [databaseHelper.getTotalScore(),
+                       databaseHelper.getTotalStar(),
+                       answerHint,
+                       halfHint]
         
         var index: Int = 0
         for l in score {

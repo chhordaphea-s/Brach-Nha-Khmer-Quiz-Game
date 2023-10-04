@@ -21,6 +21,8 @@ class HintPopupView: UIView {
     var hintType: HintType = .answer
     var number = 0
     
+    private let databaseHelper = DatabaseHelper()
+    
     // BODY
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -57,29 +59,22 @@ class HintPopupView: UIView {
         }
     }
 
-    func setup(data: HintView) {
+    func setup(data: Hint) {
         self.hintType = data.hinType
         self.number = data.number
         
+        let hint = databaseHelper.fetchData().hint
         
         if hintType == .answer {
-            let n = answerHint + number
-            print(n)
-            userdefault.set(n, forKey: Constant.userdefault.answerHint)
-
+            let n = (hint?.answerHint?.number ?? 0) + number
             hintImage.image = UIImage(named: "answerHnit")
         } else {
-            let n = halfHint + number
-            print(n)
-
-            userdefault.set(n, forKey: Constant.userdefault.halfHint)
-
+            let n = (hint?.halfHint?.number ?? 0) + number
             hintImage.image = UIImage(named: "halfHint")
         }
         
+        databaseHelper.updateHint(hintType: self.hintType, number: self.number)
         message.text = "អ្នកទទួលបានជំនួយ \(hintType.rawValue) ចំនួន \(number)"
 
     }
-
-    
 }

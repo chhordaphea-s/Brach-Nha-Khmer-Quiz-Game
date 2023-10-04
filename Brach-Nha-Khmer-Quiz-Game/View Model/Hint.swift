@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct HintView {
+struct Hint {
     let hinType: HintType
     let number: Int
     
@@ -19,6 +19,6 @@ struct HintView {
 }
 
 enum HintType: String  {
-    case answer = "ប្រាបចម្លើយ";
+    case answer = "ប្រាប់ចម្លើយ";
     case halfhalf = "៥០:៥០";
 }

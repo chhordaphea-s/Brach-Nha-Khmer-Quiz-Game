@@ -31,7 +31,7 @@ class AnswerViewController: UIViewController {
     private let timer = TimerHelper()
     private var watchedAd = false
     private var choosedCorrectAnswer = false
-    
+    private let databaseHelper = DatabaseHelper()
     
     private var incorrectAnswer = [AnswerButton]()
     private var correctAnswer = AnswerButton()
@@ -303,14 +303,14 @@ class AnswerViewController: UIViewController {
             gamePlay?.answerHint.enable = false
             gamePlay?.answerHint.num -= 1
             
-            userdefault.set(gamePlay?.answerHint.num, forKey: Constant.userdefault.answerHint)
         case .halfhalf:
             gamePlay?.halfhalfHint.enable = false
             gamePlay?.halfhalfHint.num -= 1
-            
-            userdefault.set(gamePlay?.halfhalfHint.num, forKey: Constant.userdefault.halfHint)
 
         }
+        
+        databaseHelper.updateHint(hintType: hintType, number: -1)
+
     }
     
     
@@ -348,7 +348,7 @@ class AnswerViewController: UIViewController {
         guard let gamePlayData = gamePlay else {return}
         
         gamePlay?.timings = Int(NSDate().timeIntervalSince(gamePlayData.startPlayTime))
-        self.gotoWinOrLoseViewController(data: gamePlayData)
+        self.gotoWinOrLoseViewController(data: gamePlay)
     }
 
 }
@@ -392,6 +392,7 @@ extension AnswerViewController: AnswerButtonDelegate {
                     self.switchToReadingQuestionScreen()
                 }
                 else {
+                    self.gamePlay?.question += 1
                     self.switchToWinOrLoseScreen()
                 }
             }

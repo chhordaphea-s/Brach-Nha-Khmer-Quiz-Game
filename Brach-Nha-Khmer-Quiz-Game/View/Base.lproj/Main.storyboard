@@ -81,6 +81,7 @@
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="landscape1 1" translatesAutoresizingMaskIntoConstraints="NO" id="Bgp-ZQ-HzN">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                                <gestureRecognizers/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Group 95" translatesAutoresizingMaskIntoConstraints="NO" id="XFp-eM-FNb">
                                 <rect key="frame" x="115" y="89" width="200" height="190"/>
@@ -286,6 +287,9 @@
                             <constraint firstItem="Bgp-ZQ-HzN" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="xgW-cL-lMi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HBs-ci-sA1" secondAttribute="trailing" id="zjQ-qA-RKb"/>
                         </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="1vA-sn-baT" appends="YES" id="qYD-gM-O5h"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="Ido-k4-8GV"/>
                     <connections>
@@ -305,6 +309,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="up" id="1vA-sn-baT">
+                    <connections>
+                        <action selector="swipe:" destination="BYZ-38-t0r" id="8rm-lP-7Yp"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="3398" y="-9"/>
         </scene>
@@ -1405,7 +1414,7 @@
                             <constraint firstItem="OMC-zF-kG7" firstAttribute="leading" secondItem="w6j-FM-Cbh" secondAttribute="leading" id="yu2-Ge-gBx"/>
                         </constraints>
                         <connections>
-                            <outletCollection property="gestureRecognizers" destination="bFO-z1-iUL" appends="YES" id="KLV-0R-1b7"/>
+                            <outletCollection property="gestureRecognizers" destination="CSK-RH-qYn" appends="YES" id="huV-AH-Cq7"/>
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="KPZ-Ik-Omo"/>
@@ -1434,9 +1443,9 @@
                         <action selector="generalKnowlage:" destination="IfP-oB-GcI" id="2Hl-lb-7tD"/>
                     </connections>
                 </tapGestureRecognizer>
-                <swipeGestureRecognizer direction="right" id="bFO-z1-iUL">
+                <swipeGestureRecognizer direction="right" id="CSK-RH-qYn">
                     <connections>
-                        <action selector="swipe:" destination="IfP-oB-GcI" id="DhD-NR-i9I"/>
+                        <action selector="swipe:" destination="IfP-oB-GcI" id="gY1-xA-lui"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
@@ -1533,6 +1542,7 @@
                         </constraints>
                         <connections>
                             <outletCollection property="gestureRecognizers" destination="5xA-aY-Fug" appends="YES" id="E5g-tq-yEa"/>
+                            <outletCollection property="gestureRecognizers" destination="bFO-z1-iUL" appends="YES" id="1Qc-QY-wWI"/>
                         </connections>
                     </view>
                     <connections>
@@ -1544,6 +1554,11 @@
                 <swipeGestureRecognizer direction="right" id="5xA-aY-Fug">
                     <connections>
                         <action selector="swapGesture:" destination="yyU-3z-0SV" id="iYv-jk-fDM"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="bFO-z1-iUL">
+                    <connections>
+                        <action selector="swapGesture:" destination="yyU-3z-0SV" id="1kj-XB-syb"/>
                     </connections>
                 </swipeGestureRecognizer>
             </objects>
