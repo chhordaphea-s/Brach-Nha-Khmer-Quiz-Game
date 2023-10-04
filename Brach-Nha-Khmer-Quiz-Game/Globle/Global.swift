@@ -35,13 +35,6 @@ var soundEffect: Bool { return userdefault.bool(forKey: Constant.userdefault.sou
 var vibrate: Bool { return userdefault.bool(forKey: Constant.userdefault.vibrate) }
 
 
-//var halfHint: Int { return userdefault.integer(forKey: Constant.userdefault.halfHint)  }
-//var answerHint: Int {  return userdefault.integer(forKey: Constant.userdefault.answerHint) }
-//var totalScore: Int { return userdefault.integer(forKey: Constant.userdefault.totalScore) }
-//var totalStar: Int { return userdefault.integer(forKey: Constant.userdefault.totalStar) }
-
-
-
 // MARK: FUNCTION
 func getPossiableAnswer(game: Game, level: Int, question: Int) -> [String] {
     let correctAns = game.levels[level-1].questions[question-1].answer
@@ -57,7 +50,7 @@ func getPossiableAnswer(game: Game, level: Int, question: Int) -> [String] {
     
     for _ in 0...2 {
         var tmpAnswer = allAnswer.randomElement()
-        while game.levels[level-1].questions[question-1].answer == tmpAnswer {
+        while game.levels[level-1].questions[question-1].answer == tmpAnswer || possiableAnswwer.contains(tmpAnswer ?? ""){
             tmpAnswer = allAnswer.randomElement()
         }
         possiableAnswwer.append(tmpAnswer ?? "")
@@ -72,7 +65,7 @@ func convertEngNumToKhNum(engNum: Int) -> String{
     var khNumStr = ""
 
     let khNum = ["០", "១", "២", "៣", "៤", "៥", "៦", "៧", "៨", "៩"]
-    var engString = String(engNum)
+    let engString = String(engNum)
     
     for each in engString {
         let i = Int(String(each)) ?? 0

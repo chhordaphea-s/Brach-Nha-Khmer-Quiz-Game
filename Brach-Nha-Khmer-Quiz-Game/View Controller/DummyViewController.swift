@@ -20,7 +20,7 @@ class DummyViewController: UIViewController {
         db.loadData()
         
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
             self.gotoViewControllerWithoutParam(newController: MainViewController())
         }
     }
