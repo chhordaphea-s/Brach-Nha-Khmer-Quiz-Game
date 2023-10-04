@@ -31,11 +31,6 @@ class StoreViewController: UIViewController {
     private var adsUsed = false
 
     // MARK: - Body
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -199,8 +194,9 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func increaseHint(hintProduct: HintProduct) {
         hintView.setup(data: hintProduct.getHintView())
-
-        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: hintView, width: 314, height: 276)
+        
+        
+        ViewAnimateHelper.shared.animateViewIn(getTopViewController().view, popUpView: hintView, width: 314, height: 276)
     }
 }
 

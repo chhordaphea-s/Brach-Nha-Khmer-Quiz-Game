@@ -21,11 +21,24 @@ class MainViewController: UIViewController {
     private let databaseHelper = DatabaseHelper()    
     // MARK: - Body
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
         hideButton(views: scoreBackground)
 
-        self.navigationController?.hero.isEnabled = true
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        DispatchQueue.main.async {
+            self.animateScoreBoard(views: self.scoreBackground)
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+
+        self.hero.isEnabled = true
         brachNha.hero.modifiers = [.translate(y:100)]
         
         ButtonEffectAnimation.shared.triggerRightAnswer(button: playButton)
@@ -40,9 +53,7 @@ class MainViewController: UIViewController {
         playButton.addGestureRecognizer(playButtonPressed)
         
         
-        DispatchQueue.main.async {
-            self.animateScoreBoard(views: self.scoreBackground)
-        }
+
         
     }
     
