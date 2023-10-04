@@ -51,7 +51,7 @@ class GameChoosingViewController: UIViewController {
     @IBAction func generalKnowlage(_ sender: UITapGestureRecognizer) {
         ButtonEffectAnimation.shared.popEffect(button: gameButtonView[2], sclaEffect: 0.9)
         print("Khmer General Knowlate")
-        if let data = gameData?.GeneralKnowlage {
+        if let data = gameData?.GeneralKnowledge {
             self.gotoLevelViewController(data: data)
         }
         

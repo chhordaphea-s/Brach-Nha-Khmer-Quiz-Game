@@ -35,10 +35,10 @@ var soundEffect: Bool { return userdefault.bool(forKey: Constant.userdefault.sou
 var vibrate: Bool { return userdefault.bool(forKey: Constant.userdefault.vibrate) }
 
 
-var halfHint: Int { return userdefault.integer(forKey: Constant.userdefault.halfHint)  }
-var answerHint: Int {  return userdefault.integer(forKey: Constant.userdefault.answerHint) }
-var totalScore: Int { return userdefault.integer(forKey: Constant.userdefault.totalScore) }
-var totalStar: Int { return userdefault.integer(forKey: Constant.userdefault.totalStar) }
+//var halfHint: Int { return userdefault.integer(forKey: Constant.userdefault.halfHint)  }
+//var answerHint: Int {  return userdefault.integer(forKey: Constant.userdefault.answerHint) }
+//var totalScore: Int { return userdefault.integer(forKey: Constant.userdefault.totalScore) }
+//var totalStar: Int { return userdefault.integer(forKey: Constant.userdefault.totalStar) }
 
 
 

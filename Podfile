@@ -9,7 +9,8 @@ target 'Brach-Nha-Khmer-Quiz-Game' do
   pod 'Google-Mobile-Ads-SDK'
   pod 'Hero'
   pod 'lottie-ios' 
-
+  pod 'RealmSwift', '~> 10.43'
+  
   # Pods for Brach-Nha-Khmer-Quiz-Game
 
 end

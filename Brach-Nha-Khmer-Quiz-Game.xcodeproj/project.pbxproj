@@ -15,6 +15,8 @@
 		0E401F1E2AC6B3F30058C191 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E401F1D2AC6B3F30058C191 /* NavigationController.swift */; };
 		0E5AB3072AC3E24C00ABA86E /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */; };
 		0E5AB30B2AC4284400ABA86E /* RewardedInterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AB30A2AC4284400ABA86E /* RewardedInterstitialAd.swift */; };
+		0E5CE7D02ACBF940003E7461 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CE7CF2ACBF940003E7461 /* UserData.swift */; };
+		0E5CE7D22ACBFC3E003E7461 /* DatabaseHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CE7D12ACBFC3E003E7461 /* DatabaseHelper.swift */; };
 		0E68C9272A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */; };
 		0E68C9292A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */; };
 		0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C92A2A9B356F00ACF84D /* Constant.swift */; };
@@ -35,7 +37,7 @@
 		0E8170482AC2CA3D00E2A270 /* HintCustomCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170412AC2CA3D00E2A270 /* HintCustomCellModel.swift */; };
 		0E8170492AC2CA3D00E2A270 /* HintButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170422AC2CA3D00E2A270 /* HintButton.swift */; };
 		0E81704A2AC2CA3D00E2A270 /* AnswerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170432AC2CA3D00E2A270 /* AnswerView.swift */; };
-		0E81704B2AC2CA3D00E2A270 /* HintView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170442AC2CA3D00E2A270 /* HintView.swift */; };
+		0E81704B2AC2CA3D00E2A270 /* Hint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170442AC2CA3D00E2A270 /* Hint.swift */; };
 		0E81704C2AC2CA3D00E2A270 /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E8170452AC2CA3D00E2A270 /* LevelViewModel.swift */; };
 		0E81704F2AC2CA7C00E2A270 /* HintCustomCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E81704D2AC2CA7C00E2A270 /* HintCustomCell.xib */; };
 		0E8170502AC2CA7C00E2A270 /* HintCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E81704E2AC2CA7C00E2A270 /* HintCustomCell.swift */; };
@@ -90,12 +92,13 @@
 		0E1BD08B2AB2208600F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E1BD08D2AB2208700F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
-		0E401F142AC68B700058C191 /* Brach-Nha-Khmer-Quiz-Game.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Brach-Nha-Khmer-Quiz-Game.entitlements"; sourceTree = "<group>"; };
 		0E401F172AC69D390058C191 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		0E401F192AC6A03A0058C191 /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
 		0E401F1D2AC6B3F30058C191 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 		0E5AB30A2AC4284400ABA86E /* RewardedInterstitialAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedInterstitialAd.swift; sourceTree = "<group>"; };
+		0E5CE7CF2ACBF940003E7461 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
+		0E5CE7D12ACBFC3E003E7461 /* DatabaseHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseHelper.swift; sourceTree = "<group>"; };
 		0E68C9262A9B30FF00ACF84D /* ChoosePlayerModeCustomSagement.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChoosePlayerModeCustomSagement.xib; sourceTree = "<group>"; };
 		0E68C9282A9B310900ACF84D /* ChoosePlayerModeCustomSagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChoosePlayerModeCustomSagement.swift; sourceTree = "<group>"; };
 		0E68C92A2A9B356F00ACF84D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
@@ -117,7 +120,7 @@
 		0E8170412AC2CA3D00E2A270 /* HintCustomCellModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintCustomCellModel.swift; sourceTree = "<group>"; };
 		0E8170422AC2CA3D00E2A270 /* HintButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintButton.swift; sourceTree = "<group>"; };
 		0E8170432AC2CA3D00E2A270 /* AnswerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerView.swift; sourceTree = "<group>"; };
-		0E8170442AC2CA3D00E2A270 /* HintView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintView.swift; sourceTree = "<group>"; };
+		0E8170442AC2CA3D00E2A270 /* Hint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Hint.swift; sourceTree = "<group>"; };
 		0E8170452AC2CA3D00E2A270 /* LevelViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		0E81704D2AC2CA7C00E2A270 /* HintCustomCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HintCustomCell.xib; sourceTree = "<group>"; };
 		0E81704E2AC2CA7C00E2A270 /* HintCustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HintCustomCell.swift; sourceTree = "<group>"; };
@@ -144,7 +147,6 @@
 		0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0EA44D452A97353600B5539A /* PlayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMode.swift; sourceTree = "<group>"; };
 		0ED12ADC2AC5530F006DE2B0 /* StoreKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitHelper.swift; sourceTree = "<group>"; };
-		0ED12ADE2AC55AA0006DE2B0 /* Brach-Nha-Khmer-Quiz-Game.entitlements */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.entitlements; name = "Brach-Nha-Khmer-Quiz-Game.entitlements"; path = "../../../.Trash/Brach-Nha-Khmer-Quiz-Game.entitlements"; sourceTree = "<group>"; };
 		0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimateHelper.swift; sourceTree = "<group>"; };
 		0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
 		0EDC0B332AA0A5EB00B91B2C /* SettingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
@@ -256,6 +258,7 @@
 				0E7CEFA22AB6B0BE00D500F8 /* Product.swift */,
 				0E7CEFA52AB7484600D500F8 /* HintProduct.swift */,
 				0E401F192AC6A03A0058C191 /* ViewControllerModel.swift */,
+				0E5CE7CF2ACBF940003E7461 /* UserData.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -270,6 +273,7 @@
 				0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */,
 				0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */,
 				0ED12ADC2AC5530F006DE2B0 /* StoreKitHelper.swift */,
+				0E5CE7D12ACBFC3E003E7461 /* DatabaseHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -446,7 +450,7 @@
 				0E8170432AC2CA3D00E2A270 /* AnswerView.swift */,
 				0E8170422AC2CA3D00E2A270 /* HintButton.swift */,
 				0E8170412AC2CA3D00E2A270 /* HintCustomCellModel.swift */,
-				0E8170442AC2CA3D00E2A270 /* HintView.swift */,
+				0E8170442AC2CA3D00E2A270 /* Hint.swift */,
 				0E8170452AC2CA3D00E2A270 /* LevelViewModel.swift */,
 				0E8170402AC2CA3D00E2A270 /* OnOffButton.swift */,
 			);
@@ -640,6 +644,7 @@
 				0E81703E2AC2CA2F00E2A270 /* StoreViewController.swift in Sources */,
 				0E8170532AC2CA8700E2A270 /* CustomOnOffButton.swift in Sources */,
 				0E401F1A2AC6A03A0058C191 /* ViewControllerModel.swift in Sources */,
+				0E5CE7D22ACBFC3E003E7461 /* DatabaseHelper.swift in Sources */,
 				0E8170492AC2CA3D00E2A270 /* HintButton.swift in Sources */,
 				0E98815D2AA46F8600D326CC /* Global.swift in Sources */,
 				0E8170392AC2CA2F00E2A270 /* AnswerViewController.swift in Sources */,
@@ -653,11 +658,12 @@
 				FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */,
 				0E6D72912AB81ABC005C3129 /* LostView.swift in Sources */,
 				0E81703D2AC2CA2F00E2A270 /* ReadingQuestionViewController.swift in Sources */,
-				0E81704B2AC2CA3D00E2A270 /* HintView.swift in Sources */,
+				0E81704B2AC2CA3D00E2A270 /* Hint.swift in Sources */,
 				0E5AB30B2AC4284400ABA86E /* RewardedInterstitialAd.swift in Sources */,
 				FC9CE4262AC2D2D70076F310 /* DummyViewController.swift in Sources */,
 				0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */,
 				FCDA06B32AA6F8D700A2A239 /* AnswerButton.swift in Sources */,
+				0E5CE7D02ACBF940003E7461 /* UserData.swift in Sources */,
 				FCDA06CD2AA8991C00A2A239 /* HintTellAnswerButton.swift in Sources */,
 				0E8170572AC2CA9200E2A270 /* LevelCustomCell.swift in Sources */,
 				0E8170472AC2CA3D00E2A270 /* OnOffButton.swift in Sources */,

@@ -12,11 +12,14 @@ class DummyViewController: UIViewController {
 
     @IBOutlet weak var brachNha: UIImageView!
     
+    let db = DatabaseHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-       
+        db.loadData()
+        
+        
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.gotoViewControllerWithoutParam(newController: MainViewController())
         }

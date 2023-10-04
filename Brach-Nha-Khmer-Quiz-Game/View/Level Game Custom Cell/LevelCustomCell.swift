@@ -37,11 +37,17 @@ class LevelCustomCell: UICollectionViewCell {
         levelLabel.text = convertEngNumToKhNum(engNum: data.levelNum)
         levelLabel.textColor = UIColor(cgColor: data.color1)
         
-        levelGradientColor(color1: data.color1, color2: data.color2)
-        
-        for i in 0..<data.star {
-            stars[i].tintColor = UIColor(named: "YellowStarColor")
+        if data.enable {
+            levelGradientColor(color1: data.color1, color2: data.color2)
+            
+            for i in 0..<data.star {
+                stars[i].tintColor = UIColor(named: "YellowStarColor")
+            }
+        } else {
+            levelBackgroundColor.backgroundColor = .systemGray2
         }
+        
+
     }
 
 }

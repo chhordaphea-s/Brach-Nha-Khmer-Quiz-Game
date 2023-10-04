@@ -49,7 +49,7 @@ extension UIViewController {
         presentToAnotherController(newController: controller)
     }
     
-    func gotoWinOrLoseViewController(data: GamePlay) {
+    func gotoWinOrLoseViewController(data: GamePlay?) {
         let controller = storyboard?.instantiateViewController(withIdentifier: "\(WinOrLoseViewController.self)") as! WinOrLoseViewController
         controller.gamePlay = data
         presentToAnotherController(newController: controller)

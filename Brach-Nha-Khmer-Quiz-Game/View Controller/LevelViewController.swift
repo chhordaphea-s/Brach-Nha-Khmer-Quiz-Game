@@ -16,7 +16,7 @@ class LevelViewController: UIViewController {
     
     private let answerHintView = HintPopupView()
     
-    
+    private let databaseHelper = DatabaseHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -47,15 +47,19 @@ class LevelViewController: UIViewController {
     
     // MARK: - Function
     func switchToReadingQuestionScreen(levelData: Level) {
+        guard let game = game else { return }
+        let userData = databaseHelper.fetchData()
+        guard let answerHint = userData.hint?.answerHint?.number else { return }
+        guard let halfHint = userData.hint?.halfHint?.number else { return }
 
         
-        let gamePlay = GamePlay(gameKey: game?.key ?? "",
-                                       startPlayTime: Date(),
-                                       level: levelData,
-                                       answerHint: HintButton(type: .answer, num: answerHint, enable: true),
-                                       halfhalfHint: HintButton(type: .halfhalf, num: halfHint, enable: true),
-                                       star: 0,
-                                       highestScore: 0)
+        
+        let gamePlay = GamePlay(gameKey: game.key,
+                                startPlayTime: Date(),
+                                level: levelData,
+                                answerHint: HintButton(type: .answer, num: answerHint, enable: true),
+                                halfhalfHint: HintButton(type: .halfhalf, num: halfHint, enable: true),
+                                highestScore: userData.game?.getGameByKey(key: game.key)?.getLevelGameFromLevelNum(levelNum: levelData.level)?.score ?? 0)
 
         self.gotoReadingQuestionViewController(data: gamePlay)
     }
@@ -92,8 +96,44 @@ class LevelViewController: UIViewController {
             answerHintView.centerYAnchor.constraint(equalTo: self.view.centerYAnchor)
         ])
     }
+    
+    func isLevelUnlocked(level: Level) -> Bool {
+        guard let game = game else { return false }
+        let userCompletedLevel = databaseHelper.getLevelCompleted(gameKey: game.key)
+        
+        var enable = false
+        userCompletedLevel?.forEach({ levelCompleted in
+            if level.level == levelCompleted.level {
+                enable = true
+            }
+        })
+        
+        if !enable {
+            if level.level == (userCompletedLevel?.last?.level ?? 0) + 1 {
+                enable = true
+            }
+        }
+        
+        return enable
+        
+    }
+    
+    func getStarOfLevel(level: Level) -> Int{
+        guard let game = game else { return 0 }
+        let userCompletedLevel = databaseHelper.getLevelCompleted(gameKey: game.key)
+        
+        var star = 0
+        userCompletedLevel?.forEach({ levelCompleted in
+            if level.level == levelCompleted.level {
+                star = levelCompleted.star
+            }
+        })
+        return star
+    }
 
 }
+
+    // MARK: - Delegate
 
 extension LevelViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -105,10 +145,14 @@ extension LevelViewController: UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LevelCustomCell", for: indexPath) as! LevelCustomCell
         
+        guard let level = game?.levels[indexPath.row] else { return cell }
+        
         let tmpData = LevelViewModel(color1: setupColorLevelForEachGame()[0],
-                                  color2: setupColorLevelForEachGame()[1],
-                                  levelNum: game?.levels[indexPath.row].level ?? 0,
-                                  star: 0)
+                                     color2: setupColorLevelForEachGame()[1],
+                                     levelNum: level.level,
+                                     star: getStarOfLevel(level: level),
+                                     enable: isLevelUnlocked(level: level)
+        )
         
         cell.cellConfiguration(data: tmpData)
         
@@ -118,8 +162,9 @@ extension LevelViewController: UICollectionViewDataSource, UICollectionViewDeleg
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         guard let levelData = game?.levels[indexPath.row] else { return }
-        switchToReadingQuestionScreen(levelData: levelData)
-    
+        if isLevelUnlocked(level: levelData) {
+            switchToReadingQuestionScreen(levelData: levelData)
+        }
     }
     
 }
