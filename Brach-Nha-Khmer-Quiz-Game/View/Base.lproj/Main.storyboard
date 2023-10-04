@@ -101,6 +101,7 @@
                                     <constraint firstAttribute="width" constant="42" id="pej-6a-zlN"/>
                                     <constraint firstAttribute="height" constant="42" id="qeq-QP-EaO"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="GearSix"/>
                                 <userDefinedRuntimeAttributes>
@@ -233,7 +234,7 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចូលលេង" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EgD-JP-w3H">
                                         <rect key="frame" x="94.333333333333343" y="9.666666666666627" width="91.333333333333343" height="30.333333333333329"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="26"/>
-                                        <color key="textColor" name="Text Color"/>
+                                        <color key="textColor" name="Primary"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="playIcon" translatesAutoresizingMaskIntoConstraints="NO" id="eMH-7a-M2C">
@@ -256,6 +257,9 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="soundEffectName" value="Pressed"/>
                                     <userDefinedRuntimeAttribute type="string" keyPath="soundFileName" value="pressed"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
                         </subviews>
@@ -452,8 +456,9 @@
                                     <constraint firstAttribute="width" constant="32" id="2lN-SJ-5NT"/>
                                     <constraint firstAttribute="height" constant="32" id="faw-74-yOe"/>
                                 </constraints>
+                                <color key="tintColor" name="Text Color"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Pause"/>
+                                <buttonConfiguration key="configuration" style="plain" image="GearSix"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="soundFileName" value="pressed"/>
                                 </userDefinedRuntimeAttributes>
@@ -940,6 +945,19 @@
                                     <constraint firstItem="UEg-mV-1Jq" firstAttribute="top" secondItem="nJo-4p-fVS" secondAttribute="top" constant="-20" id="srC-8Q-Elt"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e5X-XP-poA">
+                                <rect key="frame" x="16" y="75" width="32" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="32" id="8bm-mc-4Q1"/>
+                                    <constraint firstAttribute="height" constant="32" id="bfA-WM-6Yk"/>
+                                </constraints>
+                                <color key="tintColor" name="Text Color"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" image="level"/>
+                                <connections>
+                                    <action selector="menuButtonPressed:" destination="VXF-5F-ckp" eventType="touchUpInside" id="6sI-Sf-NCB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="DCJ-gf-MtP"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -950,6 +968,7 @@
                             <constraint firstItem="DCJ-gf-MtP" firstAttribute="bottom" secondItem="chA-bJ-WpW" secondAttribute="bottom" constant="40" id="F5l-SO-f0X"/>
                             <constraint firstItem="lcz-O7-1el" firstAttribute="top" secondItem="cX1-3e-reT" secondAttribute="bottom" constant="6" id="HWZ-9K-a74"/>
                             <constraint firstAttribute="trailing" secondItem="FW3-El-uGX" secondAttribute="trailing" id="Msc-5j-zaS"/>
+                            <constraint firstItem="e5X-XP-poA" firstAttribute="leading" secondItem="DCJ-gf-MtP" secondAttribute="leading" constant="16" id="NVP-Fh-v3R"/>
                             <constraint firstItem="FW3-El-uGX" firstAttribute="top" secondItem="jYp-ay-oe3" secondAttribute="top" id="REp-Xq-unF"/>
                             <constraint firstItem="FW3-El-uGX" firstAttribute="leading" secondItem="DCJ-gf-MtP" secondAttribute="leading" id="Sjm-ir-VkX"/>
                             <constraint firstItem="lcz-O7-1el" firstAttribute="centerX" secondItem="jYp-ay-oe3" secondAttribute="centerX" id="eI5-Br-csC"/>
@@ -960,6 +979,7 @@
                             <constraint firstItem="GZM-yd-6Je" firstAttribute="centerX" secondItem="jYp-ay-oe3" secondAttribute="centerX" id="pFa-dQ-dfV"/>
                             <constraint firstItem="cvS-t4-FBq" firstAttribute="leading" secondItem="DCJ-gf-MtP" secondAttribute="leading" constant="16" id="pX9-gQ-hbt"/>
                             <constraint firstItem="cX1-3e-reT" firstAttribute="centerX" secondItem="jYp-ay-oe3" secondAttribute="centerX" id="qwa-Yq-uiq"/>
+                            <constraint firstItem="e5X-XP-poA" firstAttribute="top" secondItem="DCJ-gf-MtP" secondAttribute="top" constant="16" id="sRy-CW-X9b"/>
                             <constraint firstItem="DCJ-gf-MtP" firstAttribute="trailing" secondItem="t5Q-xf-Afe" secondAttribute="trailing" constant="16" id="tAn-wP-Ekj"/>
                             <constraint firstItem="cvS-t4-FBq" firstAttribute="top" secondItem="0LQ-bs-4nM" secondAttribute="bottom" constant="80" id="wnr-Ez-cAS"/>
                             <constraint firstItem="Nbd-wO-txT" firstAttribute="centerX" secondItem="jYp-ay-oe3" secondAttribute="centerX" id="y9J-XT-2Ao"/>
@@ -968,8 +988,10 @@
                     </view>
                     <connections>
                         <outlet property="highestScoreLabel" destination="yXf-o0-v8v" id="XlK-aF-1cK"/>
+                        <outlet property="menuButton" destination="e5X-XP-poA" id="693-rL-Yxf"/>
                         <outlet property="messageLabel" destination="cX1-3e-reT" id="1b5-Zg-IpH"/>
                         <outlet property="nextGameButton" destination="chA-bJ-WpW" id="5G3-e0-Bae"/>
+                        <outlet property="nextGameIcon" destination="f2C-Hg-218" id="0Aw-Nk-fZw"/>
                         <outlet property="replayButton" destination="cvS-t4-FBq" id="roX-Xd-WFO"/>
                         <outlet property="subMessageLabel" destination="lcz-O7-1el" id="1aI-oI-1wY"/>
                         <outlet property="totalScoreLabel" destination="1wJ-eI-MHf" id="Ty1-b6-zS6"/>
@@ -1038,8 +1060,9 @@
                                     <constraint firstAttribute="width" constant="32" id="5fJ-B3-5a9"/>
                                     <constraint firstAttribute="height" constant="32" id="lIw-TR-aaq"/>
                                 </constraints>
+                                <color key="tintColor" name="Text Color"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="Pause"/>
+                                <buttonConfiguration key="configuration" style="plain" image="GearSix"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="soundFileName" value="pressed"/>
                                 </userDefinedRuntimeAttributes>
@@ -1083,7 +1106,7 @@
                                 <rect key="frame" x="72" y="830" width="286" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចុចទីនេះដើម្បីឆ្លើយសំណួរ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNJ-xh-hof">
-                                        <rect key="frame" x="83.333333333333343" y="3.3333333333333721" width="119.33333333333334" height="23.666666666666668"/>
+                                        <rect key="frame" x="83.333333333333343" y="3.3333333333333712" width="119.33333333333334" height="23.666666666666668"/>
                                         <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1386,6 +1409,7 @@
                                     <constraint firstAttribute="width" constant="42" id="Ppo-4t-M6p"/>
                                     <constraint firstAttribute="height" constant="42" id="gWj-6G-axx"/>
                                 </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="GearSix"/>
                                 <userDefinedRuntimeAttributes>
@@ -1586,7 +1610,6 @@
         <image name="Lborng" width="80" height="62"/>
         <image name="Monkey" width="105" height="77"/>
         <image name="Nextgame" width="32" height="32"/>
-        <image name="Pause" width="32" height="32"/>
         <image name="Replay" width="22" height="22"/>
         <image name="arrowshape.backward.fill" catalog="system" width="128" height="104"/>
         <image name="boygirl" width="156" height="145"/>
@@ -1594,6 +1617,7 @@
         <image name="hint" width="35" height="34"/>
         <image name="hint50" width="36" height="25"/>
         <image name="landscape1 1" width="430" height="932"/>
+        <image name="level" width="32" height="32"/>
         <image name="playIcon" width="67.666664123535156" height="67.666664123535156"/>
         <image name="score" width="32" height="33"/>
         <image name="stars" width="43" height="28"/>

@@ -79,6 +79,8 @@ class AnswerViewController: UIViewController {
     // set animation to hint
     
     @objc func ActivateHintAnswerButton() {
+        if choosedCorrectAnswer { return }
+
         print("Hint Answer Used!")
         curveAnimation(view: hintAnswerButton, animationOptions: .curveEaseOut, defaultXMovement: -240, isReset: false, completion: nil)
         hintHandler(hintType: .answer)
@@ -91,6 +93,8 @@ class AnswerViewController: UIViewController {
     }
     
     @objc func ActivateHintHalfHalfButton() {
+        if choosedCorrectAnswer { return }
+
         print("Hint HalfHalf Used!")
         curveAnimation(view: hintHaftHaftButton, animationOptions: .curveEaseOut, defaultXMovement: 240, isReset: false, completion: nil)
         hintHandler(hintType: .halfhalf)
@@ -182,7 +186,7 @@ class AnswerViewController: UIViewController {
         }
     }
     
-    func getQuestion(level: Level, numOfQuestion: Int) -> String{
+    func getQuestion(level: Level, numOfQuestion: Int) -> String {
         return level.questions[numOfQuestion-1].question
     }
     
@@ -202,27 +206,7 @@ class AnswerViewController: UIViewController {
         timer.startCountDown()
 
     }
-    
-//    func setProgressTime() {
-//        if gamePlay?.fail ?? 0 >= 3 { return }
-//        
-//        timeCountDown.setAnimatedProgress(duration: Float(gamePlay?.answerTime ?? 0)) {
-//            print("DDDDDDDDDDD")
-//            if self.gamePlay?.fail ?? 0 < 2 {
-//                self.gamePlay?.fail += 1
-//                
-//                buttonSoudEffect = AudioHelper(audioName: "failed")
-//                
-//                self.reloadViewController()
-//            } else {
-//                self.gamePlay?.fail += 1
-//                DispatchQueue.main.asyncAfter(deadline: .now() + 2 ) {
-//                    self.lostView.animateViewIn(baseView: self.view, popUpView: self.lostView)
-//                }
-//            }
-//        }
-//    }
-//    
+
     func setupAnswerIntoButton(){
         guard let gamePlayData = gamePlay else { return }
         guard let possibleAnswer = gamePlayData.level.questions[gamePlayData.question-1].possibleAnswer else { return }
@@ -313,15 +297,7 @@ class AnswerViewController: UIViewController {
 
     }
     
-    
-    func switchToAnotherScreen(game: Game){
-        let controller = storyboard?.instantiateViewController(withIdentifier: "LevelViewController") as! LevelViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        controller.game = game
-        self.present(controller, animated: true)
-    }
-    
+
   
     func switchToReadingQuestionScreen() {
         gamePlay?.question += 1
@@ -358,6 +334,8 @@ extension AnswerViewController: AnswerButtonDelegate {
     func didSelect(index: Int, status: Bool) {
 //        guard let gamePlayData = gamePlay else {return}
         
+        if choosedCorrectAnswer { return }
+        
         print(index)
         if gamePlay?.fail ?? 0 >= 3 {
             return
@@ -381,6 +359,7 @@ extension AnswerViewController: AnswerButtonDelegate {
             buttonSoudEffect = AudioHelper(audioName: "failed", loop: false)
             
         } else {
+            choosedCorrectAnswer = true
             performButtonVibrate(vibrateType: .success)
             timer.pause()
             scoreCounting()
@@ -421,7 +400,7 @@ extension AnswerViewController: SettingViewDelegate {
         guard let gamePlayData = gamePlay else { return }
         guard let game = gameData?.getGameByKey(key: gamePlayData.gameKey) else { return }
         
-        switchToAnotherScreen(game: game)
+        self.gotoLevelViewController(data: game)
     }
     
     func dismissButton(_ view: UIView) {

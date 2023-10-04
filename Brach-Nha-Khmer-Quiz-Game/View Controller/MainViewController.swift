@@ -18,8 +18,7 @@ class MainViewController: UIViewController {
     private let settingView = SettingView()
     private let playButtonPressed = UITapGestureRecognizer()
     
-    let databaseHelper = DatabaseHelper()
-
+    private let databaseHelper = DatabaseHelper()    
     // MARK: - Body
 
     override func viewDidLoad() {
@@ -155,7 +154,6 @@ class MainViewController: UIViewController {
     }
     
     func customizePlayButton (){
-        playButton.layer.cornerRadius = 27
         playButton.layer.borderColor = UIColor(rgb: 0x84B604).cgColor
         playButton.layer.borderWidth = 2
         playButton.layer.masksToBounds = true
