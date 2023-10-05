@@ -10,6 +10,7 @@
 		0E1BD08E2AB2208700F7BBA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08A2AB2208600F7BBA5 /* Main.storyboard */; };
 		0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08C2AB2208700F7BBA5 /* LaunchScreen.storyboard */; };
 		0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */; };
+		0E24D9EF2ACE7DA0006DF438 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E24D9EE2ACE7DA0006DF438 /* GoogleService-Info.plist */; };
 		0E401F182AC69D390058C191 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E401F172AC69D390058C191 /* UIViewControllerExtension.swift */; };
 		0E401F1A2AC6A03A0058C191 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E401F192AC6A03A0058C191 /* ViewControllerModel.swift */; };
 		0E401F1E2AC6B3F30058C191 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E401F1D2AC6B3F30058C191 /* NavigationController.swift */; };
@@ -92,6 +93,7 @@
 		0E1BD08B2AB2208600F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E1BD08D2AB2208700F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
+		0E24D9EE2ACE7DA0006DF438 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		0E401F172AC69D390058C191 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		0E401F192AC6A03A0058C191 /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
 		0E401F1D2AC6B3F30058C191 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
@@ -362,6 +364,7 @@
 				0E1BD09D2AB2C22C00F7BBA5 /* Font */,
 				FC3D98942A8E2A87001A05CE /* Assets.xcassets */,
 				FC3D98992A8E2A87001A05CE /* Info.plist */,
+				0E24D9EE2ACE7DA0006DF438 /* GoogleService-Info.plist */,
 				FC9CE4232AC1550A0076F310 /* YellowStarAnimation.json */,
 				0E93ADEF2AAC2F3C0073E7ED /* GameData.json */,
 				0E7CEFA42AB6B2B800D500F8 /* Configuration.storekit */,
@@ -578,6 +581,7 @@
 				0E9881672AA6E12C00D326CC /* background.mp3 in Resources */,
 				0E8170542AC2CA8700E2A270 /* CustomOnOffButton.xib in Resources */,
 				FCDA06B62AA6F91C00A2A239 /* AnswerButton.xib in Resources */,
+				0E24D9EF2ACE7DA0006DF438 /* GoogleService-Info.plist in Resources */,
 				FC9CE4242AC1550A0076F310 /* YellowStarAnimation.json in Resources */,
 				FCDA06CF2AA8992A00A2A239 /* HintTellAnswerButton.xib in Resources */,
 			);

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>765546536706-b66t5blhbhci4joskt84afkqkmotmial.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.765546536706-b66t5blhbhci4joskt84afkqkmotmial</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBxED29-4SXnDBJJ3QtNi8N6NmcIlnSZ6E</string>
+	<key>GCM_SENDER_ID</key>
+	<string>765546536706</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.einoyakoreal.Brach-Nha-Khmer-Quiz-Game</string>
+	<key>PROJECT_ID</key>
+	<string>brachnha-5595b</string>
+	<key>STORAGE_BUCKET</key>
+	<string>brachnha-5595b.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:765546536706:ios:8b7711877e7c635c13ec1b</string>
+</dict>
+</plist>

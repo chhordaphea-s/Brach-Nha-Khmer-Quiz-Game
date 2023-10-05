@@ -7,6 +7,9 @@
 
 import UIKit
 import GoogleMobileAds
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -17,6 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
                 
         DatabaseHelper().getPath()
+        FirebaseApp.configure()
+
         GADMobileAds.sharedInstance().start(completionHandler: nil)
 
         return true

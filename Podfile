@@ -11,6 +11,11 @@ target 'Brach-Nha-Khmer-Quiz-Game' do
   pod 'lottie-ios' 
   pod 'RealmSwift', '~> 10.43'
   
+  pod 'FirebaseAnalytics'
+  pod 'FirebaseAuth'
+  pod 'FirebaseFirestore'
+  
+  
   # Pods for Brach-Nha-Khmer-Quiz-Game
 
 end
