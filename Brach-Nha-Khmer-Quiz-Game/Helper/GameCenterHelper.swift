@@ -22,49 +22,84 @@ class AuthenticateHelper : NSObject, GKGameCenterControllerDelegate {
     
     /// auth the player
     func authPlayer (){
+        //        let localPlayer = GKLocalPlayer.local
+        //        let topViewController = UIApplication.getTopViewController()
+        //        localPlayer.authenticateHandler = { (view, error) in
+        //            if view != nil{
+        //                topViewController!.present(view!, animated: true)
+        //            }
+        //            else {
+        //                print(GKLocalPlayer.local.isAuthenticated)
+        //                self.authenticateWithFirebase()
+        //            }
+        //        }
+        
+        
         let localPlayer = GKLocalPlayer.local
-        let topViewController = UIApplication.getTopViewController()
-        localPlayer.authenticateHandler = {
-            (view, error) in
-            if view != nil{
-                topViewController!.present(view!, animated: true)
-            }
-            else {
+        localPlayer.authenticateHandler = { (vc, error) in
+            if let view = vc {
+                UIApplication.getTopViewController()?.present(view, animated: true)
+                
+            } else if localPlayer.isAuthenticated {
+                
                 print(GKLocalPlayer.local.isAuthenticated)
                 self.authenticateWithFirebase()
+                
+            } else {
+                print("Error: ", error?.localizedDescription ?? "Error")
+                self.setupErrorAlert(error: error!)
             }
         }
-
+        
+        
+        
     }
     
     func authenticateWithFirebase() {
+        
+        // Get Firebase credentials from the player's Game Center credentials
         GameCenterAuthProvider.getCredential() { (credential, error) in
             if let error = error {
-                print("Error: ", error.localizedDescription)
+                self.setupErrorAlert(error: error)
+                
                 return
             }
             // The credential can be used to sign in, or re-auth, or link or unlink.
-            if let credential = credential {
-                Auth.auth().signIn(with:credential) { (user, error) in
-                    if let error = error {
-                        return
-                    }
-                    
-                    let user = Auth.auth().currentUser
-                    if let user = user {
-                      let playerName = user.displayName
-
-                      // The user's ID, unique to the Firebase project.
-                      // Do NOT use this value to authenticate with your backend server,
-                      // if you have one. Use getToken(with:) instead.
-                      let uid = user.uid
-                    }
+            Auth.auth().signIn(with:credential!) { (user, error) in
+                if let error = error {
+                    return
+                }
+                if let user = user {
+                    self.setupAlert(id: user.user.uid, name: user.user.displayName ?? "")
                 }
             }
         }
     }
     
+    
+    
+    func setupAlert(id: String, name: String) {
+        let alert = UIAlertController(title: "Sign in", message: "Hello: \(name) \n You are sign in successfully, and you ID: \(id)", preferredStyle: .alert)
+        let alertButton = UIAlertAction(title: "Okay", style: .cancel) { sender in
+            
+        }
+        
+        alert.addAction(alertButton)
+        UIApplication.getTopViewController()?.present(alert, animated: true)
+    }
+    
+    func setupErrorAlert(error: Error) {
+        let alert = UIAlertController(title: "Error", message: "Error: \(error.localizedDescription).", preferredStyle: .alert)
+        let alertButton = UIAlertAction(title: "Okay", style: .cancel) { sender in
+            
+        }
+        
+        alert.addAction(alertButton)
+        UIApplication.getTopViewController()?.present(alert, animated: true)
+    }
+    
 }
+
 
 // MARK: UIApplication extensions
 
