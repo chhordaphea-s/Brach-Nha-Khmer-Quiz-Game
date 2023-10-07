@@ -196,7 +196,7 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDataSou
         hintView.setup(data: hintProduct.getHintView())
         
         
-        ViewAnimateHelper.shared.animateViewIn(getTopViewController().view, popUpView: hintView, width: 314, height: 276)
+        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: hintView, width: 314, height: 276)
     }
 }
 

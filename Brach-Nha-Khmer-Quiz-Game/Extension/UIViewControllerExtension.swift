@@ -23,6 +23,8 @@ extension UIViewController {
             
         case is StoreViewController:
             controller = storyboard?.instantiateViewController(withIdentifier: "\(StoreViewController.self)") as! StoreViewController
+        case is LoginViewController:
+            controller = storyboard?.instantiateViewController(withIdentifier: "\(LoginViewController.self)") as! LoginViewController
             
         default:
             return
@@ -65,18 +67,18 @@ extension UIViewController {
     }
     
     
-    func getTopViewController() -> UIViewController {
-        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
-
-        if var topController = keyWindow?.rootViewController {
-            while let presentedViewController = topController.presentedViewController {
-                topController = presentedViewController
-                return topController
-            }
-
-        }
-        return self
-    }
+//    func getTopViewController() -> UIViewController {
+//        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
+//
+//        if var topController = keyWindow?.rootViewController {
+//            while let presentedViewController = topController.presentedViewController {
+//                topController = presentedViewController
+//                return topController
+//            }
+//
+//        }
+//        return self
+//    }
 }
 
 

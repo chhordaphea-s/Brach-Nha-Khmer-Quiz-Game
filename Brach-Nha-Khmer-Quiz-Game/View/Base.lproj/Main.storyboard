@@ -69,7 +69,48 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sga-jU-11z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2527" y="-9"/>
+            <point key="canvasLocation" x="1113" y="-9"/>
+        </scene>
+        <!--Login View Controller-->
+        <scene sceneID="Tj5-Ab-7eq">
+            <objects>
+                <viewController storyboardIdentifier="LoginViewController" id="ULa-IP-Sr3" customClass="LoginViewController" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5nY-az-5fA">
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBz-Le-vnd" customClass="GIDSignInButton" customModule="GIDSignInButton">
+                                <rect key="frame" x="140" y="443.66666666666669" width="150" height="45"/>
+                                <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="4vj-Na-8YG"/>
+                                    <constraint firstAttribute="width" constant="150" id="BVz-kB-X1d"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lby-2f-sgF" appends="YES" id="fMT-PI-MvS"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NlF-3m-TfS"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="UBz-Le-vnd" firstAttribute="centerY" secondItem="5nY-az-5fA" secondAttribute="centerY" id="Y01-Jv-h3A"/>
+                            <constraint firstItem="UBz-Le-vnd" firstAttribute="centerX" secondItem="5nY-az-5fA" secondAttribute="centerX" id="vBz-Er-eX5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="signInButton" destination="UBz-Le-vnd" id="byV-uV-FNZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPE-VE-9hx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="lby-2f-sgF">
+                    <connections>
+                        <action selector="signInButtonPressGesture:" destination="ULa-IP-Sr3" id="5Vk-rf-LOK"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="1866" y="-9"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1106,7 +1147,7 @@
                                 <rect key="frame" x="72" y="830" width="286" height="30"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចុចទីនេះដើម្បីឆ្លើយសំណួរ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BNJ-xh-hof">
-                                        <rect key="frame" x="83.333333333333343" y="3.3333333333333712" width="119.33333333333334" height="23.666666666666668"/>
+                                        <rect key="frame" x="83.333333333333343" y="3.3333333333333721" width="119.33333333333334" height="23.666666666666668"/>
                                         <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="13"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
@@ -1657,6 +1698,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

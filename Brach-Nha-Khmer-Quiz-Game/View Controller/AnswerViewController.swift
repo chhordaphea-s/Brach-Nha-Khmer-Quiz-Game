@@ -396,6 +396,10 @@ extension AnswerViewController: AnswerButtonDelegate {
 // MARK: - Delegate
 
 extension AnswerViewController: SettingViewDelegate {
+    func logout() {
+        self.gotoViewControllerWithoutParam(newController: LoginViewController())
+    }
+    
     func quitGame() {
         guard let gamePlayData = gamePlay else { return }
         guard let game = gameData?.getGameByKey(key: gamePlayData.gameKey) else { return }

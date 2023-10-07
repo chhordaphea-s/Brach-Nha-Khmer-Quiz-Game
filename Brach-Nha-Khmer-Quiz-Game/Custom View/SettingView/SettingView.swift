@@ -10,6 +10,7 @@ import UIKit
 protocol SettingViewDelegate: NSObjectProtocol {
     func dismissButton(_ view: UIView)
     func quitGame()
+    func logout()
 }
 
 enum SettingViewType {
@@ -20,6 +21,7 @@ class SettingView: UIView {
 
     @IBOutlet var onOffButtons: [CustomOnOffButton]!
     @IBOutlet weak var quitGameButton: UIView!
+    @IBOutlet weak var quitgameLabel: UILabel!
     
     weak var delegate: SettingViewDelegate?
     
@@ -45,7 +47,12 @@ class SettingView: UIView {
     @IBAction func quitGameButtonPressed(_ sender: UITapGestureRecognizer) {
         ButtonEffectAnimation.shared.popEffect(button: quitGameButton)
         print("Quit Game ")
-        delegate?.quitGame()
+        
+        if settingButtonState == .playing {
+            delegate?.quitGame()
+        } else {
+            delegate?.logout()
+        }
     }
     
     // MARK: FUNCTION
@@ -66,7 +73,7 @@ class SettingView: UIView {
 
         setupButton()
         
-        quitGameButton.isHidden = settingButtonState == .normal ? true : false
+        quitgameLabel.text = settingButtonState == .normal ? "ចាកចេញ" : "បោះបង់ការលេង"
     }
     
     func setupButton() {

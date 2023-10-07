@@ -7,22 +7,46 @@
 
 import UIKit
 import Hero
+import FirebaseAuth
 
 class DummyViewController: UIViewController {
+
 
     @IBOutlet weak var brachNha: UIImageView!
     
     let db = DatabaseHelper()
+    let auth = GoogleAuthenticationHelper()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+                
+        auth.reAuthenticate()
+        auth.delegate = self
+
+    }
+    
+
+}
+
+extension DummyViewController: GoogleAuthenticationHelperDelegate {
+    func signInSuccess(user: User) { }
         
-        db.loadData()
+    func reAuthenticate(user: User?, error: Error?) {
         
-        
-        DispatchQueue.main.asyncAfter(deadline: .now()) {
-            self.gotoViewControllerWithoutParam(newController: MainViewController())
+        if user != nil {
+            db.loadData()
+            FirestoreHelper.shared.startSync()
+
+            guard let user = user else { return }
+            
+            FirestoreHelper.shared.fetchData(userID: user.uid) {error in 
+                self.gotoViewControllerWithoutParam(newController: MainViewController())
+            }
+
+        } else {
+            self.gotoViewControllerWithoutParam(newController: LoginViewController())
         }
     }
-
+    
+    
 }

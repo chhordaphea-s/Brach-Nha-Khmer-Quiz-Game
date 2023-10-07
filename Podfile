@@ -14,6 +14,7 @@ target 'Brach-Nha-Khmer-Quiz-Game' do
   pod 'FirebaseAnalytics'
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
+  pod 'GoogleSignIn'
   
   
   # Pods for Brach-Nha-Khmer-Quiz-Game

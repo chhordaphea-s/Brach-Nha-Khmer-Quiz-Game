@@ -11,9 +11,11 @@
 		0E1BD08F2AB2208700F7BBA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0E1BD08C2AB2208700F7BBA5 /* LaunchScreen.storyboard */; };
 		0E1BD0AF2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */; };
 		0E24D9EF2ACE7DA0006DF438 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 0E24D9EE2ACE7DA0006DF438 /* GoogleService-Info.plist */; };
+		0E24D9F12ACE8CAA006DF438 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E24D9F02ACE8CAA006DF438 /* LoginViewController.swift */; };
+		0E24D9F32ACE8E37006DF438 /* GoogleAuthenticationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E24D9F22ACE8E37006DF438 /* GoogleAuthenticationHelper.swift */; };
+		0E2DFA6D2ACED14700D92C0B /* FirestoreHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E2DFA6C2ACED14700D92C0B /* FirestoreHelper.swift */; };
 		0E401F182AC69D390058C191 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E401F172AC69D390058C191 /* UIViewControllerExtension.swift */; };
 		0E401F1A2AC6A03A0058C191 /* ViewControllerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E401F192AC6A03A0058C191 /* ViewControllerModel.swift */; };
-		0E401F1E2AC6B3F30058C191 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E401F1D2AC6B3F30058C191 /* NavigationController.swift */; };
 		0E5AB3072AC3E24C00ABA86E /* TimerHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */; };
 		0E5AB30B2AC4284400ABA86E /* RewardedInterstitialAd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5AB30A2AC4284400ABA86E /* RewardedInterstitialAd.swift */; };
 		0E5CE7D02ACBF940003E7461 /* UserData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E5CE7CF2ACBF940003E7461 /* UserData.swift */; };
@@ -94,9 +96,11 @@
 		0E1BD08D2AB2208700F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
 		0E24D9EE2ACE7DA0006DF438 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		0E24D9F02ACE8CAA006DF438 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		0E24D9F22ACE8E37006DF438 /* GoogleAuthenticationHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAuthenticationHelper.swift; sourceTree = "<group>"; };
+		0E2DFA6C2ACED14700D92C0B /* FirestoreHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreHelper.swift; sourceTree = "<group>"; };
 		0E401F172AC69D390058C191 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
 		0E401F192AC6A03A0058C191 /* ViewControllerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerModel.swift; sourceTree = "<group>"; };
-		0E401F1D2AC6B3F30058C191 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerHelper.swift; sourceTree = "<group>"; };
 		0E5AB30A2AC4284400ABA86E /* RewardedInterstitialAd.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RewardedInterstitialAd.swift; sourceTree = "<group>"; };
 		0E5CE7CF2ACBF940003E7461 /* UserData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserData.swift; sourceTree = "<group>"; };
@@ -276,6 +280,8 @@
 				0E5AB3062AC3E24C00ABA86E /* TimerHelper.swift */,
 				0ED12ADC2AC5530F006DE2B0 /* StoreKitHelper.swift */,
 				0E5CE7D12ACBFC3E003E7461 /* DatabaseHelper.swift */,
+				0E24D9F22ACE8E37006DF438 /* GoogleAuthenticationHelper.swift */,
+				0E2DFA6C2ACED14700D92C0B /* FirestoreHelper.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -312,7 +318,7 @@
 				0E8170372AC2CA2F00E2A270 /* StoreViewController.swift */,
 				0E8170312AC2CA2E00E2A270 /* WinOrLoseViewController.swift */,
 				FC9CE4252AC2D2D70076F310 /* DummyViewController.swift */,
-				0E401F1D2AC6B3F30058C191 /* NavigationController.swift */,
+				0E24D9F02ACE8CAA006DF438 /* LoginViewController.swift */,
 			);
 			path = "View Controller";
 			sourceTree = "<group>";
@@ -639,12 +645,13 @@
 				0E98816A2AA9AE4D00D326CC /* HintPopupView.swift in Sources */,
 				0E8170502AC2CA7C00E2A270 /* HintCustomCell.swift in Sources */,
 				0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */,
-				0E401F1E2AC6B3F30058C191 /* NavigationController.swift in Sources */,
+				0E24D9F32ACE8E37006DF438 /* GoogleAuthenticationHelper.swift in Sources */,
 				0EA44D372A97177600B5539A /* UIViewExtension.swift in Sources */,
 				0E9881612AA47A7D00D326CC /* SoundEffect.swift in Sources */,
 				0E8BFF712AA43495000E5AC7 /* AudioHelper.swift in Sources */,
 				0E93ADF22AAC2F570073E7ED /* GameData.swift in Sources */,
 				FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */,
+				0E2DFA6D2ACED14700D92C0B /* FirestoreHelper.swift in Sources */,
 				0E81703E2AC2CA2F00E2A270 /* StoreViewController.swift in Sources */,
 				0E8170532AC2CA8700E2A270 /* CustomOnOffButton.swift in Sources */,
 				0E401F1A2AC6A03A0058C191 /* ViewControllerModel.swift in Sources */,
@@ -661,6 +668,7 @@
 				0E401F182AC69D390058C191 /* UIViewControllerExtension.swift in Sources */,
 				FCF478342AA9CD6800075DAC /* UIProgressViewExtension.swift in Sources */,
 				0E6D72912AB81ABC005C3129 /* LostView.swift in Sources */,
+				0E24D9F12ACE8CAA006DF438 /* LoginViewController.swift in Sources */,
 				0E81703D2AC2CA2F00E2A270 /* ReadingQuestionViewController.swift in Sources */,
 				0E81704B2AC2CA3D00E2A270 /* Hint.swift in Sources */,
 				0E5AB30B2AC4284400ABA86E /* RewardedInterstitialAd.swift in Sources */,
