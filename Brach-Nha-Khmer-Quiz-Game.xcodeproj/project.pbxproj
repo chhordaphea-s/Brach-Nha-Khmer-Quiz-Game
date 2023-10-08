@@ -25,6 +25,7 @@
 		0E68C92B2A9B356F00ACF84D /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E68C92A2A9B356F00ACF84D /* Constant.swift */; };
 		0E6D72912AB81ABC005C3129 /* LostView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6D728F2AB81ABB005C3129 /* LostView.swift */; };
 		0E6D72922AB81ABC005C3129 /* LostView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0E6D72902AB81ABB005C3129 /* LostView.xib */; };
+		0E6E63B72AD33F770087C4D2 /* UIImageViewAlignedExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6E63B62AD33F770087C4D2 /* UIImageViewAlignedExtension.swift */; };
 		0E6F8AA02A989E8700B480F5 /* ButtonEffectAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */; };
 		0E7CEFA32AB6B0BE00D500F8 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7CEFA22AB6B0BE00D500F8 /* Product.swift */; };
 		0E7CEFA62AB7484600D500F8 /* HintProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E7CEFA52AB7484600D500F8 /* HintProduct.swift */; };
@@ -111,6 +112,7 @@
 		0E68C92A2A9B356F00ACF84D /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		0E6D728F2AB81ABB005C3129 /* LostView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LostView.swift; sourceTree = "<group>"; };
 		0E6D72902AB81ABB005C3129 /* LostView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LostView.xib; sourceTree = "<group>"; };
+		0E6E63B62AD33F770087C4D2 /* UIImageViewAlignedExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageViewAlignedExtension.swift; sourceTree = "<group>"; };
 		0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonEffectAnimation.swift; sourceTree = "<group>"; };
 		0E7CEFA22AB6B0BE00D500F8 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		0E7CEFA42AB6B2B800D500F8 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
@@ -303,6 +305,7 @@
 				0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */,
 				FCF478332AA9CD6800075DAC /* UIProgressViewExtension.swift */,
 				0E401F172AC69D390058C191 /* UIViewControllerExtension.swift */,
+				0E6E63B62AD33F770087C4D2 /* UIImageViewAlignedExtension.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -662,6 +665,7 @@
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
 				0E8170482AC2CA3D00E2A270 /* HintCustomCellModel.swift in Sources */,
 				0E8170382AC2CA2F00E2A270 /* WinOrLoseViewController.swift in Sources */,
+				0E6E63B72AD33F770087C4D2 /* UIImageViewAlignedExtension.swift in Sources */,
 				0EDC0B352AA0A5EB00B91B2C /* SettingView.swift in Sources */,
 				FCDA06C62AA8541200A2A239 /* HintHalfHalfButton.swift in Sources */,
 				FC9CE41C2AC144390076F310 /* StarView.swift in Sources */,

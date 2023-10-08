@@ -7,10 +7,11 @@
 
 import Foundation
 import UIKit
+import UIImageViewAlignedSwift
 
 class GameChoosingViewController: UIViewController {
     
-    @IBOutlet weak var imageBackground: UIImageView!
+    @IBOutlet weak var backgroundImage: UIImageViewAligned!
     @IBOutlet var gameButtonView: [UIView]!
     @IBOutlet weak var playerModeSagementControl: ChoosePlayerModeCustomSagement!
     
@@ -21,6 +22,10 @@ class GameChoosingViewController: UIViewController {
     private let settingView = SettingView()
     
     // MARK: - BODY
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        backgroundImage.animateBackgroundImage()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()

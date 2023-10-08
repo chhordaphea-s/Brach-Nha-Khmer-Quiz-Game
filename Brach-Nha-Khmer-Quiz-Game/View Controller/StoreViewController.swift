@@ -8,6 +8,7 @@
 import UIKit
 import StoreKit
 import BetterSegmentedControl
+import UIImageViewAlignedSwift
 
 
 
@@ -16,6 +17,7 @@ class StoreViewController: UIViewController {
     @IBOutlet weak var hintCollectionView: UICollectionView!
     @IBOutlet weak var customHintSagementControl: BetterSegmentedControl!
     @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var backgroundImage: UIImageViewAligned!
     
     
     private let layout = PagingCollectionViewLayout()
@@ -31,6 +33,11 @@ class StoreViewController: UIViewController {
     private var adsUsed = false
 
     // MARK: - Body
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        backgroundImage.animateBackgroundImage()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

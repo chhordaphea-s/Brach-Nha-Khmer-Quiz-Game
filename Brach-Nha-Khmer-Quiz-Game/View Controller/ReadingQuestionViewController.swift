@@ -7,9 +7,11 @@
 
 import UIKit
 import Hero
+import UIImageViewAlignedSwift
 
 class ReadingQuestionViewController: UIViewController {
 
+    @IBOutlet weak var backgroundImage: UIImageViewAligned!
     @IBOutlet weak var score: UILabel!
     @IBOutlet var lifePlaying: [UIImageView]!
     @IBOutlet weak var progressBar: UIProgressView!
@@ -31,6 +33,7 @@ class ReadingQuestionViewController: UIViewController {
         continueButton.addGestureRecognizer(tab)
         
         ButtonEffectAnimation.shared.triggerRightAnswer(button: continueButton)
+        backgroundImage.animateBackgroundImage()
 
     }
     
