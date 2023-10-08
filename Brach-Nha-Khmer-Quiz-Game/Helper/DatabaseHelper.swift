@@ -7,10 +7,11 @@
 
 import RealmSwift
 
-class DatabaseHelper {
+class DatabaseHelper: NSObject {
     
     private let realm = try! Realm()
-    
+    private let auth = GoogleAuthenticationHelper()
+
     
     func isEmpty() -> Bool {
         return realm.isEmpty
@@ -28,14 +29,24 @@ class DatabaseHelper {
     
     func loadData() {
         if isEmpty() {
-            guard let userData = UserData().defaultUsetData() else { return }
             
+            let userData = UserData().defaultUsetData(userID: auth.getCurrentUser()?.uid) ?? UserData()
             
             try! realm.write({
                 realm.add(userData)
-            })
+              })
+            
+            print("UserData: ", fetchData())
+            FirestoreHelper.shared.startSync()
+
         } else {
             print("UserData: ", fetchData())
+        }
+    }
+    
+    func writeTheHoldData(data: UserData) {
+        try! realm.write {
+            realm.add(data)
         }
     }
     
@@ -68,14 +79,12 @@ class DatabaseHelper {
             return nil
         }
         
-        
         return levels
     }
     
     func resetData() {
         try! realm.write {
-            let objectsToDelete = realm.objects(UserData.self)
-            realm.delete(objectsToDelete)
+            realm.deleteAll()
             
             print("Database reset successfully!")
         }
@@ -98,7 +107,6 @@ class DatabaseHelper {
                 userData.game?.generalKnowledge?.levels.append(level)
                 
             default:
-                
                 print("Wrong Game Key")
                 return
             }
@@ -144,10 +152,6 @@ class DatabaseHelper {
         }
         print("UserData: ", fetchData())
     }
-    
-    
-
-    
     
     
 }

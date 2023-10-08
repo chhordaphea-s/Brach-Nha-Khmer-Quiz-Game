@@ -102,6 +102,7 @@ class WinOrLoseViewController: UIViewController {
                                                               score: getHighestScore() ?? 0,
                                                               timing: gamePlay.timings,
                                                               level: gamePlay.level.level)
+            
             databaseHelper.addCompletedLevel(gameKey: gamePlay.gameKey, level: levelCompleted)
         }
         

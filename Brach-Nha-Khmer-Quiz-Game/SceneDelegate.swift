@@ -50,6 +50,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // to restore the scene back to its current state.
     }
 
+    func applicationWillTerminate(_ application: UIApplication) {
+        print("App Terminate")
+        FirestoreHelper.shared.stopSync()
+    }
 
     
     func playMusic() {

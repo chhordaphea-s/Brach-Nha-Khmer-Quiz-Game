@@ -73,7 +73,10 @@ class Constant {
                     halfHint = "HalfHint",
                     answerHint = "AnswerHint",
                     totalScore = "TotalScore",
-                    totalStar = "TotalStar"
+                    totalStar = "TotalStar",
+                    idToken = "idToken",
+                    accesstoken = "accessToken",
+                    startDate = "startDate"
         
     }
     
@@ -120,6 +123,11 @@ class Constant {
         
 
         
+    }
+    
+    struct server {
+        static let documentID = "userdata",
+                   collectionID = "userdata"
     }
     
 }

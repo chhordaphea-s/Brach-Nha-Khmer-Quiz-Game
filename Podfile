@@ -10,10 +10,13 @@ target 'Brach-Nha-Khmer-Quiz-Game' do
   pod 'Hero'
   pod 'lottie-ios' 
   pod 'RealmSwift', '~> 10.43'
+  pod 'UIImageViewAlignedSwift'
+
   
   pod 'FirebaseAnalytics'
   pod 'FirebaseAuth'
   pod 'FirebaseFirestore'
+  pod 'GoogleSignIn'
   
   
   # Pods for Brach-Nha-Khmer-Quiz-Game
