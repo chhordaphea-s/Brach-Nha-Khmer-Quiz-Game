@@ -48,13 +48,10 @@ class GoogleAuthenticationHelper: NSObject {
     }
     
     func reAuthenticate() {
-        let user = Auth.auth().currentUser
         let credential = GoogleAuthProvider.credential(withIDToken: userdefault.string(forKey: Constant.userdefault.idToken) ?? "",
                                                        accessToken: userdefault.string(forKey: Constant.userdefault.accesstoken) ?? "")
-        
-        var isAuthenticate = false
-        
-        user?.reauthenticate(with: credential) { result,error  in
+                
+        Auth.auth().signIn(with: credential) { result,error  in
             if error != nil {
                 self.delegate?.reAuthenticate(user: nil, error: error)
 
@@ -92,8 +89,8 @@ class GoogleAuthenticationHelper: NSObject {
     
     func authWithFirebase(credential: AuthCredential) {
         Auth.auth().signIn(with: credential) { result, error in
-            if error != nil {
-                print("Error: ", error?.localizedDescription)
+            if let error = error {
+                print("Error: ", error.localizedDescription)
                 return
             }
             

@@ -29,7 +29,8 @@ class DatabaseHelper: NSObject {
     
     func loadData() {
         if isEmpty() {
-            guard let userData = UserData().defaultUsetData(userID: auth.getCurrentUser()?.uid) else { return }
+            
+            let userData = UserData().defaultUsetData(userID: auth.getCurrentUser()?.uid) ?? UserData()
             
             try! realm.write({
                 realm.add(userData)
@@ -83,8 +84,7 @@ class DatabaseHelper: NSObject {
     
     func resetData() {
         try! realm.write {
-            let objectsToDelete = realm.objects(UserData.self)
-            realm.delete(objectsToDelete)
+            realm.deleteAll()
             
             print("Database reset successfully!")
         }
@@ -107,7 +107,6 @@ class DatabaseHelper: NSObject {
                 userData.game?.generalKnowledge?.levels.append(level)
                 
             default:
-                
                 print("Wrong Game Key")
                 return
             }
@@ -115,7 +114,6 @@ class DatabaseHelper: NSObject {
             
         }
         print("UserData: ", fetchData())
-//        db.syncToServer()
     }
     
     func getTotalScore() -> Int {
@@ -153,7 +151,6 @@ class DatabaseHelper: NSObject {
             }
         }
         print("UserData: ", fetchData())
-//        db.syncToServer()
     }
     
     

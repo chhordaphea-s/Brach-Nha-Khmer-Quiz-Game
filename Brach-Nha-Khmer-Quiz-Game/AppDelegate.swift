@@ -24,9 +24,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         FirebaseApp.configure()
 
         DatabaseHelper().getPath()
-
         GADMobileAds.sharedInstance().start(completionHandler: nil)
-
+        
         return true
     }
 

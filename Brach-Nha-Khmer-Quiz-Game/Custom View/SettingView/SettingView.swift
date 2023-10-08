@@ -21,6 +21,7 @@ class SettingView: UIView {
 
     @IBOutlet var onOffButtons: [CustomOnOffButton]!
     @IBOutlet weak var quitGameButton: UIView!
+    @IBOutlet weak var quitgameBacktound: UIView!
     @IBOutlet weak var quitgameLabel: UILabel!
     
     weak var delegate: SettingViewDelegate?
@@ -52,6 +53,7 @@ class SettingView: UIView {
             delegate?.quitGame()
         } else {
             delegate?.logout()
+
         }
     }
     
@@ -74,6 +76,12 @@ class SettingView: UIView {
         setupButton()
         
         quitgameLabel.text = settingButtonState == .normal ? "ចាកចេញ" : "បោះបង់ការលេង"
+        
+        if settingButtonState == .normal {
+            if GoogleAuthenticationHelper().getCurrentUser() == nil {
+                quitgameLabel.text = "ចុះឈ្មោះ"
+            }
+        }
     }
     
     func setupButton() {
@@ -94,8 +102,9 @@ class SettingView: UIView {
             button.delegate = self
             index += 1
         }
+        
     }
-    
+
     
     func musicBackgroundHaneler(status: Bool) {
         if status {

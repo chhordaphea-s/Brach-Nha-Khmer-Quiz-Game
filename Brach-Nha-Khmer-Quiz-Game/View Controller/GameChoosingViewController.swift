@@ -63,7 +63,7 @@ class GameChoosingViewController: UIViewController {
     }
     
     @IBAction func storeButtonPressed(_ sender: UIButton) {
-        self.gotoViewControllerWithoutParam(newController: StoreViewController())
+        storeButtonFunction()
     }
     
     
@@ -86,12 +86,19 @@ class GameChoosingViewController: UIViewController {
             index += 1
         }
     }
-
+    
+    func storeButtonFunction() {
+        if let currentUser = GoogleAuthenticationHelper().getCurrentUser() {
+            self.gotoViewControllerWithoutParam(newController: StoreViewController())
+            
+        } else {
+            self.gotoViewControllerWithoutParam(newController: LoginViewController())
+        }
+    }
     
     func setupSettingView() {
         settingView.delegate = self
         settingView.setup(type: .normal)
-//        settingView.setup(type: .playing)
     }
 
 }
@@ -104,19 +111,22 @@ extension GameChoosingViewController: SettingViewDelegate {
     }
     
     func logout() {
-        
-        let alert = UIAlertController(title: "ចាកចេញ", message: "តើអ្នកប្រាកដជាចង់ចាកចេញពីគណនីនេះមែនទេ?", preferredStyle: .alert)
-        let cancel = UIAlertAction(title: "មិនយល់ព្រម", style: .cancel)
-        let action = UIAlertAction(title: "យល់ព្រម", style: .default) { _ in
-            GoogleAuthenticationHelper().signOut() {
-                self.gotoViewControllerWithoutParam(newController: LoginViewController())
-            }
+        if let currentUser = GoogleAuthenticationHelper().getCurrentUser() {
+            let alert = UIAlertController(title: "ចាកចេញ", message: "តើអ្នកប្រាកដជាចង់ចាកចេញពីគណនីនេះមែនទេ?", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "មិនយល់ព្រម", style: .cancel)
+            let action = UIAlertAction(title: "យល់ព្រម", style: .destructive) { _ in
+                GoogleAuthenticationHelper().signOut() {
+                    self.gotoViewControllerWithoutParam(newController: LoginViewController())
+                }
 
+            }
+            
+            alert.addAction(cancel)
+            alert.addAction(action)
+            self.present(alert, animated: true)
+        } else {
+            self.gotoViewControllerWithoutParam(newController: LoginViewController())
         }
-        
-        alert.addAction(cancel)
-        alert.addAction(action)
-        self.present(alert, animated: true)
     }
 }
 

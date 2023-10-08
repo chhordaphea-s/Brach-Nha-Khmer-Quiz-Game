@@ -21,6 +21,8 @@ class FirestoreHelper {
     }
 
     func startSync() {
+        if GoogleAuthenticationHelper().getCurrentUser() == nil { return }
+        
         // Initialize Realm
         let realm = try! Realm()
         let realmResults = realm.objects(UserData.self)
@@ -37,15 +39,7 @@ class FirestoreHelper {
                 guard let uID = realmResults.first?.userID else { return }
                 let data = realmResults[0].toFirestoreDictionary()
                 
-                let docRef = self.db.collection(Constant.server.collectionID).document(uID)
-                docRef.setData(["data" : data]) { error in
-                    if let error = error {
-                        print("Error Adding Firestore: \(error.localizedDescription)")
-                    } else {
-                        print("Firestore Added successfully")
-
-                    }
-                }
+                addDataToServer(uID: uID, data: data)
 
                 break
             case .update(_, _, _, _):
@@ -71,24 +65,24 @@ class FirestoreHelper {
             }
         }
     }
+    
+    func addDataToServer(uID: String, data: [String : Any]) {
+        
+        let docRef = self.db.collection(Constant.server.collectionID).document(uID)
+        docRef.setData(["data" : data]) { error in
+            if let error = error {
+                print("Error Adding Firestore: \(error.localizedDescription)")
+            } else {
+                print("Firestore Added successfully")
+
+            }
+        }
+    }
 
     func stopSync() {
         realmNotificationToken?.invalidate()
         realmNotificationToken = nil
     }
-    
-//    func fetchData(userID: String) {
-//        let dotRef = try db.collection(Constant.server.collectionID).document(userID)
-//        dotRef.getDocument { document, error in
-//            if error != nil {
-//                print("Error Fetching Data: ", error?.localizedDescription)
-//                return
-//            }
-//            
-//            print("document: ", document?.data())
-//        }
-//    }
-    
     
     func fetchData(userID: String, completion: ((_ error: Error?) -> ())! = nil) {
         let docRef = db.collection(Constant.server.collectionID).document(userID)
@@ -96,24 +90,32 @@ class FirestoreHelper {
         docRef.getDocument { (document, error) in
             if let document = document, document.exists {
                 let data = document.data()
-
+                
+                DatabaseHelper().resetData()
                 let realmData = UserData.fromFirestoreDictionary(data!["data"] as! [String : Any])
-
+                
                 DatabaseHelper().writeTheHoldData(data: realmData)
+                self.startSync()
                 print("Database: ", DatabaseHelper().fetchData())
                 
                 completion?(error)
             } else {
-                DatabaseHelper().loadData()
-                self.startSync()
-                
-                completion?(error)
+                if DatabaseHelper().isEmpty() {
+                    DatabaseHelper().loadData()
+                    self.startSync()
 
+                } else {
+                    let realmResult = DatabaseHelper().fetchData()
+                    self.addDataToServer(uID: userID, data: realmResult.toFirestoreDictionary())
+                    self.startSync()
+                }
+                completion?(error)
+                
                 print("Firestore document does not exist or there was an error: \(error?.localizedDescription ?? "Unknown error")")
                 
             }
         }
         
     }
-    
+
 }

@@ -19,6 +19,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SettingView" customModule="Brach_Nha_Khmer_Quiz_Game" customModuleProvider="target">
             <connections>
                 <outlet property="quitGameButton" destination="QGb-Pf-XWn" id="qGa-mU-xTV"/>
+                <outlet property="quitgameBacktound" destination="1Ng-8o-4d1" id="6lp-ev-pwa"/>
                 <outlet property="quitgameLabel" destination="4c5-UU-5KZ" id="hrk-0s-kZF"/>
                 <outletCollection property="onOffButtons" destination="Vef-tO-8bl" collectionClass="NSMutableArray" id="YzS-hz-7Pi"/>
                 <outletCollection property="onOffButtons" destination="B9S-vM-wcO" collectionClass="NSMutableArray" id="Xdw-kf-7ua"/>

@@ -73,7 +73,7 @@
 		0EDDEC252AA1BAEB00E32087 /* PlayingBackground1.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EDDEC242AA1BAEB00E32087 /* PlayingBackground1.mp3 */; };
 		0EDDEC2C2AA1C6F000E32087 /* correct.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EDDEC292AA1C6F000E32087 /* correct.mp3 */; };
 		0EDDEC2D2AA1C6F000E32087 /* failed.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 0EDDEC2A2AA1C6F000E32087 /* failed.mp3 */; };
-		9ACAE1A7220D8574C05B4853 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8625A7BDAF5BDB5E0016DF55 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */; };
+		18683667E5201F7159469782 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2EFBF0BC2DE6CB24CF995CAE /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */; };
 		FC3D988C2A8E2A86001A05CE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */; };
 		FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */; };
 		FC3D98952A8E2A87001A05CE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FC3D98942A8E2A87001A05CE /* Assets.xcassets */; };
@@ -92,6 +92,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0C0CAF33956D5CE34761436E /* Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig"; path = "Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig"; sourceTree = "<group>"; };
 		0E1BD08B2AB2208600F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0E1BD08D2AB2208700F7BBA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0E1BD0AE2AB5977C00F7BBA5 /* PagingCollectionViewLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagingCollectionViewLayout.swift; sourceTree = "<group>"; };
@@ -159,9 +160,8 @@
 		0EDDEC242AA1BAEB00E32087 /* PlayingBackground1.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PlayingBackground1.mp3; sourceTree = "<group>"; };
 		0EDDEC292AA1C6F000E32087 /* correct.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = correct.mp3; sourceTree = "<group>"; };
 		0EDDEC2A2AA1C6F000E32087 /* failed.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = failed.mp3; sourceTree = "<group>"; };
-		258D287A1FC2293C06EA96CE /* Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig"; path = "Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig"; sourceTree = "<group>"; };
-		2CA491813F3E4465F40705D2 /* Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig"; path = "Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig"; sourceTree = "<group>"; };
-		8625A7BDAF5BDB5E0016DF55 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brach_Nha_Khmer_Quiz_Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2EFBF0BC2DE6CB24CF995CAE /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Brach_Nha_Khmer_Quiz_Game.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA725CD3B82C7656D29E5E48 /* Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig"; path = "Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig"; sourceTree = "<group>"; };
 		FC3D98882A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Brach-Nha-Khmer-Quiz-Game.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -186,7 +186,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9ACAE1A7220D8574C05B4853 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework in Frameworks */,
+				18683667E5201F7159469782 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -394,16 +394,16 @@
 		44491726AFD7A6E36AFEE5DF /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				258D287A1FC2293C06EA96CE /* Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig */,
-				2CA491813F3E4465F40705D2 /* Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig */,
+				0C0CAF33956D5CE34761436E /* Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig */,
+				EA725CD3B82C7656D29E5E48 /* Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		73935C76798FF0C796361FB4 /* Frameworks */ = {
+		E64AD365E9D75A3296AD78F1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				8625A7BDAF5BDB5E0016DF55 /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */,
+				2EFBF0BC2DE6CB24CF995CAE /* Pods_Brach_Nha_Khmer_Quiz_Game.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -414,7 +414,7 @@
 				FC3D988A2A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game */,
 				FC3D98892A8E2A86001A05CE /* Products */,
 				44491726AFD7A6E36AFEE5DF /* Pods */,
-				73935C76798FF0C796361FB4 /* Frameworks */,
+				E64AD365E9D75A3296AD78F1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -509,11 +509,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FC3D989C2A8E2A87001A05CE /* Build configuration list for PBXNativeTarget "Brach-Nha-Khmer-Quiz-Game" */;
 			buildPhases = (
-				53EB88C28AD2C3D00CA237FA /* [CP] Check Pods Manifest.lock */,
+				992A57E5D79F4F080DF79D9C /* [CP] Check Pods Manifest.lock */,
 				FC3D98842A8E2A86001A05CE /* Sources */,
 				FC3D98852A8E2A86001A05CE /* Frameworks */,
 				FC3D98862A8E2A86001A05CE /* Resources */,
-				3FFF9AD48A676CEC04062DD3 /* [CP] Embed Pods Frameworks */,
+				27C751DDED856B0706791B99 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -596,7 +596,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		3FFF9AD48A676CEC04062DD3 /* [CP] Embed Pods Frameworks */ = {
+		27C751DDED856B0706791B99 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -613,7 +613,7 @@
 			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Brach-Nha-Khmer-Quiz-Game/Pods-Brach-Nha-Khmer-Quiz-Game-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
-		53EB88C28AD2C3D00CA237FA /* [CP] Check Pods Manifest.lock */ = {
+		992A57E5D79F4F080DF79D9C /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -837,7 +837,7 @@
 		};
 		FC3D989D2A8E2A87001A05CE /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 258D287A1FC2293C06EA96CE /* Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig */;
+			baseConfigurationReference = 0C0CAF33956D5CE34761436E /* Pods-Brach-Nha-Khmer-Quiz-Game.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -854,6 +854,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -873,7 +874,7 @@
 		};
 		FC3D989E2A8E2A87001A05CE /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CA491813F3E4465F40705D2 /* Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig */;
+			baseConfigurationReference = EA725CD3B82C7656D29E5E48 /* Pods-Brach-Nha-Khmer-Quiz-Game.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -890,6 +891,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

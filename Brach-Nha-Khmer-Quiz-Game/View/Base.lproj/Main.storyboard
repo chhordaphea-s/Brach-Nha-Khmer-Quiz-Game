@@ -24,7 +24,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="countryside4 1" translatesAutoresizingMaskIntoConstraints="NO" id="N57-a7-qGn">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="countryside4 1" translatesAutoresizingMaskIntoConstraints="NO" id="N57-a7-qGn">
                                 <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                             </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="DummyViewController" image="BrachNha" translatesAutoresizingMaskIntoConstraints="NO" id="NJn-Pb-lhf">
@@ -79,29 +79,142 @@
                         <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UBz-Le-vnd" customClass="GIDSignInButton" customModule="GIDSignInButton">
-                                <rect key="frame" x="140" y="443.66666666666669" width="150" height="45"/>
-                                <color key="backgroundColor" systemColor="systemPinkColor"/>
-                                <gestureRecognizers/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="countryside4 1" translatesAutoresizingMaskIntoConstraints="NO" id="WDM-9m-gYz">
+                                <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ចុះឈ្មោះដើម្បីលេង" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCC-Hc-d8O">
+                                <rect key="frame" x="157" y="691" width="116" height="31"/>
+                                <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="17"/>
+                                <color key="textColor" name="Text Color"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9n1-3X-ybb">
+                                <rect key="frame" x="75" y="818" width="280" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="45" id="4vj-Na-8YG"/>
-                                    <constraint firstAttribute="width" constant="150" id="BVz-kB-X1d"/>
+                                    <constraint firstAttribute="height" constant="50" id="85u-vF-oFX"/>
+                                    <constraint firstAttribute="width" constant="280" id="uPU-fM-AOc"/>
                                 </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="រំលង">
+                                    <fontDescription key="titleFontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="16"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                        <color key="value" name="Border Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
-                                    <outletCollection property="gestureRecognizers" destination="lby-2f-sgF" appends="YES" id="fMT-PI-MvS"/>
+                                    <action selector="skipButtonPressed:" destination="ULa-IP-Sr3" eventType="touchUpInside" id="RZZ-Qp-cSX"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mlq-33-6Cp">
+                                <rect key="frame" x="75" y="752" width="280" height="50"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="abi-gb-5zi">
+                                        <rect key="frame" x="232" y="2" width="46" height="46"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GoogleLogo" translatesAutoresizingMaskIntoConstraints="NO" id="JWq-1l-BFW">
+                                                <rect key="frame" x="7" y="7" width="32" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="32" id="UbR-Dq-bbK"/>
+                                                    <constraint firstAttribute="width" constant="32" id="gvM-TX-eJV"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                        <real key="value" value="25"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" name="RedColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="46" id="5qO-Ee-QWl"/>
+                                            <constraint firstAttribute="width" constant="46" id="Sp3-Ip-4yY"/>
+                                            <constraint firstItem="JWq-1l-BFW" firstAttribute="centerY" secondItem="abi-gb-5zi" secondAttribute="centerY" id="hUu-Dc-mIU"/>
+                                            <constraint firstItem="JWq-1l-BFW" firstAttribute="centerX" secondItem="abi-gb-5zi" secondAttribute="centerX" id="mX4-bj-Oxi"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                                <real key="value" value="23"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="ភ្ជាប់ជាមួយ Google" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a7N-p4-sht">
+                                        <rect key="frame" x="78" y="9.6666666666666288" width="124" height="31"/>
+                                        <fontDescription key="fontDescription" name="AKbalthomKOUPREYJais" family="AKbalthom KOUPREY Jais" pointSize="17"/>
+                                        <color key="textColor" name="Primary"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="abi-gb-5zi" firstAttribute="top" secondItem="Mlq-33-6Cp" secondAttribute="top" constant="2" id="2a7-XB-vWk"/>
+                                    <constraint firstAttribute="height" constant="50" id="G6m-6R-kWs"/>
+                                    <constraint firstAttribute="width" constant="280" id="Nx9-uL-DcO"/>
+                                    <constraint firstAttribute="trailing" secondItem="abi-gb-5zi" secondAttribute="trailing" constant="2" id="P9o-Uw-cZi"/>
+                                    <constraint firstItem="a7N-p4-sht" firstAttribute="centerX" secondItem="Mlq-33-6Cp" secondAttribute="centerX" id="RrZ-hv-J3a"/>
+                                    <constraint firstItem="a7N-p4-sht" firstAttribute="centerY" secondItem="Mlq-33-6Cp" secondAttribute="centerY" id="TZ6-Js-Ehq"/>
+                                    <constraint firstAttribute="bottom" secondItem="abi-gb-5zi" secondAttribute="bottom" constant="2" id="WaK-ij-MYX"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadiusV">
+                                        <real key="value" value="25"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="1" y="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidthV">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColorV">
+                                        <color key="value" name="Border Color"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" name="shadowColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowRadius">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="lby-2f-sgF" appends="YES" id="qBy-2k-XJ1"/>
                                 </connections>
                             </view>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" restorationIdentifier="DummyViewController" image="BrachNha" translatesAutoresizingMaskIntoConstraints="NO" id="Q54-Zg-d5z">
+                                <rect key="frame" x="100" y="89" width="230" height="190"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="230" id="Law-Uh-ldU"/>
+                                    <constraint firstAttribute="height" constant="190" id="dNf-Cr-2tK"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="heroID" value="brachNha"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="NlF-3m-TfS"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UBz-Le-vnd" firstAttribute="centerY" secondItem="5nY-az-5fA" secondAttribute="centerY" id="Y01-Jv-h3A"/>
-                            <constraint firstItem="UBz-Le-vnd" firstAttribute="centerX" secondItem="5nY-az-5fA" secondAttribute="centerX" id="vBz-Er-eX5"/>
+                            <constraint firstItem="9n1-3X-ybb" firstAttribute="top" secondItem="Mlq-33-6Cp" secondAttribute="bottom" constant="16" id="2Cq-Bh-DIe"/>
+                            <constraint firstItem="9n1-3X-ybb" firstAttribute="centerX" secondItem="5nY-az-5fA" secondAttribute="centerX" id="7Ui-ZC-zFz"/>
+                            <constraint firstItem="NlF-3m-TfS" firstAttribute="bottom" secondItem="9n1-3X-ybb" secondAttribute="bottom" constant="30" id="F6v-Se-8UB"/>
+                            <constraint firstItem="Q54-Zg-d5z" firstAttribute="top" secondItem="NlF-3m-TfS" secondAttribute="top" constant="30" id="Im7-X0-Pgs"/>
+                            <constraint firstItem="WDM-9m-gYz" firstAttribute="leading" secondItem="5nY-az-5fA" secondAttribute="leading" id="K5Z-9s-JCe"/>
+                            <constraint firstAttribute="bottom" secondItem="WDM-9m-gYz" secondAttribute="bottom" id="XoH-Hu-eyb"/>
+                            <constraint firstAttribute="trailing" secondItem="WDM-9m-gYz" secondAttribute="trailing" id="cHe-rz-ZtB"/>
+                            <constraint firstItem="Mlq-33-6Cp" firstAttribute="centerX" secondItem="5nY-az-5fA" secondAttribute="centerX" id="cSe-b8-8O3"/>
+                            <constraint firstItem="Mlq-33-6Cp" firstAttribute="top" secondItem="qCC-Hc-d8O" secondAttribute="bottom" constant="30" id="fh2-sY-L6b"/>
+                            <constraint firstItem="Q54-Zg-d5z" firstAttribute="centerX" secondItem="5nY-az-5fA" secondAttribute="centerX" id="vDi-Tx-uyu"/>
+                            <constraint firstItem="WDM-9m-gYz" firstAttribute="top" secondItem="5nY-az-5fA" secondAttribute="top" id="vi3-jD-t2K"/>
+                            <constraint firstItem="qCC-Hc-d8O" firstAttribute="centerX" secondItem="5nY-az-5fA" secondAttribute="centerX" id="wse-fB-itZ"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="signInButton" destination="UBz-Le-vnd" id="byV-uV-FNZ"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NPE-VE-9hx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="lby-2f-sgF">
@@ -110,7 +223,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1866" y="-9"/>
+            <point key="canvasLocation" x="1865.5813953488371" y="-9.0128755364806867"/>
         </scene>
         <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -1645,6 +1758,7 @@
         <image name="Game Background 2" width="370" height="100"/>
         <image name="Game Background 3" width="370" height="100"/>
         <image name="GearSix" width="40" height="40"/>
+        <image name="GoogleLogo" width="32" height="32"/>
         <image name="Group 5" width="76" height="76"/>
         <image name="Group 95" width="224" height="203"/>
         <image name="Heart" width="21" height="20"/>
@@ -1663,11 +1777,17 @@
         <image name="score" width="32" height="33"/>
         <image name="stars" width="43" height="28"/>
         <image name="temple" width="110" height="86"/>
+        <namedColor name="Border Color">
+            <color red="0.792156862745098" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
         <namedColor name="Orange Color">
             <color red="0.92156862745098034" green="0.44313725490196076" blue="0.17254901960784313" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="Primary">
             <color red="0.51764705882352946" green="0.71372549019607845" blue="0.015686274509803921" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="RedColor">
+            <color red="0.77254901960784317" green="0.21176470588235294" blue="0.21176470588235294" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="StarColor">
             <color red="0.80784313725490198" green="0.80784313725490198" blue="0.80784313725490198" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -1693,14 +1813,14 @@
         <namedColor name="scoreboard">
             <color red="0.16470588235294117" green="0.2627450980392157" blue="0.039215686274509803" alpha="0.56999999284744263" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
+        <namedColor name="shadowColor">
+            <color red="0.0" green="0.0" blue="0.0" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
         <namedColor name="timings">
             <color red="0.6470588235294118" green="0.058823529411764705" blue="0.73725490196078436" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemPinkColor">
-            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

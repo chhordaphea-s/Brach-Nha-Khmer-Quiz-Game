@@ -75,7 +75,8 @@ class Constant {
                     totalScore = "TotalScore",
                     totalStar = "TotalStar",
                     idToken = "idToken",
-                    accesstoken = "accessToken"
+                    accesstoken = "accessToken",
+                    startDate = "startDate"
         
     }
     

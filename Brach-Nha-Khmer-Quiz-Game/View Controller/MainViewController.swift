@@ -14,17 +14,20 @@ class MainViewController: UIViewController {
     @IBOutlet var scoreBackground: [UIStackView]!
     @IBOutlet var score: [UILabel]!
     @IBOutlet weak var brachNha: UIImageView!
+    @IBOutlet weak var backgroundImage: UIImageView!
     
     private let settingView = SettingView()
+    private let hintView = HintPopupView()
     private let playButtonPressed = UITapGestureRecognizer()
     
     private let databaseHelper = DatabaseHelper()    
+    private var firstOpen = true
     // MARK: - Body
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         hideButton(views: scoreBackground)
-
+        getScore()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -32,6 +35,8 @@ class MainViewController: UIViewController {
         
         DispatchQueue.main.async {
             self.animateScoreBoard(views: self.scoreBackground)
+            self.giveHint()
+
         }
     }
     
@@ -43,18 +48,13 @@ class MainViewController: UIViewController {
         
         ButtonEffectAnimation.shared.triggerRightAnswer(button: playButton)
 
-        getScore()
-
         customizePlayButton()
         customizeScoreBoard()
         setupSettingView()
 
         playButtonPressed.addTarget(self, action: #selector(playButtonActive))
         playButton.addGestureRecognizer(playButtonPressed)
-        
-        
-
-        
+                
     }
     
     
@@ -64,7 +64,7 @@ class MainViewController: UIViewController {
     }
     
     @IBAction func storeButtonPressed(_ sender: UIButton) {
-        self.gotoViewControllerWithoutParam(newController: StoreViewController())
+        storeButtonFunction()
     }
     
     @objc func playButtonActive() {
@@ -75,10 +75,18 @@ class MainViewController: UIViewController {
     @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
         switch sender.direction {
         case .up:
-            self.gotoViewControllerWithoutParam(newController: StoreViewController())
-
+            storeButtonFunction()
         default:
             return
+        }
+    }
+    
+    func storeButtonFunction() {
+        if let currentUser = GoogleAuthenticationHelper().getCurrentUser() {
+            self.gotoViewControllerWithoutParam(newController: StoreViewController())
+            
+        } else {
+            self.gotoViewControllerWithoutParam(newController: LoginViewController())
         }
     }
     
@@ -99,6 +107,24 @@ class MainViewController: UIViewController {
             l.text = "\(convertEngNumToKhNum(engNum: scoreUD[index]))"
             index += 1
         }
+    }
+    
+    func giveHint() {
+        if userdefault.object(forKey: Constant.userdefault.startDate) as? Date == nil{
+            hintView.delegate = self
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.increaseHint(hint: .answer)
+            }
+            
+            userdefault.set(Date(), forKey: Constant.userdefault.startDate)
+        } else {
+            firstOpen = false
+        }
+    }
+    
+    func increaseHint(hint: HintType) {
+        hintView.setup(data: Hint(hinType: hint, number: 3))
+        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: hintView, width: 314, height: 276, tapBackground: false)
     }
     
     func hideButton(views: [UIView]) {
@@ -169,6 +195,15 @@ class MainViewController: UIViewController {
         playButton.layer.borderWidth = 2
         playButton.layer.masksToBounds = true
     }
+    
+    private func animateBackgroundImage () {
+        UIView.animate(withDuration: 70.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
+
+//            self.backgroundImage?.alignLeft = false
+//            self.backgroundImage?.alignRight = true
+
+        })
+    }
 
 }
 
@@ -181,19 +216,38 @@ extension MainViewController: SettingViewDelegate {
     
     func logout() {
         
-        let alert = UIAlertController(title: "ចាកចេញ", message: "តើអ្នកប្រាកដជាចង់ចាកចេញពីគណនីនេះមែនទេ?", preferredStyle: .alert)
-        let cancel = UIAlertAction(title: "មិនយល់ព្រម", style: .cancel)
-        let action = UIAlertAction(title: "យល់ព្រម", style: .default) { _ in
-            GoogleAuthenticationHelper().signOut() {
-                self.gotoViewControllerWithoutParam(newController: LoginViewController())
-            }
+        if let currentUser = GoogleAuthenticationHelper().getCurrentUser() {
+            let alert = UIAlertController(title: "ចាកចេញ", message: "តើអ្នកប្រាកដជាចង់ចាកចេញពីគណនីនេះមែនទេ?", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "មិនយល់ព្រម", style: .cancel)
+            let action = UIAlertAction(title: "យល់ព្រម", style: .destructive) { _ in
+                GoogleAuthenticationHelper().signOut() {
+                    self.gotoViewControllerWithoutParam(newController: LoginViewController())
+                }
 
+            }
+            
+            alert.addAction(cancel)
+            alert.addAction(action)
+            self.present(alert, animated: true)
+        } else {
+            self.gotoViewControllerWithoutParam(newController: LoginViewController())
         }
-        
-        alert.addAction(cancel)
-        alert.addAction(action)
-        self.present(alert, animated: true)
     }
 }
 
 
+extension MainViewController: HintPopupViewDelegate {
+    func dismissHintView(_ view: UIView) {
+        ViewAnimateHelper.shared.animateViewOut(self.view, popUpView: view)
+        getScore()
+        
+        if firstOpen {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.increaseHint(hint: .halfhalf)
+                self.firstOpen = false
+            }
+        }
+    }
+    
+    
+}

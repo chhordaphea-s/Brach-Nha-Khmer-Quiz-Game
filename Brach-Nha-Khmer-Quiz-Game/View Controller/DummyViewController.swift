@@ -16,6 +16,7 @@ class DummyViewController: UIViewController {
     
     let db = DatabaseHelper()
     let auth = GoogleAuthenticationHelper()
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +35,6 @@ extension DummyViewController: GoogleAuthenticationHelperDelegate {
     func reAuthenticate(user: User?, error: Error?) {
         
         if user != nil {
-            db.loadData()
-            FirestoreHelper.shared.startSync()
-
             guard let user = user else { return }
             
             FirestoreHelper.shared.fetchData(userID: user.uid) {error in 
@@ -44,7 +42,11 @@ extension DummyViewController: GoogleAuthenticationHelperDelegate {
             }
 
         } else {
-            self.gotoViewControllerWithoutParam(newController: LoginViewController())
+            if db.isEmpty() {
+                self.gotoViewControllerWithoutParam(newController: LoginViewController())
+            } else {
+                self.gotoViewControllerWithoutParam(newController: MainViewController())
+            }
         }
     }
     

@@ -401,10 +401,20 @@ extension AnswerViewController: SettingViewDelegate {
     }
     
     func quitGame() {
-        guard let gamePlayData = gamePlay else { return }
-        guard let game = gameData?.getGameByKey(key: gamePlayData.gameKey) else { return }
+
+        let alert = UIAlertController(title: "ចាកចេញ", message: "តើអ្នក់ចង់បោះបង់មែនទេ?", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "មិនយល់ព្រម", style: .cancel)
+        let action = UIAlertAction(title: "យល់ព្រម", style: .destructive) { _ in
+            guard let gamePlayData = self.gamePlay else { return }
+            guard let game = gameData?.getGameByKey(key: gamePlayData.gameKey) else { return }
+            
+            self.gotoLevelViewController(data: game)
+
+        }
         
-        self.gotoLevelViewController(data: game)
+        alert.addAction(cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
     
     func dismissButton(_ view: UIView) {
