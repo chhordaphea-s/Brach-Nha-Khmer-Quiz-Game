@@ -8,10 +8,12 @@
 import UIKit
 import GoogleMobileAds
 import Hero
+import UIImageViewAlignedSwift
 
 class AnswerViewController: UIViewController {
     
     @IBOutlet weak var PauseButton: UIButton!
+    @IBOutlet weak var backgroundImage: UIImageViewAligned!
     @IBOutlet weak var score: UILabel!
     @IBOutlet var lifePlaying: [UIImageView]!
     @IBOutlet weak var questionNum: UILabel!
@@ -42,6 +44,7 @@ class AnswerViewController: UIViewController {
         
         hideButton(views: answerView)
         hideHintButton()
+        backgroundImage.animateBackgroundImage()
     }
     
     override func viewDidLoad() {

@@ -7,6 +7,7 @@
 
 import UIKit
 import GoogleMobileAds
+import UIImageViewAlignedSwift
 
 class MainViewController: UIViewController {
 
@@ -14,7 +15,7 @@ class MainViewController: UIViewController {
     @IBOutlet var scoreBackground: [UIStackView]!
     @IBOutlet var score: [UILabel]!
     @IBOutlet weak var brachNha: UIImageView!
-    @IBOutlet weak var backgroundImage: UIImageView!
+    @IBOutlet weak var backgroundImage: UIImageViewAligned!
     
     private let settingView = SettingView()
     private let hintView = HintPopupView()
@@ -28,6 +29,7 @@ class MainViewController: UIViewController {
         super.viewWillAppear(animated)
         hideButton(views: scoreBackground)
         getScore()
+        backgroundImage.animateBackgroundImage()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -195,16 +197,6 @@ class MainViewController: UIViewController {
         playButton.layer.borderWidth = 2
         playButton.layer.masksToBounds = true
     }
-    
-    private func animateBackgroundImage () {
-        UIView.animate(withDuration: 70.0, delay: 0.0, options: [.repeat, .autoreverse], animations: {
-
-//            self.backgroundImage?.alignLeft = false
-//            self.backgroundImage?.alignRight = true
-
-        })
-    }
-
 }
 
 extension MainViewController: SettingViewDelegate {

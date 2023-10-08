@@ -6,17 +6,23 @@
 //
 
 import UIKit
+import UIImageViewAlignedSwift
 
 class LevelViewController: UIViewController {
 
+    @IBOutlet weak var backgoundImage: UIImageViewAligned!
     @IBOutlet weak var levelCollectionView: UICollectionView!
     @IBOutlet weak var titleGame: UILabel!
     
     var game: Game? = nil
     
     private let answerHintView = HintPopupView()
-    
     private let databaseHelper = DatabaseHelper()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        backgoundImage.animateBackgroundImage()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
