@@ -9,6 +9,7 @@ import RealmSwift
 
 class UserData: Object {
     @objc dynamic var userID: String?
+    @objc dynamic var startDate: Date?
     @objc dynamic var hint: UserHint?
     @objc dynamic var game: UserGame?
     
@@ -169,8 +170,10 @@ class HintDB: Object {
 
 extension UserData {
     func toFirestoreDictionary() -> [String: Any] {
+        
         var data: [String: Any] = [:]
         data["userID"] = userID
+        data["startDate"] = dateToString(date: startDate)
         data["hint"] = hint?.toFirestoreDictionary()
         data["game"] = game?.toFirestoreDictionary()
         return data
@@ -243,6 +246,10 @@ extension UserData {
         
         if let userID = dictionary["userID"] as? String {
             userData.userID = userID
+        }
+        
+        if let startDate = dictionary["startDate"] as? String {
+            userData.startDate = stringToDate(date: startDate)
         }
         
         if let hintData = dictionary["hint"] as? [String: Any] {

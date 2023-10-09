@@ -101,3 +101,20 @@ func peformVibrate(win: Bool) {
 //               AudioServicesPlaySystemSound(SystemSoundID(4095))
             
 }
+
+func stringToDate(date: String) -> Date {
+    let dateFormatter = DateFormatter()
+    dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+    dateFormatter.dateFormat = "YY/MMM/d, HH:mm:ss"
+    return dateFormatter.date(from: date)!
+}
+    
+func dateToString(date: Date?) -> String? {
+    guard let date = date else {
+        return nil
+    }
+    
+    let dateFormatter = DateFormatter()
+    dateFormatter.dateFormat = "YY/MMM/d, HH:mm:ss"
+    return dateFormatter.string(from: date)
+}

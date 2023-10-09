@@ -153,5 +153,20 @@ class DatabaseHelper: NSObject {
         print("UserData: ", fetchData())
     }
     
+    func getFirstDate() -> Date? {
+        let data = fetchData()
+        return data.startDate
+    }
+    
+    func setFirstDate(date: Date) {
+        guard let gameData = gameData else { return }
+        let userData = realm.objects(UserData.self)[0]
+        
+        try! realm.write{
+            userData.startDate = date
+        }
+
+    }
+    
     
 }

@@ -101,6 +101,7 @@ class FirestoreHelper {
                 completion?(error)
             } else {
                 if DatabaseHelper().isEmpty() {
+                    
                     DatabaseHelper().loadData()
                     self.startSync()
 

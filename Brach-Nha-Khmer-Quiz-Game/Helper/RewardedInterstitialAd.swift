@@ -34,6 +34,11 @@ class RewardedInterstitialAd: NSObject, GADFullScreenContentDelegate {
     
     func displayAds(controller: UIViewController) {
         
+        if !Reachability.isConnectedToNetwork() {
+            setupAlert(controller: controller)
+            return
+        }
+
         guard let rewardedInterstitialAd = rewardedInterstitialAd else {
             delegate?.adLoaded(status: false)
             return
@@ -45,6 +50,13 @@ class RewardedInterstitialAd: NSObject, GADFullScreenContentDelegate {
         }
     }
     
+    
+    func setupAlert(controller: UIViewController) {
+        let alert = UIAlertController(title: "ការតភ្ជាប់", message: "ឧបករណ៍របស់អ្នកមិនបានតភ្ជាប់ជាមួយបណ្ដាញទេ", preferredStyle: .alert)
+        let button = UIAlertAction(title: "ទទួលបាន", style: .cancel)
+        alert.addAction(button)
+        controller.present(alert, animated: true)
+    }
     
     
     func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {

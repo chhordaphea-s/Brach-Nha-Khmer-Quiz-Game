@@ -21,8 +21,12 @@ class DummyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        auth.reAuthenticate()
-        auth.delegate = self
+        if Reachability.isConnectedToNetwork() {
+            auth.reAuthenticate()
+            auth.delegate = self
+        } else {
+            self.gotoViewControllerWithoutParam(newController: MainViewController())
+        }
 
     }
     

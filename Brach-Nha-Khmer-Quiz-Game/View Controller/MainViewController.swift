@@ -112,16 +112,17 @@ class MainViewController: UIViewController {
     }
     
     func giveHint() {
-        if userdefault.object(forKey: Constant.userdefault.startDate) as? Date == nil{
+        if databaseHelper.getFirstDate() == nil {
             hintView.delegate = self
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                 self.increaseHint(hint: .answer)
             }
             
-            userdefault.set(Date(), forKey: Constant.userdefault.startDate)
+            databaseHelper.setFirstDate(date: Date())
         } else {
             firstOpen = false
         }
+
     }
     
     func increaseHint(hint: HintType) {

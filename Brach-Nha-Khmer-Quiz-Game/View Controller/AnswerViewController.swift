@@ -454,6 +454,7 @@ extension AnswerViewController: RewardedInterstitialAdDelegate {
     
     func dismissScreen() {
         if watchedAd {
+            self.gamePlay?.fail -= 1
             reloadViewController()
         } else {
             gotoFinishScreen()

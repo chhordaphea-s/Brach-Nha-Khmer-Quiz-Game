@@ -67,6 +67,7 @@
 		0EA44D392A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */; };
 		0EA44D3B2A97293A00B5539A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */; };
 		0EA44D462A97353600B5539A /* PlayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D452A97353600B5539A /* PlayMode.swift */; };
+		0EB9A8D02AD3D0BA00454E8A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB9A8CF2AD3D0B900454E8A /* Reachability.swift */; };
 		0ED12ADD2AC5530F006DE2B0 /* StoreKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED12ADC2AC5530F006DE2B0 /* StoreKitHelper.swift */; };
 		0EDC0B2D2AA0A49700B91B2C /* ViewAnimateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */; };
 		0EDC0B342AA0A5EB00B91B2C /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */; };
@@ -155,6 +156,7 @@
 		0EA44D382A9722ED00B5539A /* AKbalthom-KOUPREY-Jais.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "AKbalthom-KOUPREY-Jais.ttf"; sourceTree = "<group>"; };
 		0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0EA44D452A97353600B5539A /* PlayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMode.swift; sourceTree = "<group>"; };
+		0EB9A8CF2AD3D0B900454E8A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		0ED12ADC2AC5530F006DE2B0 /* StoreKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitHelper.swift; sourceTree = "<group>"; };
 		0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimateHelper.swift; sourceTree = "<group>"; };
 		0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
@@ -274,6 +276,7 @@
 		0E6F8A9E2A989E6700B480F5 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				0EB9A8CF2AD3D0B900454E8A /* Reachability.swift */,
 				0E5AB30A2AC4284400ABA86E /* RewardedInterstitialAd.swift */,
 				0E6F8A9F2A989E8700B480F5 /* ButtonEffectAnimation.swift */,
 				0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */,
@@ -659,6 +662,7 @@
 				0E8170532AC2CA8700E2A270 /* CustomOnOffButton.swift in Sources */,
 				0E401F1A2AC6A03A0058C191 /* ViewControllerModel.swift in Sources */,
 				0E5CE7D22ACBFC3E003E7461 /* DatabaseHelper.swift in Sources */,
+				0EB9A8D02AD3D0BA00454E8A /* Reachability.swift in Sources */,
 				0E8170492AC2CA3D00E2A270 /* HintButton.swift in Sources */,
 				0E98815D2AA46F8600D326CC /* Global.swift in Sources */,
 				0E8170392AC2CA2F00E2A270 /* AnswerViewController.swift in Sources */,
