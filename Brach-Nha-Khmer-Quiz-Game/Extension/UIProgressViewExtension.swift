@@ -23,15 +23,16 @@ extension UIProgressView {
     }
     
     @available(iOS 10.0, *)
-    func setAnimatedProgress(progress: Float = 0, duration: Float = 50, completion: (() -> ())? = nil) {
+    func setAnimatedProgress(timer: Timer, progress: Float = 0, duration: Float = 40, completion: (() -> ())? = nil) {
         
         progressTimer = Timer.scheduledTimer(withTimeInterval: 0.01, repeats: true) { (timer) in
-            DispatchQueue.main.async {
-                let current = self.progress
-                self.setProgress(current-(1/(100 * duration)), animated: true)
-            }
+        DispatchQueue.main.async {
+            let current = self.progress
+            self.setProgress(current-(1/(100 * duration)), animated: true)
+        }
             
             if self.progress <= progress {
+                self.progressTimer?.invalidate()
                 timer.invalidate()
                 if completion != nil {
                     completion!()
@@ -40,13 +41,14 @@ extension UIProgressView {
         }
     }
     
-    func timeRemainder(duration: Float = 1) -> Int{
+    func timeRemainder(duration: Float = 40) -> Int {
         let timeRemainder = self.progress * duration
         return Int(timeRemainder)
     }
 
     func pauseProgress() {
         progressTimer?.invalidate()
+        progressTimer = Timer()
     }
     
 }

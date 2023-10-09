@@ -8,7 +8,7 @@
 import UIKit
 import StoreKit
 import BetterSegmentedControl
-import GoogleMobileAds
+import UIImageViewAlignedSwift
 
 
 
@@ -16,51 +16,52 @@ class StoreViewController: UIViewController {
 
     @IBOutlet weak var hintCollectionView: UICollectionView!
     @IBOutlet weak var customHintSagementControl: BetterSegmentedControl!
+    @IBOutlet weak var backButton: UIButton!
+    @IBOutlet weak var backgroundImage: UIImageViewAligned!
     
-    var backDirection: UIViewController? = nil
-
-    let layout = PagingCollectionViewLayout()
-    let hintView = HintPopupView()
-    var hintSelected: HintType = .answer
-    var products = [SKProduct]()
-    var hints = [HintCustomCellModel]()
-    var filterProducts = [SKProduct]()
-    var selectHintProduct: HintProduct?
     
-//    var insterstitialAds = InterstitialAdsHelper()
+    private let layout = PagingCollectionViewLayout()
+    private let hintView = HintPopupView()
+    private var hintSelected: HintType = .answer
+    private var products = [SKProduct]()
+    private var hints = [HintCustomCellModel]()
+    private var filterProducts = [SKProduct]()
+    private var selectHintProduct: HintProduct?
 
-    private var interstitial: GADInterstitialAd?
-    var adsUsed = false
+    private let rewardedInterstitialAd = RewardedInterstitialAd()
+    private let storeKitHelper = StoreKitHelper()
+    private var adsUsed = false
 
     // MARK: - Body
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        backgroundImage.animateBackgroundImage()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        SKPaymentQueue.default().add(self)
         
         hintView.delegate = self
         
         setupCollectionView()
         setupSagementControl()
 
-        fetchProduct()
+        storeKitHelper.fetchProduct()
+        storeKitHelper.delegate = self
 
-//        insterstitialAds.adsLoads()
-//        insterstitialAds.delegate = self
+        rewardedInterstitialAd.adsLoads(controller: self)
+        rewardedInterstitialAd.delegate = self
         
-        adsLoads()
     }
-    
-    @IBAction func restoreButtonPressed(_ sender: UIButton) {
-        print("Restore Button Pressed ....")
-    }
+
     
     @IBAction func backButtonPressed(_ sender: UIButton) {
-        backButton()
+        self.dismiss(animated: true)
     }
+    
     @IBAction func hintSagementChanged(_ sender: BetterSegmentedControl) {
         switch sender.index {
-        case 0:
+        case 0: 
             hintSelected = .answer
         case 1:
             hintSelected = .halfhalf
@@ -72,7 +73,15 @@ class StoreViewController: UIViewController {
         hintCollectionView.reloadData()
     }
     
-
+    @IBAction func swapGesture(_ sender: UISwipeGestureRecognizer) {
+        switch sender.direction {
+        case .right, .down:
+            self.dismiss(animated: true)
+        default:
+            return
+        }
+    }
+    
     
     // MARK: - Function
 
@@ -98,13 +107,13 @@ class StoreViewController: UIViewController {
         filterProducts = []
         
         if hintSelected == .answer {
-            products.forEach { product in
+            storeKitHelper.products.forEach { product in
                 if Constant.product.productID.answerProductsID.contains(product.productIdentifier) {
                     filterProducts.append(product)
                 }
             }
         } else if hintSelected == .halfhalf {
-            products.forEach { product in
+            storeKitHelper.products.forEach { product in
                 if Constant.product.productID.halfProductsID.contains(product.productIdentifier) {
                     filterProducts.append(product)
                 }
@@ -123,23 +132,6 @@ class StoreViewController: UIViewController {
         
         return lrInset
     }
-    
-    func backButton() {
-        var controller = UIViewController()
-        
-        guard let bd = backDirection else { return }
-               
-        if bd.restorationIdentifier == "MainViewController" {
-            controller = storyboard?.instantiateViewController(withIdentifier: "MainViewController") as! MainViewController
-        } else if bd.restorationIdentifier == "GameChoosingViewController" {
-            controller = storyboard?.instantiateViewController(withIdentifier: "GameChoosingViewController") as! GameChoosingViewController
-        }
-        
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        self.present(controller, animated: true)
-    }
-    
     
     func setupSagementControl() {
         customHintSagementControl.segments = LabelSegment.segments(withTitles: ["ជំនួយ៖ \(HintType.answer.rawValue)", "ជំនួយ៖ \(HintType.halfhalf.rawValue)"],
@@ -201,7 +193,7 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDataSou
             SKPaymentQueue.default().add(payment)
             
         } else {
-            displayAds(controller: self)
+            rewardedInterstitialAd.displayAds(controller: self)
         }
      }
     
@@ -210,9 +202,7 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDataSou
     func increaseHint(hintProduct: HintProduct) {
         hintView.setup(data: hintProduct.getHintView())
         
-        buttonSoudEffect = AudioHelper(audioName: "correct", loop: false)
-        buttonSoudEffect.player?.play()
-    
+        
         ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: hintView, width: 314, height: 276)
     }
 }
@@ -226,106 +216,66 @@ extension StoreViewController: HintPopupViewDelegate {
 }
  
 // MARK: Product
-extension StoreViewController: SKProductsRequestDelegate {
-    
-    func fetchProduct() {
-        let request = SKProductsRequest(productIdentifiers: Set(Product.allCases.compactMap({ $0.rawValue })))
-        request.delegate = self
-        request.start()
+extension StoreViewController: StoreKitHelperDelegate {
+    func productRequest(response: SKProductsResponse) {
+        print("Count: ", response.products)
+        setupCollectionData()
+        self.hintCollectionView.reloadData()
     }
     
-    func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
-        DispatchQueue.main.sync {
-            print("Count: ", response.products)
-            self.products = response.products
-            setupCollectionData()
-            self.hintCollectionView.reloadData()
+    func paymentTransactionObserver(transaction: SKPaymentTransaction, transactionState: SKPaymentTransactionState) {
+        switch transactionState{
+
+        case .purchasing:
+            print("purchasing")
+        case .purchased:
+            print("purchased")
+            if let hint = selectHintProduct {
+                increaseHint(hintProduct: hint)
+            }
+            SKPaymentQueue.default().finishTransaction(transaction)
+        case .failed:
+            print("failed")
+            SKPaymentQueue.default().finishTransaction(transaction)
+
+        case .restored:
+            print("restored")
+
+        case .deferred:
+            print("deferred")
+
+        @unknown default:
+            return
         }
     }
+
 }
 
-extension StoreViewController: SKPaymentTransactionObserver {
-    func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
-        transactions.forEach({
-            switch $0.transactionState{
-                
-            case .purchasing:
-                print("purchasing")
-            case .purchased:
-                print("purchased")
-                if let hint = selectHintProduct {
-                    increaseHint(hintProduct: hint)
-                }
-                SKPaymentQueue.default().finishTransaction($0)
-            case .failed:
-                print("failed")
-                SKPaymentQueue.default().finishTransaction($0)
-
-            case .restored:
-                print("restored")
-
-            case .deferred:
-                print("deferred")
-
-            @unknown default:
-                return
-            }
-        })
-    }
-    
-    
-}
 
 // MARK: InterstitialAds
 
-extension StoreViewController {
-    
-    func adsLoads() {
-        let request = GADRequest()
-        GADInterstitialAd.load(withAdUnitID: "ca-app-pub-3940256099942544/4411468910",
-                               request: request,
-                               completionHandler: { [self] ad, error in
-            if let error = error {
-                print("Failed to load interstitial ad with error: \(error.localizedDescription)")
-                return
-            }
-            interstitial = ad
-            interstitial?.fullScreenContentDelegate = self
-        }
-        )
-        
-    }
-    
-    func displayAds(controller: UIViewController) {
-        if interstitial != nil {
-            interstitial?.present(fromRootViewController: controller)
-        } else {
-            print("Ad wasn't ready")
-
+extension StoreViewController: RewardedInterstitialAdDelegate {
+    func adLoaded(status: Bool) {
+        if status {
+            adsUsed = true
         }
     }
-}
-
-
-extension StoreViewController: GADFullScreenContentDelegate {
-    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-      print("Ad did fail to present full screen content.")
-        print("Error: ", error)
+    
+    func adError(error: Error) {
+        print("Error: ", error.localizedDescription)
     }
-
-    /// Tells the delegate that the ad will present full screen content.
-    func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-      print("Ad will present full screen content.")
-    }
-
-    /// Tells the delegate that the ad dismissed full screen content.
-    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        print("Ad did dismiss full screen content.")
-        
+    
+    func dismissScreen() {
         guard let hint = selectHintProduct else { return }
-        
-        increaseHint(hintProduct: hint)
-        adsUsed = true
-        hintCollectionView.reloadData()
+
+        if adsUsed {
+            increaseHint(hintProduct: hint)
+            hintCollectionView.reloadData()
+        }
     }
+    
+    
+
+    
+
 }

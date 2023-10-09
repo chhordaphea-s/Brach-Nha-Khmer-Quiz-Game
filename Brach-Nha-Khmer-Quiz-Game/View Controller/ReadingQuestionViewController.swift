@@ -7,9 +7,11 @@
 
 import UIKit
 import Hero
+import UIImageViewAlignedSwift
 
 class ReadingQuestionViewController: UIViewController {
 
+    @IBOutlet weak var backgroundImage: UIImageViewAligned!
     @IBOutlet weak var score: UILabel!
     @IBOutlet var lifePlaying: [UIImageView]!
     @IBOutlet weak var progressBar: UIProgressView!
@@ -17,23 +19,37 @@ class ReadingQuestionViewController: UIViewController {
     @IBOutlet weak var question: UILabel!
     @IBOutlet weak var continueButton: UIView!
  
+    private let settingView = SettingView()
+    private let timer = TimerHelper()
+    
     var gamePlay: GamePlay? = nil
-    let settingView = SettingView()
+    
+    // MARK: - Body
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        let tab = UITapGestureRecognizer(target: self, action: #selector(activateContinueButton(_:)))
+        continueButton.addGestureRecognizer(tab)
+        
+        ButtonEffectAnimation.shared.triggerRightAnswer(button: continueButton)
+        backgroundImage.animateBackgroundImage()
+
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupGameData()
         setupSettingView()
-        
-        ButtonEffectAnimation.shared.triggerRightAnswer(button: continueButton)
-        
-        ActivateContinueButton()
-        setProgressTime()
-        
-        
-        let tab = UITapGestureRecognizer(target: self, action: #selector(ActivateContinueButton))
-        continueButton.addGestureRecognizer(tab)
+        setupTimer()
+
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timer.reset()
+    }
+    
     
     
     @IBAction func pauseButtonPressed(_ sender: UIButton) {
@@ -41,16 +57,24 @@ class ReadingQuestionViewController: UIViewController {
         ButtonEffectAnimation.shared.popEffect(button: sender)
     }
     
-    // MARK: ~Body
-    
-    @objc func ActivateContinueButton() {
+    @objc func activateContinueButton(_ sender: UITapGestureRecognizer) {
         print("Player ready!")
         ButtonEffectAnimation.shared.popEffect(button: continueButton)
         
-        switchToAnswerScreen()
-        
-        
+        progressBar.pauseProgress()
+        guard let gamePlay = gamePlay else { return }
+        self.gotoAnswerViewController(data: gamePlay)    }
+    
+    
+    //  MARK: - Function
+    
+    func setupTimer() {
+        timer.setupTimer(duration: gamePlay?.readingTime ?? 0)
+        timer.delegate = self
+        timer.startCountDown()
+
     }
+    
     
     func setupSettingView() {
         settingView.delegate = self
@@ -85,46 +109,46 @@ class ReadingQuestionViewController: UIViewController {
         }
         
     }
-
-    func setProgressTime() {
-        progressBar.setAnimatedProgress(progress: 0, duration: 15){
-            print("Done")
-            self.switchToAnswerScreen()
-        }
-    }
-    
-    func switchToAnswerScreen() {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "AnswerViewController") as! AnswerViewController
-        controller.gamePlay = gamePlay
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        self.present(controller, animated: true)
-    }
-    
-    func switchToLevelScreen(game: Game){
-        let controller = storyboard?.instantiateViewController(withIdentifier: "LevelViewController") as! LevelViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        controller.game = game
-        self.present(controller, animated: true)
-    }
-    
-    
-
 }
 
 
 
 extension ReadingQuestionViewController: SettingViewDelegate {
+    func logout() {
+        self.gotoViewControllerWithoutParam(newController: LoginViewController())
+
+    }
+    
     func quitGame() {
-        guard let gamePlayData = gamePlay else { return }
-        guard let game = gameData?.getGameByKey(key: gamePlayData.gameKey) else { return }
+        let alert = UIAlertController(title: "ចាកចេញ", message: "តើអ្នក់ចង់បោះបង់មែនទេ?", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "មិនយល់ព្រម", style: .cancel)
+        let action = UIAlertAction(title: "យល់ព្រម", style: .destructive) { _ in
+            guard let gamePlayData = self.gamePlay else { return }
+            guard let game = gameData?.getGameByKey(key: gamePlayData.gameKey) else { return }
+            
+            self.gotoLevelViewController(data: game)
+
+        }
         
-        switchToLevelScreen(game: game)
+        alert.addAction(cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
      
     
     func dismissButton(_ view: UIView) {
         ViewAnimateHelper.shared.animateViewOut(self.view, popUpView: view)
     }
+}
+
+extension ReadingQuestionViewController: TimerHelperDelegate {
+    func loadTimer(timer: Timer, progress: Float) {
+        progressBar.setProgress(progress, animated: true)
+    }
+    
+    func didLoadTimer(timer: Timer) {
+        guard let gamePlay = gamePlay else { return }
+        self.gotoAnswerViewController(data: gamePlay)
+    }
+
 }

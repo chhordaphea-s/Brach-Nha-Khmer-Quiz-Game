@@ -59,6 +59,9 @@ class Constant {
                 return UIImage(named: "noVibrate") ?? UIImage(systemName: "waveform.slash")!
             }
         }
+        
+        static let backIcon = UIImage(named: "ArrowFatRight")
+        
     }
     
     
@@ -70,7 +73,10 @@ class Constant {
                     halfHint = "HalfHint",
                     answerHint = "AnswerHint",
                     totalScore = "TotalScore",
-                    totalStar = "TotalStar"
+                    totalStar = "TotalStar",
+                    idToken = "idToken",
+                    accesstoken = "accessToken",
+                    startDate = "startDate"
         
     }
     
@@ -105,6 +111,23 @@ class Constant {
             UIColor(rgb: 0x36A1A8)
         ]
         
+    }
+    
+    // MARK: - ViewController
+    struct viewControllerConstant {
+        struct answerViewController {
+            static let controller = AnswerViewController()
+            static let storyboarID = "\(AnswerViewController.self)"
+            static let type = AnswerViewController.self
+        }
+        
+
+        
+    }
+    
+    struct server {
+        static let documentID = "userdata",
+                   collectionID = "userdata"
     }
     
 }

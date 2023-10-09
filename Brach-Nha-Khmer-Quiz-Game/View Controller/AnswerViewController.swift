@@ -8,10 +8,12 @@
 import UIKit
 import GoogleMobileAds
 import Hero
+import UIImageViewAlignedSwift
 
 class AnswerViewController: UIViewController {
     
     @IBOutlet weak var PauseButton: UIButton!
+    @IBOutlet weak var backgroundImage: UIImageViewAligned!
     @IBOutlet weak var score: UILabel!
     @IBOutlet var lifePlaying: [UIImageView]!
     @IBOutlet weak var questionNum: UILabel!
@@ -21,17 +23,20 @@ class AnswerViewController: UIViewController {
     @IBOutlet weak var hintHaftHaftButton: HintHalfHalfButton!
     @IBOutlet var answerView: [AnswerButton]!
     
-    let lostView = LostView()
+    
+    private let lostView = LostView()
+    private let settingView = SettingView()
+    private let rewardAds = RewardedInterstitialAd()
     
     var gamePlay: GamePlay? = nil
-    let settingView = SettingView()
-    var watchedAd = false
-    
-    private var rewardedInterstitialAd: GADRewardedInterstitialAd?
 
+    private let timer = TimerHelper()
+    private var watchedAd = false
+    private var choosedCorrectAnswer = false
+    private let databaseHelper = DatabaseHelper()
     
-    var incorrectAnswer = [AnswerButton]()
-    var correctAnswer = AnswerButton()
+    private var incorrectAnswer = [AnswerButton]()
+    private var correctAnswer = AnswerButton()
     
     
     override func viewWillAppear(_ animated: Bool) {
@@ -39,6 +44,7 @@ class AnswerViewController: UIViewController {
         
         hideButton(views: answerView)
         hideHintButton()
+        backgroundImage.animateBackgroundImage()
     }
     
     override func viewDidLoad() {
@@ -49,27 +55,24 @@ class AnswerViewController: UIViewController {
         setupGameData()
         setupSettingView()
         setupAnswerIntoButton()
-        setProgressTime()
+        setupHintGesture()
         setupHint()
-        adsLoads()
+        setupTimer()
+        
+        rewardAds.adsLoads(controller: self)
+        rewardAds.delegate = self
         
         lostView.delegate = self
-
-        hintAnswerButton.roundCorners(corners: [.bottomRight, .topRight], radius: 15)
-        hintHaftHaftButton.roundCorners(corners: [.bottomLeft, .topLeft], radius: 15)
-        
-   
-        
-        let tab = UITapGestureRecognizer(target: self, action: #selector(ActivateHintAnswerButton))
-        let click = UITapGestureRecognizer(target: self, action: #selector(ActivateHintHalfHalfButton))
-        hintAnswerButton.addGestureRecognizer(tab)
-        hintHaftHaftButton.addGestureRecognizer(click)
-        
-
+       
         DispatchQueue.main.async {
             self.animateInAnswerButton(views: self.answerView)
             self.animateHintButton()
         }
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewDidDisappear(animated)
+        timer.reset()
     }
     
     @IBAction func pauseButtonPressed(_ sender: UIButton) {
@@ -79,6 +82,8 @@ class AnswerViewController: UIViewController {
     // set animation to hint
     
     @objc func ActivateHintAnswerButton() {
+        if choosedCorrectAnswer { return }
+
         print("Hint Answer Used!")
         curveAnimation(view: hintAnswerButton, animationOptions: .curveEaseOut, defaultXMovement: -240, isReset: false, completion: nil)
         hintHandler(hintType: .answer)
@@ -91,6 +96,8 @@ class AnswerViewController: UIViewController {
     }
     
     @objc func ActivateHintHalfHalfButton() {
+        if choosedCorrectAnswer { return }
+
         print("Hint HalfHalf Used!")
         curveAnimation(view: hintHaftHaftButton, animationOptions: .curveEaseOut, defaultXMovement: 240, isReset: false, completion: nil)
         hintHandler(hintType: .halfhalf)
@@ -133,22 +140,21 @@ class AnswerViewController: UIViewController {
                             each.isHidden = false
                         })
                         xMovement *= -1
-
-                        
                     }
                 }
                 
             }
         }
-        
-
-        
+  
     }
     
     // MARK: - functions
     
+    
     func setupHint() {
         guard let gamePlayData = gamePlay else { return }
+        hintAnswerButton.roundCorners(corners: [.bottomRight, .topRight], radius: 15)
+        hintHaftHaftButton.roundCorners(corners: [.bottomLeft, .topLeft], radius: 15)
         
         hintAnswerButton.setupData(data: HintButton(type: gamePlayData.answerHint.type,
                                                     num: gamePlayData.answerHint.num,
@@ -157,6 +163,13 @@ class AnswerViewController: UIViewController {
         hintHaftHaftButton.setupData(data: HintButton(type: gamePlayData.halfhalfHint.type,
                                                       num: gamePlayData.halfhalfHint.num,
                                                       enable: gamePlayData.halfhalfHint.enable))
+    }
+    
+    func setupHintGesture() {
+        let tab = UITapGestureRecognizer(target: self, action: #selector(ActivateHintAnswerButton))
+        let click = UITapGestureRecognizer(target: self, action: #selector(ActivateHintHalfHalfButton))
+        hintAnswerButton.addGestureRecognizer(tab)
+        hintHaftHaftButton.addGestureRecognizer(click)
     }
     
     func setupSettingView() {
@@ -176,7 +189,7 @@ class AnswerViewController: UIViewController {
         }
     }
     
-    func getQuestion(level: Level, numOfQuestion: Int) -> String{
+    func getQuestion(level: Level, numOfQuestion: Int) -> String {
         return level.questions[numOfQuestion-1].question
     }
     
@@ -190,24 +203,13 @@ class AnswerViewController: UIViewController {
         
     }
 
+    func setupTimer() {
+        timer.setupTimer(duration: gamePlay?.answerTime ?? 0)
+        timer.delegate = self
+        timer.startCountDown()
 
-    
-    func setProgressTime() {
-        if gamePlay?.fail ?? 0 >= 3 { return }
-        
-        timeCountDown.setAnimatedProgress(progress: 0, duration: 40){
-            if self.gamePlay?.fail ?? 0 < 2 {
-                self.gamePlay?.fail += 1
-            } else {
-                self.gamePlay?.fail += 1
-                DispatchQueue.main.asyncAfter(deadline: .now()+2 ) {
-                    self.lostView.animateViewIn(baseView: self.view, popUpView: self.lostView)
-                }
-            }
-            self.reloadViewController()
-        }
     }
-    
+
     func setupAnswerIntoButton(){
         guard let gamePlayData = gamePlay else { return }
         guard let possibleAnswer = gamePlayData.level.questions[gamePlayData.question-1].possibleAnswer else { return }
@@ -276,7 +278,8 @@ class AnswerViewController: UIViewController {
     }
     
     func scoreCounting() {
-        gamePlay?.score += timeCountDown.timeRemainder(duration: 40) * 4
+        guard let gamePlayData = gamePlay else { return }
+        gamePlay?.score += Int(timer.getTimerRemainder()) * gamePlayData.multiplyer
 
         setScore()
     }
@@ -287,38 +290,27 @@ class AnswerViewController: UIViewController {
             gamePlay?.answerHint.enable = false
             gamePlay?.answerHint.num -= 1
             
-            userdefault.set(gamePlay?.answerHint.num, forKey: Constant.userdefault.answerHint)
         case .halfhalf:
             gamePlay?.halfhalfHint.enable = false
             gamePlay?.halfhalfHint.num -= 1
-            
-            userdefault.set(gamePlay?.halfhalfHint.num, forKey: Constant.userdefault.halfHint)
 
         }
+        
+        databaseHelper.updateHint(hintType: hintType, number: -1)
+
     }
     
-    
-    func switchToAnotherScreen(game: Game){
-        let controller = storyboard?.instantiateViewController(withIdentifier: "LevelViewController") as! LevelViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        controller.game = game
-        self.present(controller, animated: true)
-    }
-    
+
   
     func switchToReadingQuestionScreen() {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "ReadingQuestionViewController") as! ReadingQuestionViewController
-        
         gamePlay?.question += 1
-        controller.gamePlay = gamePlay
-    
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        self.present(controller, animated: true)
+        guard let gamePlay = gamePlay else { return }
+        self.gotoReadingQuestionViewController(data: gamePlay)
     }
     
     func reloadViewController() {
+        watchedAd = false
+        timer.reset()
         incorrectAnswer = [AnswerButton]()
         correctAnswer = AnswerButton()
         timeCountDown.setProgress(1, animated: true)
@@ -333,15 +325,9 @@ class AnswerViewController: UIViewController {
     }
     func switchToWinOrLoseScreen(){
         guard let gamePlayData = gamePlay else {return}
-
-        let controller = storyboard?.instantiateViewController(withIdentifier: "WinOrLoseViewController") as! WinOrLoseViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
         
-        gamePlay?.timings = Int(NSDate().timeIntervalSince(gamePlayData.countTimer))
-
-        controller.gamePlay = gamePlay
-        self.present(controller, animated: true)
+        gamePlay?.timings = Int(NSDate().timeIntervalSince(gamePlayData.startPlayTime))
+        self.gotoWinOrLoseViewController(data: gamePlay)
     }
 
 }
@@ -351,6 +337,8 @@ extension AnswerViewController: AnswerButtonDelegate {
     func didSelect(index: Int, status: Bool) {
 //        guard let gamePlayData = gamePlay else {return}
         
+        if choosedCorrectAnswer { return }
+        
         print(index)
         if gamePlay?.fail ?? 0 >= 3 {
             return
@@ -358,36 +346,35 @@ extension AnswerViewController: AnswerButtonDelegate {
         
         
         if !status {
-            
+            performButtonVibrate(vibrateType: .error)
             if gamePlay?.fail ?? 0 < 2 {
                 gamePlay?.fail += 1
             } else {
-                timeCountDown.pauseProgress()
+                timer.pause()
 
                 gamePlay?.fail += 1
-                DispatchQueue.main.asyncAfter(deadline: .now()+0.5) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
                     self.lostView.animateViewIn(baseView: self.view, popUpView: self.lostView)
                 }
             }
             setLifeOfGame()
 
-            
             buttonSoudEffect = AudioHelper(audioName: "failed", loop: false)
-            buttonSoudEffect.player?.volume = 100
-            buttonSoudEffect.player?.play()
             
         } else {
-            timeCountDown.pauseProgress()
+            choosedCorrectAnswer = true
+            performButtonVibrate(vibrateType: .success)
+            timer.pause()
             scoreCounting()
             
             buttonSoudEffect = AudioHelper(audioName: "correct", loop: false)
-            buttonSoudEffect.player?.play()
             
-            DispatchQueue.main.asyncAfter(deadline: .now()+2) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
                 if self.gamePlay?.question ?? 0 < 5 {
                     self.switchToReadingQuestionScreen()
                 }
                 else {
+                    self.gamePlay?.question += 1
                     self.switchToWinOrLoseScreen()
                 }
             }
@@ -412,11 +399,25 @@ extension AnswerViewController: AnswerButtonDelegate {
 // MARK: - Delegate
 
 extension AnswerViewController: SettingViewDelegate {
+    func logout() {
+        self.gotoViewControllerWithoutParam(newController: LoginViewController())
+    }
+    
     func quitGame() {
-        guard let gamePlayData = gamePlay else { return }
-        guard let game = gameData?.getGameByKey(key: gamePlayData.gameKey) else { return }
+
+        let alert = UIAlertController(title: "ចាកចេញ", message: "តើអ្នក់ចង់បោះបង់មែនទេ?", preferredStyle: .alert)
+        let cancel = UIAlertAction(title: "មិនយល់ព្រម", style: .cancel)
+        let action = UIAlertAction(title: "យល់ព្រម", style: .destructive) { _ in
+            guard let gamePlayData = self.gamePlay else { return }
+            guard let game = gameData?.getGameByKey(key: gamePlayData.gameKey) else { return }
+            
+            self.gotoLevelViewController(data: game)
+
+        }
         
-        switchToAnotherScreen(game: game)
+        alert.addAction(cancel)
+        alert.addAction(action)
+        self.present(alert, animated: true)
     }
     
     func dismissButton(_ view: UIView) {
@@ -431,62 +432,57 @@ extension AnswerViewController: LostViewDelegate {
     
     func displayAds() {
         lostView.animateViewOut(baseView: self.view, popUpView: lostView)
-        displayAds(controller: self)
+        rewardAds.displayAds(controller: self)
     }
     
     
 }
 
 // MAKR: InterstitialAds
-extension AnswerViewController {
-    
-    func adsLoads() {
-        GADRewardedInterstitialAd.load(withAdUnitID:"ca-app-pub-3940256099942544/6978759866",
-                                       request: GADRequest()) { ad, error in
-            if let error = error {
-                return print("Failed to load rewarded interstitial ad with error: \(error.localizedDescription)")
-            }
-            
-            self.rewardedInterstitialAd = ad
-            self.rewardedInterstitialAd?.fullScreenContentDelegate = self
+extension AnswerViewController: RewardedInterstitialAdDelegate {
+    func adLoaded(status: Bool) {
+        if status {
+            watchedAd = true
+        } else {
+            setupAlert()
         }
     }
     
-    func displayAds(controller: UIViewController) {
-        
-        guard let rewardedInterstitialAd = rewardedInterstitialAd else {
-          return setupAlert()
-        }
-
-        rewardedInterstitialAd.present(fromRootViewController: self) {
-            _ = rewardedInterstitialAd.adReward
-            self.watchedAd = true
-            self.gamePlay?.fail -= 1
-        }
-    }
-}
-
-
-extension AnswerViewController: GADFullScreenContentDelegate {
-    func ad(_ ad: GADFullScreenPresentingAd, didFailToPresentFullScreenContentWithError error: Error) {
-      print("Ad did fail to present full screen content.")
-        print("Error: ", error)
+    func adError(error: Error) {
         setupAlert()
     }
-
-    /// Tells the delegate that the ad will present full screen content.
-    func adWillPresentFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-      print("Ad will present full screen content.")
-    }
-
-    /// Tells the delegate that the ad dismissed full screen content.
-    func adDidDismissFullScreenContent(_ ad: GADFullScreenPresentingAd) {
-        print("Ad did dismiss full screen content.")
-        
+    
+    func dismissScreen() {
         if watchedAd {
+            self.gamePlay?.fail -= 1
             reloadViewController()
         } else {
-            switchToWinOrLoseScreen()
+            gotoFinishScreen()
         }
     }
+    
+    
+}
+
+extension AnswerViewController: TimerHelperDelegate {
+    func loadTimer(timer: Timer, progress: Float) {
+        timeCountDown.setProgress(progress, animated: true)
+    }
+    
+    func didLoadTimer(timer: Timer) {
+        if self.gamePlay?.fail ?? 0 < 2 {
+            self.gamePlay?.fail += 1
+
+            buttonSoudEffect = AudioHelper(audioName: "failed")
+
+            self.reloadViewController()
+        } else {
+            self.gamePlay?.fail += 1
+            DispatchQueue.main.asyncAfter(deadline: .now() + 2 ) {
+                self.lostView.animateViewIn(baseView: self.view, popUpView: self.lostView)
+            }
+        }
+    }
+    
+    
 }

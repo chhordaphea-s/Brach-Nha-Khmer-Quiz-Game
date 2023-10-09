@@ -7,20 +7,25 @@
 
 import Foundation
 import UIKit
+import UIImageViewAlignedSwift
 
 class GameChoosingViewController: UIViewController {
     
-    @IBOutlet weak var imageBackground: UIImageView!
+    @IBOutlet weak var backgroundImage: UIImageViewAligned!
     @IBOutlet var gameButtonView: [UIView]!
     @IBOutlet weak var playerModeSagementControl: ChoosePlayerModeCustomSagement!
     
     
-    var active: PlayMode = .singlePlayerMode
+    private var active: PlayMode = .singlePlayerMode
     
     
-    let settingView = SettingView()
+    private let settingView = SettingView()
     
     // MARK: - BODY
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        backgroundImage.animateBackgroundImage()
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +41,7 @@ class GameChoosingViewController: UIViewController {
         print("Khmer Riddle")
         
         if let data = gameData?.Riddle {
-            switchToAnotherScreen(game: data)
+            self.gotoLevelViewController(data: data)
         }
     }
     
@@ -45,25 +50,35 @@ class GameChoosingViewController: UIViewController {
         print("Khmer Proverb")
         
         if let data = gameData?.Proverb {
-            switchToAnotherScreen(game: data)
+            self.gotoLevelViewController(data: data)
         }
     }
     @IBAction func generalKnowlage(_ sender: UITapGestureRecognizer) {
         ButtonEffectAnimation.shared.popEffect(button: gameButtonView[2], sclaEffect: 0.9)
         print("Khmer General Knowlate")
-        if let data = gameData?.GeneralKnowlage {
-            switchToAnotherScreen(game: data)
+        if let data = gameData?.GeneralKnowledge {
+            self.gotoLevelViewController(data: data)
         }
         
     }
     
     @IBAction func settingButtonPressed(_ sender: UIButton) {
 //        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 326)
-        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 270)
+        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: settingView, width: 320, height: 348)
     }
     
     @IBAction func storeButtonPressed(_ sender: UIButton) {
-        switchToStoreViewController()
+        storeButtonFunction()
+    }
+    
+    
+    @IBAction func swipe(_ sender: UISwipeGestureRecognizer) {
+        switch sender.direction {
+        case .right:
+            self.gotoViewControllerWithoutParam(newController: MainViewController())
+        default:
+            return
+        }
     }
     
     // MARK: - Function
@@ -76,31 +91,21 @@ class GameChoosingViewController: UIViewController {
             index += 1
         }
     }
-
+    
+    func storeButtonFunction() {
+        if let currentUser = GoogleAuthenticationHelper().getCurrentUser() {
+            self.gotoViewControllerWithoutParam(newController: StoreViewController())
+            
+        } else {
+            self.gotoViewControllerWithoutParam(newController: LoginViewController())
+        }
+    }
     
     func setupSettingView() {
         settingView.delegate = self
         settingView.setup(type: .normal)
-//        settingView.setup(type: .playing)
     }
-    
 
-    
-    func switchToAnotherScreen(game: Game){
-        let controller = storyboard?.instantiateViewController(withIdentifier: "LevelViewController") as! LevelViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        controller.game = game
-        self.present(controller, animated: true)
-    }
-    
-    func switchToStoreViewController() {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "BuyHintViewController") as! StoreViewController
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        controller.backDirection = self
-        self.present(controller, animated: true)
-    }
 }
 
 extension GameChoosingViewController: SettingViewDelegate {
@@ -108,6 +113,25 @@ extension GameChoosingViewController: SettingViewDelegate {
     
     func dismissButton(_ view: UIView) {
         ViewAnimateHelper.shared.animateViewOut(self.view, popUpView: view)
+    }
+    
+    func logout() {
+        if let currentUser = GoogleAuthenticationHelper().getCurrentUser() {
+            let alert = UIAlertController(title: "ចាកចេញ", message: "តើអ្នកប្រាកដជាចង់ចាកចេញពីគណនីនេះមែនទេ?", preferredStyle: .alert)
+            let cancel = UIAlertAction(title: "មិនយល់ព្រម", style: .cancel)
+            let action = UIAlertAction(title: "យល់ព្រម", style: .destructive) { _ in
+                GoogleAuthenticationHelper().signOut() {
+                    self.gotoViewControllerWithoutParam(newController: LoginViewController())
+                }
+
+            }
+            
+            alert.addAction(cancel)
+            alert.addAction(action)
+            self.present(alert, animated: true)
+        } else {
+            self.gotoViewControllerWithoutParam(newController: LoginViewController())
+        }
     }
 }
 

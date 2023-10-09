@@ -28,9 +28,8 @@ extension UIView {
         
         if touches.first != nil {
             guard let soundName = soundFileName else {return}
-            if !soundName.isEmpty && soundEffect{
-                buttonSoudEffect.musicConfigure(audioName: soundName)
-                buttonSoudEffect.player?.play()
+            if !soundName.isEmpty {
+                buttonSoudEffect = AudioHelper(audioName: soundName)
             }
         }
     }
@@ -42,9 +41,8 @@ extension UIButton {
         super.touchesBegan(touches, with: event)
         
         guard let soundName = soundFileName else {return}
-        if !soundName.isEmpty && soundEffect{
-            buttonSoudEffect.musicConfigure(audioName: soundName)
-            buttonSoudEffect.player?.play()
+        if !soundName.isEmpty {
+            buttonSoudEffect = AudioHelper(audioName: soundName)
         }
     }
 }

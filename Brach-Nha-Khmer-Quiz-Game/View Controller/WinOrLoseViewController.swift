@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import AudioToolbox
+
 
 class WinOrLoseViewController: UIViewController {
     
@@ -17,9 +19,18 @@ class WinOrLoseViewController: UIViewController {
     @IBOutlet weak var highestScoreLabel: UILabel!
     @IBOutlet weak var replayButton: UIView!
     @IBOutlet weak var nextGameButton: UIView!
+    @IBOutlet weak var nextGameIcon: UIImageView!
+    @IBOutlet weak var menuButton: UIButton!
     @IBOutlet var stars: [StarView]!
     
     var gamePlay: GamePlay? = nil
+    
+    let databaseHelper = DatabaseHelper()
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        configureNextButton()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,7 +40,9 @@ class WinOrLoseViewController: UIViewController {
         displayMessages()
         setupHighestScore()
         displayStars()
-
+        setupSoundEffect()
+        
+        writeDataToDatabase()
     }
     
     
@@ -44,17 +57,66 @@ class WinOrLoseViewController: UIViewController {
     }
     
     @IBAction func nextGameTapGesture(_ sender: Any) {
-        guard let gamePlayData = gamePlay else {return}
-        guard let nextLvl = gameData?.getLevelGameFromLevelNum(gameKey: gamePlayData.gameKey, 
-                                                               levelNum: gamePlayData.level.level + 1)else { return }
-
+        guard let gamePlay = gamePlay else {return}
         ButtonEffectAnimation.shared.popEffect(button: nextGameButton)
-        
-        
-        switchToReadingQuestionScreen(key: gamePlayData.gameKey,
-                                      level: nextLvl,
-                                      highestScore: 0)
+
+        if gamePlay.question == 6 {
+            guard let nextLvl = gameData?.getLevelGameFromLevelNum(gameKey: gamePlay.gameKey,
+                                                                   levelNum: gamePlay.level.level + 1)else { return }
+
+            switchToReadingQuestionScreen(key: gamePlay.gameKey,
+                                          level: nextLvl,
+                                          highestScore: 0)
+        } else {
+            guard let gameData = gameData else { return }
+            guard let game = gameData.getGameByKey(key: gamePlay.gameKey) else { return }
+            
+            self.gotoLevelViewController(data: game)
+        }
     }
+    
+    @IBAction func menuButtonPressed(_ sener: UIButton) {
+        guard let gameData = gameData else { return }
+        guard let gamePlay = gamePlay else {return}
+        guard let game = gameData.getGameByKey(key: gamePlay.gameKey) else { return }
+        
+        self.gotoLevelViewController(data: game)
+    }
+    
+    // MARK: - Function
+    
+    func configureNextButton() {
+        
+        if gamePlay?.question != 6 {
+            nextGameIcon.image = UIImage(named: "level")!
+            menuButton.isHidden = true
+            nextGameIcon.tintColor = .white
+        }
+    }
+    
+    func writeDataToDatabase() {
+        guard let gamePlay = gamePlay else {return}
+
+        if gamePlay.question == 6 {
+            let levelCompleted = LevelCompleted().defaultData(star: getStar() ?? 1,
+                                                              score: getHighestScore() ?? 0,
+                                                              timing: gamePlay.timings,
+                                                              level: gamePlay.level.level)
+            
+            databaseHelper.addCompletedLevel(gameKey: gamePlay.gameKey, level: levelCompleted)
+        }
+        
+    }
+    
+    func setupSoundEffect() {
+        guard let gamePlayData = gamePlay else {return}
+        
+        peformVibrate(win: gamePlayData.question == 6 ? true : false)
+
+        buttonSoudEffect.musicConfigure(audioName: gamePlayData.question == 6 ? "winner" : "lostGame")
+
+    }
+    
     
     func setupTotalScore() {
         totalScoreLabel.text = convertEngNumToKhNum(engNum: gamePlay?.score ?? 0)
@@ -74,7 +136,13 @@ class WinOrLoseViewController: UIViewController {
     }
     
     func setupHighestScore() {
-        guard let gamePlayData = gamePlay else {return}
+        var tmpHighestScore = getHighestScore() ?? 0
+        
+        highestScoreLabel.text = convertEngNumToKhNum(engNum: tmpHighestScore)
+    }
+    
+    func getHighestScore() -> Int? {
+        guard let gamePlayData = gamePlay else {return nil}
         var tmpHighestScore: Int
         
         if gamePlayData.highestScore < gamePlayData.score {
@@ -83,7 +151,7 @@ class WinOrLoseViewController: UIViewController {
             tmpHighestScore = gamePlayData.highestScore
         }
         
-        highestScoreLabel.text = convertEngNumToKhNum(engNum: tmpHighestScore)
+        return tmpHighestScore
     }
     
     func displayMessages() {
@@ -101,18 +169,7 @@ class WinOrLoseViewController: UIViewController {
     }
     
     func displayStars() {
-        guard let gamePlayData = gamePlay else {return}
-        var numOfStar = 0
-        
-        if gamePlayData.question == 5 {
-            if gamePlayData.score < 500 {
-                numOfStar = 1
-            } else if gamePlayData.score < 800 {
-                numOfStar = 2
-            } else {
-                numOfStar = 3
-            }
-        }
+        var numOfStar = getStar() ?? 0
         
         DispatchQueue.main.async {
             for i in 0..<numOfStar {
@@ -125,31 +182,34 @@ class WinOrLoseViewController: UIViewController {
         
     }
     
-    func switchToReadingQuestionScreen(key: String, level: Level, highestScore: Int) {
-        let controller = storyboard?.instantiateViewController(withIdentifier: "ReadingQuestionViewController") as! ReadingQuestionViewController
+    func getStar() -> Int? {
+        guard let gamePlayData = gamePlay else {return nil}
+
+        var numOfStar = 0
         
-        controller.gamePlay = GamePlay(gameKey: key,
-                                       level: level,
-                                       question: 1,
-                                       score: 0,
-                                       fail: 0,
-                                       timings: 0,
-                                       answerHint: HintButton(type: .answer, num: answerHint, enable: true),
-                                       halfhalfHint: HintButton(type: .halfhalf, num: halfHint, enable: true),
-                                       star: 0,
-                                       highestScore: highestScore,
-                                       countTimer: Date()
-        )
-        
-        controller.modalPresentationStyle = .fullScreen
-        controller.modalTransitionStyle = .crossDissolve
-        self.present(controller, animated: true)
+        if gamePlayData.question == 6 {
+            if gamePlayData.score < 500 {
+                numOfStar = 1
+            } else if gamePlayData.score < 800 {
+                numOfStar = 2
+            } else {
+                numOfStar = 3
+            }
+        }
+        return numOfStar
     }
     
-    
-    
-    
-
-   
-
+    func switchToReadingQuestionScreen(key: String, level: Level, highestScore: Int) {
+        let userData = databaseHelper.fetchData()
+        guard let answerHint = userData.hint?.answerHint?.number else { return }
+        guard let halfHint = userData.hint?.halfHint?.number else { return }
+                
+        let gamePlay = GamePlay(gameKey: key,
+                                startPlayTime: Date(),
+                                level: level,
+                                answerHint: HintButton(type: .answer, num: answerHint, enable: true),
+                                halfhalfHint: HintButton(type: .halfhalf, num: halfHint, enable: true),
+                                highestScore: userData.game?.getGameByKey(key: key)?.getLevelGameFromLevelNum(levelNum: level.level)?.score ?? 0)
+        self.gotoReadingQuestionViewController(data: gamePlay)
+    }
 }

@@ -8,6 +8,12 @@
 import UIKit
 import GoogleMobileAds
 
+import FirebaseCore
+import FirebaseFirestore
+import FirebaseAuth
+import GoogleSignIn
+
+
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -15,9 +21,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-                
-        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        FirebaseApp.configure()
 
+        DatabaseHelper().getPath()
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
+        
         return true
     }
 
@@ -38,3 +46,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+
+extension AppDelegate {
+    
+    func application(_ app: UIApplication,
+                     open url: URL,
+                     options: [UIApplication.OpenURLOptionsKey: Any] = [:]) -> Bool {
+      return GIDSignIn.sharedInstance.handle(url)
+    }
+    
+}

@@ -125,3 +125,10 @@ extension UIView {
         }
     }
 }
+
+
+extension UIButton {
+    func toBarButtonItem() -> UIBarButtonItem? {
+        return UIBarButtonItem(customView: self)
+    }
+}
