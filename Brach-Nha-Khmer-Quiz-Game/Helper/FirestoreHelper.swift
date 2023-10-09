@@ -21,6 +21,7 @@ class FirestoreHelper {
     }
 
     func startSync() {
+        
         if GoogleAuthenticationHelper().getCurrentUser() == nil { return }
         
         // Initialize Realm
@@ -45,17 +46,18 @@ class FirestoreHelper {
             case .update(_, _, _, _):
                 // Handle updates, deletions, and insertions
                 guard let uID = realmResults.first?.userID else { return }
-                let dataToSync = realmResults[0].toFirestoreDictionary()
 
+                updateDataToServer(uID: uID, realmResult: realmResults)
+                
                 // Update the data in Firestore
-                let docRef = self.db.collection(Constant.server.collectionID).document(uID)
-                docRef.setData(["data" : dataToSync]) { error in
-                    if let error = error {
-                        print("Error updating Firestore: \(error.localizedDescription)")
-                    } else {
-                        print("Firestore updated successfully")
-                    }
-                }
+//                let docRef = self.db.collection(Constant.server.collectionID).document(uID)
+//                docRef.setData(["data" : dataToSync]) { error in
+//                    if let error = error {
+//                        print("Error updating Firestore: \(error.localizedDescription)")
+//                    } else {
+//                        print("Firestore updated successfully")
+//                    }
+//                }
 
                 break
             case .error(let error):
@@ -66,8 +68,7 @@ class FirestoreHelper {
         }
     }
     
-    func addDataToServer(uID: String, data: [String : Any]) {
-        
+    func addDataToServer(uID: String,  data: [String : Any]) {
         let docRef = self.db.collection(Constant.server.collectionID).document(uID)
         docRef.setData(["data" : data]) { error in
             if let error = error {
@@ -77,6 +78,20 @@ class FirestoreHelper {
 
             }
         }
+    }
+    
+    func updateDataToServer(uID: String, realmResult: Results<UserData>) {
+        let dataToSync = realmResult[0].toFirestoreDictionary()
+
+        let docRef = self.db.collection(Constant.server.collectionID).document(uID)
+        docRef.setData(["data" : dataToSync]) { error in
+            if let error = error {
+                print("Error updating Firestore: \(error.localizedDescription)")
+            } else {
+                print("Firestore updated successfully")
+            }
+        }
+        
     }
 
     func stopSync() {

@@ -25,7 +25,12 @@ class LoginViewController: UIViewController {
     }
 
     @IBAction func signInButtonPressGesture(_ sender: UITapGestureRecognizer) {
-        auth.signIn(baseVeiw: self)
+        if !Reachability.isConnectedToNetwork() {
+            setupAlert(self)
+        } else {
+            auth.signIn(baseVeiw: self)
+
+        }
     }
     
     @IBAction func skipButtonPressed(_ sender: UIButton) {
@@ -39,6 +44,13 @@ class LoginViewController: UIViewController {
         alert.addAction(action)
         alert.addAction(cancel)
         self.present(alert, animated: true)
+    }
+    
+    func setupAlert(_ controller: UIViewController) {
+        let alert = UIAlertController(title: "ការតភ្ជាប់", message: "ឧបករណ៍របស់អ្នកមិនបានតភ្ជាប់ជាមួយបណ្ដាញទេ", preferredStyle: .alert)
+        let button = UIAlertAction(title: "ទទួលបាន", style: .cancel)
+        alert.addAction(button)
+        controller.present(alert, animated: true)
     }
 
     

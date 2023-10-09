@@ -21,17 +21,9 @@ class DummyViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        if Reachability.isConnectedToNetwork() {
-            auth.reAuthenticate()
-            auth.delegate = self
-        } else {
-            print("userdata:", db.fetchData())
-            self.gotoViewControllerWithoutParam(newController: MainViewController())
-        }
-
+        auth.reAuthenticate()
+        auth.delegate = self
     }
-    
-
 }
 
 extension DummyViewController: GoogleAuthenticationHelperDelegate {
@@ -50,6 +42,7 @@ extension DummyViewController: GoogleAuthenticationHelperDelegate {
             if db.isEmpty() {
                 self.gotoViewControllerWithoutParam(newController: LoginViewController())
             } else {
+                FirestoreHelper.shared.startSync()
                 self.gotoViewControllerWithoutParam(newController: MainViewController())
             }
         }

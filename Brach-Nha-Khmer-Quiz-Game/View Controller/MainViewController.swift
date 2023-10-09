@@ -84,7 +84,7 @@ class MainViewController: UIViewController {
     }
     
     func storeButtonFunction() {
-        if let currentUser = GoogleAuthenticationHelper().getCurrentUser() {
+        if GoogleAuthenticationHelper().getCurrentUser() != nil {
             self.gotoViewControllerWithoutParam(newController: StoreViewController())
             
         } else {

@@ -3,4 +3,101 @@
    uuid = "B7695A3B-96A3-49DC-9A03-2E18EE8AD785"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5C7FD119-6F2A-4FB3-BEEB-5E76BAD9648D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/View Controller/DummyViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
+            landmarkName = "reAuthenticate(user:error:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "5C7FD119-6F2A-4FB3-BEEB-5E76BAD9648D - 5adc5e49cad3e831"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.DummyViewController.reAuthenticate(user: Swift.Optional&lt;__C.FIRUser&gt;, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/View%20Controller/DummyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "552">
+               </Location>
+               <Location
+                  uuid = "5C7FD119-6F2A-4FB3-BEEB-5E76BAD9648D - 5adc5e49cad3e831"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.DummyViewController.reAuthenticate(user: Swift.Optional&lt;__C.FIRUser&gt;, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/View%20Controller/DummyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "47"
+                  endingLineNumber = "47"
+                  offsetFromSymbolStart = "564">
+               </Location>
+               <Location
+                  uuid = "5C7FD119-6F2A-4FB3-BEEB-5E76BAD9648D - 5adc5e49cad3e810"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.DummyViewController.reAuthenticate(user: Swift.Optional&lt;__C.FIRUser&gt;, error: Swift.Optional&lt;Swift.Error&gt;) -&gt; ()"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/View%20Controller/DummyViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "46"
+                  endingLineNumber = "46"
+                  offsetFromSymbolStart = "564">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "EC0BD5D1-9ED8-47CB-9E26-F1317B7FD367"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Helper/FirestoreHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "startSync()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AFE6B103-961D-49D1-981C-7D8FA49EE62A"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Helper/FirestoreHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "startSync()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>

@@ -68,6 +68,7 @@
 		0EA44D3B2A97293A00B5539A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */; };
 		0EA44D462A97353600B5539A /* PlayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D452A97353600B5539A /* PlayMode.swift */; };
 		0EB9A8D02AD3D0BA00454E8A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB9A8CF2AD3D0B900454E8A /* Reachability.swift */; };
+		0EB9A8D22AD4040A00454E8A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB9A8D12AD4040A00454E8A /* NetworkMonitor.swift */; };
 		0ED12ADD2AC5530F006DE2B0 /* StoreKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED12ADC2AC5530F006DE2B0 /* StoreKitHelper.swift */; };
 		0EDC0B2D2AA0A49700B91B2C /* ViewAnimateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */; };
 		0EDC0B342AA0A5EB00B91B2C /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */; };
@@ -157,6 +158,7 @@
 		0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0EA44D452A97353600B5539A /* PlayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMode.swift; sourceTree = "<group>"; };
 		0EB9A8CF2AD3D0B900454E8A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
+		0EB9A8D12AD4040A00454E8A /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		0ED12ADC2AC5530F006DE2B0 /* StoreKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitHelper.swift; sourceTree = "<group>"; };
 		0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimateHelper.swift; sourceTree = "<group>"; };
 		0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
@@ -235,7 +237,6 @@
 				FCDA06CB2AA898CD00A2A239 /* HintTellAnswerButton */,
 				FCDA06C42AA853A700A2A239 /* HintHalfHalfButton */,
 				FCDA06B12AA6F89100A2A239 /* AnswerButton */,
-				0E68C9232A9B307F00ACF84D /* ChoosePlayerModeCustomSagement */,
 			);
 			path = "Custom View";
 			sourceTree = "<group>";
@@ -287,6 +288,7 @@
 				0E5CE7D12ACBFC3E003E7461 /* DatabaseHelper.swift */,
 				0E24D9F22ACE8E37006DF438 /* GoogleAuthenticationHelper.swift */,
 				0E2DFA6C2ACED14700D92C0B /* FirestoreHelper.swift */,
+				0EB9A8D12AD4040A00454E8A /* NetworkMonitor.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -435,11 +437,12 @@
 		FC3D988A2A8E2A86001A05CE /* Brach-Nha-Khmer-Quiz-Game */ = {
 			isa = PBXGroup;
 			children = (
+				0E68C9232A9B307F00ACF84D /* ChoosePlayerModeCustomSagement */,
 				0EDDEC232AA194DA00E32087 /* Utilities */,
 				0EDDEC222AA194CF00E32087 /* Globle */,
+				0EDC0B242AA0A3E700B91B2C /* View Controller */,
 				0E68C9222A9B307400ACF84D /* Custom View */,
 				0EDC0B252AA0A3F800B91B2C /* View */,
-				0EDC0B242AA0A3E700B91B2C /* View Controller */,
 				FCCDD2312A9CB68200672A8C /* View Model */,
 				0E6F8A9E2A989E6700B480F5 /* Helper */,
 				0E6F8A9D2A989E5E00B480F5 /* Model */,
@@ -664,6 +667,7 @@
 				0E5CE7D22ACBFC3E003E7461 /* DatabaseHelper.swift in Sources */,
 				0EB9A8D02AD3D0BA00454E8A /* Reachability.swift in Sources */,
 				0E8170492AC2CA3D00E2A270 /* HintButton.swift in Sources */,
+				0EB9A8D22AD4040A00454E8A /* NetworkMonitor.swift in Sources */,
 				0E98815D2AA46F8600D326CC /* Global.swift in Sources */,
 				0E8170392AC2CA2F00E2A270 /* AnswerViewController.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
