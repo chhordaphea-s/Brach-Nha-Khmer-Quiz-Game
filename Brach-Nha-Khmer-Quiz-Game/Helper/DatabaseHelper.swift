@@ -9,6 +9,7 @@ import RealmSwift
 
 class DatabaseHelper: NSObject {
     
+
     private let realm = try! Realm()
     private let auth = GoogleAuthenticationHelper()
 

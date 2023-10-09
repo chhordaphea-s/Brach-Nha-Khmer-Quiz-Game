@@ -65,20 +65,6 @@ extension UIViewController {
         newController.modalTransitionStyle = .crossDissolve
         self.present(newController, animated: true)
     }
-    
-    
-//    func getTopViewController() -> UIViewController {
-//        let keyWindow = UIApplication.shared.windows.filter {$0.isKeyWindow}.first
-//
-//        if var topController = keyWindow?.rootViewController {
-//            while let presentedViewController = topController.presentedViewController {
-//                topController = presentedViewController
-//                return topController
-//            }
-//
-//        }
-//        return self
-//    }
 }
 
 

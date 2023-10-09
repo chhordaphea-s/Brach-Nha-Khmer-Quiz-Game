@@ -25,6 +25,7 @@ class DummyViewController: UIViewController {
             auth.reAuthenticate()
             auth.delegate = self
         } else {
+            print("userdata:", db.fetchData())
             self.gotoViewControllerWithoutParam(newController: MainViewController())
         }
 
