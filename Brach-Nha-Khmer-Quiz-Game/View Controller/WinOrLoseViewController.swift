@@ -24,12 +24,23 @@ class WinOrLoseViewController: UIViewController {
     @IBOutlet var stars: [StarView]!
     
     var gamePlay: GamePlay? = nil
+    var shouldGiveHint = false
     
     let databaseHelper = DatabaseHelper()
+    private let hintView = HintPopupView()
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureNextButton()
+
+        
+        guard let gamePlay = gamePlay else { return }
+        if gamePlay.question == 6 {
+            if gamePlay.highestScore == 0 && gamePlay.level.level % 5 == 0 {
+                shouldGiveHint = true
+            }
+        }
+        
     }
     
     override func viewDidLoad() {
@@ -44,6 +55,12 @@ class WinOrLoseViewController: UIViewController {
         
         writeDataToDatabase()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        giftHint()
+    }
+    
     
     
     @IBAction func replayTapGesture(_ sender: UITapGestureRecognizer) {
@@ -84,6 +101,22 @@ class WinOrLoseViewController: UIViewController {
     }
     
     // MARK: - Function
+    
+    func giftHint() {
+        if !shouldGiveHint { return }
+        
+        hintView.delegate = self
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+            self.increaseHint(hint: .answer)
+        }
+        
+
+    }
+    
+    func increaseHint(hint: HintType) {
+        hintView.setup(data: Hint(hinType: hint, number: 1))
+        ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: hintView, width: 314, height: 276, tapBackground: false)
+    }
     
     func configureNextButton() {
         
@@ -212,4 +245,20 @@ class WinOrLoseViewController: UIViewController {
                                 highestScore: userData.game?.getGameByKey(key: key)?.getLevelGameFromLevelNum(levelNum: level.level)?.score ?? 0)
         self.gotoReadingQuestionViewController(data: gamePlay)
     }
+}
+
+
+extension WinOrLoseViewController: HintPopupViewDelegate {
+    func dismissHintView(_ view: UIView) {
+        ViewAnimateHelper.shared.animateViewOut(self.view, popUpView: view)
+        
+        if shouldGiveHint {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+                self.increaseHint(hint: .halfhalf)
+                self.shouldGiveHint = false
+            }
+        }
+    }
+    
+    
 }
