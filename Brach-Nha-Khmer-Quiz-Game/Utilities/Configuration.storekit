@@ -7,112 +7,67 @@
     {
       "displayPrice" : "2.99",
       "familyShareable" : false,
-      "internalID" : "F4F56F1E",
+      "internalID" : "E96410E3",
       "localizations" : [
         {
-          "description" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន៣",
-          "displayName" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន៣",
+          "description" : "ជំនួយ៖ ប្រាប់ចម្លើយ ចំនួន៣",
+          "displayName" : "ជំនួយ៖ ប្រាប់ចម្លើយ ចំនួន៣",
           "locale" : "en_US"
         }
       ],
       "productID" : "com.BrachNhaKhmerQuizGame.answerHint3x",
       "referenceName" : "answerHint3x",
-      "type" : "NonConsumable"
+      "type" : "Consumable"
     },
     {
       "displayPrice" : "4.99",
       "familyShareable" : false,
-      "internalID" : "E0FB88A5",
+      "internalID" : "4871413B",
       "localizations" : [
         {
-          "description" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន៩",
-          "displayName" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន៩",
+          "description" : "ជំនួយ៖ ប្រាប់ចម្លើយ ចំនួន៩",
+          "displayName" : "ជំនួយ៖ ប្រាប់ចម្លើយ ចំនួន៩",
           "locale" : "en_US"
         }
       ],
       "productID" : "com.BrachNhaKhmerQuizGame.answerHint9x",
       "referenceName" : "answerHint9x",
-      "type" : "NonConsumable"
+      "type" : "Consumable"
     },
     {
       "displayPrice" : "9.99",
       "familyShareable" : false,
-      "internalID" : "C6B6F597",
+      "internalID" : "08EA16C0",
       "localizations" : [
         {
-          "description" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន២០",
-          "displayName" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន២០",
+          "description" : "ជំនួយ៖ ប្រាប់ចម្លើយ ចំនួន២០",
+          "displayName" : "ជំនួយ៖ ប្រាប់ចម្លើយ ចំនួន២០",
           "locale" : "en_US"
         }
       ],
       "productID" : "com.BrachNhaKhmerQuizGame.answerHint20x",
-      "referenceName" : "answrHint20x",
-      "type" : "NonConsumable"
-    },
-    {
-      "displayPrice" : "2.99",
-      "familyShareable" : false,
-      "internalID" : "D50E6543",
-      "localizations" : [
-        {
-          "description" : "ជំនួយ៖ ៥០:៥០ ចំនួន៣",
-          "displayName" : "ជំនួយ៖ ៥០:៥០ ចំនួន៣",
-          "locale" : "en_US"
-        }
-      ],
-      "productID" : "com.BrachNhaKhmerQuizGame.halfHint3x",
-      "referenceName" : "halfHint3x",
-      "type" : "NonConsumable"
-    },
-    {
-      "displayPrice" : "4.99",
-      "familyShareable" : false,
-      "internalID" : "39A2C085",
-      "localizations" : [
-        {
-          "description" : "ជំនួយ៖ ៥០:៥០ ចំនួន៩",
-          "displayName" : "ជំនួយ៖ ៥០:៥០ ចំនួន៩",
-          "locale" : "en_US"
-        }
-      ],
-      "productID" : "com.BrachNhaKhmerQuizGame.halfHint9x",
-      "referenceName" : "halfHint9x",
-      "type" : "NonConsumable"
-    },
-    {
-      "displayPrice" : "9.99",
-      "familyShareable" : false,
-      "internalID" : "E688E4E7",
-      "localizations" : [
-        {
-          "description" : "ជំនួយ៖ ៥០:៥០ ចំនួន២០",
-          "displayName" : "ជំនួយ៖ ៥០:៥០ ចំនួន២០",
-          "locale" : "en_US"
-        }
-      ],
-      "productID" : "com.BrachNhaKhmerQuizGame.halfHint20x",
-      "referenceName" : "halfHint20x",
-      "type" : "NonConsumable"
+      "referenceName" : "answerHint20x",
+      "type" : "Consumable"
     },
     {
       "displayPrice" : "0",
       "familyShareable" : false,
-      "internalID" : "203431BE",
+      "internalID" : "CEC46EF9",
       "localizations" : [
         {
-          "description" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន១",
-          "displayName" : "ជំនួយ៖ ប្រាប់បម្លើយ ចំនួន១",
+          "description" : "ជំនួយ៖ ប្រាប់ចម្លើយ ចំនួន១",
+          "displayName" : "ជំនួយ៖ ប្រាប់ចម្លើយ ចំនួន១",
           "locale" : "en_US"
         }
       ],
       "productID" : "com.BrachNhaKhmerQuizGame.answerHint1x",
       "referenceName" : "answerHint1x",
-      "type" : "NonConsumable"
+      "type" : "Consumable"
     },
     {
       "displayPrice" : "0",
       "familyShareable" : false,
-      "internalID" : "E7DBE5EF",
+      "internalID" : "DD95332C",
       "localizations" : [
         {
           "description" : "ជំនួយ៖ ៥០:៥០ ចំនួន១",
@@ -122,7 +77,52 @@
       ],
       "productID" : "com.BrachNhaKhmerQuizGame.halfHint1x",
       "referenceName" : "halfHint1x",
-      "type" : "NonConsumable"
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "9.99",
+      "familyShareable" : false,
+      "internalID" : "BDBFD0BD",
+      "localizations" : [
+        {
+          "description" : "ជំនួយ៖ ៥០:៥០ ចំនួន២០",
+          "displayName" : "ជំនួយ៖ ៥០:៥០ ចំនួន២០",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.BrachNhaKhmerQuizGame.halfHint20x",
+      "referenceName" : "halfHint20x",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "4.99",
+      "familyShareable" : false,
+      "internalID" : "D18CF6E7",
+      "localizations" : [
+        {
+          "description" : "ជំនួយ៖ ៥០:៥០ ចំនួន៩",
+          "displayName" : "ជំនួយ៖ ៥០:៥០ ចំនួន៩",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.BrachNhaKhmerQuizGame.halfHint9x",
+      "referenceName" : "halfHint9x",
+      "type" : "Consumable"
+    },
+    {
+      "displayPrice" : "2.99",
+      "familyShareable" : false,
+      "internalID" : "7D60FF0F",
+      "localizations" : [
+        {
+          "description" : "ជំនួយ៖ ៥០:៥០ ចំនួន៣",
+          "displayName" : "ជំនួយ៖ ៥០:៥០ ចំនួន៣",
+          "locale" : "en_US"
+        }
+      ],
+      "productID" : "com.BrachNhaKhmerQuizGame.halfHint3x",
+      "referenceName" : "halfHint3x",
+      "type" : "Consumable"
     }
   ],
   "settings" : {
