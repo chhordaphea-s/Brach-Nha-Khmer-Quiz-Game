@@ -440,6 +440,10 @@ extension AnswerViewController: LostViewDelegate {
 
 // MAKR: InterstitialAds
 extension AnswerViewController: RewardedInterstitialAdDelegate {
+    func errorConnection() {
+        switchToWinOrLoseScreen()
+    }
+    
     func adLoaded(status: Bool) {
         if status {
             watchedAd = true

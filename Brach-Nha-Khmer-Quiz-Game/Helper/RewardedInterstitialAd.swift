@@ -12,6 +12,7 @@ protocol RewardedInterstitialAdDelegate: NSObjectProtocol {
     func adLoaded(status: Bool)
     func adError(error: Error)
     func dismissScreen()
+    func errorConnection()
     
 }
 
@@ -53,7 +54,9 @@ class RewardedInterstitialAd: NSObject, GADFullScreenContentDelegate {
     
     func setupAlert(controller: UIViewController) {
         let alert = UIAlertController(title: "ការតភ្ជាប់", message: "ឧបករណ៍របស់អ្នកមិនបានតភ្ជាប់ជាមួយបណ្ដាញទេ", preferredStyle: .alert)
-        let button = UIAlertAction(title: "ទទួលបាន", style: .cancel)
+        let button = UIAlertAction(title: "ទទួលបាន", style: .cancel) {_ in
+            self.delegate?.errorConnection()
+        }
         alert.addAction(button)
         controller.present(alert, animated: true)
     }
