@@ -255,6 +255,9 @@ extension StoreViewController: StoreKitHelperDelegate {
 // MARK: InterstitialAds
 
 extension StoreViewController: RewardedInterstitialAdDelegate {
+    func errorConnection() {
+    }
+    
     func adLoaded(status: Bool) {
         if status {
             adsUsed = true

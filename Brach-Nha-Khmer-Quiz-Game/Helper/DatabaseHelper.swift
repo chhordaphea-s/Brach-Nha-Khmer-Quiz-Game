@@ -99,14 +99,54 @@ class DatabaseHelper: NSObject {
 
             switch gameKey {
             case gameData.Riddle.key:
-                userData.game?.riddle?.levels.append(level)
                 
+                if let index = self.getIndexOfCompletedLevel(levels: userData.game?.riddle?.levels, newLevel: level) {
+                    
+                    if let level1 = userData.game?.riddle?.levels[index] {
+                        let newReplaceLevel = getBetterLevel(level1: level1, level2: level)
+                        
+                        userData.game?.riddle?.levels.replace(index: index, object: newReplaceLevel)
+                    } else {
+                        print("Error Index: ", index)
+                    }
+                        
+                } else {
+                    userData.game?.riddle?.levels.append(level)
+                }
+            
             case gameData.Proverb.key:
-                userData.game?.proverb?.levels.append(level)
                 
+                
+                if let index = self.getIndexOfCompletedLevel(levels: userData.game?.proverb?.levels, newLevel: level) {
+                    
+                    if let level1 = userData.game?.proverb?.levels[index] {
+                        let newReplaceLevel = getBetterLevel(level1: level1, level2: level)
+                        
+                        userData.game?.proverb?.levels.replace(index: index, object: newReplaceLevel)
+                    } else {
+                        print("Error Index: ", index)
+                    }
+                        
+                } else {
+                    userData.game?.proverb?.levels.append(level)
+                }
+                                
             case gameData.GeneralKnowledge.key:
-                userData.game?.generalKnowledge?.levels.append(level)
                 
+                if let index = self.getIndexOfCompletedLevel(levels: userData.game?.generalKnowledge?.levels, newLevel: level) {
+                    
+                    if let level1 = userData.game?.generalKnowledge?.levels[index] {
+                        let newReplaceLevel = getBetterLevel(level1: level1, level2: level)
+                        
+                        userData.game?.generalKnowledge?.levels.replace(index: index, object: newReplaceLevel)
+                    } else {
+                        print("Error Index: ", index)
+                    }
+                        
+                } else {
+                    userData.game?.generalKnowledge?.levels.append(level)
+                }
+    
             default:
                 print("Wrong Game Key")
                 return
@@ -115,6 +155,34 @@ class DatabaseHelper: NSObject {
             
         }
         print("UserData: ", fetchData())
+    }
+    
+    func getBetterLevel(level1: LevelCompleted?, level2: LevelCompleted) -> LevelCompleted {
+        guard let level1 = level1 else { return level2 }
+        
+        if level1.score >= level2.score {
+            return level1
+        } else {
+            return level2
+        }
+    }
+    
+    func getIndexOfCompletedLevel(levels: List<LevelCompleted>?, newLevel: LevelCompleted) -> Int? {
+        var levelIndex: Int?
+        
+        guard let levels = levels else { return nil }
+        var index = 0
+
+        for level in levels {
+            if level.level == newLevel.level {
+                levelIndex = index
+                break
+            }
+            index += 1
+        }
+                
+        
+        return levelIndex
     }
     
     func getTotalScore() -> Int {
@@ -168,6 +236,8 @@ class DatabaseHelper: NSObject {
         }
 
     }
+    
+
     
     
 }

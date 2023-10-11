@@ -98,7 +98,8 @@ class ReadingQuestionViewController: UIViewController {
         
         score.text = "ពិន្ទុ \(convertEngNumToKhNum(engNum: gamePlayData.score))"
         setLifeOfGame()
-        questionOrder.text = "សំណួរទី\(convertEngNumToKhNum(engNum: gamePlayData.question))"
+        questionOrder.text = "កម្រិត\(convertEngNumToKhNum(engNum: gamePlayData.level.level))៖ សំណួរទី \(convertEngNumToKhNum(engNum: gamePlayData.question))"
+        
         question.text = getQuestion(level: gamePlayData.level,
                     numOfQuestion: gamePlayData.question)
         
