@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "landscape1 1.png",
+      "filename" : "Video.svg",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "landscape1 1@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "landscape1 1@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }

@@ -3,4 +3,309 @@
    uuid = "B7695A3B-96A3-49DC-9A03-2E18EE8AD785"
    type = "0"
    version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1755A833-7982-4EED-9767-4F2471399925"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "176"
+            endingLineNumber = "176"
+            landmarkName = "getIndexOfCompletedLevel(levels:newLevel:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1755A833-7982-4EED-9767-4F2471399925 - f6b22862a5050cdd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.DatabaseHelper.getIndexOfCompletedLevel(levels: Swift.Optional&lt;RealmSwift.List&lt;Brach_Nha_Khmer_Quiz_Game.LevelCompleted&gt;&gt;, newLevel: Brach_Nha_Khmer_Quiz_Game.LevelCompleted) -&gt; Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "336">
+               </Location>
+               <Location
+                  uuid = "1755A833-7982-4EED-9767-4F2471399925 - f6b22862a5050cdd"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.DatabaseHelper.getIndexOfCompletedLevel(levels: Swift.Optional&lt;RealmSwift.List&lt;Brach_Nha_Khmer_Quiz_Game.LevelCompleted&gt;&gt;, newLevel: Brach_Nha_Khmer_Quiz_Game.LevelCompleted) -&gt; Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "176"
+                  endingLineNumber = "176"
+                  offsetFromSymbolStart = "232">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7ECCC665-56E6-4EF8-8FE2-0F7E18FFE7A6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "173"
+            endingLineNumber = "173"
+            landmarkName = "getIndexOfCompletedLevel(levels:newLevel:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "7ECCC665-56E6-4EF8-8FE2-0F7E18FFE7A6 - f6b22862a5050d42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.DatabaseHelper.getIndexOfCompletedLevel(levels: Swift.Optional&lt;RealmSwift.List&lt;Brach_Nha_Khmer_Quiz_Game.LevelCompleted&gt;&gt;, newLevel: Brach_Nha_Khmer_Quiz_Game.LevelCompleted) -&gt; Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "168">
+               </Location>
+               <Location
+                  uuid = "7ECCC665-56E6-4EF8-8FE2-0F7E18FFE7A6 - f6b22862a5050d42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.DatabaseHelper.getIndexOfCompletedLevel(levels: Swift.Optional&lt;RealmSwift.List&lt;Brach_Nha_Khmer_Quiz_Game.LevelCompleted&gt;&gt;, newLevel: Brach_Nha_Khmer_Quiz_Game.LevelCompleted) -&gt; Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "204">
+               </Location>
+               <Location
+                  uuid = "7ECCC665-56E6-4EF8-8FE2-0F7E18FFE7A6 - f6b22862a5050d42"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.DatabaseHelper.getIndexOfCompletedLevel(levels: Swift.Optional&lt;RealmSwift.List&lt;Brach_Nha_Khmer_Quiz_Game.LevelCompleted&gt;&gt;, newLevel: Brach_Nha_Khmer_Quiz_Game.LevelCompleted) -&gt; Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "173"
+                  endingLineNumber = "173"
+                  offsetFromSymbolStart = "172">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73AF3A18-6FA7-4033-A0CE-4F97C213DB21"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
+            landmarkName = "getIndexOfCompletedLevel(levels:newLevel:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "73AF3A18-6FA7-4033-A0CE-4F97C213DB21 - f6b22862a5050c78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.DatabaseHelper.getIndexOfCompletedLevel(levels: Swift.Optional&lt;RealmSwift.List&lt;Brach_Nha_Khmer_Quiz_Game.LevelCompleted&gt;&gt;, newLevel: Brach_Nha_Khmer_Quiz_Game.LevelCompleted) -&gt; Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "404">
+               </Location>
+               <Location
+                  uuid = "73AF3A18-6FA7-4033-A0CE-4F97C213DB21 - f6b22862a5050c78"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.DatabaseHelper.getIndexOfCompletedLevel(levels: Swift.Optional&lt;RealmSwift.List&lt;Brach_Nha_Khmer_Quiz_Game.LevelCompleted&gt;&gt;, newLevel: Brach_Nha_Khmer_Quiz_Game.LevelCompleted) -&gt; Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "179"
+                  endingLineNumber = "179"
+                  offsetFromSymbolStart = "392">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3C02722-D720-4B29-A7E0-4F19233E41D8"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "177"
+            endingLineNumber = "177"
+            landmarkName = "getIndexOfCompletedLevel(levels:newLevel:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DF03FF28-8C48-4F34-8227-2ABD799A0F12"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "addCompletedLevel(gameKey:level:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "7DD7F494-E4EB-48BE-866C-B4B15A9B90E7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "addCompletedLevel(gameKey:level:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BD39C381-467C-44F8-85C0-B12FA06B2864"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "addCompletedLevel(gameKey:level:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9818D98D-7462-469C-A02A-E4E06F7BCDE1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "163"
+            endingLineNumber = "163"
+            landmarkName = "getBetterLevel(level1:level2:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "487D50B7-1A95-43F3-B304-3FB10CFD597C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "161"
+            endingLineNumber = "161"
+            landmarkName = "getBetterLevel(level1:level2:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A05B2364-355B-4CE0-9E3C-743931E1F926"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "185"
+            endingLineNumber = "185"
+            landmarkName = "getIndexOfCompletedLevel(levels:newLevel:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A05B2364-355B-4CE0-9E3C-743931E1F926 - ad209dd0fd2091b7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.DatabaseHelper.getTotalScore() -&gt; Swift.Int"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "187"
+                  endingLineNumber = "187"
+                  offsetFromSymbolStart = "36">
+               </Location>
+               <Location
+                  uuid = "A05B2364-355B-4CE0-9E3C-743931E1F926 - f6b22862a50533b6"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Brach_Nha_Khmer_Quiz_Game.DatabaseHelper.getIndexOfCompletedLevel(levels: Swift.Optional&lt;RealmSwift.List&lt;Brach_Nha_Khmer_Quiz_Game.LevelCompleted&gt;&gt;, newLevel: Brach_Nha_Khmer_Quiz_Game.LevelCompleted) -&gt; Swift.Optional&lt;Swift.Int&gt;"
+                  moduleName = "Brach-Nha-Khmer-Quiz-Game"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/ainghongsin/GitHub/Brach-Nha-Khmer-Quiz-Game/Brach-Nha-Khmer-Quiz-Game/Helper/DatabaseHelper.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "185"
+                  endingLineNumber = "185"
+                  offsetFromSymbolStart = "476">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
 </Bucket>
