@@ -46,14 +46,18 @@ class WinOrLoseViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        findTotalTiming()
-        setupTotalScore()
         displayMessages()
-        setupHighestScore()
         displayStars()
         setupSoundEffect()
         
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5){
+            self.setupTotalScore()
+            self.setupHighestScore()
+            self.findTotalTiming()
+        }
+        
         writeDataToDatabase()
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -152,7 +156,12 @@ class WinOrLoseViewController: UIViewController {
     
     
     func setupTotalScore() {
-        totalScoreLabel.text = convertEngNumToKhNum(engNum: gamePlay?.score ?? 0)
+        for i in 0 ... (self.gamePlay?.score ?? 00){
+            let d: Double = Double(i) * 0.001
+            DispatchQueue.main.asyncAfter(deadline: .now() + d) {
+                self.totalScoreLabel.text = convertEngNumToKhNum(engNum: i)
+            }
+        }
         
     }
     
@@ -163,7 +172,24 @@ class WinOrLoseViewController: UIViewController {
         let minute = totalTiming / 60
         let second = totalTiming % 60
         
-        totalTimingLabel.text = "\(convertEngNumToKhNum(engNum: minute)):\(convertEngNumToKhNum(engNum: second))"
+
+        
+        
+        for i in 0...minute  {
+            let t: Double = Double(i) * 0.05
+            DispatchQueue.main.asyncAfter(deadline: .now() + t) {
+                self.totalTimingLabel.text = "\(convertEngNumToKhNum(engNum: i)):០០"
+            }
+        }
+        
+        for i in 0 ... second {
+            let t: Double = Double(i) * 0.05
+            DispatchQueue.main.asyncAfter(deadline: .now() + t) {
+                self.totalTimingLabel.text = "\(convertEngNumToKhNum(engNum: minute)):\(convertEngNumToKhNum(engNum: i))"
+            }
+        }
+        
+        
         print("\(minute):\(second)")
         
     }
@@ -171,7 +197,13 @@ class WinOrLoseViewController: UIViewController {
     func setupHighestScore() {
         var tmpHighestScore = getHighestScore() ?? 0
         
-        highestScoreLabel.text = convertEngNumToKhNum(engNum: tmpHighestScore)
+            for i in 0 ... tmpHighestScore {
+                let d: Double = Double(i) * 0.001
+                DispatchQueue.main.asyncAfter(deadline: .now() + d) {
+                    self.highestScoreLabel.text = convertEngNumToKhNum(engNum: i)
+                }
+            }
+        
     }
     
     func getHighestScore() -> Int? {
