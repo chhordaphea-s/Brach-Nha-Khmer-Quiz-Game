@@ -40,7 +40,7 @@ class AudioHelper {
     init() { }
     
     func play() {
-
+        self.player?.play()
     }
     
     func pause() {
