@@ -17,31 +17,31 @@ class TimerHelper {
     
     weak var delegate: TimerHelperDelegate?
     
-    private var duration: TimeInterval = 0
+    private var duration: Double = 0
     private var reloader: Double = 0
-    private var counter: Double = 0
+    private var date: Date? = nil
+
     
-    
-    
-    func setupTimer(duration: Double, reloadPerSec: Float = 0.01) {
-        self.duration = TimeInterval(duration)
+    func setupTimer(duration: Double, reloadPerSec: Float = 0.01, date: Date = Date()) {
+        self.duration = duration
         self.reloader = Double(reloadPerSec)
+        self.date = date
     }
     
     
     func startCountDown() {
-        self.counter = duration
+        guard date != nil else { return }
 
         timer = Timer.scheduledTimer(withTimeInterval: reloader, repeats: true) { timer in
-            let progress: Float = Float(self.counter / self.duration)
+            let remainder: Double = self.getTimerRemainder()
+            let progress: Float = Float(remainder / Double(self.duration))
+
             self.delegate?.loadTimer(timer: timer, progress: progress)
             
-            if self.counter <= 0 {
+            if remainder <= 0 {
                 self.delegate?.didLoadTimer(timer: timer)
                 timer.invalidate()
             }
-            self.counter -= self.reloader
-            
         }
     }
     
@@ -53,11 +53,11 @@ class TimerHelper {
     func reset() {
         timer?.invalidate()
         timer = nil
-        self.counter = self.duration
+        date = nil
     }
     
     func getTimerRemainder() -> Double {
-        return self.counter
+        return Double(self.duration - NSDate().timeIntervalSince(self.date ?? Date()))
     }
     
 
