@@ -366,6 +366,7 @@ extension AnswerViewController: AnswerButtonDelegate {
             performButtonVibrate(vibrateType: .success)
             timer.pause()
             scoreCounting()
+            disEnableAnswerButton()
             
             buttonSoudEffect = AudioHelper(audioName: "correct", loop: false)
             
@@ -392,6 +393,11 @@ extension AnswerViewController: AnswerButtonDelegate {
         self.present(alert, animated: true)
     }
     
+    func disEnableAnswerButton() {
+        for button in answerView {
+            button.isEnable = false
+        }
+    }
     
 }
 

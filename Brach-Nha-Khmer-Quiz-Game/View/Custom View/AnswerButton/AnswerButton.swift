@@ -40,6 +40,7 @@ class AnswerButton: UIView {
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesEnded(touches, with: event)
+        if !isEnable { return }
         
         ButtonEffectAnimation.shared.popEffect(button: self)
         
@@ -56,11 +57,11 @@ class AnswerButton: UIView {
                 statusAnswer = false
             }
             
-            
-            if isEnable == true{
-                delegate?.didSelect(index: index, status: statusAnswer)
-                isEnable = false
-            }
+            delegate?.didSelect(index: index, status: statusAnswer)
+
+//            if isEnable == true{
+//                isEnable = false
+//            }
             
         }
     }
