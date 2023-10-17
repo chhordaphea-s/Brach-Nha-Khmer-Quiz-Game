@@ -60,7 +60,7 @@ class AnswerButton: UIView {
             delegate?.didSelect(index: index, status: statusAnswer)
 
 //            if isEnable == true{
-//                isEnable = false
+            isEnable = false
 //            }
             
         }
