@@ -122,7 +122,6 @@ class MainViewController: UIViewController {
         } else {
             firstOpen = false
         }
-
     }
     
     func increaseHint(hint: HintType) {

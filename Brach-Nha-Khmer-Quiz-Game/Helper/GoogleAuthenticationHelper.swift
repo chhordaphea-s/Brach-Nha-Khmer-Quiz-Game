@@ -60,11 +60,8 @@ class GoogleAuthenticationHelper: NSObject {
             
             if let user = result?.user {
                 self.delegate?.reAuthenticate(user: user, error: nil)
-
             }
         }
-
-
     }
     
     

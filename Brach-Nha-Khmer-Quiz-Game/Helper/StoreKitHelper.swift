@@ -32,26 +32,17 @@ class StoreKitHelper: NSObject, SKProductsRequestDelegate, SKPaymentTransactionO
     }
 
     // MARK: Delegate
-
-    
     func productsRequest(_ request: SKProductsRequest, didReceive response: SKProductsResponse) {
         DispatchQueue.main.sync {
             self.products = response.products
             delegate?.productRequest(response: response)
-//            print("Count: ", response.products)
-//            setupCollectionData()
-//            self.hintCollectionView.reloadData()
         }
     }
     
-    
     func paymentQueue(_ queue: SKPaymentQueue, updatedTransactions transactions: [SKPaymentTransaction]) {
         transactions.forEach({
-            
             delegate?.paymentTransactionObserver(transaction: $0, transactionState: $0.transactionState)
             
         })
     }
-    
-    
 }

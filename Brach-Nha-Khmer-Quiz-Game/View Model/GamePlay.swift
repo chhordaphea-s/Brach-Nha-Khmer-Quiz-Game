@@ -11,7 +11,7 @@ struct GamePlay {
     let gameKey: String
     let readingTime: Double
     let answerTime: Double
-    let multiplyer: Int
+    let multiply: Int
     let startPlayTime: Date
     
     var level: Level
@@ -42,7 +42,7 @@ struct GamePlay {
         self.gameKey = gameKey
         self.readingTime = readingTime
         self.answerTime = answerTime
-        self.multiplyer = multiplyer
+        self.multiply = multiplyer
         self.startPlayTime = startPlayTime
         self.level = level
         self.question = question

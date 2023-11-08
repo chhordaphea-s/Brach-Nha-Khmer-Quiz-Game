@@ -68,7 +68,6 @@
 		0EA44D3B2A97293A00B5539A /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */; };
 		0EA44D462A97353600B5539A /* PlayMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EA44D452A97353600B5539A /* PlayMode.swift */; };
 		0EB9A8D02AD3D0BA00454E8A /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB9A8CF2AD3D0B900454E8A /* Reachability.swift */; };
-		0EB9A8D22AD4040A00454E8A /* NetworkMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EB9A8D12AD4040A00454E8A /* NetworkMonitor.swift */; };
 		0ED12ADD2AC5530F006DE2B0 /* StoreKitHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ED12ADC2AC5530F006DE2B0 /* StoreKitHelper.swift */; };
 		0EDC0B2D2AA0A49700B91B2C /* ViewAnimateHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */; };
 		0EDC0B342AA0A5EB00B91B2C /* SettingView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */; };
@@ -158,7 +157,6 @@
 		0EA44D3A2A97293A00B5539A /* UIColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIColorExtension.swift; sourceTree = "<group>"; };
 		0EA44D452A97353600B5539A /* PlayMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayMode.swift; sourceTree = "<group>"; };
 		0EB9A8CF2AD3D0B900454E8A /* Reachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
-		0EB9A8D12AD4040A00454E8A /* NetworkMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMonitor.swift; sourceTree = "<group>"; };
 		0ED12ADC2AC5530F006DE2B0 /* StoreKitHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreKitHelper.swift; sourceTree = "<group>"; };
 		0EDC0B2C2AA0A49700B91B2C /* ViewAnimateHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewAnimateHelper.swift; sourceTree = "<group>"; };
 		0EDC0B322AA0A5EB00B91B2C /* SettingView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SettingView.xib; sourceTree = "<group>"; };
@@ -199,6 +197,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E119AEF2AE527C100D63543 /* File Support */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "File Support";
+			sourceTree = "<group>";
+		};
 		0E1BD09D2AB2C22C00F7BBA5 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -266,7 +271,6 @@
 		0E6F8A9D2A989E5E00B480F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				0E81703F2AC2CA3D00E2A270 /* GamePlay.swift */,
 				0EA44D452A97353600B5539A /* PlayMode.swift */,
 				0E93ADF12AAC2F570073E7ED /* GameData.swift */,
 				0E8BFF722AA43584000E5AC7 /* AudioMode.swift */,
@@ -292,7 +296,6 @@
 				0E5CE7D12ACBFC3E003E7461 /* DatabaseHelper.swift */,
 				0E24D9F22ACE8E37006DF438 /* GoogleAuthenticationHelper.swift */,
 				0E2DFA6C2ACED14700D92C0B /* FirestoreHelper.swift */,
-				0EB9A8D12AD4040A00454E8A /* NetworkMonitor.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -372,13 +375,15 @@
 			path = CustomSwitchButton;
 			sourceTree = "<group>";
 		};
-		0EDDEC222AA194CF00E32087 /* Globle */ = {
+		0EDDEC222AA194CF00E32087 /* Global */ = {
 			isa = PBXGroup;
 			children = (
+				FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */,
+				FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */,
 				0E68C92A2A9B356F00ACF84D /* Constant.swift */,
 				0E98815C2AA46F8600D326CC /* Global.swift */,
 			);
-			path = Globle;
+			path = Global;
 			sourceTree = "<group>";
 		};
 		0EDDEC232AA194DA00E32087 /* Utilities */ = {
@@ -448,15 +453,14 @@
 			isa = PBXGroup;
 			children = (
 				0EDDEC232AA194DA00E32087 /* Utilities */,
-				0EDDEC222AA194CF00E32087 /* Globle */,
+				0EDDEC222AA194CF00E32087 /* Global */,
 				0EDC0B242AA0A3E700B91B2C /* View Controller */,
 				0EDC0B252AA0A3F800B91B2C /* View */,
 				FCCDD2312A9CB68200672A8C /* View Model */,
 				0E6F8A9E2A989E6700B480F5 /* Helper */,
 				0E6F8A9D2A989E5E00B480F5 /* Model */,
 				0EA44D352A9716FF00B5539A /* Extension */,
-				FC3D988D2A8E2A86001A05CE /* SceneDelegate.swift */,
-				FC3D988B2A8E2A86001A05CE /* AppDelegate.swift */,
+				0E119AEF2AE527C100D63543 /* File Support */,
 			);
 			path = "Brach-Nha-Khmer-Quiz-Game";
 			sourceTree = "<group>";
@@ -477,6 +481,7 @@
 				0E8170422AC2CA3D00E2A270 /* HintButton.swift */,
 				0E8170412AC2CA3D00E2A270 /* HintCustomCellModel.swift */,
 				0E8170442AC2CA3D00E2A270 /* Hint.swift */,
+				0E81703F2AC2CA3D00E2A270 /* GamePlay.swift */,
 				0E8170452AC2CA3D00E2A270 /* LevelViewModel.swift */,
 				0E8170402AC2CA3D00E2A270 /* OnOffButton.swift */,
 			);
@@ -675,7 +680,6 @@
 				0E5CE7D22ACBFC3E003E7461 /* DatabaseHelper.swift in Sources */,
 				0EB9A8D02AD3D0BA00454E8A /* Reachability.swift in Sources */,
 				0E8170492AC2CA3D00E2A270 /* HintButton.swift in Sources */,
-				0EB9A8D22AD4040A00454E8A /* NetworkMonitor.swift in Sources */,
 				0E98815D2AA46F8600D326CC /* Global.swift in Sources */,
 				0E8170392AC2CA2F00E2A270 /* AnswerViewController.swift in Sources */,
 				FC3D988E2A8E2A86001A05CE /* SceneDelegate.swift in Sources */,
@@ -872,6 +876,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -881,7 +887,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.einoyakoreal.Brach-Nha-Khmer-Quiz-Game";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hongsin.Brach-Nha-Khmer-Quiz-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -909,6 +915,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = NO;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -918,7 +926,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.einoyakoreal.Brach-Nha-Khmer-Quiz-Game";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.hongsin.Brach-Nha-Khmer-Quiz-Game";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

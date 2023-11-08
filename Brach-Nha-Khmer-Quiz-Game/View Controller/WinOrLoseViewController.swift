@@ -114,7 +114,6 @@ class WinOrLoseViewController: UIViewController {
             self.increaseHint(hint: .answer)
         }
         
-
     }
     
     func increaseHint(hint: HintType) {
@@ -203,7 +202,6 @@ class WinOrLoseViewController: UIViewController {
                     self.highestScoreLabel.text = convertEngNumToKhNum(engNum: i)
                 }
             }
-        
     }
     
     func getHighestScore() -> Int? {

@@ -48,17 +48,6 @@ class FirestoreHelper {
                 guard let uID = realmResults.first?.userID else { return }
 
                 updateDataToServer(uID: uID, realmResult: realmResults)
-                
-                // Update the data in Firestore
-//                let docRef = self.db.collection(Constant.server.collectionID).document(uID)
-//                docRef.setData(["data" : dataToSync]) { error in
-//                    if let error = error {
-//                        print("Error updating Firestore: \(error.localizedDescription)")
-//                    } else {
-//                        print("Firestore updated successfully")
-//                    }
-//                }
-
                 break
             case .error(let error):
                 // Handle errors

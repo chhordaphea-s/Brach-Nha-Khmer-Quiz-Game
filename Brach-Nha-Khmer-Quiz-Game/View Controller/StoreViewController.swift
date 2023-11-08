@@ -177,10 +177,6 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         selectHintProduct = HintProduct(product: filterProducts[indexPath.row])
-        
-        
-
-        
         guard let hint = selectHintProduct else {return}
         
         
@@ -201,8 +197,6 @@ extension StoreViewController: UICollectionViewDelegate, UICollectionViewDataSou
     
     func increaseHint(hintProduct: HintProduct) {
         hintView.setup(data: hintProduct.getHintView())
-        
-        
         ViewAnimateHelper.shared.animateViewIn(self.view, popUpView: hintView, width: 314, height: 276)
     }
 }

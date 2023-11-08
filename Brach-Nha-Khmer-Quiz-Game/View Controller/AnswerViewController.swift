@@ -279,7 +279,7 @@ class AnswerViewController: UIViewController {
     
     func scoreCounting() {
         guard let gamePlayData = gamePlay else { return }
-        gamePlay?.score += Int(timer.getTimerRemainder()) * gamePlayData.multiplyer
+        gamePlay?.score += Int(timer.getTimerRemainder()) * gamePlayData.multiply
 
         setScore()
     }
@@ -335,8 +335,6 @@ class AnswerViewController: UIViewController {
 extension AnswerViewController: AnswerButtonDelegate {
     
     func didSelect(index: Int, status: Bool) {
-//        guard let gamePlayData = gamePlay else {return}
-        
         if choosedCorrectAnswer { return }
         
         print(index)
@@ -379,7 +377,6 @@ extension AnswerViewController: AnswerButtonDelegate {
                     self.switchToWinOrLoseScreen()
                 }
             }
-        
         }
     }
     

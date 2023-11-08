@@ -85,20 +85,8 @@ func peformVibrate(win: Bool) {
     if win {
         AudioServicesPlaySystemSound(SystemSoundID(1329))
     } else {
-//       AudioServicesPlaySystemSound(SystemSoundID(1027))
         AudioServicesPlaySystemSound(kSystemSoundID_Vibrate)
-
-
     }
-
-    
-//                AudioServicesPlaySystemSound(SystemSoundID(1301))
-//               AudioServicesPlaySystemSound(SystemSoundID(1027))
-//               AudioServicesPlaySystemSound(SystemSoundID(1028))
-//                let alert = SystemSoundID(1011)
-//                AudioServicesPlaySystemSoundWithCompletion(alert, nil)
-//               AudioServicesPlaySystemSound(SystemSoundID(1333))
-//               AudioServicesPlaySystemSound(SystemSoundID(4095))
             
 }
 
