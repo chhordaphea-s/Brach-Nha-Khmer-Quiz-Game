@@ -197,13 +197,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0E119AEF2AE527C100D63543 /* File Support */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = "File Support";
-			sourceTree = "<group>";
-		};
 		0E1BD09D2AB2C22C00F7BBA5 /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -271,6 +264,13 @@
 		0E6F8A9D2A989E5E00B480F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0E8170432AC2CA3D00E2A270 /* AnswerView.swift */,
+				0E8170422AC2CA3D00E2A270 /* HintButton.swift */,
+				0E8170412AC2CA3D00E2A270 /* HintCustomCellModel.swift */,
+				0E8170442AC2CA3D00E2A270 /* Hint.swift */,
+				0E81703F2AC2CA3D00E2A270 /* GamePlay.swift */,
+				0E8170452AC2CA3D00E2A270 /* LevelViewModel.swift */,
+				0E8170402AC2CA3D00E2A270 /* OnOffButton.swift */,
 				0EA44D452A97353600B5539A /* PlayMode.swift */,
 				0E93ADF12AAC2F570073E7ED /* GameData.swift */,
 				0E8BFF722AA43584000E5AC7 /* AudioMode.swift */,
@@ -456,11 +456,9 @@
 				0EDDEC222AA194CF00E32087 /* Global */,
 				0EDC0B242AA0A3E700B91B2C /* View Controller */,
 				0EDC0B252AA0A3F800B91B2C /* View */,
-				FCCDD2312A9CB68200672A8C /* View Model */,
 				0E6F8A9E2A989E6700B480F5 /* Helper */,
 				0E6F8A9D2A989E5E00B480F5 /* Model */,
 				0EA44D352A9716FF00B5539A /* Extension */,
-				0E119AEF2AE527C100D63543 /* File Support */,
 			);
 			path = "Brach-Nha-Khmer-Quiz-Game";
 			sourceTree = "<group>";
@@ -472,20 +470,6 @@
 				FC9CE41D2AC144490076F310 /* StarView.xib */,
 			);
 			path = StarView;
-			sourceTree = "<group>";
-		};
-		FCCDD2312A9CB68200672A8C /* View Model */ = {
-			isa = PBXGroup;
-			children = (
-				0E8170432AC2CA3D00E2A270 /* AnswerView.swift */,
-				0E8170422AC2CA3D00E2A270 /* HintButton.swift */,
-				0E8170412AC2CA3D00E2A270 /* HintCustomCellModel.swift */,
-				0E8170442AC2CA3D00E2A270 /* Hint.swift */,
-				0E81703F2AC2CA3D00E2A270 /* GamePlay.swift */,
-				0E8170452AC2CA3D00E2A270 /* LevelViewModel.swift */,
-				0E8170402AC2CA3D00E2A270 /* OnOffButton.swift */,
-			);
-			path = "View Model";
 			sourceTree = "<group>";
 		};
 		FCDA06B12AA6F89100A2A239 /* AnswerButton */ = {
